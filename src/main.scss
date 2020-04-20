@@ -1,7 +1,11 @@
 @import "../node_modules/normalize.scss/normalize.scss";
-@import "components/button/button.scss";
-@import "components/plan/plan.scss";
+@import "uikit/base.scss";
 
-body {
-  background-color: green;
-}
+//
+@import "components/button/button.scss";//
+@import "components/plan/plan.scss";//
+
+body {//
+  background-color: green;//
+}//
+//

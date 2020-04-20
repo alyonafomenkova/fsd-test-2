@@ -52,7 +52,12 @@ const config = {
             }
           }
         ]
-      }
+      },
+
+      {
+        test: /\.(woff2|woff|ttf|svg)$/,
+        loader: 'file-loader?limit=1024&name=fonts/[name].[ext]'
+      },
     ],
   },
 
