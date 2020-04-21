@@ -6,3 +6,40 @@ block title
 block main
   include ../../../components/logo/logo
   +logo("../../../", "gray")
+  div.content
+    +colors
+    +types
+
+mixin colors
+  -
+    const colorsData = [
+    {"title": "Dark Shade 100%", "value": "rgba(31, 32, 65, 1)", "valueInHex": "#1F2041"},
+    {"title": "Dark Shade 75%", "value": "rgba(31, 32, 65, 0.75)", "valueInHex": "#1F2041"},
+    {"title": "Dark Shade 50%", "value": "rgba(31, 32, 65, 0.50)", "valueInHex": "#1F2041"},
+    {"title": "Dark Shade 25%", "value": "rgba(31, 32, 65, 0.25)", "valueInHex": "#1F2041"},
+    {"title": "Dark Shade 5%", "value": "rgba(31, 32, 65, 0.05)", "valueInHex": "#1F2041"},
+    {"title": "Purple", "value": "rgba(188, 156, 255, 1)", "valueInHex": "#BC9CFF"},
+    {"title": "Green", "value": "rgba(111, 207, 151, 1)", "valueInHex": "#6FCF97"}
+    ];
+  section.content__item
+    each item in colorsData
+      div.color-block
+        div.color-block__example(style="background-color:"+item.value)
+        div.color-block__info.color-block-info
+          h2.color-block-info__title #{item.title}
+          p.color-block-info__description #{item.valueInHex}
+
+
+mixin types
+  -
+    const typesData = [
+    {"tag": "H1", "title": "H1", "description": "This one is the sub-section or widget title"},
+    {"tag": "H2", "title": "H2", "description": "Next one is the item title inside widgets"},
+    {"tag": "H3", "title": "H3", "description": "This is a label or CTA text"},
+    {"tag": "p", "title": "Body", "description": "This is the body text which is used for most of the design, like paragraphs, lists, etc."},
+    ];
+  section.content__item
+    each item in typesData
+      div.type-block
+        #{item.tag}.type-block__title #{item.title}
+        #{item.tag}.type-block__description #{item.description}
