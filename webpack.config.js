@@ -33,7 +33,15 @@ const config = {
     writeToDisk: true,
     open: 'chrome',
   },
-
+  resolve: {
+    alias: {
+      Normalize: path.resolve(__dirname, 'node_modules/normalize.scss/normalize.scss'),//
+      Theme: path.resolve(__dirname, 'src/base/theme.scss'),
+      Fonts: path.resolve(__dirname, 'src/fonts'),
+      FontsScss: path.resolve(__dirname, 'src/base/fonts.scss'),
+      Base: path.resolve(__dirname, 'src/base/base.scss')
+    }
+  },
   module: {
     rules: [
       {

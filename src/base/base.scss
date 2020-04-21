@@ -1,9 +1,10 @@
-@import "../../node_modules/normalize.scss/normalize.scss";
-@import "theme.scss";
-@import "fonts.scss";
+@import '~Normalize';
+@import '~Theme';
+@import '~FontsScss';
 
 html {
   box-sizing: border-box;
+  font-size: 14px;
 }
 
 *,
@@ -18,28 +19,30 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875rem; //14px
+  line-height: 1.5rem; //24px
   color: $dark-color-opacity-75;
 }
 
 h1, h2, h3 {
+  margin: 0;
+  padding: 0;
   font-family: "Quicksand", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5rem; // 24px
+  line-height: 1.875rem; // 30px
   color: $dark-color;
 }
 
 h2 {
-  font-size: 19px;
-  line-height: 24px;
+  font-size: 1.1875rem; // 19px
+  line-height: 1.875rem; // 30px
 }
 
 h3 {
   font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.75rem; // 12px;
+  line-height: 0.9375rem; // 15px;
   text-transform: uppercase;
 }

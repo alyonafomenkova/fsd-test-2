@@ -4,8 +4,8 @@
   font-weight: normal;
   font-display: swap;
   src: local("Montserrat");
-  src: url("fonts/montserrat-regular.woff2") format("woff2"), url("fonts/montserrat-regular.woff") format("woff"),
-  url("fonts/montserrat-regular.ttf") format("truetype"), url("fonts/montserrat-regular.svg#Montserrat") format("svg");
+  src: url("~Fonts/montserrat-regular.woff2") format("woff2"), url("~Fonts/montserrat-regular.woff") format("woff"),
+  url("~Fonts/montserrat-regular.ttf") format("truetype"), url("~Fonts/montserrat-regular.svg#Montserrat") format("svg");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-weight: bold;
   font-display: swap;
   src: local("Montserrat");
-  src: url("fonts/montserrat-bold.woff2") format("woff2"), url("fonts/montserrat-bold.woff") format("woff"),
-  url("fonts/montserrat-bold.ttf") format("truetype"), url("fonts/montserrat-bold.svg#Montserrat") format("svg");
+  src: url("~Fonts/montserrat-bold.woff2") format("woff2"), url("~Fonts/montserrat-bold.woff") format("woff"),
+  url("~Fonts/montserrat-bold.ttf") format("truetype"), url("~Fonts/montserrat-bold.svg#Montserrat") format("svg");
 }
 
 @font-face {
@@ -24,8 +24,8 @@
   font-weight: normal;
   font-display: swap;
   src: local("Quicksand");
-  src: url("fonts/quicksand-regular.woff2") format("woff2"), url("fonts/quicksand-regular.woff") format("woff"),
-  url("fonts/quicksand-regular.ttf") format("truetype"), url("fonts/quicksand-regular.svg#Quicksand") format("svg");
+  src: url("~Fonts/quicksand-regular.woff2") format("woff2"), url("~Fonts/quicksand-regular.woff") format("woff"),
+  url("~Fonts/quicksand-regular.ttf") format("truetype"), url("~Fonts/quicksand-regular.svg#Quicksand") format("svg");
 }
 
 @font-face {
@@ -34,6 +34,6 @@
   font-weight: bold;
   font-display: swap;
   src: local("Quicksand");
-  src: url("fonts/quicksand-bold.woff2") format("woff2"), url("fonts/quicksand-bold.woff") format("woff"),
-  url("fonts/quicksand-bold.ttf") format("truetype"), url("fonts/quicksand-bold.svg#Quicksand") format("svg");
+  src: url("~Fonts/quicksand-bold.woff2") format("woff2"), url("~Fonts/quicksand-bold.woff") format("woff"),
+  url("~Fonts/quicksand-bold.ttf") format("truetype"), url("~Fonts/quicksand-bold.svg#Quicksand") format("svg");
 }
