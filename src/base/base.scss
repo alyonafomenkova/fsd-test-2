@@ -19,8 +19,8 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.875rem; //14px
-  line-height: 1.5rem; //24px
+  font-size: 1rem; //14px
+  line-height: 1.714rem; //24px
   color: $dark-color-opacity-75;
 }
 
@@ -30,19 +30,19 @@ h1, h2, h3 {
   font-family: "Quicksand", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.5rem; // 24px
-  line-height: 1.875rem; // 30px
+  font-size: 1.714rem; // 24px
+  line-height: 2.143rem; // 30px
   color: $dark-color;
 }
 
 h2 {
-  font-size: 1.1875rem; // 19px
-  line-height: 1.875rem; // 30px
+  font-size: 1.357rem; // 19px
+  line-height: 2.143rem; // 30px
 }
 
 h3 {
   font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 0.75rem; // 12px;
-  line-height: 0.9375rem; // 15px;
+  font-size: 0.857rem; // 12px;
+  line-height: 1.071rem; // 15px;
   text-transform: uppercase;
 }
