@@ -2,17 +2,31 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const PATHS = {
+  source: path.join(__dirname, 'src'),
+  build: path.join(__dirname, 'build')
+};
 
 const config = {
   mode: 'development',
-  entry: './src/index.js',
+  // entry: './src/index.js',
+  // output: {
+  //   path: path.resolve(__dirname, 'dist'),
+  //   filename: '[name].bundle.js'
+  // },
+  entry: {
+    'colors-and-types':     PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.js',
+    //'module/a/index': 'module/a/index.js',
+    //'module/b/index': 'module/b/index.js',
+  },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: PATHS.build,
     filename: '[name].bundle.js'
   },
   devServer: {
-    index: 'index.html',
-    contentBase: path.join(__dirname, 'dist'),
+    //index: 'index.html',
+    index: 'colors-and-type.html',
+    contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
     port: 9000,
@@ -67,8 +81,8 @@ const config = {
       filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: './src/index.pug'
+      filename: 'colors-and-type.html',
+      template: PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.pug'
     }),
   ]
 };
