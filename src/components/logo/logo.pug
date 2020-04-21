@@ -1,0 +1,9 @@
+-const pathToMainLogo="components/logo/images/main-logo.svg";
+-const pathToGrayLogo="components/logo/images/gray-logo.svg";
+
+mixin logo(basePath, type)
+  .logo
+    if type==="gray"
+      img.logo_gray(src=basePath+pathToGrayLogo alt="logo")
+    else
+      img.logo_main(src=basePath+pathToMainLogo alt="Main logo")
