@@ -9,23 +9,16 @@ const PATHS = {
 
 const config = {
   mode: 'development',
-  // entry: './src/index.js',
-  // output: {
-  //   path: path.resolve(__dirname, 'dist'),
-  //   filename: '[name].bundle.js'
-  // },
   entry: {
     'colors-and-types':     PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.js',
-    //'module/a/index': 'module/a/index.js',
-    //'module/b/index': 'module/b/index.js',
+    'form-elements':     PATHS.source + '/pages/uikit/form-elements/form-elements.js',
   },
   output: {
     path: PATHS.build,
     filename: '[name].bundle.js'
   },
   devServer: {
-    //index: 'index.html',
-    index: 'colors-and-type.html',
+    index: 'form-elements.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
@@ -91,6 +84,10 @@ const config = {
     new HtmlWebpackPlugin({
       filename: 'colors-and-type.html',
       template: PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'form-elements.html',
+      template: PATHS.source + '/pages/uikit/form-elements/form-elements.pug'
     }),
   ]
 };
