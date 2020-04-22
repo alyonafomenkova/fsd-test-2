@@ -10,29 +10,30 @@ const PATHS = {
 const config = {
   mode: 'development',
   entry: {
-    'colors-and-types':     PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.js',
-    'form-elements':     PATHS.source + '/pages/uikit/form-elements/form-elements.js',
+    'index': PATHS.source + '/pages/index/index.js',
+    'colors-and-type': PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.js',
+    'form-elements': PATHS.source + '/pages/uikit/form-elements/form-elements.js',
   },
   output: {
     path: PATHS.build,
     filename: '[name].bundle.js'
   },
   devServer: {
-    index: 'form-elements.html',
+    index: 'index.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
-    port: 9000,
+    port: 8000,
     writeToDisk: true,
     open: 'chrome',
   },
   resolve: {
     alias: {
-      Normalize: path.resolve(__dirname, 'node_modules/normalize.scss/normalize.scss'),//
+      Normalize: path.resolve(__dirname, 'node_modules/normalize.scss/normalize.scss'),
       Theme: path.resolve(__dirname, 'src/base/theme.scss'),
       Fonts: path.resolve(__dirname, 'src/fonts'),
       FontsScss: path.resolve(__dirname, 'src/base/fonts.scss'),
-      Base: path.resolve(__dirname, 'src/base/base.scss')
+      Base: path.resolve(__dirname, 'src/base/base.scss'),
     }
   },
   module: {
@@ -77,17 +78,27 @@ const config = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: PATHS.source + '/pages/index/index.pug',
+      chunks: ['index'],
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
       filename: 'colors-and-type.html',
-      template: PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.pug'
+      template: PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.pug',
+      chunks: ['colors-and-type'],
+      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'form-elements.html',
-      template: PATHS.source + '/pages/uikit/form-elements/form-elements.pug'
+      template: PATHS.source + '/pages/uikit/form-elements/form-elements.pug',
+      chunks: ['form-elements'],
+      inject: true,
     }),
   ]
 };

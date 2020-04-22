@@ -1,0 +1,19 @@
+extends ../../base/base.pug
+
+block title
+  | Index page
+
+block main
+  div.content
+    +addPages
+
+mixin addPages
+  -
+    const pages = [
+    {"link": "colors-and-type.html", "title": 'colors-and-type page'},
+    {"link": "form-elements.html", "title": 'form-elements page'},
+    ];
+  ul.page-list
+    each item in pages
+      li.page-list__item
+        a(href=item.link) #{item.title}

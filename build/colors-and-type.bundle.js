@@ -258,7 +258,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "form-elements";
+/******/ 			var chunkId = "colors-and-type";
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				hotEnsureUpdateChunk(chunkId);
@@ -790,7 +790,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(2)(__webpack_require__.s = 2);
+/******/ 	return hotCreateRequire(1)(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1181,37 +1181,37 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 
 /***/ }),
 
-/***/ "./src/pages/uikit/form-elements/form-elements.js":
-/*!********************************************************!*\
-  !*** ./src/pages/uikit/form-elements/form-elements.js ***!
-  \********************************************************/
+/***/ "./src/pages/uikit/colors-and-type/colors-and-type.js":
+/*!************************************************************!*\
+  !*** ./src/pages/uikit/colors-and-type/colors-and-type.js ***!
+  \************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-elements.scss */ \"./src/pages/uikit/form-elements/form-elements.scss\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form_elements_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/pages/uikit/form-elements/form-elements.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _colors_and_type_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./colors-and-type.scss */ \"./src/pages/uikit/colors-and-type/colors-and-type.scss\");\n/* harmony import */ var _colors_and_type_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_colors_and_type_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/pages/uikit/colors-and-type/colors-and-type.js?");
 
 /***/ }),
 
-/***/ "./src/pages/uikit/form-elements/form-elements.scss":
-/*!**********************************************************!*\
-  !*** ./src/pages/uikit/form-elements/form-elements.scss ***!
-  \**********************************************************/
+/***/ "./src/pages/uikit/colors-and-type/colors-and-type.scss":
+/*!**************************************************************!*\
+  !*** ./src/pages/uikit/colors-and-type/colors-and-type.scss ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/pages/uikit/form-elements/form-elements.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/pages/uikit/colors-and-type/colors-and-type.scss?");
 
 /***/ }),
 
-/***/ 2:
-/*!********************************************************************************************************************************************!*\
-  !*** multi (webpack)-dev-server/client?http://localhost:8000 (webpack)/hot/dev-server.js ./src/pages/uikit/form-elements/form-elements.js ***!
-  \********************************************************************************************************************************************/
+/***/ 1:
+/*!************************************************************************************************************************************************!*\
+  !*** multi (webpack)-dev-server/client?http://localhost:8000 (webpack)/hot/dev-server.js ./src/pages/uikit/colors-and-type/colors-and-type.js ***!
+  \************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! d:\\workspace\\fsd-test-2\\node_modules\\webpack-dev-server\\client\\index.js?http://localhost:8000 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:8000\");\n__webpack_require__(/*! d:\\workspace\\fsd-test-2\\node_modules\\webpack\\hot\\dev-server.js */\"./node_modules/webpack/hot/dev-server.js\");\nmodule.exports = __webpack_require__(/*! d:\\workspace\\fsd-test-2\\src/pages/uikit/form-elements/form-elements.js */\"./src/pages/uikit/form-elements/form-elements.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
+eval("__webpack_require__(/*! d:\\workspace\\fsd-test-2\\node_modules\\webpack-dev-server\\client\\index.js?http://localhost:8000 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:8000\");\n__webpack_require__(/*! d:\\workspace\\fsd-test-2\\node_modules\\webpack\\hot\\dev-server.js */\"./node_modules/webpack/hot/dev-server.js\");\nmodule.exports = __webpack_require__(/*! d:\\workspace\\fsd-test-2\\src/pages/uikit/colors-and-type/colors-and-type.js */\"./src/pages/uikit/colors-and-type/colors-and-type.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
 
 /***/ })
 
