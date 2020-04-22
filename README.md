@@ -2,8 +2,8 @@
 
 ## Демо:<br/>
 ### UIkit:<br/>
-- [colors-and-type](https://alyonafomenkova.github.io/fsd-test-2/colors-and-type.html)
-- [form-elements](https://alyonafomenkova.github.io/fsd-test-2/form-elements.html)
+- [colors-and-type](https://alyonafomenkova.github.io/fsd-test-2/build/colors-and-type.html)
+- [form-elements](https://alyonafomenkova.github.io/fsd-test-2/build/form-elements.html)
 
 ### Main pages:<br/>
 
