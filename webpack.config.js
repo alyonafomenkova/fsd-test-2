@@ -10,7 +10,6 @@ const PATHS = {
 const config = {
   mode: 'development',
   entry: {
-    'index': PATHS.source + '/pages/index/index.js',
     'colors-and-type': PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.js',
     'form-elements': PATHS.source + '/pages/uikit/form-elements/form-elements.js',
   },
@@ -19,12 +18,11 @@ const config = {
     filename: '[name].bundle.js'
   },
   devServer: {
-    index: 'index.html',
+    index: 'form-elements.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
     port: 8000,
-    writeToDisk: true,
     open: 'chrome',
   },
   resolve: {
@@ -81,12 +79,6 @@ const config = {
     // new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: PATHS.source + '/pages/index/index.pug',
-      chunks: ['index'],
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'colors-and-type.html',
