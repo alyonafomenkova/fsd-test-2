@@ -5,5 +5,22 @@ block title
 
 block main
   include ../../../components/logo/logo
+  include ../../../components/text-field/text-field
   +logo("../../../", "gray")
-  div.content
+  section.content
+    div.content__column
+      div.block-element
+        +elementDescription("Text Field", "Default")
+        div.block-element__inputs-wrapper
+          +textField("email", "email", "", "email-id", "Email")
+
+      div.block-element
+        +elementDescription("Text Field", "Hover / Focus")
+        div.block-element__inputs-wrapper
+          +textField("text", "text", "focused", "text-id", "This is pretty awesome")
+
+
+mixin elementDescription(title, state)
+    div.block-element__description
+      h3.block-element__title #{title}
+      p.block-element__state #{state}

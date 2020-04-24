@@ -1,5 +1,26 @@
 @import '~Base';
+@import '../colors-and-type/colors-and-type.scss';
+@import '../../../components/text-field/text-field.scss';
 
-body {
-  background-color: red;
- }
+.content__column {
+  padding-left: 8.7%;
+}
+
+.block-element {
+  width: 320px;
+  margin-bottom: 21px;
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  &__state {
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $dark-color-opacity-50;
+  }
+}
