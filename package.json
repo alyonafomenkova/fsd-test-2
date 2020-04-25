@@ -35,6 +35,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "item-quantity-dropdown": "^2.1.0",
+    "jquery": "^3.5.0",
     "normalize.scss": "^0.1.0",
     "pug-html-loader": "^1.1.5"
   }

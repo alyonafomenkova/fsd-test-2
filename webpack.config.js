@@ -6,6 +6,7 @@ const PATHS = {
   source: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build')
 };
+const webpack = require('webpack');
 
 const config = {
   mode: 'development',
@@ -92,6 +93,10 @@ const config = {
       chunks: ['form-elements'],
       inject: true,
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    })
   ]
 };
 
