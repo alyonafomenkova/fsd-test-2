@@ -9,58 +9,27 @@
   <body>
         <div class="logo"><img class="logo_gray" src="fonts/gray-logo.svg" alt="logo">
         </div>
-    <div class="test">
-          <section class="content__item">
-            <div class="color-block">
-              <div class="color-block__example" style="background-color:rgba(31, 32, 65, 1)"></div>
-              <div class="color-block__info color-block-info">
-                <h2 class="color-block-info__title">Dark Shade 100%</h2>
-                <p class="color-block-info__description">#1F2041</p>
-              </div>
-            </div>
-            <div class="color-block">
-              <div class="color-block__example" style="background-color:rgba(31, 32, 65, 0.75)"></div>
-              <div class="color-block__info color-block-info">
-                <h2 class="color-block-info__title">Dark Shade 75%</h2>
-                <p class="color-block-info__description">#1F2041</p>
-              </div>
-            </div>
-            <div class="color-block">
-              <div class="color-block__example" style="background-color:rgba(31, 32, 65, 0.50)"></div>
-              <div class="color-block__info color-block-info">
-                <h2 class="color-block-info__title">Dark Shade 50%</h2>
-                <p class="color-block-info__description">#1F2041</p>
-              </div>
-            </div>
-            <div class="color-block">
-              <div class="color-block__example" style="background-color:rgba(31, 32, 65, 0.25)"></div>
-              <div class="color-block__info color-block-info">
-                <h2 class="color-block-info__title">Dark Shade 25%</h2>
-                <p class="color-block-info__description">#1F2041</p>
-              </div>
-            </div>
-            <div class="color-block">
-              <div class="color-block__example" style="background-color:rgba(31, 32, 65, 0.05)"></div>
-              <div class="color-block__info color-block-info">
-                <h2 class="color-block-info__title">Dark Shade 5%</h2>
-                <p class="color-block-info__description">#1F2041</p>
-              </div>
-            </div>
-            <div class="color-block">
-              <div class="color-block__example" style="background-color:rgba(188, 156, 255, 1)"></div>
-              <div class="color-block__info color-block-info">
-                <h2 class="color-block-info__title">Purple</h2>
-                <p class="color-block-info__description">#BC9CFF</p>
-              </div>
-            </div>
-            <div class="color-block">
-              <div class="color-block__example" style="background-color:rgba(111, 207, 151, 1)"></div>
-              <div class="color-block__info color-block-info">
-                <h2 class="color-block-info__title">Green</h2>
-                <p class="color-block-info__description">#6FCF97</p>
-              </div>
-            </div>
-          </section>
-    </div>
+    <section class="content">
+      <div class="content__column">
+        <div class="block-element">
+          <div class="block-element__description">
+            <h3 class="block-element__title">Text Field</h3>
+            <p class="block-element__state">Default</p>
+          </div>
+          <div class="block-element__inputs-wrapper">
+                <input class="text-field" type="email" name="email" id="email-id" placeholder="Email">
+          </div>
+        </div>
+        <div class="block-element">
+          <div class="block-element__description">
+            <h3 class="block-element__title">Text Field</h3>
+            <p class="block-element__state">Hover / Focus</p>
+          </div>
+          <div class="block-element__inputs-wrapper">
+                <input class="text-field  text-field_focused" type="text" name="text" id="text-id" placeholder="This is pretty awesome">
+          </div>
+        </div>
+      </div>
+    </section>
   <script src="form-elements.bundle.js"></script></body>
 </html>
