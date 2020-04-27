@@ -93,3 +93,34 @@
 .button-increment:hover .icon-increment::after {
   background: $dark-color-opacity-50;
 }
+
+.iqdropdown-menu-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 19px auto 13px auto;
+  padding: 0 7px 0 14px;
+}
+
+.iqdropdown-menu-buttons__clear,
+.iqdropdown-menu-buttons__apply {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.iqdropdown-menu-buttons__clear {
+  color: $dark-color-opacity-50;
+  &:hover {
+    color: $dark-color-opacity-75;
+  }
+}
+
+.iqdropdown-menu-buttons__apply {
+  color: $purple-color;
+  &:hover {
+    color: $purple-hover-color;
+  }
+}

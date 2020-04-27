@@ -2,12 +2,15 @@ mixin dropdown
   div.iqdropdown
     p.iqdropdown-selection Сколько гостей
     div.iqdropdown-menu
-      div.iqdropdown-menu-option(data-id="adult")
+      div.iqdropdown-menu-option(data-id="adult" data-defaultcount="2" data-mincount="2" data-maxcount="5")
         div
           h3.iqdropdown-item Взрослые
-      div.iqdropdown-menu-option(data-id="children")
+      div.iqdropdown-menu-option(data-id="children" data-defaultcount="0" data-mincount="0" data-maxcount="5")
         div
           h3.iqdropdown-item Дети
-      div.iqdropdown-menu-option(data-id="babies")
+      div.iqdropdown-menu-option(data-id="babies" data-defaultcount="0" data-mincount="0" data-maxcount="5")
         div
           h3.iqdropdown-item Младенцы
+      div.iqdropdown-menu-buttons
+        button.iqdropdown-menu-buttons__clear(type='button') очистить
+        button.iqdropdown-menu-buttons__apply(type='button') применить
