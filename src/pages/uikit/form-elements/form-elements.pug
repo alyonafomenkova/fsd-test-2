@@ -8,6 +8,12 @@ block main
   include ../../../components/text-field/text-field
   include ../../../components/dropdown/dropdown
   +logo("../../../", "gray")
+  -
+    const options = [
+    {"title": "Взрослые", "id": "adult", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+    {"title": "Дети", "id": "children", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+    {"title": "Младенцы", "id": "babies", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+    ];
   section.content
     div.content__column
       div.block-element
@@ -22,8 +28,7 @@ block main
 
       div.block-element
         +elementDescription("Dropdown", "Default")
-        +dropdown
-
+        +dropdown("Сколько гостей", options)
 
 mixin elementDescription(title, state)
     div.block-element__description
