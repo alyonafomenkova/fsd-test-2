@@ -3,8 +3,8 @@ import '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.
 
 jQuery(function() {
   const menu = $('.iqdropdown');
-  const clearButton = $('.iqdropdown-menu-buttons__clear');
   const $this = $(this);
+  const clearButton = $('.iqdropdown-menu-buttons__clear');
   const setPlural = (count) => {
     if (count === 1) {
       return 'гость';
@@ -14,6 +14,27 @@ jQuery(function() {
       return 'гостей';
     }
   };
+
+  function clear() {
+    event.preventDefault();
+    // count = 0;
+    // totalItems = 0;
+    // console.log("CLEAR", id, "count: ", count, "totalItems: ",totalItems);
+    console.log("Reset!");
+    $('.counter').html('0');
+    $('.iqdropdown-selection').html('0 гостей');
+
+    ///
+    // adult, children, babies - const
+    // children[1].remove() в функцию removeControls(...)
+    $(".iqdropdown-menu-option")[0].children[1].remove();
+    $(".iqdropdown-menu-option")[1].children[1].remove();
+    $(".iqdropdown-menu-option")[2].children[1].remove();
+    $('.iqdropdown').iqDropdown(options);
+    ///
+  }
+
+  clearButton.click(clear);
 
   const options = {
     maxItems: Infinity,
@@ -28,19 +49,9 @@ jQuery(function() {
         return totalItems + ' ' + setPlural(totalItems);
       }
     },
-    onChange: (id, count, totalItems) => {
-      if (totalItems > 0) {
-        clearButton.click((event) => {
-          event.preventDefault();
-          count = 0;
-          totalItems = 0;
-          console.log("CLEAR", id, count, totalItems);
-        });
-      }
-      console.log("onChange: ", id, count, totalItems);//
-      //this.setSelectionText(totalItems);
+    onChange: function(id, count, totalItems) {
+      // clearButton.click(clear);
     },
-    // buttons to increment/decrement
     controls: {
       position: 'right',
       displayCls: 'iqdropdown-item-display',
@@ -48,23 +59,5 @@ jQuery(function() {
       counterCls: 'counter'
     },
   };
-
   $('.iqdropdown').iqDropdown(options);
-
-  $this.off('click').on('click', $this.click((event) => {
-      console.log("$this: ", $this);//
-      //event.preventDefault();
-    console.log("event.target: ", event.target);
-    const cond1 = $(event.target).hasClass('iqdropdown-selection');
-    const cond2 = $(event.target).hasClass('iqdropdown-menu-buttons__apply');
-      if (cond1 || cond2) {
-        console.log("toggleClass: ", event.target);
-        //$this.toggleClass('menu-open');
-      }
-    }));
-
-  //});
-
-
-  //console.log("totalItems: ", options.totalItems);
 });
