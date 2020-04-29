@@ -1,4 +1,5 @@
 import './dropdown.scss';
+import './dropdown.pug';
 import '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
 
 jQuery(function() {
@@ -14,28 +15,11 @@ jQuery(function() {
       return 'гостей';
     }
   };
-
-  function clear() {
+  const clear = () => {
     event.preventDefault();
-    // count = 0;
-    // totalItems = 0;
-    // console.log("CLEAR", id, "count: ", count, "totalItems: ",totalItems);
-    console.log("Reset!");
-    $('.counter').html('0');
-    $('.iqdropdown-selection').html('0 гостей');
-
-    ///
-    // adult, children, babies - const
-    // children[1].remove() в функцию removeControls(...)
-    $(".iqdropdown-menu-option")[0].children[1].remove();
-    $(".iqdropdown-menu-option")[1].children[1].remove();
-    $(".iqdropdown-menu-option")[2].children[1].remove();
+    $( ".iqdropdown-menu" ).find( ".iqdropdown-item-controls" ).remove();
     $('.iqdropdown').iqDropdown(options);
-    ///
-  }
-
-  clearButton.click(clear);
-
+  };
   const options = {
     maxItems: Infinity,
     minItems: 0,
@@ -49,9 +33,6 @@ jQuery(function() {
         return totalItems + ' ' + setPlural(totalItems);
       }
     },
-    onChange: function(id, count, totalItems) {
-      // clearButton.click(clear);
-    },
     controls: {
       position: 'right',
       displayCls: 'iqdropdown-item-display',
@@ -59,5 +40,6 @@ jQuery(function() {
       counterCls: 'counter'
     },
   };
+  clearButton.click(clear);
   $('.iqdropdown').iqDropdown(options);
 });
