@@ -37,6 +37,7 @@
   "dependencies": {
     "item-quantity-dropdown": "^2.1.0",
     "jquery": "^3.5.0",
+    "jquery-mask-plugin": "^1.14.16",
     "normalize.scss": "^0.1.0",
     "pug-html-loader": "^1.1.5"
   }

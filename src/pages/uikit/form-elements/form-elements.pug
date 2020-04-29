@@ -6,29 +6,35 @@ block title
 block main
   include ../../../components/logo/logo
   include ../../../components/text-field/text-field
+  include ../../../components/masked-text-field/masked-text-field
   include ../../../components/dropdown/dropdown
-  +logo("../../../", "gray")
+  +logo('../../../', 'gray')
   -
     const options = [
-    {"title": "Взрослые", "id": "adult", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-    {"title": "Дети", "id": "children", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-    {"title": "Младенцы", "id": "babies", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+    {'title': 'Взрослые', 'id': 'adult', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Дети', 'id': 'children', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Младенцы', 'id': 'babies', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
     ];
   section.content
     div.content__column
       div.block-element
-        +elementDescription("Text Field", "Default")
+        +elementDescription('Text Field', 'Default')
         div.block-element__inputs-wrapper
-          +textField("email", "email", "", "email-id", "Email")
+          +textField('email', 'email', '', 'email-id', 'Email')
 
       div.block-element
-        +elementDescription("Text Field", "Hover / Focus")
+        +elementDescription('Text Field', 'Hover / Focus')
         div.block-element__inputs-wrapper
-          +textField("text", "text", "focused", "text-id", "This is pretty awesome")
+          +textField('text', 'text', 'focused', 'text-id', 'This is pretty awesome')
 
       div.block-element
-        +elementDescription("Dropdown", "Default")
-        +dropdown("Сколько гостей", options)
+        +elementDescription('Dropdown', 'Default')
+        +dropdown('Сколько гостей', options)
+
+      div.block-element
+        +elementDescription('masked text field', 'Default')
+        div.block-element__inputs-wrapper
+          +maskedTextField('date', 'masked-text', 'focused masked-text-field_date', 'masked-text', 'дд.мм.гггг')
 
 mixin elementDescription(title, state)
     div.block-element__description
