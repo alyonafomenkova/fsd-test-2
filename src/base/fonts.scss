@@ -37,3 +37,12 @@
   src: url("~Fonts/quicksand-bold.woff2") format("woff2"), url("~Fonts/quicksand-bold.woff") format("woff"),
   url("~Fonts/quicksand-bold.ttf") format("truetype"), url("~Fonts/quicksand-bold.svg#Quicksand") format("svg");
 }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("~Fonts/materialIcons-regular.woff2") format("woff2"), url("~Fonts/materialIcons-regular.woff") format("woff"),
+  url("~Fonts/materialIcons-regular.ttf") format("truetype"), url("~Fonts/materialIcons-regular.svg#MaterialIcons-Regular") format("svg");
+}
