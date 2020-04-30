@@ -1,20 +1,8 @@
-mixin maskedTextField(type, name, classes, id, placeholder, readOnly = false)
-  -
-    let classesList
-    if(typeof(classes) !== "undefined" && classes) {
-    classesList = classes.split(",")
-    }
-    let allClasses = "";
-    if(typeof(classesList) !== "undefined" && classesList) {
-      for (let i = 0; i < classesList.length; i++) {
-        allClasses = allClasses + " masked-text-field_" + classesList[i].trim()
-      }
-    }
+mixin maskedTextField(type, name, classes, placeholder, readOnly = false)
   input.masked-text-field(
     type = type,
     name = name,
-    class = allClasses,
-    id = id || '',
+    class = classes,
     placeholder = placeholder || '',
     readOnly = readOnly || false
   )
