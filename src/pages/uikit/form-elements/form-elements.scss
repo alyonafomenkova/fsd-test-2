@@ -24,3 +24,17 @@
     color: $dark-color-opacity-50;
   }
 }
+
+.block-element:nth-of-type(4) {
+  margin-bottom: 43px;
+}
+
+.block-element__inputs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.block-element__half-column {
+  width: 150px;
+}

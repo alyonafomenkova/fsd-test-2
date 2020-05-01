@@ -1,0 +1,132 @@
+@import '../../base/theme.scss';
+@import '../../base/fonts.scss';
+@import '../masked-text-field/masked-text-field';
+@import '../buttons/buttons';
+@import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+
+.datepicker-inline .datepicker {
+  position: absolute;
+}
+
+.datepicker {
+  width: 320px;
+  border: 1px solid $dark-color-opacity-25;
+  box-shadow: 0 10px 20px $dark-color-opacity-5;
+}
+
+.datepicker--pointer {
+  display: none;
+}
+
+.datepicker--nav {
+  padding: 18px 20px 26px 18px;
+  border: none;
+  &-title {
+    font-family: Quicksand, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.datepicker--nav-prev,
+.datepicker--nav-next {
+  height: 25px;
+ }
+
+.datepicker--nav-action:hover,
+.datepicker--nav-title:hover {
+  background-color: inherit;
+}
+
+.datepicker--nav-prev span,
+.datepicker--nav-next span {
+  display: inline-block;
+  width: 24px;
+  font-family: 'Material Icons';
+  font-size: 24px;
+  color: $purple-color;
+}
+
+.datepicker--nav-prev span:hover,
+.datepicker--nav-next span:hover {
+  color: $purple-hover-color;
+}
+
+.datepicker--content {
+  padding: 0 20px 0 21px;
+}
+
+.datepicker--days-names {
+  margin-bottom: 15px;
+}
+
+.datepicker--day-name {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: none;
+  color: $purple-color;
+}
+
+.datepicker--cells {
+  border-right: 22px;
+}
+
+.datepicker--cell-day {
+  height: 40px;
+  border-radius: 22px;
+}
+
+.datepicker--cell-day.-other-month-,
+.datepicker--cell-year.-other-decade- {
+  color: $dark-color-opacity-25;
+}
+
+.datepicker--cell.-current- {
+  background: $green-gradient;
+  color: $white-color;
+}
+
+.datepicker--cell.-selected-,
+.datepicker--cell.-focus-,
+.datepicker--cell.-selected-:hover,
+.datepicker--cell.-selected-.-current-,
+.datepicker--cell.-selected-.-focus- {
+  background: $purple-gradient
+}
+
+.datepicker--buttons {
+  width: 280px;
+  margin: 18px auto 0 auto;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  border-top: none;
+}
+
+.datepicker--button {
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-color-opacity-50;
+  &:hover {
+    background: inherit;
+    color: $dark-color-opacity-75;
+  }
+}
+
+.datepicker--button[data-action$="apply"] {
+  color: $purple-color;
+  text-align: right;
+  &:hover {
+    color: $purple-hover-color;
+  }
+}

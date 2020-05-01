@@ -388,6 +388,13 @@ th {
   src: local("Quicksand");
   src: url(fonts/quicksand-bold.woff2) format("woff2"), url(fonts/quicksand-bold.woff) format("woff"), url(fonts/quicksand-bold.ttf) format("truetype"), url(fonts/quicksand-bold.svg#Quicksand) format("svg"); }
 
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
 html {
   box-sizing: border-box;
   font-size: 14px; }

@@ -8,6 +8,7 @@ block main
   include ../../../components/text-field/text-field
   include ../../../components/masked-text-field/masked-text-field
   include ../../../components/dropdown/dropdown
+  include ../../../components/date-dropdown/date-dropdown
   +logo('../../../', 'gray')
   -
     const options = [
@@ -19,13 +20,11 @@ block main
     div.content__column
       div.block-element
         +elementDescription('Text Field', 'Default')
-        div.block-element__inputs-wrapper
-          +textField('email', 'email', '', 'email-id', 'Email')
+        +textField('email', 'email', '', 'email-id', 'Email')
 
       div.block-element
         +elementDescription('Text Field', 'Hover / Focus')
-        div.block-element__inputs-wrapper
-          +textField('text', 'text', 'focused', 'text-id', 'This is pretty awesome')
+        +textField('text', 'text', 'focused', 'text-id', 'This is pretty awesome')
 
       div.block-element
         +elementDescription('Dropdown', 'Default')
@@ -33,8 +32,16 @@ block main
 
       div.block-element
         +elementDescription('masked text field', 'Default')
+        +maskedTextField('date', 'masked-text', 'masked-text', 'masked-text-field_date', 'дд.мм.гггг')
+
+      div.block-element
         div.block-element__inputs-wrapper
-          +maskedTextField('date', 'masked-text', 'focused masked-text-field_date', 'masked-text', 'дд.мм.гггг')
+          div.block-element__half-column
+            +elementDescription('date Dropdown')
+            +date-dropdown('start')
+          div.block-element__half-column
+            +elementDescription('date Dropdown')
+            +date-dropdown('end')
 
 mixin elementDescription(title, state)
     div.block-element__description

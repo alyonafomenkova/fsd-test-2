@@ -16,17 +16,69 @@
             <h3 class="block-element__title">Text Field</h3>
             <p class="block-element__state">Default</p>
           </div>
-          <div class="block-element__inputs-wrapper">
-                <input class="text-field" type="email" name="email" id="email-id" placeholder="Email">
-          </div>
+              <input class="text-field" type="email" name="email" id="email-id" placeholder="Email">
         </div>
         <div class="block-element">
           <div class="block-element__description">
             <h3 class="block-element__title">Text Field</h3>
             <p class="block-element__state">Hover / Focus</p>
           </div>
+              <input class="text-field  text-field_focused" type="text" name="text" id="text-id" placeholder="This is pretty awesome">
+        </div>
+        <div class="block-element">
+          <div class="block-element__description">
+            <h3 class="block-element__title">Dropdown</h3>
+            <p class="block-element__state">Default</p>
+          </div>
+              <div class="iqdropdown">
+                <p class="iqdropdown-selection">Сколько гостей
+                  <div class="iqdropdown-menu">
+                    <div class="iqdropdown-menu-option" data-id="adult" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                      <div>
+                        <h3 class="iqdropdown-item">Взрослые</h3>
+                      </div>
+                    </div>
+                    <div class="iqdropdown-menu-option" data-id="children" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                      <div>
+                        <h3 class="iqdropdown-item">Дети</h3>
+                      </div>
+                    </div>
+                    <div class="iqdropdown-menu-option" data-id="babies" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                      <div>
+                        <h3 class="iqdropdown-item">Младенцы</h3>
+                      </div>
+                    </div>
+                    <div class="iqdropdown-menu-buttons">
+                      <button class="iqdropdown-menu-buttons__clear" type="button" style="visibility:hidden;">очистить</button>
+                      <button class="iqdropdown-menu-buttons__apply" type="button">применить</button>
+                    </div>
+                  </div>
+                </p>
+              </div>
+        </div>
+        <div class="block-element">
+          <div class="block-element__description">
+            <h3 class="block-element__title">masked text field</h3>
+            <p class="block-element__state">Default</p>
+          </div>
+              <input class="masked-text-field masked-text-field_date" type="date" name="masked-text" id="masked-text" placeholder="дд.мм.гггг">
+        </div>
+        <div class="block-element">
           <div class="block-element__inputs-wrapper">
-                <input class="text-field  text-field_focused" type="text" name="text" id="text-id" placeholder="This is pretty awesome">
+            <div class="block-element__half-column">
+              <div class="block-element__description">
+                <h3 class="block-element__title">date Dropdown</h3>
+                <p class="block-element__state"></p>
+              </div>
+                      <input class="masked-text-field date-dropdown atepicker-here" type="text" name="date-dropdown" id="start" placeholder="дд.мм.гггг">
+            </div>
+            <div class="block-element__half-column">
+              <div class="block-element__description">
+                <h3 class="block-element__title">date Dropdown</h3>
+                <p class="block-element__state"></p>
+              </div>
+                      <input class="masked-text-field date-dropdown atepicker-here" type="text" name="date-dropdown" id="end" placeholder="дд.мм.гггг">
+            </div>
           </div>
         </div>
       </div>
