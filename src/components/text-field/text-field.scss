@@ -1,6 +1,35 @@
 @import '../../base/theme.scss';
 
 .text-field {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-field__label {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-color;
+}
+
+.text-field__state {
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-color-opacity-50;
+}
+
+.text-field__input {
   box-sizing: border-box;
   width: 100%;
   height:44px;
@@ -9,7 +38,7 @@
   border-radius: 4px;
   &:hover,
   &:focus,
-  &_focused {
+  &--focused {
     border-color: $dark-color-opacity-50;
   }
   &::placeholder {
@@ -17,8 +46,8 @@
   }
 }
 
-.text-field:hover::placeholder,
-.text-field:focus::placeholder,
-.text-field_focused::placeholder {
+.text-field__input:hover::placeholder,
+.text-field__input:focus::placeholder,
+.text-field__input--focused::placeholder {
   color: $dark-color-opacity-75;
 }

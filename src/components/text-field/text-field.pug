@@ -1,20 +1,13 @@
-mixin textField(type, name, classes, id, placeholder, readOnly = false)
-  -
-    let classesList
-    if(typeof(classes) !== "undefined" && classes) {
-    classesList = classes.split(",")
-    }
-    let allClasses = "";
-    if(typeof(classesList) !== "undefined" && classesList) {
-      for (let i = 0; i < classesList.length; i++) {
-        allClasses = allClasses + " text-field_" + classesList[i].trim()
-      }
-    }
-  input.text-field(
-    type = type,
-    name = name,
-    class = allClasses,
-    id = id || '',
-    placeholder = placeholder || '',
-    readOnly = readOnly || false
+mixin textField(type, name, classes, placeholder, label = null, uikitState='default', readOnly = false)
+  div.text-field
+    if label
+      label.text-field__label !{label}
+    if uikitState
+      span.text-field__state !{uikitState}
+    input.text-field__input(
+      type = type,
+      name = name,
+      class = classes,
+      placeholder = placeholder || '',
+      readOnly = readOnly || false
   )
