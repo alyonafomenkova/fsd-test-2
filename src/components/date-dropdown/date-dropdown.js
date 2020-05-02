@@ -4,6 +4,7 @@ import '../../../node_modules/air-datepicker/dist/js/datepicker.min.js';
 jQuery(function() {
   const $start = $('#start');
   const $end = $('#end');
+  const $filter = $('#filter');
   const baseOptions = {
     startDate: new Date(),
     prevHtml: '<button class="buttons datepicker--nav-prev" type="button"><span>arrow_back</span></button>',
@@ -28,6 +29,19 @@ jQuery(function() {
       })
     }
   };
+  const additionalOptionsForFilterInput = {
+    range: true,
+    dateFormat: 'dd M',
+    multipleDatesSeparator: ' - ',
+    onSelect: function (formattedDate, date) {
+      const $applyButton = $filter.datepicker().data('datepicker').$datepicker.find('.datepicker--button[data-action="apply"]');
+      $applyButton.click(() => {
+        event.preventDefault();
+        event.stopPropagation();
+        $filter.datepicker().data('datepicker').hide();
+      })
+    }
+  };
   const additionalOptionsForEndInput = {
     onSelect: function (formattedDate, date) {
       const $applyButton = $end.datepicker().data('datepicker').$datepicker.find('.datepicker--button[data-action="apply"]');
@@ -48,9 +62,10 @@ jQuery(function() {
     const options = $.extend({}, baseOptions, additionalOptions);
     return options;
   };
-
   $start.datepicker(createOptions(additionalOptionsForStartInput));
   $end.datepicker(createOptions(additionalOptionsForEndInput));
+  $filter.datepicker(createOptions(additionalOptionsForFilterInput));
   addApplyButton($start);
   addApplyButton($end);
+  addApplyButton($filter);
 });

@@ -4,6 +4,41 @@
 @import '../buttons/buttons';
 @import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 
+.date-dropdown {
+  position: relative;
+  cursor: pointer;
+  &--filter {
+    width: 266px;
+  }
+}
+
+.date-dropdown[id$="filter"] {
+  text-transform: lowercase;
+}
+
+.date-dropdown::after {
+  content: 'expand_more';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: $dark-color-opacity-50;
+  pointer-events: none;
+}
+
+.date-dropdown:hover::after {
+  color: $dark-color-opacity-75;
+}
+
 .datepicker-inline .datepicker {
   position: absolute;
 }
@@ -96,7 +131,37 @@
 .datepicker--cell.-selected-:hover,
 .datepicker--cell.-selected-.-current-,
 .datepicker--cell.-selected-.-focus- {
-  background: $purple-gradient
+  background: $purple-gradient;
+}
+
+.datepicker--cell.-in-range- {
+  background:  $purple-gradient-25;
+}
+
+.datepicker--cell.-range-from-,
+.datepicker--cell.-range-to- {
+  position: relative;
+  border-radius: 50%;
+  background:  $purple-gradient-25;
+  z-index: 1;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background: $purple-gradient-25;
+  }
+}
+
+.datepicker--cell.-range-to-::before {
+  left: 0;
+}
+
+.datepicker--cell.-selected-{
+  background:  $purple-gradient;
 }
 
 .datepicker--buttons {

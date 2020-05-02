@@ -38,10 +38,14 @@ block main
         div.block-element__inputs-wrapper
           div.block-element__half-column
             +elementDescription('date Dropdown')
-            +date-dropdown('start')
+            +date-dropdown('start', 'дд.мм.гггг')
           div.block-element__half-column
             +elementDescription('date Dropdown')
-            +date-dropdown('end')
+            +date-dropdown('end', 'дд.мм.гггг')
+
+      div.block-element
+        +elementDescription('filter date dropdown', '')
+        +date-dropdown('filter', '19 авг - 23 авг', 'filter')
 
 mixin elementDescription(title, state)
     div.block-element__description

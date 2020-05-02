@@ -1,3 +1,4 @@
 include ../masked-text-field/masked-text-field
-mixin date-dropdown(id)
-  +maskedTextField('text', 'date-dropdown', id, 'date-dropdown atepicker-here', 'дд.мм.гггг')
+mixin date-dropdown(id, placeholder, mod='')
+  div(class=(mod.length > 0) ? `date-dropdown date-dropdown--${mod}` : `date-dropdown`)
+    +maskedTextField('text', 'date-dropdown', id, 'date-dropdown atepicker-here', placeholder)
