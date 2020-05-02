@@ -9,6 +9,7 @@ block main
   include ../../../components/masked-text-field/masked-text-field
   include ../../../components/dropdown/dropdown
   include ../../../components/date-dropdown/date-dropdown
+  include ../../../components/subscription-text-field/subscription-text-field
   +logo('../../../', 'gray')
   -
     const options = [
@@ -34,6 +35,8 @@ block main
         +elementDescription('masked text field', 'Default')
         +maskedTextField('date', 'masked-text', 'masked-text', 'masked-text-field_date', 'дд.мм.гггг')
 
+      div.empty-block
+
       div.block-element
         div.block-element__inputs-wrapper
           div.block-element__half-column
@@ -43,9 +46,17 @@ block main
             +elementDescription('date Dropdown')
             +date-dropdown('end', 'дд.мм.гггг')
 
+      div.empty-block
+
       div.block-element
         +elementDescription('filter date dropdown', '')
         +date-dropdown('filter', '19 авг - 23 авг', 'filter')
+
+      div.empty-block
+
+      div.block-element
+        +elementDescription('subscription text field', '')
+        +subscriptionTextField('email')
 
 mixin elementDescription(title, state)
     div.block-element__description
