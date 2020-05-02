@@ -7,14 +7,14 @@ body {
   margin: 0 auto;
  }
 
-.content {
+.container {
   display: flex;
   justify-content: space-between;
   margin: 61px auto 0 auto;
-  &__item:first-child {
+  &__content:first-child {
     padding-left: 9.4%;
   }
-  &__item:last-child {
+  &__content:last-child {
     padding-right: 5.3%;
   }
 }
@@ -28,10 +28,9 @@ body {
     margin-right: 40px;
     border-radius: 6px;
   }
-}
-
-.color-block-info {
-  margin-top: 5px;
+  &__info {
+    margin-top: 5px;
+  }
   &__description {
     margin: 0;
     font-family: Quicksand;
