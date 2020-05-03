@@ -1,6 +1,12 @@
 import './masked-text-field.scss';
-import 'jquery-mask-plugin';
+import 'inputmask/dist/jquery.inputmask';
 
 jQuery(function() {
-  $('.masked-text-field_date').mask('00.00.0000');
+  const $selector = $('.masked-text-field__input');
+  const options = {
+    alias: 'datetime',
+    inputFormat: 'dd.mm.yyyy',
+    placeholder: 'дд.мм.гггг'
+  }
+  $selector.inputmask(options);
 });
