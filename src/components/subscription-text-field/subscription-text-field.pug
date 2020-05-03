@@ -1,6 +1,5 @@
 include ../text-field/text-field
-
 mixin subscriptionTextField(classes)
   div.subscription-text-field
-    +textField('email', 'email', classes, 'email-id', 'Email')
+    +textField('email', 'email', 'sub-email-id', classes, 'Email', 'subscription text field', '')
     i.subscription-text-field__arrow arrow_forward
