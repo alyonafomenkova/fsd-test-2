@@ -1,6 +1,36 @@
 @import '../../base/theme.scss';
 @import '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
+.dropdown__info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.dropdown__label {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-color;
+}
+
+.dropdown__state {
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-color-opacity-50;
+}
+
 .iqdropdown {
   height: 44px;
   border: 1px solid $dark-color-opacity-25;
