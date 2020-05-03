@@ -9,104 +9,87 @@
   <body>
         <div class="logo"><img class="logo_gray" src="fonts/gray-logo.svg" alt="logo">
         </div>
-    <section class="content">
-      <div class="content__column">
-        <div class="block-element">
-          <div class="block-element__description">
-            <h3 class="block-element__title">Text Field</h3>
-            <p class="block-element__state">Default</p>
-          </div>
-              <input class="text-field" type="email" name="email" id="email-id" placeholder="Email">
+    <div class="form-elements">
+      <div class="form-elements__elements-wrapper">
+        <div class="form-elements__element form-elements__element--margin-bottom-21">
+              <div class="text-field">
+                <label class="text-field__label" for="email-id">Text Field</label><span class="text-field__state">Default</span>
+                <input class="text-field__input" type="email" name="email" id="email-id" placeholder="Email">
+              </div>
         </div>
-        <div class="block-element">
-          <div class="block-element__description">
-            <h3 class="block-element__title">Text Field</h3>
-            <p class="block-element__state">Hover / Focus</p>
-          </div>
-              <input class="text-field  text-field_focused" type="text" name="text" id="text-id" placeholder="This is pretty awesome">
+        <div class="form-elements__element form-elements__element--margin-bottom-21">
+              <div class="text-field">
+                <label class="text-field__label" for="text-1-id">Text Field</label><span class="text-field__state">Hover / Focus</span>
+                <input class="text-field__input text-field__input--focused" type="text" name="text" id="text-1-id" placeholder="This is pretty awesome">
+              </div>
         </div>
-        <div class="block-element">
-          <div class="block-element__description">
-            <h3 class="block-element__title">Dropdown</h3>
-            <p class="block-element__state">Default</p>
-          </div>
-              <div class="iqdropdown">
-                <p class="iqdropdown-selection">Сколько гостей
-                  <div class="iqdropdown-menu">
-                    <div class="iqdropdown-menu-option" data-id="adult" data-defaultcount="0" data-mincount="0" data-maxcount="10">
-                      <div>
-                        <h3 class="iqdropdown-item">Взрослые</h3>
+        <div class="form-elements__element form-elements__element--margin-bottom-24">
+              <div class="dropdown">
+                <div class="dropdown__info">
+                  <h3 class="dropdown__lable">Dropdown</h3><span class="dropdown__state">default</span>
+                </div>
+                <div class="iqdropdown">
+                  <p class="iqdropdown-selection">Сколько гостей
+                    <div class="iqdropdown-menu">
+                      <div class="iqdropdown-menu-option" data-id="adult" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                        <div>
+                          <h3 class="iqdropdown-item">Взрослые</h3>
+                        </div>
+                      </div>
+                      <div class="iqdropdown-menu-option" data-id="children" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                        <div>
+                          <h3 class="iqdropdown-item">Дети</h3>
+                        </div>
+                      </div>
+                      <div class="iqdropdown-menu-option" data-id="babies" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                        <div>
+                          <h3 class="iqdropdown-item">Младенцы</h3>
+                        </div>
+                      </div>
+                      <div class="iqdropdown-menu-buttons">
+                        <button class="iqdropdown-menu-buttons__clear" type="button" style="visibility:hidden;">очистить</button>
+                        <button class="iqdropdown-menu-buttons__apply" type="button">применить</button>
                       </div>
                     </div>
-                    <div class="iqdropdown-menu-option" data-id="children" data-defaultcount="0" data-mincount="0" data-maxcount="10">
-                      <div>
-                        <h3 class="iqdropdown-item">Дети</h3>
-                      </div>
-                    </div>
-                    <div class="iqdropdown-menu-option" data-id="babies" data-defaultcount="0" data-mincount="0" data-maxcount="10">
-                      <div>
-                        <h3 class="iqdropdown-item">Младенцы</h3>
-                      </div>
-                    </div>
-                    <div class="iqdropdown-menu-buttons">
-                      <button class="iqdropdown-menu-buttons__clear" type="button" style="visibility:hidden;">очистить</button>
-                      <button class="iqdropdown-menu-buttons__apply" type="button">применить</button>
-                    </div>
-                  </div>
-                </p>
+                  </p>
+                </div>
               </div>
         </div>
-        <div class="block-element">
-          <div class="block-element__description">
-            <h3 class="block-element__title">masked text field</h3>
-            <p class="block-element__state">Default</p>
-          </div>
-              <input class="masked-text-field masked-text-field_date" type="date" name="masked-text" id="masked-text" placeholder="дд.мм.гггг">
-        </div>
-        <div class="empty-block"></div>
-        <div class="block-element">
-          <div class="block-element__inputs-wrapper">
-            <div class="block-element__half-column">
-              <div class="block-element__description">
-                <h3 class="block-element__title">date Dropdown</h3>
-                <p class="block-element__state"></p>
-              </div>
-                  <div class="date-dropdown">
-                        <input class="masked-text-field date-dropdown atepicker-here" type="text" name="date-dropdown" id="start" placeholder="дд.мм.гггг">
-                  </div>
-            </div>
-            <div class="block-element__half-column">
-              <div class="block-element__description">
-                <h3 class="block-element__title">date Dropdown</h3>
-                <p class="block-element__state"></p>
-              </div>
-                  <div class="date-dropdown">
-                        <input class="masked-text-field date-dropdown atepicker-here" type="text" name="date-dropdown" id="end" placeholder="дд.мм.гггг">
-                  </div>
-            </div>
-          </div>
-        </div>
-        <div class="empty-block"></div>
-        <div class="block-element">
-          <div class="block-element__description">
-            <h3 class="block-element__title">filter date dropdown</h3>
-            <p class="block-element__state"></p>
-          </div>
-              <div class="date-dropdown date-dropdown--filter">
-                    <input class="masked-text-field date-dropdown atepicker-here" type="text" name="date-dropdown" id="filter" placeholder="19 авг - 23 авг">
+        <div class="form-elements__element form-elements__element--margin-bottom-40">
+              <div class="masked-text-field">
+                <label class="masked-text-field__label" for="masked-text-id">masked text field</label><span class="masked-text-field__state">default</span>
+                <input class="masked-text-field__input masked-text-field--date" type="text" name="masked-text" id="masked-text-id" placeholder="дд.мм.гггг">
               </div>
         </div>
-        <div class="empty-block"></div>
-        <div class="block-element">
-          <div class="block-element__description">
-            <h3 class="block-element__title">subscription text field</h3>
-            <p class="block-element__state"></p>
-          </div>
+        <div class="form-elements__element form-elements__element--margin-bottom-40">
+              <div class="date-dropdown">
+                <div class="date-dropdown__item">
+                  <label class="date-dropdown__label" for="start1-id">date Dropdown</label>
+                  <input class="date-dropdown__input" id="start1-id" placeholder="дд.мм.гггг">
+                </div>
+                <div class="date-dropdown__item">
+                  <label class="date-dropdown__label" for="end1-id">date Dropdown</label>
+                  <input class="date-dropdown__input" id="end1-id" placeholder="дд.мм.гггг">
+                </div>
+              </div>
+        </div>
+        <div class="form-elements__element form-elements__element--margin-bottom-40">
+              <div class="date-dropdown">
+                <div class="date-dropdown__item date-dropdown__item--filter">
+                  <label class="date-dropdown__label" for="filter1-id">filter date dropdown</label>
+                  <input class="date-dropdown__input" id="filter1-id" placeholder="19 авг - 23 авг">
+                </div>
+              </div>
+        </div>
+        <div class="form-elements__element">
               <div class="subscription-text-field">
-                    <input class="text-field  text-field_email" type="email" name="email" id="email-id" placeholder="Email"><i class="subscription-text-field__arrow">arrow_forward</i>
+                    <div class="text-field">
+                      <label class="text-field__label" for="sub-email-id">subscription text field</label>
+                      <input class="text-field__input" type="email" name="email" id="sub-email-id" placeholder="Email">
+                    </div><i class="subscription-text-field__arrow">arrow_forward</i>
               </div>
         </div>
       </div>
-    </section>
+    </div>
   <script src="form-elements.bundle.js"></script></body>
 </html>

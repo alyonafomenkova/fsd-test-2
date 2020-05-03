@@ -2,39 +2,22 @@
 @import '../colors-and-type/colors-and-type.scss';
 @import '../../../components/text-field/text-field.scss';
 
-.content__column {
-  padding-left: 8.7%;
-}
-
-.empty-block {
-  height: 22px;
-}
-
-.block-element {
-  width: 320px;
-  margin-bottom: 21px;
-  &__description {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 4px;
-  }
-  &__state {
-    margin: 0;
-    font-family: Montserrat;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $dark-color-opacity-50;
-  }
-}
-
-.block-element__inputs-wrapper {
-  display: flex;
+.form-elements {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
   justify-content: space-between;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 1160px;
 }
 
-.block-element__half-column {
-  width: 150px;
+.form-elements__element {
+  &--margin-bottom-21 {
+    margin-bottom: 21px;
+  }
+  &--margin-bottom-24 {
+    margin-bottom: 24px;
+  }
+  &--margin-bottom-40 {
+    margin-bottom: 40px;
+  }
 }

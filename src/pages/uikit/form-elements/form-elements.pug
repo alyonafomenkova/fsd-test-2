@@ -17,48 +17,24 @@ block main
     {'title': 'Дети', 'id': 'children', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
     {'title': 'Младенцы', 'id': 'babies', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
     ];
-  section.content
-    div.content__column
-      div.block-element
-        +elementDescription('Text Field', 'Default')
-        +textField('email', 'email', '', 'email-id', 'Email')
-
-      div.block-element
-        +elementDescription('Text Field', 'Hover / Focus')
-        +textField('text', 'text', 'focused', 'text-id', 'This is pretty awesome')
-
-      div.block-element
-        +elementDescription('Dropdown', 'Default')
-        +dropdown('Сколько гостей', options)
-
-      div.block-element
-        +elementDescription('masked text field', 'Default')
-        +maskedTextField('date', 'masked-text', 'masked-text', 'masked-text-field_date', 'дд.мм.гггг')
-
-      div.empty-block
-
-      div.block-element
-        div.block-element__inputs-wrapper
-          div.block-element__half-column
-            +elementDescription('date Dropdown')
-            +date-dropdown('start', 'дд.мм.гггг')
-          div.block-element__half-column
-            +elementDescription('date Dropdown')
-            +date-dropdown('end', 'дд.мм.гггг')
-
-      div.empty-block
-
-      div.block-element
-        +elementDescription('filter date dropdown', '')
-        +date-dropdown('filter', '19 авг - 23 авг', 'filter')
-
-      div.empty-block
-
-      div.block-element
-        +elementDescription('subscription text field', '')
-        +subscriptionTextField('email')
-
-mixin elementDescription(title, state)
-    div.block-element__description
-      h3.block-element__title #{title}
-      p.block-element__state #{state}
+    const dropdownData = [
+    {'id': 'start1-id', 'label': 'date Dropdown', 'placeholder': 'дд.мм.гггг', 'classes': ''},
+    {'id': 'end1-id', 'label': 'date Dropdown', 'placeholder': 'дд.мм.гггг', 'classes': ''},
+    ];
+    const filterDropdownData = {'id': 'filter1-id', 'label': 'filter date dropdown', 'placeholder': '19 авг - 23 авг', 'classes': ''};
+  div.form-elements
+    div.form-elements__elements-wrapper
+      div.form-elements__element.form-elements__element--margin-bottom-21
+        +textField('email', 'email', 'email-id', '', 'Email', 'Text Field', 'Default')
+      div.form-elements__element.form-elements__element--margin-bottom-21
+        +textField('text', 'text', 'text-1-id', 'text-field__input--focused', 'This is pretty awesome', 'Text Field', 'Hover / Focus')
+      div.form-elements__element.form-elements__element--margin-bottom-24
+        +dropdown('Сколько гостей', options, 'Dropdown')
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        +maskedTextField('text', 'masked-text', 'masked-text-id', 'masked-text-field--date', 'дд.мм.гггг', 'masked text field')
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        +date-dropdown(true, dropdownData)
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        +date-dropdown(false, filterDropdownData)
+      div.form-elements__element
+        +subscriptionTextField('')
