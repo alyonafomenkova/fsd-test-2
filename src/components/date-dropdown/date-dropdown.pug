@@ -1,4 +1,20 @@
 include ../masked-text-field/masked-text-field
-mixin date-dropdown(id, placeholder, mod='')
-  div(class=(mod.length > 0) ? `date-dropdown date-dropdown--${mod}` : `date-dropdown`)
-    +maskedTextField('text', 'date-dropdown', id, 'date-dropdown atepicker-here', placeholder)
+mixin date-dropdown(isTwoInputs, dropdownData)
+  div.date-dropdown
+    if isTwoInputs
+      each item in dropdownData
+        div.date-dropdown__item
+          label.date-dropdown__label(for=item.id) !{item.label}
+          input.date-dropdown__input(
+            id = item.id,
+            class = item.classes,
+            placeholder = item.placeholder,
+          )
+    else
+      div.date-dropdown__item.date-dropdown__item--filter
+        label.date-dropdown__label(for=dropdownData.id) !{dropdownData.label}
+        input.date-dropdown__input(
+          id = dropdownData.id,
+          class = dropdownData.classes,
+          placeholder = dropdownData.placeholder,
+        )
