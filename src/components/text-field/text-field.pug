@@ -1,12 +1,13 @@
-mixin textField(type, name, classes, placeholder, label = null, uikitState='default', readOnly = false)
+mixin textField(type, name, id, classes, placeholder, label = null, uikitState='default', readOnly = false)
   div.text-field
     if label
-      label.text-field__label !{label}
+      label.text-field__label(for=id) !{label}
     if uikitState
       span.text-field__state !{uikitState}
     input.text-field__input(
       type = type,
       name = name,
+      id = id,
       class = classes,
       placeholder = placeholder || '',
       readOnly = readOnly || false
