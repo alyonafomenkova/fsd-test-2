@@ -10,6 +10,7 @@ block main
   include ../../../components/dropdown/dropdown
   include ../../../components/date-dropdown/date-dropdown
   include ../../../components/subscription-text-field/subscription-text-field
+  include ../../../components/checkbox-buttons/checkbox-buttons
   +logo('../../../', 'gray')
   -
     const options = [
@@ -22,6 +23,11 @@ block main
     {'id': 'end1-id', 'label': 'date Dropdown', 'placeholder': 'дд.мм.гггг', 'classes': ''},
     ];
     const filterDropdownData = {'id': 'filter1-id', 'label': 'filter date dropdown', 'placeholder': '19 авг - 23 авг', 'classes': ''};
+    const checkboxData = [
+    {'id': 'smoke-id', 'name': 'smoke', 'label': 'Можно курить', 'isChecked': 'false', 'classes': ''},
+    {'id': 'pets-id', 'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': 'true', 'classes': ''},
+    {'id': 'guests-id', 'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': 'true', 'classes': ''},
+    ];
   div.form-elements
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element--margin-bottom-21
@@ -38,3 +44,7 @@ block main
         +date-dropdown(false, filterDropdownData)
       div.form-elements__element
         +subscriptionTextField('')
+
+    div.form-elements__elements-wrapper
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        +checkboxButtons(checkboxData, 'Checkbox Buttons')

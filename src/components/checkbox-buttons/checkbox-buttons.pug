@@ -1,0 +1,15 @@
+mixin checkboxButtons(checkboxData, titleOfList=null)
+  div.checkbox
+    if titleOfList
+      h2.checkbox__title !{titleOfList}
+    ul.checkbox__list
+      each item in checkboxData
+        li.checkbox__item
+          input.checkbox__input.visually-hidden(
+            type = 'checkbox',
+            id = item.id,
+            name = item.name,
+            class = item.classes,
+            checked=(item.isChecked==='true' ? 'checked' : undefined),
+          )
+          label.checkbox__label(for=item.id) #{item.label}

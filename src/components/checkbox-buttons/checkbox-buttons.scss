@@ -1,0 +1,40 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+
+.checkbox__title {
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.checkbox__list {
+  margin-top: 16px;
+}
+
+.checkbox__input + label {
+  display: inline-flex;
+  width: 240px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.checkbox__input + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid $dark-color-opacity-25;
+  border-radius: 4px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.checkbox__input:checked + label::before {
+  border-color: #BC9CFF;
+  background-image: url("images/tick.svg");
+}
