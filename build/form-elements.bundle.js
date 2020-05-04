@@ -279,6 +279,29 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
+/***/ "./src/components/toggle-button/toggle-button.js":
+/*!*******************************************************!*\
+  !*** ./src/components/toggle-button/toggle-button.js ***!
+  \*******************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _toggle_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle-button.scss */ \"./src/components/toggle-button/toggle-button.scss\");\n/* harmony import */ var _toggle_button_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_toggle_button_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/toggle-button/toggle-button.js?");
+
+/***/ }),
+
+/***/ "./src/components/toggle-button/toggle-button.scss":
+/*!*********************************************************!*\
+  !*** ./src/components/toggle-button/toggle-button.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/toggle-button/toggle-button.scss?");
+
+/***/ }),
+
 /***/ "./src/pages/uikit/form-elements/form-elements.js":
 /*!********************************************************!*\
   !*** ./src/pages/uikit/form-elements/form-elements.js ***!
@@ -287,7 +310,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-elements.scss */ \"./src/pages/uikit/form-elements/form-elements.scss\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form_elements_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/dropdown/dropdown.js */ \"./src/components/dropdown/dropdown.js\");\n/* harmony import */ var _components_date_dropdown_date_dropdown_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/date-dropdown/date-dropdown.js */ \"./src/components/date-dropdown/date-dropdown.js\");\n/* harmony import */ var _components_masked_text_field_masked_text_field_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/masked-text-field/masked-text-field.js */ \"./src/components/masked-text-field/masked-text-field.js\");\n/* harmony import */ var _components_subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/subscription-text-field/subscription-text-field.js */ \"./src/components/subscription-text-field/subscription-text-field.js\");\n/* harmony import */ var _components_checkbox_buttons_checkbox_buttons_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../components/checkbox-buttons/checkbox-buttons.js */ \"./src/components/checkbox-buttons/checkbox-buttons.js\");\n/* harmony import */ var _components_radio_buttons_radio_buttons_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../components/radio-buttons/radio-buttons.js */ \"./src/components/radio-buttons/radio-buttons.js\");\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/pages/uikit/form-elements/form-elements.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-elements.scss */ \"./src/pages/uikit/form-elements/form-elements.scss\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form_elements_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/dropdown/dropdown.js */ \"./src/components/dropdown/dropdown.js\");\n/* harmony import */ var _components_date_dropdown_date_dropdown_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/date-dropdown/date-dropdown.js */ \"./src/components/date-dropdown/date-dropdown.js\");\n/* harmony import */ var _components_masked_text_field_masked_text_field_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/masked-text-field/masked-text-field.js */ \"./src/components/masked-text-field/masked-text-field.js\");\n/* harmony import */ var _components_subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/subscription-text-field/subscription-text-field.js */ \"./src/components/subscription-text-field/subscription-text-field.js\");\n/* harmony import */ var _components_checkbox_buttons_checkbox_buttons_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../components/checkbox-buttons/checkbox-buttons.js */ \"./src/components/checkbox-buttons/checkbox-buttons.js\");\n/* harmony import */ var _components_radio_buttons_radio_buttons_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../components/radio-buttons/radio-buttons.js */ \"./src/components/radio-buttons/radio-buttons.js\");\n/* harmony import */ var _components_toggle_button_toggle_button_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../components/toggle-button/toggle-button.js */ \"./src/components/toggle-button/toggle-button.js\");\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/pages/uikit/form-elements/form-elements.js?");
 
 /***/ }),
 

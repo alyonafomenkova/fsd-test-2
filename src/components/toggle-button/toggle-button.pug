@@ -1,0 +1,15 @@
+mixin toggleButton(toggleData, title=null)
+  div.toggle
+    if title
+      h2.toggle__title !{title}
+    ul.toggle__list
+      each item in toggleData
+        li.toggle__item
+          label.toggle__label(for=item.id) #{item.label}
+            input.toggle__input.visually-hidden(
+              type = 'checkbox',
+              name = item.name,
+              class = item.classes,
+              checked=(item.isChecked==='true' ? 'checked' : undefined),
+            )
+            span.toggle__slider

@@ -12,6 +12,7 @@ block main
   include ../../../components/subscription-text-field/subscription-text-field
   include ../../../components/checkbox-buttons/checkbox-buttons
   include ../../../components/radio-buttons/radio-buttons
+  include ../../../components/toggle-button/toggle-button
   +logo('../../../', 'gray')
   -
     const options = [
@@ -33,6 +34,10 @@ block main
     {'id': 'male-id', 'name': 'sex', 'label': 'Мужчина', 'isChecked': 'true', 'classes': ''},
     {'id': 'female-id', 'name': 'sex', 'label': 'Женщина', 'isChecked': 'false', 'classes': ''},
     ];
+    const toggleData = [
+    {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': 'true', 'classes': ''},
+    {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': 'false', 'classes': ''},
+    ];
   div.form-elements
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element--margin-bottom-21
@@ -53,5 +58,7 @@ block main
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element--margin-bottom-40
         +checkboxButtons(checkboxData, 'Checkbox Buttons')
-      div.form-elements__element.form-elements__element--margin-bottom-40
+      div.form-elements__element.form-elements__element--margin-bottom-35
         +radioButtons(radioData, 'Radio Buttons')
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        +toggleButton(toggleData, 'Toggle')

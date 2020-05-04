@@ -1,0 +1,56 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+
+.toggle__title {
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.toggle__list {
+  margin-top: 14px;
+}
+
+.toggle__item {
+  position: relative;
+  margin-bottom: 11px;
+  padding-left: 50px;
+}
+
+.toggle__slider {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 10px;
+  border: 1px solid $dark-color-opacity-25;
+  cursor: pointer;
+}
+
+.toggle__slider::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $dark-color-opacity-25;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle__input:checked + .toggle__slider {
+  border-color: $purple-color;
+}
+
+.toggle__input:checked + .toggle__slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+  background-image: $purple-gradient;
+}
