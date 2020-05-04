@@ -1,0 +1,15 @@
+mixin radioButtons(radioData, titleOfList=null)
+  div.radio
+    if titleOfList
+      h2.radio__title !{titleOfList}
+    ul.radio__list
+      each item in radioData
+        li.radio__item
+          input.radio__input.visually-hidden(
+            type = 'radio',
+            id = item.id,
+            name = item.name,
+            class = item.classes,
+            checked=(item.isChecked==='true' ? 'checked' : undefined),
+          )
+          label.radio__label(for=item.id) #{item.label}

@@ -11,6 +11,7 @@ block main
   include ../../../components/date-dropdown/date-dropdown
   include ../../../components/subscription-text-field/subscription-text-field
   include ../../../components/checkbox-buttons/checkbox-buttons
+  include ../../../components/radio-buttons/radio-buttons
   +logo('../../../', 'gray')
   -
     const options = [
@@ -27,6 +28,10 @@ block main
     {'id': 'smoke-id', 'name': 'smoke', 'label': 'Можно курить', 'isChecked': 'false', 'classes': ''},
     {'id': 'pets-id', 'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': 'true', 'classes': ''},
     {'id': 'guests-id', 'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': 'true', 'classes': ''},
+    ];
+    const radioData = [
+    {'id': 'male-id', 'name': 'sex', 'label': 'Мужчина', 'isChecked': 'true', 'classes': ''},
+    {'id': 'female-id', 'name': 'sex', 'label': 'Женщина', 'isChecked': 'false', 'classes': ''},
     ];
   div.form-elements
     div.form-elements__elements-wrapper
@@ -48,3 +53,5 @@ block main
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element--margin-bottom-40
         +checkboxButtons(checkboxData, 'Checkbox Buttons')
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        +radioButtons(radioData, 'Radio Buttons')
