@@ -24,3 +24,20 @@
     margin-bottom: 40px;
   }
 }
+
+.form-elements__title {
+  margin-bottom: 16px;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.form-elements__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &--like-buttons {
+    width: 90px;
+  }
+}

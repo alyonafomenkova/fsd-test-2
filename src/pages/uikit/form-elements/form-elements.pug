@@ -13,6 +13,7 @@ block main
   include ../../../components/checkbox-buttons/checkbox-buttons
   include ../../../components/radio-buttons/radio-buttons
   include ../../../components/toggle-button/toggle-button
+  include ../../../components/like-button/like-button
   +logo('../../../', 'gray')
   -
     const options = [
@@ -62,3 +63,8 @@ block main
         +radioButtons(radioData, 'Radio Buttons')
       div.form-elements__element.form-elements__element--margin-bottom-40
         +toggleButton(toggleData, 'Toggle')
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        h2.form-elements__title like button
+        div.form-elements__wrapper.form-elements__wrapper--like-buttons
+          +likeButton(2)
+          +likeButton(12, true)

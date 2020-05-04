@@ -1,0 +1,4 @@
+mixin likeButton(countOfLikes, isActive=false)
+  button.like-button(class=isActive ? 'like-button--active' : '')
+    span.like-button__icon favorite_border
+    span.like-button__count-likes #{countOfLikes}
