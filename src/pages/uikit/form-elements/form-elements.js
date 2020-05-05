@@ -8,3 +8,4 @@ import '../../../components/radio-buttons/radio-buttons.js';
 import '../../../components/toggle-button/toggle-button.js';
 import '../../../components/like-button/like-button.js';
 import '../../../components/rating/rating.js';
+import '../../../components/range-slider/range-slider.js';

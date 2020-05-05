@@ -15,6 +15,7 @@ block main
   include ../../../components/toggle-button/toggle-button
   include ../../../components/like-button/like-button
   include ../../../components/rating/rating
+  include ../../../components/range-slider/range-slider
   +logo('../../../', 'gray')
   -
     const options = [
@@ -74,3 +75,7 @@ block main
         div.form-elements__wrapper.form-elements__wrapper--rate-buttons
           +rating(4)
           +rating(5)
+
+    div.form-elements__elements-wrapper
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        +rangeSlider('Range Slider', 5000, 10000)
