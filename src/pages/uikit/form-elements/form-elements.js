@@ -7,3 +7,4 @@ import '../../../components/checkbox-buttons/checkbox-buttons.js';
 import '../../../components/radio-buttons/radio-buttons.js';
 import '../../../components/toggle-button/toggle-button.js';
 import '../../../components/like-button/like-button.js';
+import '../../../components/rating/rating.js';

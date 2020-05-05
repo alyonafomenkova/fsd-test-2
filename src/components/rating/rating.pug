@@ -1,0 +1,9 @@
+mixin rating(currentRating)
+  - let n = 1;
+  - let maxRating = 5;
+  div.rating
+    ul.rating__list
+      while n <= maxRating
+        li.rating__item(data-value = n, class = currentRating >= n ? 'selected' : '')
+          i.rating__star
+        - n++

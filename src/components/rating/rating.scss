@@ -1,0 +1,25 @@
+@import '../../base/theme.scss';
+
+.rating__list {
+  display: flex;
+  cursor: pointer;
+}
+
+.rating__item {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.rating__star {
+  display: inline-block;
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  background-image: $purple-gradient;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
