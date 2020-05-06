@@ -15,14 +15,8 @@
     cursor: pointer;
   }
   &__label {
+    @include h3-text;
     margin-bottom: 4px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $dark-color;
   }
   &__input {
     width: 100%;
@@ -53,6 +47,7 @@
 }
 
 .date-dropdown__item::after {
+  @include material-icons;
   content: 'expand_more';
   position: absolute;
   bottom: 0;
@@ -62,11 +57,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Material Icons;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 24px;
   color: $dark-color-opacity-50;
   pointer-events: none;
 }
@@ -93,11 +83,7 @@
   padding: 18px 20px 26px 18px;
   border: none;
   &-title {
-    font-family: Quicksand, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
+    @include h2-text;
   }
 }
 
@@ -113,10 +99,8 @@
 
 .datepicker--nav-prev span,
 .datepicker--nav-next span {
-  display: inline-block;
+  @include material-icons;
   width: 24px;
-  font-family: 'Material Icons';
-  font-size: 24px;
   color: $purple-color;
 }
 
@@ -134,12 +118,7 @@
 }
 
 .datepicker--day-name {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: none;
+  @include h3-text;
   color: $purple-color;
 }
 
@@ -210,13 +189,8 @@
 }
 
 .datepicker--button {
+  @include h3-text;
   display: inline-block;
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
   color: $dark-color-opacity-50;
   &:hover {
     background: inherit;

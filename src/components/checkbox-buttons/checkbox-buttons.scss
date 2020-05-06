@@ -2,10 +2,7 @@
 @import '../../base/base.scss';
 
 .checkbox__title {
-  font-family: Montserrat;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
+  @include h3-text;
 }
 
 .checkbox__list {
@@ -14,9 +11,11 @@
 
 .checkbox__input + label {
   display: inline-flex;
-  width: 240px;
   align-items: flex-start;
+  width: 240px;
   cursor: pointer;
+  color: $dark-color-opacity-50;
+  line-height: 1.286rem;
 }
 
 .checkbox__input + label::before {

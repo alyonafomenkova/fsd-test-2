@@ -1,4 +1,5 @@
 @import '../../base/theme.scss';
+@import '../../base/base.scss';
 @import '../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css';
 
 .range-slider {
@@ -41,15 +42,14 @@
 }
 
 .irs--flat .irs-single {
+  @include h3-text;
   display: block;
   top: -15px;
   right: 0;
   left: auto !important;
   visibility: visible !important;
+  font-weight: normal;
   color: $dark-color-opacity-50;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
   background-color: inherit;
   pointer-events: none;
 }

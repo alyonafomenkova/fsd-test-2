@@ -26,11 +26,8 @@
 }
 
 .form-elements__title {
+  @include h3-text;
   margin-bottom: 16px;
-  font-family: Montserrat;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
 }
 
 .form-elements__wrapper {
@@ -43,4 +40,9 @@
   &--rate-buttons {
     width: 260px;
   }
+}
+
+.form-elements__button {
+  margin-right: 20px;
+  margin-bottom: 30px;
 }

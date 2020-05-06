@@ -7,8 +7,8 @@ jQuery(function() {
   const $filter = $('#filter1-id');
   const baseOptions = {
     startDate: new Date(),
-    prevHtml: '<button class="buttons datepicker--nav-prev" type="button"><span>arrow_back</span></button>',
-    nextHtml: '<button class="buttons datepicker--nav-next" type="button"><span>arrow_forward</span></button>',
+    prevHtml: '<button class="button datepicker--nav-prev" type="button"><span>arrow_back</span></button>',
+    nextHtml: '<button class="button datepicker--nav-next" type="button"><span>arrow_forward</span></button>',
     navTitles: {
       days: 'MM yyyy',
       months: 'yyyy',

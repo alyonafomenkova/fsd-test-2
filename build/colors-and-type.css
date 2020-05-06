@@ -404,9 +404,11 @@ html {
 *::after {
   box-sizing: inherit; }
 
-body {
+body, h1, h2, h3 {
   margin: 0;
-  padding: 0;
+  padding: 0; }
+
+body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -414,9 +416,7 @@ body {
   line-height: 1.714rem;
   color: rgba(31, 32, 65, 0.75); }
 
-h1, h2, h3 {
-  margin: 0;
-  padding: 0;
+h1 {
   font-family: "Quicksand", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -425,14 +425,21 @@ h1, h2, h3 {
   color: #1F2041; }
 
 h2 {
+  font-family: "Quicksand", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
   font-size: 1.357rem;
-  line-height: 2.143rem; }
+  line-height: 1.714rem;
+  color: #1F2041; }
 
 h3 {
   font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
   font-size: 0.857rem;
   line-height: 1.071rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #1F2041; }
 
 ul {
   margin: 0;
@@ -478,7 +485,7 @@ body {
     margin-top: 5px; }
   .color-block__description {
     margin: 0;
-    font-family: Quicksand;
+    font-family: "Quicksand", "Arial", sans-serif;
     font-weight: normal;
     font-size: 19px;
     line-height: 29px; }

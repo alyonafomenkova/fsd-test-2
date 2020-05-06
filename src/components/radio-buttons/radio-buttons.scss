@@ -2,10 +2,7 @@
 @import '../../base/base.scss';
 
 .radio__title {
-  font-family: Montserrat;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
+  @include h3-text;
 }
 
 .radio__list {

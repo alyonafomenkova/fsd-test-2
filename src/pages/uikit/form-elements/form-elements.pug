@@ -16,6 +16,7 @@ block main
   include ../../../components/like-button/like-button
   include ../../../components/rating/rating
   include ../../../components/range-slider/range-slider
+  include ../../../components/buttons/buttons
   +logo('../../../', 'gray')
   -
     const options = [
@@ -77,5 +78,14 @@ block main
           +rating(5)
 
     div.form-elements__elements-wrapper
-      div.form-elements__element.form-elements__element--margin-bottom-40
+      div.form-elements__element.form-elements__element--margin-bottom-35
         +rangeSlider('Range Slider', 5000, 10000)
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        h2.form-elements__title buttons
+        +button('button', 'button button--small button--filled form-elements__button', 'CLICK ME')
+        +button('button', 'button button--small button--filled button--filled-hovered', 'CLICK ME')
+        +button('button', 'button button--small button--border form-elements__button', 'CLICK ME')
+        +button('button', 'button button--small button--border button--border-hovered form-elements__button', 'CLICK ME')
+        +button('button', 'button button--link form-elements__button', 'CLICK ME')
+        +button('button', 'button button--link button--link-hovered', 'CLICK ME')
+        +button('button', 'button button--action', 'перейти к оплате')

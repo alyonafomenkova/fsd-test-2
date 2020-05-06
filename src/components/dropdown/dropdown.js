@@ -17,7 +17,7 @@ jQuery(function() {
   };
   const clear = () => {
     event.preventDefault();
-    $( ".iqdropdown-menu" ).find( ".iqdropdown-item-controls" ).remove();
+    $('.iqdropdown-menu').find('.iqdropdown-item-controls').remove();
     $('.iqdropdown').iqDropdown(options);
   };
   const options = {
