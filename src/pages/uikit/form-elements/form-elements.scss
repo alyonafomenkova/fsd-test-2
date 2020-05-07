@@ -5,6 +5,7 @@
 .form-elements {
   display: grid;
   grid-template-columns: repeat(3, 320px);
+  grid-row-gap: 100px;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1160px;

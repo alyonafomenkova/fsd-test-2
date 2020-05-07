@@ -37,6 +37,10 @@
   }
 }
 
+.iqdropdown.menu-open {
+  border-color: $dark-color-opacity-50;
+}
+
 .iqdropdown .iqdropdown-menu-option {
   display: flex;
   justify-content: space-between;

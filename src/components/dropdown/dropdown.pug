@@ -1,17 +1,19 @@
-mixin dropdown(title, options, label = null, uikitState='default', expanded = false)
-  div.dropdown
+mixin dropdown(title, options, dropdownContentType, label = null, uikitState='default', expanded = false)
+  div.dropdown()
     if label
       div.dropdown__info
         h3.dropdown__lable !{label}
         if uikitState
           span.dropdown__state !{uikitState}
-    div.iqdropdown(class=expanded ? 'menu-open' : '')
+    div.iqdropdown(class=expanded ? 'menu-open' : '')(
+      class=dropdownContentType==='guests' ? 'iqdropdown--guests' : 'iqdropdown--facilities')
       p.iqdropdown-selection #{title}
         div.iqdropdown-menu
           each item in options
             div.iqdropdown-menu-option(data-id=item.id data-defaultcount=item.defaultCount data-mincount=item.minCount data-maxcount=item.maxCount)
               div
                 h3.iqdropdown-item #{item.title}
-          div.iqdropdown-menu-buttons
-            button.iqdropdown-menu-buttons__clear(type='button' style={'visibility': 'hidden'}) очистить
-            button.iqdropdown-menu-buttons__apply(type='button') применить
+          if(dropdownContentType === 'guests')
+            div.iqdropdown-menu-buttons
+              button.iqdropdown-menu-buttons__clear(type='button' style={'visibility': 'hidden'}) очистить
+              button.iqdropdown-menu-buttons__apply(type='button') применить

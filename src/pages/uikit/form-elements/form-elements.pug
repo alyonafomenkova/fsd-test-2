@@ -25,6 +25,16 @@ block main
     {'title': 'Дети', 'id': 'children', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
     {'title': 'Младенцы', 'id': 'babies', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
     ];
+    const optionsWithTwoGuests = [
+    {'title': 'Взрослые', 'id': 'adult', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Дети', 'id': 'children', 'defaultCount': '1', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Младенцы', 'id': 'babies', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+    ];
+    const facilities = [
+    {'title': 'спальни', 'id': 'bedroom', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'кровати', 'id': 'bed', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'ванные комнаты', 'id': 'bathroom', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+    ];
     const dropdownData = [
     {'id': 'start1-id', 'label': 'date Dropdown', 'placeholder': 'дд.мм.гггг', 'classes': ''},
     {'id': 'end1-id', 'label': 'date Dropdown', 'placeholder': 'дд.мм.гггг', 'classes': ''},
@@ -50,7 +60,7 @@ block main
       div.form-elements__element.form-elements__element--margin-bottom-21
         +textField('text', 'text', 'text-1-id', 'text-field__input--focused', 'This is pretty awesome', 'Text Field', 'Hover / Focus')
       div.form-elements__element.form-elements__element--margin-bottom-24
-        +dropdown('Сколько гостей', options, 'Dropdown')
+        +dropdown('Сколько гостей', options, 'guests', 'Dropdown')
       div.form-elements__element.form-elements__element--margin-bottom-40
         +maskedTextField('text', 'masked-text', 'masked-text-id', 'masked-text-field--date', 'дд.мм.гггг', 'masked text field')
       div.form-elements__element.form-elements__element--margin-bottom-40
@@ -93,3 +103,23 @@ block main
       div.form-elements__element.form-elements__element--margin-bottom-40
         h2.form-elements__title pagination
         +pagination
+
+    div.form-elements__elements-wrapper
+      div.form-elements__element.form-elements__element--margin-bottom-24
+        +dropdown('Сколько комнат', facilities, 'facilities', 'Dropdown')
+      div.form-elements__element.form-elements__element--margin-bottom-21
+        +dropdown('Сколько комнат', facilities, 'facilities', 'Dropdown', 'expanded', true)
+      div.form-elements__element
+        // expandable checkbox list
+        h2 expandable checkbox list
+      div.form-elements__element
+        // expandable checkbox list
+        h2 expandable checkbox list
+
+    div.form-elements__elements-wrapper
+      div.form-elements__element
+        +dropdown('Сколько гостей', options, 'guests', 'Dropdown', '', true)
+
+    div.form-elements__elements-wrapper
+      div.form-elements__element
+        +dropdown('Сколько гостей', optionsWithTwoGuests, 'guests', 'Dropdown', '', true)
