@@ -17,6 +17,7 @@ block main
   include ../../../components/rating/rating
   include ../../../components/range-slider/range-slider
   include ../../../components/buttons/buttons
+  include ../../../components/pagination/pagination
   +logo('../../../', 'gray')
   -
     const options = [
@@ -89,3 +90,6 @@ block main
         +button('button', 'button button--link form-elements__button', 'CLICK ME')
         +button('button', 'button button--link button--link-hovered', 'CLICK ME')
         +button('button', 'button button--action', 'перейти к оплате')
+      div.form-elements__element.form-elements__element--margin-bottom-40
+        h2.form-elements__title pagination
+        +pagination

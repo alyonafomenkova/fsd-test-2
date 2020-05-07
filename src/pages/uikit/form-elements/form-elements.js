@@ -10,3 +10,4 @@ import '../../../components/like-button/like-button.js';
 import '../../../components/rating/rating.js';
 import '../../../components/range-slider/range-slider.js';
 import '../../../components/buttons/buttons.js';
+import '../../../components/pagination/pagination.js';

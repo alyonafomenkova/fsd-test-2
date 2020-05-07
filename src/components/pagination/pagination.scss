@@ -1,0 +1,43 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+
+.pagination {
+  max-width: 240px;
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination__link {
+  @include h3-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  font-weight: normal;
+  height: 40px;
+  cursor: pointer;
+  &--current {
+    background: $purple-gradient;
+    border-radius: 22px;
+    font-weight: bold;
+    color: $white-color;
+  }
+  &--next {
+    @include material-icons;
+    display: flex;
+    background: $green-gradient;
+    border-radius: 22px;
+    color: $white-color;
+  }
+}
+
+.pagination__description {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.714rem;
+}
