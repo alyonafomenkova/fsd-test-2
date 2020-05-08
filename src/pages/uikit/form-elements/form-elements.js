@@ -13,3 +13,4 @@ import '../../../components/buttons/buttons.js';
 import '../../../components/pagination/pagination.js';
 import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js';
 import '../../../components/rich-checkbox-buttons/rich-checkbox-buttons.js';
+import '../../../components/bullet-list/bullet-list.js';

@@ -20,6 +20,7 @@ block main
   include ../../../components/pagination/pagination
   include ../../../components/expandable-checkbox-list/expandable-checkbox-list
   include ../../../components/rich-checkbox-buttons/rich-checkbox-buttons
+  include ../../../components/bullet-list/bullet-list
   +logo('../../../', 'gray')
   -
     const options = [
@@ -74,6 +75,11 @@ block main
     const toggleData = [
     {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': 'true', 'classes': ''},
     {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': 'false', 'classes': ''},
+    ];
+    const bulletData = [
+    {'name': 'Нельзя с питомцами', 'classes': ''},
+    {'name': 'Без вечеринок и мероприятий', 'classes': ''},
+    {'name': 'Время прибытия — после 13:00, а выезд до 12:00', 'classes': ''}
     ];
   div.form-elements
     div.form-elements__elements-wrapper
@@ -149,3 +155,7 @@ block main
     div.form-elements__elements-wrapper
       div.form-elements__element
         +richCheckboxButtons(richCheckboxData, 'rich Checkbox Buttons')
+
+    div.form-elements__elements-wrapper
+      div.form-elements__element
+        +bulletList(bulletData, 'bullet list')

@@ -1,0 +1,24 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+
+.bullet__list {
+  max-width: 264px;
+  margin-top: 16px;
+}
+
+.bullet__item {
+  position: relative;
+  padding-left: 21px;
+  margin-bottom: 11px;
+}
+
+.bullet__item::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: $dark-color-opacity-25;
+}

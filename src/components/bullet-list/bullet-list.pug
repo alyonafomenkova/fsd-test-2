@@ -1,0 +1,7 @@
+mixin bulletList(bulletData, titleOfList=null)
+  div.bullet
+    if titleOfList
+      h3.bullet__title !{titleOfList}
+    ul.bullet__list
+      each item in bulletData
+        li.bullet__item(class = item.classes) #{item.name}
