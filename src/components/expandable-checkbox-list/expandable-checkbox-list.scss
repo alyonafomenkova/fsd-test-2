@@ -1,6 +1,10 @@
 @import '../../base/theme.scss';
 @import '../../base/base.scss';
 
+.expandable-checkbox {
+  max-width: 266px;
+}
+
 .expandable-checkbox .checkbox__list {
   display: none;
 }

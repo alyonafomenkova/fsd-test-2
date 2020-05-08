@@ -5,7 +5,7 @@
 .form-elements {
   display: grid;
   grid-template-columns: repeat(3, 320px);
-  grid-row-gap: 100px;
+  grid-template-rows: repeat(4, min-content);
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1160px;
@@ -26,6 +26,12 @@
   }
   &--margin-bottom-45 {
     margin-bottom: 45px;
+  }
+  &--margin-bottom-100 {
+    margin-bottom: 100px;
+  }
+  &--margin-bottom-158 {
+    margin-bottom: 158px;
   }
   &--margin-bottom-173 {
     margin-bottom: 173px;

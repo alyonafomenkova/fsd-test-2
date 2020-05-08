@@ -19,6 +19,7 @@ block main
   include ../../../components/buttons/buttons
   include ../../../components/pagination/pagination
   include ../../../components/expandable-checkbox-list/expandable-checkbox-list
+  include ../../../components/rich-checkbox-buttons/rich-checkbox-buttons
   +logo('../../../', 'gray')
   -
     const options = [
@@ -62,6 +63,10 @@ block main
     {'id': 'tv-2-id', 'name': 'tv', 'label': 'Телевизор', 'isChecked': 'false', 'classes': ''},
     {'id': 'shampoo-2-id', 'name': 'shampoo', 'label': 'Шампунь', 'isChecked': 'false', 'classes': ''},
     ];
+    const richCheckboxData = [
+    {'id': 'hall-id', 'name': 'hall', 'title': 'Широкий коридор', 'description': 'Ширина коридоров в номере не менее 91 см.', 'isChecked': 'false'},
+    {'id': 'assistant-id', 'name': 'assistant', 'title': 'Помощник для инвалидов', 'description': 'На 1 этаже вас встретит специалист  и проводит до номера.', 'isChecked': 'false'},
+    ];
     const radioData = [
     {'id': 'male-id', 'name': 'sex', 'label': 'Мужчина', 'isChecked': 'true', 'classes': ''},
     {'id': 'female-id', 'name': 'sex', 'label': 'Женщина', 'isChecked': 'false', 'classes': ''},
@@ -84,7 +89,7 @@ block main
         +date-dropdown(true, dropdownData)
       div.form-elements__element.form-elements__element--margin-bottom-40
         +date-dropdown(false, filterDropdownData)
-      div.form-elements__element
+      div.form-elements__element.form-elements__element--margin-bottom-100
         +subscriptionTextField('')
 
     div.form-elements__elements-wrapper
@@ -126,10 +131,6 @@ block main
         +dropdown('Сколько комнат', facilities, 'facilities', 'Dropdown')
       div.form-elements__element.form-elements__element--margin-bottom-173
         +dropdown('Сколько комнат', facilities, 'facilities', 'Dropdown', 'expanded', true)
-      div.form-elements__element.form-elements__element--margin-bottom-45
-        +expandableCheckboxList(expandableCheckboxData1, 'expandable checkbox list', false)
-      div.form-elements__element
-        +expandableCheckboxList(expandableCheckboxData2, 'expandable checkbox list', true)
 
     div.form-elements__elements-wrapper
       div.form-elements__element
@@ -138,3 +139,13 @@ block main
     div.form-elements__elements-wrapper
       div.form-elements__element
         +dropdown('Сколько гостей', optionsWithTwoGuests, 'guests', 'Dropdown', '', true)
+
+    div.form-elements__elements-wrapper
+      div.form-elements__element.form-elements__element--margin-bottom-45
+        +expandableCheckboxList(expandableCheckboxData1, 'expandable checkbox list', false)
+      div.form-elements__element
+        +expandableCheckboxList(expandableCheckboxData2, 'expandable checkbox list', true)
+
+    div.form-elements__elements-wrapper
+      div.form-elements__element
+        +richCheckboxButtons(richCheckboxData, 'rich Checkbox Buttons')

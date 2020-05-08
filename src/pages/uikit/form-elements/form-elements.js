@@ -12,3 +12,4 @@ import '../../../components/range-slider/range-slider.js';
 import '../../../components/buttons/buttons.js';
 import '../../../components/pagination/pagination.js';
 import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js';
+import '../../../components/rich-checkbox-buttons/rich-checkbox-buttons.js';
