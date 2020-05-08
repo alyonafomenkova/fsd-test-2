@@ -94,6 +94,5 @@ jQuery(function() {
   $('.iqdropdown--guests').iqDropdown(createOptions(additionalGuestsOptions));
   $('.iqdropdown--facilities').iqDropdown(createOptions(additionalFacilitiesOptions));
   showClearButton($('.iqdropdown--guests'));
-  console.log('fffffffff', $('.iqdropdown--facilities').closest('.dropdown'));
   $('.iqdropdown--facilities').closest('.dropdown').css({'max-width': '266px'});
 });

@@ -1,0 +1,7 @@
+mixin expandableCheckboxList(checkboxData, titleOfList, isExpandable=false)
+  include ../checkbox-buttons/checkbox-buttons
+  div.expandable-checkbox(class=isExpandable ? 'expandable-checkbox--expanded' : '')
+    div.expandable-checkbox__selection
+      h3.expandable-checkbox__title !{titleOfList}
+      i.expandable-checkbox__more-icon expand_more
+    +checkboxButtons(checkboxData)

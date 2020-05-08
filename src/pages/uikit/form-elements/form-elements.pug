@@ -18,6 +18,7 @@ block main
   include ../../../components/range-slider/range-slider
   include ../../../components/buttons/buttons
   include ../../../components/pagination/pagination
+  include ../../../components/expandable-checkbox-list/expandable-checkbox-list
   +logo('../../../', 'gray')
   -
     const options = [
@@ -44,6 +45,22 @@ block main
     {'id': 'smoke-id', 'name': 'smoke', 'label': 'Можно курить', 'isChecked': 'false', 'classes': ''},
     {'id': 'pets-id', 'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': 'true', 'classes': ''},
     {'id': 'guests-id', 'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': 'true', 'classes': ''},
+    ];
+    const expandableCheckboxData1 = [
+    {'id': 'breakfast-1-id', 'name': 'breakfast', 'label': 'Завтрак', 'isChecked': 'false', 'classes': ''},
+    {'id': 'table-1-id', 'name': 'table', 'label': 'Письменный стол', 'isChecked': 'true', 'classes': ''},
+    {'id': 'chair-1-id', 'name': 'chair', 'label': 'Стул для кормления', 'isChecked': 'true', 'classes': ''},
+    {'id': 'cot-1-id', 'name': 'cot', 'label': 'Кроватка', 'isChecked': 'true', 'classes': ''},
+    {'id': 'tv-1-id', 'name': 'tv', 'label': 'Телевизор', 'isChecked': 'false', 'classes': ''},
+    {'id': 'shampoo-1-id', 'name': 'shampoo', 'label': 'Шампунь', 'isChecked': 'false', 'classes': ''},
+    ];
+    const expandableCheckboxData2 = [
+    {'id': 'breakfast-2-id', 'name': 'breakfast', 'label': 'Завтрак', 'isChecked': 'false', 'classes': ''},
+    {'id': 'table-2-id', 'name': 'table', 'label': 'Письменный стол', 'isChecked': 'true', 'classes': ''},
+    {'id': 'chair-2-id', 'name': 'chair', 'label': 'Стул для кормления', 'isChecked': 'true', 'classes': ''},
+    {'id': 'cot-2-id', 'name': 'cot', 'label': 'Кроватка', 'isChecked': 'true', 'classes': ''},
+    {'id': 'tv-2-id', 'name': 'tv', 'label': 'Телевизор', 'isChecked': 'false', 'classes': ''},
+    {'id': 'shampoo-2-id', 'name': 'shampoo', 'label': 'Шампунь', 'isChecked': 'false', 'classes': ''},
     ];
     const radioData = [
     {'id': 'male-id', 'name': 'sex', 'label': 'Мужчина', 'isChecked': 'true', 'classes': ''},
@@ -107,14 +124,12 @@ block main
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element--margin-bottom-24
         +dropdown('Сколько комнат', facilities, 'facilities', 'Dropdown')
-      div.form-elements__element.form-elements__element--margin-bottom-21
+      div.form-elements__element.form-elements__element--margin-bottom-173
         +dropdown('Сколько комнат', facilities, 'facilities', 'Dropdown', 'expanded', true)
+      div.form-elements__element.form-elements__element--margin-bottom-45
+        +expandableCheckboxList(expandableCheckboxData1, 'expandable checkbox list', false)
       div.form-elements__element
-        // expandable checkbox list
-        h2 expandable checkbox list
-      div.form-elements__element
-        // expandable checkbox list
-        h2 expandable checkbox list
+        +expandableCheckboxList(expandableCheckboxData2, 'expandable checkbox list', true)
 
     div.form-elements__elements-wrapper
       div.form-elements__element

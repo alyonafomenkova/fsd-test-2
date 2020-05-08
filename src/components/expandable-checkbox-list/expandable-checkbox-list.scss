@@ -1,0 +1,32 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+
+.expandable-checkbox .checkbox__list {
+  display: none;
+}
+
+.expandable-checkbox--expanded .checkbox__list {
+  display: block;
+}
+
+.expandable-checkbox--expanded .expandable-checkbox__more-icon {
+  transform: rotate(-180deg);
+}
+
+.expandable-checkbox__selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 266px;
+  cursor: pointer;
+}
+
+.expandable-checkbox__more-icon {
+  @include material-icons;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 44px;
+  line-height: 18px;
+}
