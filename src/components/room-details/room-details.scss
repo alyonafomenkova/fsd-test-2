@@ -1,0 +1,36 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+
+.room-details {
+  max-width: 280px;
+}
+
+.room-details__item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $dark-color-opacity-10;
+}
+
+.room-details__icon {
+  @include material-icons;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  font-size: 48px;
+  line-height: 48px;
+  background: $purple-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.room-details__name {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.room-details__description {
+  display: inline-block;
+}

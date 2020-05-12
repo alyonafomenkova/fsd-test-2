@@ -21,6 +21,7 @@ block main
   include ../../../components/expandable-checkbox-list/expandable-checkbox-list
   include ../../../components/rich-checkbox-buttons/rich-checkbox-buttons
   include ../../../components/bullet-list/bullet-list
+  include ../../../components/room-details/room-details
   +logo('../../../', 'gray')
   -
     const options = [
@@ -80,6 +81,10 @@ block main
     {'name': 'Нельзя с питомцами', 'classes': ''},
     {'name': 'Без вечеринок и мероприятий', 'classes': ''},
     {'name': 'Время прибытия — после 13:00, а выезд до 12:00', 'classes': ''}
+    ];
+    const roomDetailsData = [
+    {'icon': 'insert_emoticon', 'name': 'Комфорт', 'description': 'Шумопоглощающие стены'},
+    {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
     ];
   div.form-elements
     div.form-elements__elements-wrapper
@@ -149,7 +154,7 @@ block main
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element--margin-bottom-45
         +expandableCheckboxList(expandableCheckboxData1, 'expandable checkbox list', false)
-      div.form-elements__element
+      div.form-elements__element.form-elements__element--margin-bottom-109
         +expandableCheckboxList(expandableCheckboxData2, 'expandable checkbox list', true)
 
     div.form-elements__elements-wrapper
@@ -159,3 +164,7 @@ block main
     div.form-elements__elements-wrapper
       div.form-elements__element
         +bulletList(bulletData, 'bullet list')
+
+    div.form-elements__elements-wrapper
+      div.form-elements__element
+        +roomDetails(roomDetailsData)
