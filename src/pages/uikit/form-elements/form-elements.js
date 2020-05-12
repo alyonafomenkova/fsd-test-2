@@ -15,3 +15,4 @@ import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js
 import '../../../components/rich-checkbox-buttons/rich-checkbox-buttons.js';
 import '../../../components/bullet-list/bullet-list.js';
 import '../../../components/room-details/room-details.js';
+import '../../../components/reviews/reviews.js';

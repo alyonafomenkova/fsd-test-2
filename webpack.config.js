@@ -70,6 +70,11 @@ const config = {
       },
 
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+      },
+
+      {
         test: /\.(woff2|woff|ttf|svg)$/,
         loader: 'file-loader?limit=1024&name=fonts/[name].[ext]'
       },

@@ -1,0 +1,38 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+
+.reviews__author {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.reviews__avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  background-image: url("images/avatar-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid $white-color;
+  border-radius: 32px;
+  box-shadow: 0 10px 20px $dark-color-opacity-10;
+}
+
+.reviews__author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__author-name {
+  font-weight: bold;
+}
+
+.reviews__text-wrapper {
+  display: flex;
+  padding-left: 5px;
+}
+
+.reviews__text {
+  max-width: 653px;
+  margin: 0 0 0 14px;
+}

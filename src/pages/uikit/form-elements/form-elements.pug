@@ -22,6 +22,7 @@ block main
   include ../../../components/rich-checkbox-buttons/rich-checkbox-buttons
   include ../../../components/bullet-list/bullet-list
   include ../../../components/room-details/room-details
+  include ../../../components/reviews/reviews
   +logo('../../../', 'gray')
   -
     const options = [
@@ -85,6 +86,14 @@ block main
     const roomDetailsData = [
     {'icon': 'insert_emoticon', 'name': 'Комфорт', 'description': 'Шумопоглощающие стены'},
     {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
+    ];
+    const reviewsData = [
+    {'imgName': 'avatar-1.png',
+    'authorName': 'Мурад Сарафанов',
+    'date': '5 дней назад',
+    'likeBtn': {'count': '12', 'isActive': true},
+    'text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+    },
     ];
   div.form-elements
     div.form-elements__elements-wrapper
@@ -168,3 +177,7 @@ block main
     div.form-elements__elements-wrapper
       div.form-elements__element
         +roomDetails(roomDetailsData)
+
+    div.form-elements__elements-wrapper.form-elements__elements-wrapper--double-column
+      div.form-elements__element
+        +reviews(reviewsData)

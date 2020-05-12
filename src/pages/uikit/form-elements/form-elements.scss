@@ -2,6 +2,13 @@
 @import '../colors-and-type/colors-and-type.scss';
 @import '../../../components/text-field/text-field.scss';
 
+.form-elements__elements-wrapper {
+  &--double-column {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
 .form-elements {
   display: grid;
   grid-template-columns: repeat(3, 320px);

@@ -1,0 +1,17 @@
+mixin reviews(data, title=null, count=null)
+  div.reviews
+    if title
+      h2.reviews__title !{title}
+    if count
+      span.reviews__count !{count}
+    ul.reviews__list
+      each item in data
+        li.reviews__item
+          div.reviews__author
+            div.reviews__avatar
+            div.reviews__author-info
+              span.reviews__author-name !{item.authorName}
+              span.reviews__date !{item.date}
+          div.reviews__text-wrapper
+            +likeButton(item.likeBtn.count, item.likeBtn.isActive)
+            p.reviews__text !{item.text}
