@@ -13,13 +13,15 @@ const config = {
   entry: {
     'colors-and-type': PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.js',
     'form-elements': PATHS.source + '/pages/uikit/form-elements/form-elements.js',
+    'cards': PATHS.source + '/pages/uikit/cards/cards.js',
   },
   output: {
     path: PATHS.build,
     filename: '[name].bundle.js'
   },
   devServer: {
-    index: 'form-elements.html',
+    index: 'cards.html',
+    //index: 'form-elements.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
@@ -33,6 +35,8 @@ const config = {
       Fonts: path.resolve(__dirname, 'src/fonts'),
       FontsScss: path.resolve(__dirname, 'src/base/fonts.scss'),
       Base: path.resolve(__dirname, 'src/base/base.scss'),
+      AirDatepicker: path.resolve(__dirname, 'node_modules/air-datepicker/dist'),
+      Dropdown: path.resolve(__dirname, 'node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css'),
     }
   },
   module: {
@@ -96,6 +100,12 @@ const config = {
       filename: 'form-elements.html',
       template: PATHS.source + '/pages/uikit/form-elements/form-elements.pug',
       chunks: ['form-elements'],
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'cards.html',
+      template: PATHS.source + '/pages/uikit/cards/cards.pug',
+      chunks: ['cards'],
       inject: true,
     }),
     new webpack.ProvidePlugin({

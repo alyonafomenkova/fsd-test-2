@@ -7,7 +7,7 @@
     </title>
   <link href="form-elements.css" rel="stylesheet"></head>
   <body>
-        <div class="logo"><img class="logo_gray" src="fonts/gray-logo.svg" alt="logo">
+        <div class="logo"><img class="logo--gray" src="fonts/gray-logo.svg" alt="logo">
         </div>
     <div class="form-elements">
       <div class="form-elements__elements-wrapper">
@@ -456,18 +456,18 @@
               </div>
         </div>
       </div>
-      <div class="form-elements__elements-wrapper">
+      <div class="form-elements__elements-wrapper form-elements__elements-wrapper--double-column">
         <div class="form-elements__element">
               <div class="reviews">
                 <ul class="reviews__list">
                   <li class="reviews__item">
                     <div class="reviews__author">
                       <div class="reviews__avatar"></div>
-                      <div><span class="reviews__author-name">Мурад Сарафанов</span><span class="reviews__date">5 дней назад</span></div>
+                      <div class="reviews__author-info"><span class="reviews__author-name">Мурад Сарафанов</span><span class="reviews__date">5 дней назад</span></div>
                     </div>
-                    <div>
-                      <!--btn-->
-                      <p class="reviews__text">avatar-1.png</p>
+                    <div class="reviews__text-wrapper">
+                          <button class="like-button like-button--active"><span class="like-button__icon">favorite_border</span><span class="like-button__count-likes">12</span></button>
+                      <p class="reviews__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
                     </div>
                   </li>
                 </ul>

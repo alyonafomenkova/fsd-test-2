@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cards
+    </title>
+  <link href="cards.css" rel="stylesheet"></head>
+  <body>
+        <div class="logo"><img class="logo--gray" src="fonts/gray-logo.svg" alt="logo">
+        </div>
+    <div class="cards">
+      <!--div.cards__wrapper-->
+      <!--  div.cards__card-->
+      <!--    +searchForm-->
+      <!--  div.cards__card-->
+      <!--    +registrationForm-->
+      <div class="cards__wrapper">
+        <!--div.cards__card-->
+        <!--  +searchForm-->
+        <div class="cards__card">
+              <form class="login-form" action="url" method="post">
+                <h2 class="login-form__title">Войти</h2>
+                <fieldset class="login-form__fieldset-data">
+                      <div class="text-field">
+                        <input class="text-field__input" type="text" name="email" id="email-id" placeholder="Email">
+                      </div>
+                      <div class="text-field">
+                        <input class="text-field__input" type="text" name="password" id="password-id" placeholder="Пароль">
+                      </div>
+                </fieldset>
+                    <button class="button button button--action" type="button">войти</button>
+                <div class="registration-form__login-wrapper"><span class="login-form__registration-text">Нет аккаунта на Toxin?</span>
+                      <button class="button button button--small button--border" type="button">создать</button>
+                </div>
+              </form>
+        </div>
+      </div>
+      <!---->
+      <!--div.cards__wrapper-->
+      <!--  div.cards__card-->
+      <!--    +searchForm-->
+      <!--  div.cards__card-->
+      <!--    +searchForm-->
+    </div>
+  <script src="cards.bundle.js"></script></body>
+</html>
