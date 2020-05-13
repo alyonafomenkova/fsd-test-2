@@ -3,6 +3,7 @@
 
 .radio__title {
   @include h3-text;
+  margin-bottom: 16px;
 }
 
 .radio__list {
@@ -10,7 +11,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 220px;
-  margin-top: 16px;
 }
 
 .radio__input + label {
