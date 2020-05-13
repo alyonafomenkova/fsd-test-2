@@ -2,9 +2,10 @@
 @import '../../base/base.scss';
 
 .text-field {
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 320px;
  }
 
 .text-field__label {
