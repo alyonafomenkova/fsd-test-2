@@ -12,22 +12,23 @@ include ../buttons/buttons
   {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': 'false', 'classes': ''},
   ];
 mixin registrationForm
-  form.registration-form(action='url' method='post')
-    h2.registration-form__title Регистрация аккаунта
-    fieldset.registration-form__fieldset-name
-      +textField('text', 'name', 'name-id', '', 'Имя', null, null)
-      +textField('text', 'surname', 'surname-id', '', 'Фамилия', null, null)
-    fieldset.registration-form__fieldset-gender
-      +radioButtons(radioData)
-    fieldset.registration-form__fieldset-birthday
-      +maskedTextField('text', 'birthday', 'birthday-id', 'classes', 'дд.мм.гггг', 'дата рождения', null)
-    fieldset.registration-form__fieldset-login
-      legend.registration-form__legend-login данные для входа в сервис
-      +textField('text', 'email', 'email-id', '', 'Email', null, null)
-      +textField('text', 'password', 'password-id', '', 'Пароль', null, null)
-    div.registration-form__offers-wrapper
-      +toggleButton(toggleData)
-    +button('button', 'button--action', 'перейти к оплате')
-    div.registration-form__login-wrapper
-      span.registration-form__login-text Уже есть аккаунт на Toxin
-      +button('button', 'button button--small button--filled form-elements__button', 'войти')
+  div.registration-card
+    form.registration-card__form.registration-form(action='url' method='post')
+      h2.registration-form__title Регистрация аккаунта
+      fieldset.registration-form__fieldset-name
+        +textField('text', 'name', 'name-id', '', 'Имя', null, null)
+        +textField('text', 'surname', 'surname-id', '', 'Фамилия', null, null)
+      fieldset.registration-form__fieldset-gender
+        +radioButtons(radioData)
+      fieldset.registration-form__fieldset-birthday
+        +maskedTextField('text', 'birthday', 'birthday-id', 'classes', 'дд.мм.гггг', 'дата рождения', null)
+      fieldset.registration-form__fieldset-login
+        legend.registration-form__legend-login данные для входа в сервис
+        +textField('text', 'email', 'email-id', '', 'Email', null, null)
+        +textField('text', 'password', 'password-id', '', 'Пароль', null, null)
+      div.registration-form__offers-wrapper
+        +toggleButton(toggleData)
+      +button('button', 'button--action', 'перейти к оплате')
+    div.registration-card__login-wrapper
+      span.registration-card__login-text Уже есть аккаунт на Toxin
+      +button('button', 'button--small button--filled', 'войти')

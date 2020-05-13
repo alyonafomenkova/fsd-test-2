@@ -1,7 +1,7 @@
 @import '../../base/theme.scss';
 @import '../../base/base.scss';
 
-.registration-form {
+.registration-card {
   max-width: 382px;
   padding: 20px;
   background-color: $white-color;
@@ -51,21 +51,21 @@
   margin-bottom: 10px;
 }
 
-.registration-form__login-wrapper {
+.registration-card__login-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
 }
 
-.registration-form__login-text {
+.registration-card__login-text {
   font-size: 12px;
   line-height: 15px;
   color: $black-color;
 }
 
 @media (min-width: $tablet-width) {
-  .registration-form {
+  .registration-card {
     padding: 40px 30px 30px 30px;
   }
   .registration-form__title {
@@ -73,7 +73,7 @@
     font-size: 24px;
     line-height: 30px;
   }
-  .registration-form__login-text {
+  .registration-card__login-text {
     font-size: 14px;
     line-height: 18px;
   }
