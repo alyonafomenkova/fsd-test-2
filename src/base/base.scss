@@ -13,6 +13,8 @@ html {
   box-sizing: inherit;
 }
 
+$tablet-width: 768px;
+
 @mixin h1-text {
   font-family: "Quicksand", "Arial", sans-serif;
   font-style: normal;
