@@ -4,6 +4,6 @@
 mixin logo(basePath, type)
   .logo
     if type==='gray'
-      img.logo_gray(src=basePath+pathToGrayLogo alt='logo')
+      img.logo--gray(src=basePath+pathToGrayLogo alt='logo')
     else
-      img.logo_main(src=basePath+pathToMainLogo alt='Main logo')
+      img.logo--main(src=basePath+pathToMainLogo alt='Main logo')
