@@ -59,7 +59,8 @@
 }
 
 .button--action {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   position: relative;
   background: $purple-gradient;
   color: $white-color;
