@@ -1,0 +1,80 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+
+.registration-form {
+  max-width: 382px;
+  padding: 20px;
+  background-color: $white-color;
+  border: 1px solid $black-color-opacity-12;
+  border-radius: 4px;
+  box-shadow: 0 0 25px $black-color-opacity-20;
+}
+
+.registration-form__title {
+  margin-bottom: 20px;
+}
+
+.registration-form {
+  &__fieldset-name,
+  &__fieldset-gender,
+  &__fieldset-birthday,
+  &__fieldset-login {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  &__fieldset-name {
+    margin-bottom: 14px;
+  }
+  &__fieldset-gender {
+    margin-bottom: 24px;
+  }
+  &__fieldset-birthday {
+    margin-bottom: 20px;
+  }
+  &__fieldset-login {
+    margin-bottom: 10px;
+  }
+}
+
+.registration-form__legend-login {
+  @include h3-text;
+  margin-bottom: 4px;
+}
+
+.registration-form__offers-wrapper {
+  margin-bottom: 24px;
+}
+
+.registration-form .text-field {
+  margin-bottom: 10px;
+}
+
+.registration-form__login-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.registration-form__login-text {
+  font-size: 12px;
+  line-height: 15px;
+  color: $black-color;
+}
+
+@media (min-width: $tablet-width) {
+  .registration-form {
+    padding: 40px 30px 30px 30px;
+  }
+  .registration-form__title {
+    width: 305px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .registration-form__login-text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
