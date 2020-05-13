@@ -1,0 +1,42 @@
+@import '../date-dropdown/date-dropdown.scss';
+@import '../dropdown/dropdown.scss';
+@import '../buttons/buttons.scss';
+
+.search-form {
+  max-width: 380px;
+  padding: 20px;
+  background-color: $white-color;
+  border: 1px solid $black-color-opacity-12;
+  border-radius: 4px;
+  box-shadow: 0 0 25px $black-color-opacity-20;
+}
+
+.search-form__title {
+  margin-bottom: 20px;
+}
+
+.search-form {
+  &__fieldset-date,
+  &__fieldset-guests {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  &__fieldset-date {
+    margin-bottom: 20px;
+  }
+  &__fieldset-guests {
+    margin-bottom: 31px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .search-form {
+    padding: 40px 30px 30px 30px;
+  }
+  .search-form__title {
+    width: 305px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
