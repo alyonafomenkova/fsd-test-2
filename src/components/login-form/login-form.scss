@@ -4,7 +4,9 @@
 .login-card {
   max-width: 382px;
   padding: 20px;
+  position: relative;
   background-color: $white-color;
+  z-index: 0;
   border: 1px solid $black-color-opacity-12;
   border-radius: 4px;
   box-shadow: 0 0 25px $black-color-opacity-20;
