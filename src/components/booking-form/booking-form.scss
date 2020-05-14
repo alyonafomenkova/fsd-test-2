@@ -1,0 +1,102 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+@import '../date-dropdown/date-dropdown.scss';
+
+.booking-form {
+  max-width: 382px;
+  padding: 20px;
+  background-color: $white-color;
+  border: 1px solid $black-color-opacity-12;
+  border-radius: 4px;
+  box-shadow: 0 0 25px $black-color-opacity-20;
+}
+
+.booking-form__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.booking-form__room-number {
+  @include h2-text;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.booking-form__room-type {
+  @include h3-text;
+  color: $purple-color;
+}
+
+.booking-form__room-cost,
+.booking-form__room-period {
+  line-height: 18px;
+  color: $dark-color-opacity-50;
+}
+
+.booking-form__fieldset-date,
+.booking-form__fieldset-guests {
+  margin: 0 0 20px 0;
+  padding: 0;
+  border: none;
+}
+
+.booking-form__price-details {
+  margin-bottom: 30px;
+}
+
+.booking-form__price-per-day,
+.booking-form__service-charge,
+.booking-form__extra-service {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.booking-form__service-text {
+  width: 190px;
+}
+
+.booking-form__more-info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $dark-color-opacity-25;
+  border-radius: 50%;
+  color: $dark-color-opacity-25;
+}
+
+.booking-form__count {
+  margin-left: auto;
+}
+
+.booking-form__total-price {
+  display: flex;
+  align-items: baseline;
+}
+
+.booking-form__total-text {
+  @include h2-text;
+  margin-right: 5px;
+}
+
+.booking-form__dotes {
+  flex-grow: 1;
+  border-bottom: 1px dashed $dark-color-opacity-25;
+}
+
+.booking-form__total-value {
+  @include h2-text;
+  margin-left: 5px;
+}
+
+@media (min-width: $tablet-width) {
+  .booking-form {
+    padding: 40px 30px 30px 30px;
+  }
+  .booking-form__service-text {
+    width: 217px;
+  }
+}
