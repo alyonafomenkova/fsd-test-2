@@ -10,38 +10,262 @@
         <div class="logo"><img class="logo--gray" src="fonts/gray-logo.svg" alt="logo">
         </div>
     <div class="cards">
-      <!--div.cards__wrapper-->
-      <!--  div.cards__card-->
-      <!--    +searchForm-->
-      <!--  div.cards__card-->
-      <!--    +registrationForm-->
       <div class="cards__wrapper">
-        <!--div.cards__card-->
-        <!--  +searchForm-->
         <div class="cards__card">
-              <form class="login-form" action="url" method="post">
-                <h2 class="login-form__title">Войти</h2>
-                <fieldset class="login-form__fieldset-data">
-                      <div class="text-field">
-                        <input class="text-field__input" type="text" name="email" id="email-id" placeholder="Email">
-                      </div>
-                      <div class="text-field">
-                        <input class="text-field__input" type="text" name="password" id="password-id" placeholder="Пароль">
+              <form class="search-form" action="url" method="post">
+                <h2 class="search-form__title">Найдём номера под ваши пожелания</h2>
+                <fieldset class="search-form__fieldset-date">
+                      <div class="date-dropdown">
+                        <div class="date-dropdown__item">
+                          <label class="date-dropdown__label" for="start1-id">прибытие</label>
+                          <input class="date-dropdown__input" id="start1-id" placeholder="дд.мм.гггг">
+                        </div>
+                        <div class="date-dropdown__item">
+                          <label class="date-dropdown__label" for="end1-id">выезд</label>
+                          <input class="date-dropdown__input" id="end1-id" placeholder="дд.мм.гггг">
+                        </div>
                       </div>
                 </fieldset>
-                    <button class="button button button--action" type="button">войти</button>
-                <div class="registration-form__login-wrapper"><span class="login-form__registration-text">Нет аккаунта на Toxin?</span>
-                      <button class="button button button--small button--border" type="button">создать</button>
-                </div>
+                <fieldset class="search-form__fieldset-guests">
+                      <div class="dropdown">
+                        <div class="dropdown__info">
+                          <h3 class="dropdown__lable">гости</h3>
+                        </div>
+                        <div class="iqdropdown iqdropdown--guests">
+                          <p class="iqdropdown-selection">Сколько гостей
+                            <div class="iqdropdown-menu">
+                              <div class="iqdropdown-menu-option" data-id="adult" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                                <div>
+                                  <h3 class="iqdropdown-item">Взрослые</h3>
+                                </div>
+                              </div>
+                              <div class="iqdropdown-menu-option" data-id="children" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                                <div>
+                                  <h3 class="iqdropdown-item">Дети</h3>
+                                </div>
+                              </div>
+                              <div class="iqdropdown-menu-option" data-id="babies" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                                <div>
+                                  <h3 class="iqdropdown-item">Младенцы</h3>
+                                </div>
+                              </div>
+                              <div class="iqdropdown-menu-buttons">
+                                <button class="iqdropdown-menu-buttons__clear" type="button" style="visibility:hidden;">очистить</button>
+                                <button class="iqdropdown-menu-buttons__apply" type="button">применить</button>
+                              </div>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                </fieldset>
+                    <button class="button button--action" type="button">подобрать номер</button>
               </form>
         </div>
+        <div class="cards__card">
+              <div class="registration-card">
+                <form class="registration-card__form registration-form" action="url" method="post">
+                  <h2 class="registration-form__title">Регистрация аккаунта</h2>
+                  <fieldset class="registration-form__fieldset-name">
+                        <div class="text-field">
+                          <input class="text-field__input" type="text" name="name" id="name-id" placeholder="Имя">
+                        </div>
+                        <div class="text-field">
+                          <input class="text-field__input" type="text" name="surname" id="surname-id" placeholder="Фамилия">
+                        </div>
+                  </fieldset>
+                  <fieldset class="registration-form__fieldset-gender">
+                        <div class="radio">
+                          <ul class="radio__list">
+                            <li class="radio__item">
+                              <input class="radio__input visually-hidden" type="radio" id="male-id" name="sex" checked="checked">
+                              <label class="radio__label" for="male-id">Мужчина</label>
+                            </li>
+                            <li class="radio__item">
+                              <input class="radio__input visually-hidden" type="radio" id="female-id" name="sex">
+                              <label class="radio__label" for="female-id">Женщина</label>
+                            </li>
+                          </ul>
+                        </div>
+                  </fieldset>
+                  <fieldset class="registration-form__fieldset-birthday">
+                        <div class="masked-text-field">
+                          <label class="masked-text-field__label" for="birthday-id">дата рождения</label>
+                          <input class="masked-text-field__input classes" type="text" name="birthday" id="birthday-id" placeholder="дд.мм.гггг">
+                        </div>
+                  </fieldset>
+                  <fieldset class="registration-form__fieldset-login">
+                    <legend class="registration-form__legend-login">данные для входа в сервис</legend>
+                        <div class="text-field">
+                          <input class="text-field__input" type="text" name="email" id="email-id" placeholder="Email">
+                        </div>
+                        <div class="text-field">
+                          <input class="text-field__input" type="text" name="password" id="password-id" placeholder="Пароль">
+                        </div>
+                  </fieldset>
+                  <div class="registration-form__offers-wrapper">
+                        <div class="toggle">
+                          <ul class="toggle__list">
+                            <li class="toggle__item">
+                              <label class="toggle__label">Получать спецпредложения
+                                <input class="toggle__input visually-hidden" type="checkbox" name="toggle"><span class="toggle__slider"></span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                  </div>
+                      <button class="button button--action" type="button">перейти к оплате</button>
+                </form>
+                <div class="registration-card__login-wrapper"><span class="registration-card__login-text">Уже есть аккаунт на Toxin</span>
+                      <button class="button button--small button--filled" type="button">войти</button>
+                </div>
+              </div>
+        </div>
       </div>
-      <!---->
-      <!--div.cards__wrapper-->
-      <!--  div.cards__card-->
-      <!--    +searchForm-->
-      <!--  div.cards__card-->
-      <!--    +searchForm-->
+      <div class="cards__wrapper">
+        <div class="cards__card">
+              <form class="booking-form" action="url" method="post">
+                <div class="booking-form__header">
+                  <div class="booking-form__room-info"><span class="booking-form__room-number">№ 888</span><span class="booking-form__room-type"> люкс</span></div>
+                  <div class="booking-form__room-price"><b class="booking-form__room-cost">9&nbsp;990₽</b><span class="booking-form__room-period"> в сутки</span></div>
+                </div>
+                <fieldset class="booking-form__fieldset-date">
+                      <div class="date-dropdown">
+                        <div class="date-dropdown__item">
+                          <label class="date-dropdown__label" for="start1-id">прибытие</label>
+                          <input class="date-dropdown__input" id="start1-id" placeholder="дд.мм.гггг">
+                        </div>
+                        <div class="date-dropdown__item">
+                          <label class="date-dropdown__label" for="end1-id">выезд</label>
+                          <input class="date-dropdown__input" id="end1-id" placeholder="дд.мм.гггг">
+                        </div>
+                      </div>
+                </fieldset>
+                <fieldset class="booking-form__fieldset-guests">
+                      <div class="dropdown">
+                        <div class="dropdown__info">
+                          <h3 class="dropdown__lable">гости</h3>
+                        </div>
+                        <div class="iqdropdown iqdropdown--guests">
+                          <p class="iqdropdown-selection">Сколько гостей
+                            <div class="iqdropdown-menu">
+                              <div class="iqdropdown-menu-option" data-id="adult" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                                <div>
+                                  <h3 class="iqdropdown-item">Взрослые</h3>
+                                </div>
+                              </div>
+                              <div class="iqdropdown-menu-option" data-id="children" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                                <div>
+                                  <h3 class="iqdropdown-item">Дети</h3>
+                                </div>
+                              </div>
+                              <div class="iqdropdown-menu-option" data-id="babies" data-defaultcount="0" data-mincount="0" data-maxcount="10">
+                                <div>
+                                  <h3 class="iqdropdown-item">Младенцы</h3>
+                                </div>
+                              </div>
+                              <div class="iqdropdown-menu-buttons">
+                                <button class="iqdropdown-menu-buttons__clear" type="button" style="visibility:hidden;">очистить</button>
+                                <button class="iqdropdown-menu-buttons__apply" type="button">применить</button>
+                              </div>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                </fieldset>
+                <div class="booking-form__price-details">
+                  <div class="booking-form__price-per-day"><span>9&nbsp;990₽ x 4 суток</span><span class="booking-form__count">39&nbsp;960₽</span></div>
+                  <div class="booking-form__service-charge"><span class="booking-form__service-text">Сбор за услуги: скидка&nbsp;2&nbsp;179₽</span><span class="booking-form__more-info-icon">i</span><span class="booking-form__count">39&nbsp;960₽</span></div>
+                  <div class="booking-form__extra-service"><span class="booking-form__service-text">Сбор за дополнительные услуги</span><span class="booking-form__more-info-icon">i</span><span class="booking-form__count">300₽</span></div>
+                  <p class="booking-form__total-price"><span class="booking-form__total-text">Итого</span><span class="booking-form__dotes"></span><span class="booking-form__total-value">38&nbsp;081₽</span></p>
+                </div>
+                    <button class="button button--action" type="button">забронировать</button>
+              </form>
+        </div>
+        <div class="cards__card">
+              <div class="login-card">
+                <form class="login-card__form login-form" action="url" method="post">
+                  <h2 class="login-form__title">Войти</h2>
+                  <fieldset class="login-form__fieldset-data">
+                        <div class="text-field">
+                          <input class="text-field__input" type="text" name="email" id="email-id" placeholder="Email">
+                        </div>
+                        <div class="text-field">
+                          <input class="text-field__input" type="text" name="password" id="password-id" placeholder="Пароль">
+                        </div>
+                  </fieldset>
+                      <button class="button button--action" type="button">войти</button>
+                </form>
+                <div class="login-card__registration-wrapper"><span class="login-card__registration-text">Нет аккаунта на Toxin?</span>
+                      <button class="button button--small button--border" type="button">создать</button>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="cards__wrapper">
+        <div class="cards__card cards__card--datepicker">
+          <div class="datepicker-here datepicker--onCard" data-range="true" data-initial-range="[&amp;quot;2020-08-19&amp;quot;,&amp;quot;2020-08-23&amp;quot;]" clear="true"></div>
+        </div>
+        <div class="cards__card">
+              <div class="room-info-cards">
+                <ul class="room-info-cards__list">
+                  <li class="room-info-cards__item">
+                    <div class="room-info-cards__slideshow-container">
+                      <div class="room-info-cards__mySlides room-info-cards__mySlides--fade"><img class="room-info-cards__img" src="3da53d2e77c61e0995942c4d5317047c.png"></div>
+                      <div class="room-info-cards__mySlides room-info-cards__mySlides--fade"><img class="room-info-cards__img" src="d9332d738ffa5371abb097f413239fe8.png"></div>
+                      <div class="room-info-cards__mySlides room-info-cards__mySlides--fade"><img class="room-info-cards__img" src="94e2e7f9803d1c3d97b7de9f5eb72420.png"></div>
+                      <div class="room-info-cards__mySlides room-info-cards__mySlides--fade"><img class="room-info-cards__img" src="0056fa0ddf55f6ee860b4d277554f508.png"></div><a class="room-info-cards__prev-link"><i class="room-info-cards__prev-icon">expand_more</i></a><a class="room-info-cards__next-link"><i class="room-info-cards__next-icon">expand_more</i></a><br>
+                      <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot" data-number="4"></span></div>
+                    </div>
+                    <div class="room-info-cards__info-wrapper">
+                      <div class="room-info-cards__room-wrapper">
+                        <div><span class="room-info-cards__number">№ 888</span><span class="room-info-cards__type"> люкс</span>
+                        </div>
+                        <div class="room-info-cards__price-wrapper"><b class="room-info-cards__price">9&nbsp;990₽</b><span class="room-info-cards__price-period"> в сутки</span></div>
+                      </div>
+                      <div class="room-info-cards__reviews-wrapper">
+                            <div class="rating">
+                              <ul class="rating__list">
+                                <li class="rating__item selected" data-value="1"><i class="rating__star"></i></li>
+                                <li class="rating__item selected" data-value="2"><i class="rating__star"></i></li>
+                                <li class="rating__item selected" data-value="3"><i class="rating__star"></i></li>
+                                <li class="rating__item selected" data-value="4"><i class="rating__star"></i></li>
+                                <li class="rating__item selected" data-value="5"><i class="rating__star"></i></li>
+                              </ul>
+                            </div><span><b> 145 </b>Отзывов</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="room-info-cards__item">
+                    <div class="room-info-cards__slideshow-container">
+                      <div class="room-info-cards__mySlides room-info-cards__mySlides--fade"><img class="room-info-cards__img" src="89fe26b1d7ad16846c7fdc46ed4118c5.png"></div>
+                      <div class="room-info-cards__mySlides room-info-cards__mySlides--fade"><img class="room-info-cards__img" src="d9332d738ffa5371abb097f413239fe8.png"></div>
+                      <div class="room-info-cards__mySlides room-info-cards__mySlides--fade"><img class="room-info-cards__img" src="94e2e7f9803d1c3d97b7de9f5eb72420.png"></div>
+                      <div class="room-info-cards__mySlides room-info-cards__mySlides--fade"><img class="room-info-cards__img" src="0056fa0ddf55f6ee860b4d277554f508.png"></div><a class="room-info-cards__prev-link"><i class="room-info-cards__prev-icon">expand_more</i></a><a class="room-info-cards__next-link"><i class="room-info-cards__next-icon">expand_more</i></a><br>
+                      <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot" data-number="4"></span></div>
+                    </div>
+                    <div class="room-info-cards__info-wrapper">
+                      <div class="room-info-cards__room-wrapper">
+                        <div><span class="room-info-cards__number">№ 840</span>
+                        </div>
+                        <div class="room-info-cards__price-wrapper"><b class="room-info-cards__price">9&nbsp;990₽</b><span class="room-info-cards__price-period"> в сутки</span></div>
+                      </div>
+                      <div class="room-info-cards__reviews-wrapper">
+                            <div class="rating">
+                              <ul class="rating__list">
+                                <li class="rating__item selected" data-value="1"><i class="rating__star"></i></li>
+                                <li class="rating__item selected" data-value="2"><i class="rating__star"></i></li>
+                                <li class="rating__item selected" data-value="3"><i class="rating__star"></i></li>
+                                <li class="rating__item selected" data-value="4"><i class="rating__star"></i></li>
+                                <li class="rating__item" data-value="5"><i class="rating__star"></i></li>
+                              </ul>
+                            </div><span><b> 65 </b>Отзывов</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        </div>
+      </div>
     </div>
   <script src="cards.bundle.js"></script></body>
 </html>

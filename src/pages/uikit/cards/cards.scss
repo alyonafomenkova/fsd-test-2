@@ -6,13 +6,24 @@ body {
   background-color: #E5E5E5;
 }
 
-//.cards {
-//  display: flex;
-//  justify-content: space-between;
-//  max-width: 1160px;
-//  margin: 72px auto 140px auto;
-//}
-//
-//.cards__card {
-//  margin-bottom: 40px;
-//}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1160px;
+  margin: 72px auto 140px auto;
+}
+
+.cards__wrapper {
+  margin-right: 40px;
+}
+
+.cards__card {
+  margin-bottom: 40px;
+  &--datepicker {
+    min-height: 369px;
+  }
+}
+
+.datepicker--onCard .datepicker {
+  width: 320px;
+}

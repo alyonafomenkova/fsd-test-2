@@ -130,6 +130,29 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ }),
 
+/***/ "./src/components/booking-form/booking-form.js":
+/*!*****************************************************!*\
+  !*** ./src/components/booking-form/booking-form.js ***!
+  \*****************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _booking_form_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./booking-form.scss */ \"./src/components/booking-form/booking-form.scss\");\n/* harmony import */ var _booking_form_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_booking_form_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _date_dropdown_date_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../date-dropdown/date-dropdown.js */ \"./src/components/date-dropdown/date-dropdown.js\");\n/* harmony import */ var _dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../dropdown/dropdown.js */ \"./src/components/dropdown/dropdown.js\");\n/* harmony import */ var _buttons_buttons_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../buttons/buttons.js */ \"./src/components/buttons/buttons.js\");\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/components/booking-form/booking-form.js?");
+
+/***/ }),
+
+/***/ "./src/components/booking-form/booking-form.scss":
+/*!*******************************************************!*\
+  !*** ./src/components/booking-form/booking-form.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/booking-form/booking-form.scss?");
+
+/***/ }),
+
 /***/ "./src/components/buttons/buttons.js":
 /*!*******************************************!*\
   !*** ./src/components/buttons/buttons.js ***!
@@ -218,7 +241,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _login_form_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login-form.scss */ \"./src/components/login-form/login-form.scss\");\n/* harmony import */ var _login_form_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_login_form_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n// import '../text-field/text-field.js';\n// import '../radio-buttons/radio-buttons.js';\n// import '../masked-text-field/masked-text-field.js';\n// import '../toggle-button/toggle-button.js';\n// import '../buttons/buttons.js';\n\n\n//# sourceURL=webpack:///./src/components/login-form/login-form.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _login_form_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login-form.scss */ \"./src/components/login-form/login-form.scss\");\n/* harmony import */ var _login_form_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_login_form_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/login-form/login-form.js?");
 
 /***/ }),
 
@@ -279,6 +302,29 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
+/***/ "./src/components/rating/rating.js":
+/*!*****************************************!*\
+  !*** ./src/components/rating/rating.js ***!
+  \*****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var _rating_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rating.scss */ \"./src/components/rating/rating.scss\");\n/* harmony import */ var _rating_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_rating_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\njQuery(function() {\n  const toggleSelectedIcon = () => {\n    const allIcons = $('.rating__star');\n    const allSelectedIcons = $('.selected').find('.rating__star');\n    allIcons.each(function() {\n      $(this).html('star_border');\n    });\n    allSelectedIcons.each(function() {\n      $(this).html('star');\n    });\n  };\n\n  toggleSelectedIcon();\n\n  $('.rating__item').on('click', function(){\n    const onStar = parseInt($(this).data('value'), 10);\n    const stars = $(this).parent().children('li.rating__item');\n    for (let i = 0; i < stars.length; i++) {\n      $(stars[i]).removeClass('selected');\n      toggleSelectedIcon();\n    }\n    for (let i = 0; i < onStar; i++) {\n      $(stars[i]).addClass('selected');\n      toggleSelectedIcon();\n    }\n  });\n});\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"), __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/rating/rating.js?");
+
+/***/ }),
+
+/***/ "./src/components/rating/rating.scss":
+/*!*******************************************!*\
+  !*** ./src/components/rating/rating.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/rating/rating.scss?");
+
+/***/ }),
+
 /***/ "./src/components/registration-form/registration-form.js":
 /*!***************************************************************!*\
   !*** ./src/components/registration-form/registration-form.js ***!
@@ -299,6 +345,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _reg
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/registration-form/registration-form.scss?");
+
+/***/ }),
+
+/***/ "./src/components/room-info-cards/room-info-cards.js":
+/*!***********************************************************!*\
+  !*** ./src/components/room-info-cards/room-info-cards.js ***!
+  \***********************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _room_info_cards_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./room-info-cards.scss */ \"./src/components/room-info-cards/room-info-cards.scss\");\n/* harmony import */ var _room_info_cards_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_room_info_cards_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _rating_rating_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rating/rating.js */ \"./src/components/rating/rating.js\");\n\n\n\nclass Carousel {\n  constructor(carousel) {\n    this.carousel = carousel;\n    this.prevButtons = this.carousel.querySelectorAll('.room-info-cards__prev-link');\n    this.nextButtons = this.carousel.querySelectorAll('.room-info-cards__next-link');\n    this.dotButtons = this.carousel.querySelectorAll('.room-info-cards__dot');\n    this.controlsButtonClick = this.controlsButtonClick.bind(this);\n    this.dotButtonClick = this.dotButtonClick.bind(this);\n    this.slideIndex = 1;\n  }\n\n  showSlides() {\n    const slides = this.carousel.querySelectorAll('.room-info-cards__mySlides');\n    let i;\n    if (this.slideIndex > slides.length) {this.slideIndex = 1}\n    if (this.slideIndex < 1) {\n      this.slideIndex = slides.length;\n    }\n    for (i = 0; i < slides.length; i++) {\n      slides[i].style.display = 'none';\n    }\n    for (i = 0; i < this.dotButtons.length; i++) {\n      this.dotButtons[i].className = this.dotButtons[i].className.replace(' active', '');\n    }\n    slides[this.slideIndex-1].style.display = 'block';\n    this.dotButtons[this.slideIndex-1].className += ' active';\n  }\n\n  controlsButtonClick(n) {\n    return () => {\n      this.slideIndex = +this.slideIndex + n;\n      this.showSlides();\n    };\n  }\n\n  dotButtonClick() {\n    this.slideIndex = event.target.getAttribute('data-number');\n    this.showSlides();\n  };\n\n  addListeners() {\n    this.prevButtons.forEach((prevButton) => {\n      prevButton.addEventListener('click', this.controlsButtonClick(-1));\n    });\n    this.nextButtons.forEach((nextButton) => {\n      nextButton.addEventListener('click', this.controlsButtonClick(1));\n    });\n    this.dotButtons.forEach((dotButton) => {\n      dotButton.addEventListener('click', this.dotButtonClick);\n    });\n  }\n\n  createCarousel() {\n    this.showSlides();\n    this.addListeners();\n  }\n}\n\nconst carousels = document.querySelectorAll('.room-info-cards__slideshow-container');\n\ncarousels.forEach((it) => {\n  const carousel = new Carousel(it);\n  carousel.createCarousel();\n});\n\n\n//# sourceURL=webpack:///./src/components/room-info-cards/room-info-cards.js?");
+
+/***/ }),
+
+/***/ "./src/components/room-info-cards/room-info-cards.scss":
+/*!*************************************************************!*\
+  !*** ./src/components/room-info-cards/room-info-cards.scss ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/room-info-cards/room-info-cards.scss?");
 
 /***/ }),
 
@@ -379,7 +448,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards.scss */ \"./src/pages/uikit/cards/cards.scss\");\n/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cards_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_search_form_search_form_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/search-form/search-form.js */ \"./src/components/search-form/search-form.js\");\n/* harmony import */ var _components_registration_form_registration_form_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/registration-form/registration-form.js */ \"./src/components/registration-form/registration-form.js\");\n/* harmony import */ var _components_login_form_login_form_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/login-form/login-form.js */ \"./src/components/login-form/login-form.js\");\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/pages/uikit/cards/cards.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards.scss */ \"./src/pages/uikit/cards/cards.scss\");\n/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cards_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_search_form_search_form_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/search-form/search-form.js */ \"./src/components/search-form/search-form.js\");\n/* harmony import */ var _components_registration_form_registration_form_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/registration-form/registration-form.js */ \"./src/components/registration-form/registration-form.js\");\n/* harmony import */ var _components_login_form_login_form_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/login-form/login-form.js */ \"./src/components/login-form/login-form.js\");\n/* harmony import */ var _components_booking_form_booking_form_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/booking-form/booking-form.js */ \"./src/components/booking-form/booking-form.js\");\n/* harmony import */ var _components_room_info_cards_room_info_cards_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../components/room-info-cards/room-info-cards.js */ \"./src/components/room-info-cards/room-info-cards.js\");\n/* harmony import */ var _node_modules_air_datepicker_dist_js_datepicker_min_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../node_modules/air-datepicker/dist/js/datepicker.min.js */ \"./node_modules/air-datepicker/dist/js/datepicker.min.js\");\n/* harmony import */ var _node_modules_air_datepicker_dist_js_datepicker_min_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_node_modules_air_datepicker_dist_js_datepicker_min_js__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\n\njQuery(function() {\n  const $filter = $('.datepicker--onCard');\n  let startDate = new Date();\n  let endDate = new Date();\n  startDate.setDate(startDate.getDate() + 2);\n  endDate.setDate(endDate.getDate() + 5);\n  const selectDates = [startDate, endDate];\n  const baseOptions = {\n    startDate: new Date(),\n    prevHtml: '<button class=\"button datepicker--nav-prev\" type=\"button\"><span>arrow_back</span></button>',\n    nextHtml: '<button class=\"button datepicker--nav-next\" type=\"button\"><span>arrow_forward</span></button>',\n    navTitles: {\n      days: 'MM yyyy',\n      months: 'yyyy',\n      years: 'yyyy1 - yyyy2'\n    },\n    clearButton: true,\n    autoClose: false,\n    range: true,\n    multipleDatesSeparator: ' - ',\n    dateFormat: 'dd M',\n    onSelect: function (formattedDate, date) {\n      const $applyButton = $filter.datepicker().data('datepicker').$datepicker.find('.datepicker--button[data-action=\"apply\"]');\n      $applyButton.click(() => {\n        event.preventDefault();\n        event.stopPropagation();\n        $filter.datepicker().data('datepicker').hide();\n      })\n    },\n  };\n\n  const addApplyButton = ($datepickerInput) => {\n    const applyButtonHtml = '<span class=\"datepicker--button\" data-action=\"apply\">Применить</span>';\n    const $buttons = $datepickerInput.data('datepicker').$datepicker.find('.datepicker--buttons');\n    $buttons.append(applyButtonHtml);\n  };\n\n  $filter.datepicker(baseOptions);\n  addApplyButton($filter);\n  $('.datepicker--onCard').datepicker().data('datepicker').selectDate(selectDates);\n});\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"), __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/pages/uikit/cards/cards.js?");
 
 /***/ }),
 
