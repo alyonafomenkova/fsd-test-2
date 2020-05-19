@@ -1,0 +1,34 @@
+mixin roomInfoCards(data, title=null)
+  include ../../components/rating/rating
+  div.room-info-cards
+    if title
+      h1.room-info-cards__title !{title}
+    ul.room-info-cards__list
+      each item in data
+        li.room-info-cards__item
+          div.room-info-cards__slideshow-container
+            each img in item.images
+              div.room-info-cards__mySlides.room-info-cards__mySlides--fade
+                img.room-info-cards__img(src=img.imgSrc)
+            a.room-info-cards__prev-link
+              i.room-info-cards__prev-icon expand_more
+            a.room-info-cards__next-link
+              i.room-info-cards__next-icon expand_more
+            br
+            div.room-info-cards__dots-wrapper
+              span(data-number="1").room-info-cards__dot
+              span(data-number="2").room-info-cards__dot
+              span(data-number="3").room-info-cards__dot
+              span(data-number="4").room-info-cards__dot
+          div.room-info-cards__info-wrapper
+            div.room-info-cards__room-wrapper
+              div
+                span.room-info-cards__number !{item.title}
+                if(item.type)
+                  span.room-info-cards__type  !{item.type}
+              div.room-info-cards__price-wrapper
+                b.room-info-cards__price 9&nbsp;990₽
+                span.room-info-cards__price-period  в сутки
+            div.room-info-cards__reviews-wrapper
+              +rating(item.rating)
+              span <b> !{item.reviewsCount} </b>Отзывов
