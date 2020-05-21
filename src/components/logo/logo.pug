@@ -1,9 +1,11 @@
 -const pathToMainLogo='components/logo/images/main-logo.svg';
+-const pathToTextLogo='components/logo/images/text-logo.svg';
 -const pathToGrayLogo='components/logo/images/gray-logo.svg';
 
 mixin logo(basePath, type)
-  .logo
+  a.logo
     if type==='gray'
-      img.logo--gray(src=basePath+pathToGrayLogo alt='logo')
+      img.logo__img.logo__img--gray(src=basePath+pathToGrayLogo alt='logo')
     else
-      img.logo--main(src=basePath+pathToMainLogo alt='Main logo')
+      img.logo__img.logo__img--main(src=basePath+pathToMainLogo alt='Main logo')
+      img.logo__img.logo__img--text(src=basePath+pathToTextLogo alt='Main logo')

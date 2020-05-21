@@ -1,8 +1,15 @@
 .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 106px;
+}
+
+.logo__img {
   width: 48px;
   height: 48px;
 }
 
-.logo--gray {
-  margin: 30px 0 0 30px;
+.logo__img--gray {
+  margin: 30px 0 72px 30px;
 }
