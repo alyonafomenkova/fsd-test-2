@@ -1,0 +1,38 @@
+mixin header(data, isUserAuthorized=null)
+  include ../logo/logo
+  header.header
+    +logo('../../../', 'mainLogo')
+    div.header__wrapper.header__wrapper-menu--opened
+      div.header__buttons-wrapper
+        button.header__toggle-menu-btn.header__toggle-menu-btn--nojs(type='button')
+          i.header__toggle-menu-icon.header__toggle-menu-icon--open menu
+          i.header__toggle-menu-icon.header__toggle-menu-icon--close expand_less
+        if(isUserAuthorized)
+          span.header__user-name Cosmin Negoita
+        else
+          a.header__show-auth-btn.header__show-auth-btn--nojs(href='auth.html') person
+          div.header__auth-wrapper
+            a.header__login Login
+            a.header__register REGISTER
+      nav.header__main-nav
+        ul.header__nav-list
+          li.header__nav-item
+            a.header__nav-link.header__nav-link--active Home
+          li.header__nav-item
+            a.header__nav-link About Us
+          li.header__nav-item.header__submenu.header__submenu--close
+            a.header__nav-link.header__nav-link--more Services
+            button.header__toggle-submenu-btn.header__toggle-submenu-btn--nojs
+              i.header__toggle-submenu-icon.header__toggle-submenu-icon--open expand_more
+              i.header__toggle-submenu-icon.header__toggle-submenu-icon--close expand_less
+            ul.header__submenu-list.header__submenu-list--services
+              li.header__submenu-item
+                a.header__submenu-item Service_1
+              li.header__submenu-item
+                a.header__submenu-item Service_2
+          li.header__nav-item
+            a.header__nav-link Careers
+          li.header__nav-item
+            a.header__nav-link News
+          li.header__nav-item
+            a.header__nav-link Documentation
