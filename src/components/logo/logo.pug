@@ -5,7 +5,7 @@
 mixin logo(basePath, type)
   a.logo
     if type==='gray'
-      img.logo__img.logo__img--gray(src=basePath+pathToGrayLogo alt='logo')
+      img.logo__img.logo__img--gray(src=basePath+pathToGrayLogo width='48' height='48' alt='logo')
     else
-      img.logo__img.logo__img--main(src=basePath+pathToMainLogo alt='Main logo')
+      img.logo__img.logo__img--main(src=basePath+pathToMainLogo width='40' height='40' alt='Main logo')
       img.logo__img.logo__img--text(src=basePath+pathToTextLogo alt='Main logo')
