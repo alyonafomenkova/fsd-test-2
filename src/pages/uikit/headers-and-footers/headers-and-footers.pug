@@ -1,0 +1,24 @@
+extends ../../../base/base.pug
+
+block title
+  | headers-and-footers
+
+block main
+  include ../../../components/logo/logo
+  include ../../../components/header/header
+  +logo('../../../', 'gray')
+  -
+    const headersData = [
+    {'content': 'Home', 'isActive': 'true'},
+    {'content': 'About Us'},
+    {'content': 'Services', 'submenu': [{'content': 'Service_1'}, {'content': 'Service_2'}]},
+    {'content': 'Careers'},
+    {'content': 'News'},
+    {'content': 'Documentation'},
+    ];//
+
+  div.container
+    div.container__item
+      +header(headersData, false, false)
+    div.container__item
+      +header(headersData, true)

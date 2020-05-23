@@ -14,13 +14,14 @@ const config = {
     'colors-and-type': PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.js',
     'form-elements': PATHS.source + '/pages/uikit/form-elements/form-elements.js',
     'cards': PATHS.source + '/pages/uikit/cards/cards.js',
+    'headers-and-footers': PATHS.source + '/pages/uikit/headers-and-footers/headers-and-footers.js',
   },
   output: {
     path: PATHS.build,
     filename: '[name].bundle.js'
   },
   devServer: {
-    index: 'cards.html',
+    index: 'headers-and-footers.html',
     //index: 'form-elements.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
@@ -106,6 +107,12 @@ const config = {
       filename: 'cards.html',
       template: PATHS.source + '/pages/uikit/cards/cards.pug',
       chunks: ['cards'],
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'headers-and-footers.html',
+      template: PATHS.source + '/pages/uikit/headers-and-footers/headers-and-footers.pug',
+      chunks: ['headers-and-footers'],
       inject: true,
     }),
     new webpack.ProvidePlugin({
