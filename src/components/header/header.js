@@ -1,5 +1,6 @@
 import './header.scss';
 import '../logo/logo.js';
+import '../buttons/buttons.js';
 
 const toggleMenuButtons = document.querySelectorAll('.header__toggle-menu-btn');
 const toggleSubmenuLinks = document.querySelectorAll('.header__nav-item.header__submenu');
@@ -17,21 +18,21 @@ toggleMenuButtons.forEach((button) => {
 });
 
 headerNavMenu.forEach((navMenu) => {
-  const wrapper = navMenu.closest('.header__wrapper');
+  const wrapper = navMenu.closest('.header__content-wrapper');
   const list = navMenu.querySelector('.header__nav-list');
-  wrapper.classList.remove('header__wrapper-menu--opened');
-  wrapper.classList.add('header__wrapper-menu--closed');
+  wrapper.classList.remove('header__content-wrapper-menu--opened');
+  wrapper.classList.add('header__content-wrapper-menu--closed');
 });
 
 toggleMenuButtons.forEach((button) => {
   button.addEventListener('click', function() {
-    const wrapper = button.closest('.header__wrapper');
-    if (wrapper.classList.contains('header__wrapper-menu--closed')) {
-      wrapper.classList.remove('header__wrapper-menu--closed');
-      wrapper.classList.add('header__wrapper-menu--opened');
+    const wrapper = button.closest('.header__content-wrapper');
+    if (wrapper.classList.contains('header__content-wrapper-menu--closed')) {
+      wrapper.classList.remove('header__content-wrapper-menu--closed');
+      wrapper.classList.add('header__content-wrapper-menu--opened');
     } else {
-      wrapper.classList.add('header__wrapper-menu--closed');
-      wrapper.classList.remove('header__wrapper-menu--opened');
+      wrapper.classList.add('header__content-wrapper-menu--closed');
+      wrapper.classList.remove('header__content-wrapper-menu--opened');
     }
   });
 });

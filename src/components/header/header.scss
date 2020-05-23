@@ -2,21 +2,27 @@
 @import '../../base/base.scss';
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 500px;
   margin: 0 auto;
   padding: 0 20px 0 20px;
-  background-color: pink;//
+  background-color: $white-color;
+  margin-bottom: 50px;//
 }
 
 .header__wrapper {
-  width: 60%;
-  background-color: darkseagreen;//
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fce8f4;//
 }
 
-.header__wrapper-menu--closed {
+.header__content-wrapper {
+  width: 60%;
+  background-color: #b4f0db;//
+}
+
+.header__content-wrapper-menu--closed {
   .header__main-nav {
     display: none;
   }
@@ -28,7 +34,7 @@
   }
 }
 
-.header__wrapper-menu--opened {
+.header__content-wrapper-menu--opened {
   .header__main-nav {
     display: block;
   }
@@ -46,7 +52,6 @@
   align-items: center;
   width: 100%;
   min-height: 48px;
-  background-color: red;//
   &--authorized {
     justify-content: flex-end;
   }
@@ -94,7 +99,8 @@
 
 .header__nav-link {
   display: block;
-  padding: 7px;
+  padding: 6px;
+  cursor: pointer;
   &--active {
     font-weight: bold;
     color: $dark-color-opacity-75;
@@ -151,6 +157,7 @@
   display: block;
   padding: 5px;
   font-style: italic;
+  cursor: pointer;
 }
 
 /* Auth block */
@@ -169,28 +176,74 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    max-width: 1160px;
     padding: 0;
-    background-color: yellow;//
+  }
+  .header__wrapper {
+    max-width: 1160px;
+    padding-top: 12px;
+    padding-left: 45px;
+  }
+  .header__content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    width: auto;
   }
   .header__toggle-menu-btn {
     display: none;
   }
-  .header__main-nav--closed .header__nav-list {
+  .header__content-wrapper-menu--closed .header__main-nav {
     display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    background-color: #e8fcf5;//
   }
   .header__nav-item {
     min-width: auto;
   }
+  .header__nav-link {
+    padding: 10px 0;
+    background-color: #66D2EA;//
+  }
+  .header__submenu {
+    width: auto;
+    padding-right: 24px;
+    position: relative;
+    &:hover {
+      .header__submenu-list {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba($purple-color, 0.5);
+      }
+      background-color: red;//
+    }
+  }
+  .header__buttons-wrapper {
+    width: auto;
+    order: 1;
+  }
+  .header__login {
+    min-height: 34px !important; // вынести в buttons component
+    min-width: 79px;
+    margin-right: 20px;
+  }
+  .header__register {
+    min-height: 34px !important; // вынести в buttons component
+    min-width: 101px;
+  }
   .header__user-name {
     display: block;
+    padding: 6px 0 6px 30px;
+    border-left: 1px solid $dark-color-opacity-10;
+    color: $dark-color-opacity-50;
   }
-
   .header__show-auth-btn {
     display: none;
   }
-
   .header__auth-wrapper {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 0;
   }
 }
