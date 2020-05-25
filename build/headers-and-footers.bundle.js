@@ -109,6 +109,29 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
+/***/ "./src/components/footer/footer.js":
+/*!*****************************************!*\
+  !*** ./src/components/footer/footer.js ***!
+  \*****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.scss */ \"./src/components/footer/footer.scss\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _buttons_buttons_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buttons/buttons.js */ \"./src/components/buttons/buttons.js\");\n/* harmony import */ var _subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../subscription-text-field/subscription-text-field.js */ \"./src/components/subscription-text-field/subscription-text-field.js\");\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/components/footer/footer.js?");
+
+/***/ }),
+
+/***/ "./src/components/footer/footer.scss":
+/*!*******************************************!*\
+  !*** ./src/components/footer/footer.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/footer/footer.scss?");
+
+/***/ }),
+
 /***/ "./src/components/header/header.js":
 /*!*****************************************!*\
   !*** ./src/components/header/header.js ***!
@@ -155,6 +178,29 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
+/***/ "./src/components/subscription-text-field/subscription-text-field.js":
+/*!***************************************************************************!*\
+  !*** ./src/components/subscription-text-field/subscription-text-field.js ***!
+  \***************************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subscription-text-field.scss */ \"./src/components/subscription-text-field/subscription-text-field.scss\");\n/* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/subscription-text-field/subscription-text-field.js?");
+
+/***/ }),
+
+/***/ "./src/components/subscription-text-field/subscription-text-field.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/components/subscription-text-field/subscription-text-field.scss ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/subscription-text-field/subscription-text-field.scss?");
+
+/***/ }),
+
 /***/ "./src/pages/uikit/headers-and-footers/headers-and-footers.js":
 /*!********************************************************************!*\
   !*** ./src/pages/uikit/headers-and-footers/headers-and-footers.js ***!
@@ -163,7 +209,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./headers-and-footers.scss */ \"./src/pages/uikit/headers-and-footers/headers-and-footers.scss\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/header/header.js */ \"./src/components/header/header.js\");\n\n\n\n\n//# sourceURL=webpack:///./src/pages/uikit/headers-and-footers/headers-and-footers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./headers-and-footers.scss */ \"./src/pages/uikit/headers-and-footers/headers-and-footers.scss\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/header/header.js */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/footer/footer.js */ \"./src/components/footer/footer.js\");\n\n\n\n\n\n//# sourceURL=webpack:///./src/pages/uikit/headers-and-footers/headers-and-footers.js?");
 
 /***/ }),
 

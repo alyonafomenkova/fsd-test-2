@@ -1,0 +1,97 @@
+@import '../../base/theme.scss';
+@import '../../base/base.scss';
+
+.footer {
+  margin: 0 auto;
+  padding-top: 89px;
+  background-color: $white-color;
+}
+
+.footer__wrapper {
+  display: flex;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 12px;
+  padding-bottom: 75px;
+  background-color: #fce8f4;//
+}
+
+.footer__description-wrapper {
+  width: 24%;
+  background-color: #a5f2c9;//
+}
+
+.footer__description {
+  margin: 18px 0 0 0;
+}
+
+.footer__content-wrapper {
+  display: flex;
+  width: 76%;
+  padding-top: 5px;
+}
+
+.footer__content-item {
+  width: 100%;
+}
+
+.footer__content-list {
+  margin-top: 17px;
+}
+
+.footer__content-link {
+  display: block;
+  padding-bottom: 15px;
+}
+
+.footer__subscribe-text {
+  margin: 18px 0 24px 0;
+}
+
+.footer__separator {
+  height: 1px;
+  background-color: $dark-color-opacity-10;
+  border: none;
+}
+
+.footer__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1160px;
+  margin: 11px auto 0 auto;
+  padding-bottom: 10px;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer__social-link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.footer__social-icon {
+  font-family: 'font-awesome-5-brands-regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  &--tw::before {
+    content: '\f099';
+  }
+  &--fb::before {
+    content: '\f082';
+  }
+  &--insta::before {
+    content: '\f16d';
+  }
+}
+
+/* media */
+
+//@media (min-width: $tablet-width) {
+//}

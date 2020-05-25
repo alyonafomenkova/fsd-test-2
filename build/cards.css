@@ -396,6 +396,13 @@ th {
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+
 html {
   box-sizing: border-box;
   font-size: 14px; }
@@ -506,6 +513,13 @@ ul {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
@@ -903,6 +917,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -1406,6 +1427,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -2166,6 +2194,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -2996,6 +3031,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -3227,6 +3269,13 @@ body {
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -3623,6 +3672,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -4126,6 +4182,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -4886,6 +4949,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -5716,6 +5786,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -5927,6 +6004,13 @@ ul {
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -6323,6 +6407,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -6826,6 +6917,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -7586,6 +7684,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -8417,6 +8522,13 @@ th {
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+
 html {
   box-sizing: border-box;
   font-size: 14px; }
@@ -8954,6 +9066,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -9482,6 +9601,13 @@ th {
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+
 html {
   box-sizing: border-box;
   font-size: 14px; }
@@ -9990,6 +10116,13 @@ th {
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+
 html {
   box-sizing: border-box;
   font-size: 14px; }
@@ -10488,6 +10621,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -10991,6 +11131,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -11502,6 +11649,13 @@ th {
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+
 html {
   box-sizing: border-box;
   font-size: 14px; }
@@ -12006,6 +12160,13 @@ th {
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+
 html {
   box-sizing: border-box;
   font-size: 14px; }
@@ -12107,6 +12268,13 @@ ul {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
@@ -12504,6 +12672,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -13007,6 +13182,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -13870,6 +14052,13 @@ th {
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+
 html {
   box-sizing: border-box;
   font-size: 14px; }
@@ -14484,6 +14673,13 @@ th {
   font-weight: normal;
   font-display: swap;
   src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;

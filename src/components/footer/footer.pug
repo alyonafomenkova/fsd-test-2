@@ -1,0 +1,38 @@
+mixin footer(data, isUserAuthorized, isRu)
+  include ../logo/logo
+  include ../buttons/buttons
+  include ../subscription-text-field/subscription-text-field
+  footer.footer
+    div.footer__wrapper
+      div.footer__description-wrapper
+        +logo('../../../', 'mainLogo')
+        p.footer__description !{data.description}
+      div.footer__content-wrapper
+        each item in data.contentLists
+          div.footer__content-item
+            h3 !{item.title}
+            if(item.links)
+              ul.footer__content-list
+                each link in item.links
+                  li
+                    a.footer__content-link !{link}
+            if(item.subscribe)
+              div.footer__subscribe-wrapper
+                p.footer__subscribe-text !{item.subscribe}
+                +subscriptionTextField('Your email address')
+    hr.footer__separator
+    div.footer__bottom-wrapper
+      p.footer__copyright-text Copyright © 2018 Toxin UI Kit. All rights reserved.
+      ul.footer__social-list
+        li
+          a.footer__social-link.footer__social-link--tw(href='https://twitter.com/' target='_blank')
+            span.visually-hidden Мы в Твиттер
+            i.footer__social-icon.footer__social-icon--tw
+        li
+          a.footer__social-link.footer__social-link--fb(href='https://www.facebook.com/' target='_blank')
+            span.visually-hidden Мы в Фейсбук
+            i.footer__social-icon.footer__social-icon--fb
+        li
+          a.footer__social-link.footer__social-link--insta(href='https://www.instagram.com/' target='_blank')
+            span.visually-hidden Мы в Инстаграм
+            i.footer__social-icon.footer__social-icon--insta
