@@ -46,3 +46,12 @@
   src: url("~Fonts/materialIcons-regular.woff2") format("woff2"), url("~Fonts/materialIcons-regular.woff") format("woff"),
   url("~Fonts/materialIcons-regular.ttf") format("truetype"), url("~Fonts/materialIcons-regular.svg#MaterialIcons-Regular") format("svg");
 }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("~Fonts/font-awesome-5-brands-regular.woff2") format("woff2"), url("~Fonts/font-awesome-5-brands-regular.woff") format("woff"),
+  url("~Fonts/font-awesome-5-brands-regular.ttf") format("truetype"), url("~Fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular") format("svg");
+}
