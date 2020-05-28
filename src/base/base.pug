@@ -1,11 +1,11 @@
 doctype html
 html(lang="en")
+  block vars
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width,initial-scale=1")
+    block meta
     title
       block title
-
   body
-    block main
-      // - include header, footer
+    block content
