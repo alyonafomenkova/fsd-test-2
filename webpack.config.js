@@ -11,18 +11,20 @@ const webpack = require('webpack');
 const config = {
   mode: 'development',
   entry: {
-    'colors-and-type': PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.js',
-    'form-elements': PATHS.source + '/pages/uikit/form-elements/form-elements.js',
-    'cards': PATHS.source + '/pages/uikit/cards/cards.js',
-    'headers-and-footers': PATHS.source + '/pages/uikit/headers-and-footers/headers-and-footers.js',
+    'colors-and-type': PATHS.source + '/pages/colors-and-type/colors-and-type.js',
+    'form-elements': PATHS.source + '/pages/form-elements/form-elements.js',
+    'cards': PATHS.source + '/pages/cards/cards.js',
+    'headers-and-footers': PATHS.source + '/pages/headers-and-footers/headers-and-footers.js',
   },
   output: {
     path: PATHS.build,
     filename: '[name].bundle.js'
   },
   devServer: {
-    index: 'headers-and-footers.html',
-    //index: 'form-elements.html',
+    //index: 'colors-and-type.html',
+    index: 'form-elements.html',
+    //index: 'cards.html',
+    //index: 'headers-and-footers.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
@@ -61,27 +63,25 @@ const config = {
 
       {
         test: /\.pug$/,
-        loaders: [
-          {
-            loader: "html-loader"
-          },
-          {
-            loader: "pug-html-loader",
-            options: {
-              "pretty":true
-            }
-          }
-        ]
+        loader: 'pug-loader',
+        options: {
+          'pretty': true
+        }
       },
 
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|svg|jpe?g|gif)$/i,
         loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]'
+        },
+        exclude: [/fonts/],
       },
 
       {
         test: /\.(woff2|woff|ttf|svg)$/,
-        loader: 'file-loader?limit=1024&name=fonts/[name].[ext]'
+        include: [/fonts/],
+        loader: 'file-loader?limit=1024&name=fonts/[name].[ext]',
       },
     ],
   },
@@ -93,25 +93,25 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       filename: 'colors-and-type.html',
-      template: PATHS.source + '/pages/uikit/colors-and-type/colors-and-type.pug',
+      template: PATHS.source + '/pages/colors-and-type/colors-and-type.pug',
       chunks: ['colors-and-type'],
       inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'form-elements.html',
-      template: PATHS.source + '/pages/uikit/form-elements/form-elements.pug',
+      template: PATHS.source + '/pages/form-elements/form-elements.pug',
       chunks: ['form-elements'],
       inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'cards.html',
-      template: PATHS.source + '/pages/uikit/cards/cards.pug',
+      template: PATHS.source + '/pages/cards/cards.pug',
       chunks: ['cards'],
       inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'headers-and-footers.html',
-      template: PATHS.source + '/pages/uikit/headers-and-footers/headers-and-footers.pug',
+      template: PATHS.source + '/pages/headers-and-footers/headers-and-footers.pug',
       chunks: ['headers-and-footers'],
       inject: true,
     }),
