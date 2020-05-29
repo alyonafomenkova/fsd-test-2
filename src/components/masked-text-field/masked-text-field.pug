@@ -1,14 +1,14 @@
-mixin maskedTextField(type, name, id, classes, placeholder, label = null, uikitState='default', readOnly = false)
+mixin maskedTextField(options)
   div.masked-text-field
-    if label
-      label.masked-text-field__label(for=id) !{label}
-    if uikitState
-      span.masked-text-field__state !{uikitState}
+    if options.label
+      label.masked-text-field__label(for=options.id) !{options.label}
+    if options.uikitState
+      span.masked-text-field__state !{options.uikitState}
     input.masked-text-field__input(
-      type = type,
-      name = name,
-      id = id,
-      class = classes,
-      placeholder = placeholder || '',
-      readOnly = readOnly || false,
+      type = options.type,
+      name = options.name,
+      id = options.id,
+      class=options.classes ? 'masked-text-field__input--' + options.classes : '',
+      placeholder = options.placeholder || '',
+      :readonly=(options.readOnly)
     )
