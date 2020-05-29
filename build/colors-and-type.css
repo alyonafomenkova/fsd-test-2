@@ -411,7 +411,7 @@ html {
 *::after {
   box-sizing: inherit; }
 
-body, h1, h2, h3 {
+h1, h2, h3 {
   margin: 0;
   padding: 0; }
 
@@ -467,14 +467,12 @@ ul {
 
 body {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 30px 0 0 30px; }
+  margin: 0 auto; }
 
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 67px 185px 0 120px; }
+  padding: 67px 185px 0 150px; }
 
 .color-block {
   display: flex;
@@ -526,4 +524,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 106px; }
+
+.logo__img--uikit {
+  margin-top: 30px;
+  margin-left: 30px; }
 
