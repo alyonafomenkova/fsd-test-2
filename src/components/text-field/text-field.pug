@@ -1,14 +1,14 @@
-mixin textField(type, name, id, classes, placeholder, label = null, uikitState='default', readOnly = false)
+mixin textField(options)
   div.text-field
-    if label
-      label.text-field__label(for=id) !{label}
-    if uikitState
-      span.text-field__state !{uikitState}
+    if options.label
+      label.text-field__label(for=options.id) !{options.label}
+    if options.uikitState
+      span.text-field__state !{options.uikitState}
     input.text-field__input(
-      type = type,
-      name = name,
-      id = id,
-      class = classes,
-      placeholder = placeholder || '',
-      readOnly = readOnly || false
+      type = options.type,
+      name = options.name,
+      id = options.id,
+      class=options.classes ? 'text-field__input--' + options.classes : '',
+      placeholder = options.placeholder || '',
+      :readonly=(options.readOnly)
   )

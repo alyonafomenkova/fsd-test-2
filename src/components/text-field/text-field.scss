@@ -1,5 +1,5 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
 
 .text-field {
   display: flex;
@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .text-field__state {
@@ -32,7 +32,8 @@
   border-radius: 4px;
   &:hover,
   &:focus,
-  &--focused {
+  &--hovered {
+    outline: none;
     border-color: $dark-color-opacity-50;
   }
   &::placeholder {
@@ -42,6 +43,6 @@
 
 .text-field__input:hover::placeholder,
 .text-field__input:focus::placeholder,
-.text-field__input--focused::placeholder {
+.text-field__input--hovered::placeholder {
   color: $dark-color-opacity-75;
 }
