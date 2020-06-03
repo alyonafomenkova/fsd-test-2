@@ -1,12 +1,45 @@
 import './dropdown.scss';
 import './dropdown.pug';
-import '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
 
-jQuery(function() {
-  const menu = $('.iqdropdown');
-  const $this = $(this);
-  const clearButton = $('.iqdropdown-menu-buttons__clear');
-  const setPluralForGuests = (count) => {
+class Dropdown {
+  constructor(dropdown) {
+    this.dropdown = dropdown;
+    this.type = this.dropdown.getAttribute('data-type');
+    this.selection = this.dropdown.querySelector('.js-dropdown__selection');
+    this.placeholder = this.dropdown.querySelector('.js-dropdown__selection-text');
+    this.defaultPlaceholderText = this.placeholder.getAttribute('data-placeholder');
+    this.menu = this.dropdown.querySelector('.js-dropdown__menu');
+    this.optionList = this.dropdown.querySelectorAll('.js-dropdown__option');
+    this.decrementButtons = this.dropdown.querySelectorAll('.js-dropdown__decrement-button');
+    this.incrementButtons = this.dropdown.querySelectorAll('.js-dropdown__increment-button');
+    this.quantityNodes = this.dropdown.querySelectorAll('.js-dropdown__quantity');
+    this.handleSelectionButtonClick = this.handleSelectionButtonClick.bind(this);
+    this.handleDecrementButtonClick = this.handleDecrementButtonClick.bind(this);
+    this.handleIncrementButtonClick = this.handleIncrementButtonClick.bind(this);
+    this.handleClearButtonClick = this.handleClearButtonClick.bind(this);
+    this.handleApplyButtonClick = this.handleApplyButtonClick.bind(this);
+    this.totalCount;
+    this.Mode = {
+      PEOPLE: `people`,
+      FACILITIES: `facilities`
+    };
+  }
+
+  toggleMenu() {
+    this.menu.classList.toggle('dropdown__menu--expanded');
+  };
+
+  toggleClearButton() {
+    const clearButton = this.dropdown.querySelector('.js-dropdown__clear-button');
+    this.updateTotalCount();
+    if (this.totalCount > 0) {
+      clearButton.classList.remove('dropdown__clear-button--invisible');
+    } else {
+      clearButton.classList.add('dropdown__clear-button--invisible');
+    }
+  }
+
+  setPluralForGuests(count) {
     if (count === 1) {
       return 'гость';
     } else if (count >= 2 && count <= 4) {
@@ -15,84 +48,178 @@ jQuery(function() {
       return 'гостей';
     }
   };
-  const setPluralForBedroom = (item) => {
-    if (item.bedroom === 1) {
-      return `${item.bedroom} спальня`;
-    } else if (item.bedroom >= 2 && item.bedroom <= 4) {
-      return `${item.bedroom} спальни`;
-    } else if (item.bedroom === 0 || item.bedroom >= 5) {
-      return `${item.bedroom} спален`;
+
+  setPluralForBedrooms(count) {
+    if (count === 1) {
+      return `${count} спальня`;
+    } else if (count >= 2 && count <= 4) {
+      return `${count} спальни`;
+    } else if (count === 0 || count >= 5) {
+      return `${count} спален`;
     }
   };
-  const setPluralForBed = (item) => {
-    if (item.bed === 1) {
-      return `${item.bed} кровать`;
-    } else if (item.bed >= 2 && item.bed <= 4) {
-      return `${item.bed} кровати`;
-    } else if (item.bed === 0 || item.bed >= 5) {
-      return `${item.bed} кроватей`;
+
+  setPluralForBeds(count) {
+    if (count === 1) {
+      return `${count} кровать`;
+    } else if (count >= 2 && count <= 4) {
+      return `${count} кровати`;
+    } else if (count === 0 || count >= 5) {
+      return `${count} кроватей`;
     }
   };
-  const clear = () => {
-    event.preventDefault();
-    $('.iqdropdown-menu').find('.iqdropdown-item-controls').remove();
-    $('.iqdropdown--guests').iqDropdown(createOptions(additionalGuestsOptions));
-  };
-  const showClearButton = (target) => {
-    const selection = target.find('.iqdropdown-selection');
-    selection.each(function() {
-      let title = $(this).text();
-      if (title === 'Сколько гостей') {
-        $(this).parent().find('.iqdropdown-menu-buttons__clear').css({'visibility': 'hidden'});
-      } else {
-        $(this).parent().find('.iqdropdown-menu-buttons__clear').css({'visibility': 'visible'});
+
+  updateTotalCount() {
+    this.totalCount = 0;
+    this.quantityNodes.forEach((node) => {
+      this.totalCount += +node.innerText;
+    });
+  }
+
+  updatePlaceholder() {
+    if (this.totalCount > 0) {
+      this.placeholder.innerText = ``;
+      if (this.type === this.Mode.PEOPLE) {
+        this.placeholder.innerText = this.totalCount + ' ' + this.setPluralForGuests(this.totalCount);
+      } else if (this.type === this.Mode.FACILITIES) {
+        const bedroomCount = Number.parseInt(this.quantityNodes[0].innerText);
+        const bedCount = Number.parseInt(this.quantityNodes[1].innerText);
+        this.placeholder.innerText = this.setPluralForBedrooms(bedroomCount) + ', ' + this.setPluralForBeds(bedCount) + '...';
+      } else throw new Error('Unknown dropdown\'s mode');
+    } else {
+      this.placeholder.innerText = this.defaultPlaceholderText;
+    }
+  }
+
+  disableButtons() {
+    this.optionList.forEach((option) => {
+      const index = option.getAttribute('data-index');
+      const currentCount = this.quantityNodes[index].innerText;
+      const minCount = this.decrementButtons[index].getAttribute('data-min-count');
+      const maxCount = this.incrementButtons[index].getAttribute('data-max-count');
+      if (currentCount === minCount) {
+        this.decrementButtons[index].disabled = true;
+      }
+      if (currentCount === maxCount) {
+        this.incrementButtons[index].disabled = true;
       }
     });
+  }
 
-  };
-  const baseOptions = {
-    maxItems: Infinity,
-    minItems: 0,
-    controls: {
-      position: 'right',
-      displayCls: 'iqdropdown-item-display',
-      controlsCls: 'iqdropdown-item-controls',
-      counterCls: 'counter'
-    },
-  };
-  const additionalGuestsOptions = {
-    setSelectionText: (itemCount, totalItems) => {
-      if (menu.hasClass('menu-open')) {
-        if (totalItems === 0) {
-          return `Сколько гостей`;
-        } else {
-          return totalItems + ' ' + setPluralForGuests(totalItems);
-        }
-      }
-    },
-    onChange: (id, count, totalItems) => {
-      const target = $(event.target).closest('.iqdropdown--guests');
-      if (totalItems !== 0) {
-        showClearButton(target);
-      } else {
-        target.find('.iqdropdown-menu-buttons__clear').css({'visibility': 'hidden'});
-      }
-    },
-  };
-  const additionalFacilitiesOptions = {
-    setSelectionText: (itemCount, totalItems) => {
-      if (menu.hasClass('menu-open')) {
-        return setPluralForBedroom(itemCount) + ', ' + setPluralForBed(itemCount) + '...';
-      }
-    },
-  };
-  const createOptions  = (additionalOptions) => {
-    const options = $.extend({}, baseOptions, additionalOptions);
-    return options;
-  };
-  clearButton.click(clear);
-  $('.iqdropdown--guests').iqDropdown(createOptions(additionalGuestsOptions));
-  $('.iqdropdown--facilities').iqDropdown(createOptions(additionalFacilitiesOptions));
-  showClearButton($('.iqdropdown--guests'));
-  $('.iqdropdown--facilities').closest('.dropdown').css({'max-width': '266px'});
+  enableDecrementButton(button) {
+    button.disabled = false;
+  }
+
+  incrementCount() {
+    const incrementButton = event.target;
+    const index = incrementButton.getAttribute('data-index');
+    const maxCount = Number.parseInt(incrementButton.getAttribute('data-max-count'));
+    let currentCountNode = this.quantityNodes[index];
+    let currentCountValue = Number.parseInt(currentCountNode.innerText);
+    let decrementButton = this.decrementButtons[index];
+    if (currentCountValue < maxCount) {
+      currentCountValue += 1;
+      currentCountNode.innerHTML = ``;
+      currentCountNode.innerHTML = currentCountValue;
+      this.enableDecrementButton(decrementButton);
+    }
+  }
+
+  decrementCount() {
+    const decrementButton = event.target;
+    const index = decrementButton.getAttribute('data-index');
+    const minCount = Number.parseInt(decrementButton.getAttribute('data-min-count'));
+    let currentCountNode = this.quantityNodes[index];
+    let currentCountValue = Number.parseInt(currentCountNode.innerText);
+    if (currentCountValue > minCount) {
+      currentCountValue -= 1;
+      currentCountNode.innerHTML = ``;
+      currentCountNode.innerHTML = currentCountValue;
+    }
+  }
+
+  resetCounts() {
+    this.quantityNodes.forEach((node) => {
+      node.innerText = 0;
+    });
+  }
+
+  handleSelectionButtonClick() {
+    this.toggleMenu();
+  }
+
+  handleDecrementButtonClick() {
+    this.decrementCount();
+    this.disableButtons();
+    this.updateTotalCount();
+    this.updatePlaceholder();
+    if (this.type === this.Mode.PEOPLE) {
+      this.toggleClearButton();
+    }
+  }
+
+  handleIncrementButtonClick() {
+    this.incrementCount();
+    this.disableButtons();
+    this.updateTotalCount();
+    this.updatePlaceholder();
+    if (this.type === this.Mode.PEOPLE) {
+      this.toggleClearButton();
+    }
+  }
+
+  handleClearButtonClick() {
+    this.resetCounts();
+    this.disableButtons();
+    this.updateTotalCount();
+    this.updatePlaceholder();
+    this.toggleClearButton();
+  }
+
+  handleApplyButtonClick() {
+    this.toggleMenu();
+  }
+
+  addListenersForPeopleMode() {
+    const clearButton = this.dropdown.querySelector('.js-dropdown__clear-button');
+    const applyButton = this.dropdown.querySelector('.js-dropdown__apply-button');
+    this.selection.addEventListener('click', this.handleSelectionButtonClick);
+    this.decrementButtons.forEach((decrementButton) => {
+      decrementButton.addEventListener('click', this.handleDecrementButtonClick);
+    });
+    this.incrementButtons.forEach((incrementButton) => {
+      incrementButton.addEventListener('click', this.handleIncrementButtonClick);
+    });
+    clearButton.addEventListener('click', this.handleClearButtonClick);
+    applyButton.addEventListener('click', this.handleApplyButtonClick);
+    this.toggleClearButton();
+  }
+
+  addListenersForFacilitiesMode() {
+    this.selection.addEventListener('click', this.handleSelectionButtonClick);
+    this.decrementButtons.forEach((decrementButton) => {
+      decrementButton.addEventListener('click', this.handleDecrementButtonClick);
+    });
+    this.incrementButtons.forEach((incrementButton) => {
+      incrementButton.addEventListener('click', this.handleIncrementButtonClick);
+    });
+  }
+
+  init() {
+    this.disableButtons();
+    this.updateTotalCount();
+    this.updatePlaceholder();
+    if (this.type === this.Mode.PEOPLE) {
+      this.addListenersForPeopleMode();
+    } else if (this.type === this.Mode.FACILITIES) {
+      this.addListenersForFacilitiesMode();
+    } else throw new Error('Unknown dropdown\'s mode');
+  }
+}
+
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach((it) => {
+  const dropdown = new Dropdown(it);
+  dropdown.init();
 });

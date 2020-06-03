@@ -1,19 +1,35 @@
-mixin dropdown(title, options, dropdownContentType, label = null, uikitState='default', expanded = false)
-  div.dropdown
-    if label
+mixin dropdown(settings, items)
+  div.dropdown(data-type=settings.type)
+    if settings.label
       div.dropdown__info
-        h3.dropdown__lable !{label}
-        if uikitState
-          span.dropdown__state !{uikitState}
-    div.iqdropdown(class=expanded ? 'menu-open' : '')(
-      class=dropdownContentType==='guests' ? 'iqdropdown--guests' : 'iqdropdown--facilities')
-      p.iqdropdown-selection #{title}
-        div.iqdropdown-menu
-          each item in options
-            div.iqdropdown-menu-option(data-id=item.id data-defaultcount=item.defaultCount data-mincount=item.minCount data-maxcount=item.maxCount)
-              div
-                h3.iqdropdown-item #{item.title}
-          if(dropdownContentType === 'guests')
-            div.iqdropdown-menu-buttons
-              button.iqdropdown-menu-buttons__clear(type='button' style={'visibility': 'hidden'}) очистить
-              button.iqdropdown-menu-buttons__apply(type='button') применить
+        h3.dropdown__lable !{settings.label}
+        if settings.uikitState
+          span.dropdown__state !{settings.uikitState}
+    div.dropdown__container
+      div.dropdown__selection.js-dropdown__selection
+        p.dropdown__selection-text.js-dropdown__selection-text(data-placeholder=settings.placeholder) !{settings.placeholder}
+        span.dropdown__selection-icon expand_more
+      div.dropdown__menu.js-dropdown__menu(class=settings.isExpanded==='true' ? 'dropdown__menu--expanded' : '')
+        div.dropdown__options
+          each item, index in items
+            div.dropdown__option.js-dropdown__option(data-index=index)
+              h3.dropdown__option-title !{item.title}
+              div.dropdown__buttons-wrapper
+                button.dropdown__button.dropdown__decrement-button.js-dropdown__decrement-button(
+                  type='button'
+                  data-min-count=item.minCount
+                  data-index=index
+                ) -
+                span.dropdown__quantity.js-dropdown__quantity(
+                  data-default-count=item.defaultCount
+                  data-index=index
+                ) !{item.defaultCount}
+                button.dropdown__button.dropdown__increment-button.js-dropdown__increment-button(
+                  type='button'
+                  data-max-count=item.maxCount
+                  data-index=index
+                ) +
+        if(settings.type=='people')
+          div.dropdown__controls-wrapper
+            button.dropdown__button.dropdown__clear-button.js-dropdown__clear-button(type='button') очистить
+            button.dropdown__button.dropdown__apply-button.js-dropdown__apply-button(type='button') применить

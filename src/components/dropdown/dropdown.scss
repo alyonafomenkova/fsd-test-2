@@ -1,10 +1,5 @@
 @import '../../base/theme.scss';
 @import '../../base/base.scss';
-@import '~Dropdown';
-
-.dropdown {
-  max-width: 320px;
-}
 
 .dropdown__info {
   display: flex;
@@ -27,120 +22,133 @@
   color: $dark-color-opacity-50;
 }
 
-.iqdropdown {
-  height: 44px;
+.dropdown__container {
+  position: relative;
+}
+
+.dropdown__selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
   border: 1px solid $dark-color-opacity-25;
-  &:hover,
-  &:focus,
-  &_focused {
-    border-color: $dark-color-opacity-50;
-  }
-  .iqdropdown-selection {
-    @include body-text;
-    color: $dark-color-opacity-75;
-  }
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.iqdropdown.menu-open {
-  border-color: $dark-color-opacity-50;
+.dropdown__selection-text {
+  margin: 0;
 }
 
-.iqdropdown .iqdropdown-menu-option {
-  display: flex;
-  justify-content: space-between;
-  height: auto;
-  padding: 7px 7px 0 15px;
-  &:last-child {
-    margin-bottom: 8px;
-  }
-}
-
-.iqdropdown.menu-open .iqdropdown-menu {
-  border: 1px solid $dark-color-opacity-50;
-  box-shadow: none;
-}
-
-.iqdropdown .iqdropdown-menu {
-  top: 42px;
-}
-
-.iqdropdown-item {
-  @include h3-text;
-  line-height: 2.143;
-}
-
-.iqdropdown .iqdropdown-item-controls {
-  width: 92px;
-  height:  30px;
-  button.button-decrement,
-  button.button-increment {
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    border: 1px solid $dark-color-opacity-25;
-    border-radius: 22px;
-  }
-  .counter {
-    flex-grow: 1;
-    padding: 0;
-    border: none;
-    @include h3-text;
-    line-height: 2.143;
-    text-align: center;
-  }
-}
-
-.iqdropdown .icon-decrement.icon-increment::before {
-  width: 1px;
-  height: 7px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: $dark-color-opacity-25;
-}
-
-.iqdropdown .icon-decrement::after {
-  width: 7px;
-  height: 1px;
-  top: 7px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background: $dark-color-opacity-25;
-}
-
-.iqdropdown .iqdropdown-item-controls button:hover {
-  background-color: $white-color;
-  border-color: $dark-color-opacity-50;
-}
-
-.button-decrement:hover .icon-decrement::after,
-.button-increment:hover .icon-increment::before,
-.button-increment:hover .icon-increment::after {
-  background: $dark-color-opacity-50;
-}
-
-.iqdropdown-menu-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin: 19px auto 13px auto;
-  padding: 0 7px 0 14px;
-}
-
-.iqdropdown-menu-buttons__clear,
-.iqdropdown-menu-buttons__apply {
-  @include h3-text;
-}
-
-.iqdropdown-menu-buttons__clear {
+.dropdown__selection-icon {
+  @include material-icons;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
   color: $dark-color-opacity-50;
-  &:hover {
+}
+
+.dropdown__menu {
+  display: none;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 320px;
+  padding-left: 15px;
+  padding-right: 7px;
+  padding-bottom: 13px;
+  z-index: 2;
+  border: 1px solid $dark-color-opacity-25;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 10px 20px $dark-color-opacity-5;
+  background-color: $white-color;
+}
+
+.dropdown__menu--expanded {
+  display: block;
+}
+
+.dropdown__option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7px 0;
+}
+
+.dropdown__buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 92px;
+}
+
+.dropdown__decrement-button,
+.dropdown__increment-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid $dark-color-opacity-25;
+  background: none;
+  border-radius: 22px;
+  font-size: 18px;
+  line-height: 22px;
+  color: $dark-color-opacity-25;
+  cursor: pointer;
+}
+
+.dropdown__decrement-button:disabled,
+.dropdown__increment-button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.dropdown__decrement-button:hover,
+.dropdown__increment-button:hover,
+.dropdown__decrement-button:focus,
+.dropdown__increment-button:focus {
+  color: $dark-color-opacity-50;
+  border-color: $dark-color-opacity-50;
+  outline: none;
+}
+
+.dropdown__quantity {
+  @include h3-text;
+}
+
+.dropdown__controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.dropdown__clear-button,
+.dropdown__apply-button {
+  @include h3-text;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown__clear-button {
+  color: $dark-color-opacity-50;
+  &:hover,
+  &:focus {
+    outline: none;
     color: $dark-color-opacity-75;
+  }
+  &--invisible {
+    display: none;
   }
 }
 
-.iqdropdown-menu-buttons__apply {
-  color: $purple-color;
-  &:hover {
+.dropdown__apply-button {
+  &:hover,
+  &:focus {
+    outline: none;
     color: $purple-hover-color;
   }
+  margin-left: auto;
+  color: $purple-color;
 }
