@@ -1,15 +1,19 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
 
 .like-button {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 40px;
+  min-width: 40px;
   height: 20px;
   border: 1px solid $dark-color-opacity-25;
   border-radius: 10px;
   background-color: inherit;
+  &:focus {
+    outline-color: $purple-color;
+  }
 }
 
 .like-button__icon {
@@ -28,7 +32,7 @@
   pointer-events: none;
 }
 
-.like-button--active {
+.js-like-button--active {
   border-color: $purple-color;
   .like-button__icon,
   .like-button__count-likes {

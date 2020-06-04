@@ -3,13 +3,13 @@ mixin radioButtons(radioData, titleOfList=null)
     if titleOfList
       h2.radio__title !{titleOfList}
     ul.radio__list
-      each item in radioData
+      each item, index in radioData
         li.radio__item
           input.radio__input.visually-hidden(
             type = 'radio',
-            id = item.id,
+            id = item.name+'-'+index+'-id',
             name = item.name,
-            class = item.classes,
             checked=(item.isChecked==='true' ? 'checked' : undefined),
+            disabled=(item.isDisabled==='true' ? 'checked' : undefined),
           )
-          label.radio__label(for=item.id) #{item.label}
+          label.radio__label(for=item.name+'-'+index+'-id') #{item.label}

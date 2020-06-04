@@ -1,15 +1,15 @@
-mixin checkboxButtons(checkboxData, titleOfList=null)
-  div.checkbox
+mixin checkboxButtons(checkboxData, titleOfList, isExpandable=null)
+  div.checkbox.js-checkbox(class=isExpandable ? 'checkbox--expandable' : '')
     if titleOfList
       h2.checkbox__title !{titleOfList}
     ul.checkbox__list
       each item in checkboxData
-        li.checkbox__item
+        li.checkbox__item(class=item.isDisabled==='true' ? 'checkbox__item--disabled' : '')
           input.checkbox__input.visually-hidden(
             type = 'checkbox',
-            id = item.id,
+            id = item.name+'-id',
             name = item.name,
-            class = item.classes,
             checked=(item.isChecked==='true' ? 'checked' : undefined),
+            disabled=(item.isDisabled==='true' ? 'checked' : undefined),
           )
-          label.checkbox__label(for=item.id) #{item.label}
+          label.checkbox__label(for=item.name+'-id') #{item.label}

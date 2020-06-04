@@ -1,11 +1,13 @@
 import './expandable-checkbox-list.scss';
 
 jQuery(function() {
-  const selection = $('.expandable-checkbox__selection');
+  const EXPANDED_CLASS = 'expandable-checkbox--expanded';
+  const selection = $('.js-expandable-checkbox__selection');
+
   selection.click(function() {
-    const target = $(event.target).closest('.expandable-checkbox');
-    const checkboxList = $(target.find('.checkbox'));
-    target.toggleClass('expandable-checkbox--expanded');
-    target.hasClass('expandable-checkbox--expanded') ? checkboxList.show() : checkboxList.hide();
+    const target = $(event.target).closest('.js-expandable-checkbox');
+    const checkboxList = $(target.find('.js-checkbox'));
+    target.toggleClass(EXPANDED_CLASS);
+    target.hasClass(EXPANDED_CLASS) ? checkboxList.show() : checkboxList.hide();
   });
 });

@@ -1,16 +1,27 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
+
+.checkbox__item {
+  margin-bottom: 10px;
+  &--disabled  {
+    opacity: 0.5;
+  }
+}
 
 .checkbox__title {
   @include h3-text;
 }
 
 .checkbox__list {
-  margin-top: 16px;
+  margin-top: 17px;
+}
+
+.checkbox--expandable .checkbox__list {
+  margin-top: 0;
 }
 
 .checkbox__input + label {
-  display: inline-flex;
+  display: flex;
   align-items: flex-start;
   width: 240px;
   cursor: pointer;
@@ -27,13 +38,21 @@
   flex-grow: 0;
   border: 1px solid $dark-color-opacity-25;
   border-radius: 4px;
-  margin-right: 0.5em;
+  margin-right: 0.7em;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
 }
 
 .checkbox__input:checked + label::before {
-  border-color: #BC9CFF;
-  background-image: url("images/tick.svg");
+  border-color: $purple-color;
+  background-image: url('images/tick.svg');
+}
+
+.checkbox__input + label:hover {
+  color: $dark-color-opacity-75;
+}
+
+.checkbox__input + label:hover::before {
+  border-color: $purple-hover-color;
 }

@@ -1,12 +1,9 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
 
 .rich-checkbox__title {
   @include h3-text;
-}
-
-.rich-checkbox__list {
-  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .rich-checkbox__input + label {
@@ -34,14 +31,14 @@
 }
 
 .rich-checkbox__input:checked + label::before {
-  border-color: #BC9CFF;
-  background-image: url("images/tick.svg");
+  border-color: $purple-color;
+  background-image: url('images/tick.svg');
 }
 
 .rich-checkbox__label {
   flex-direction: column;
   width: 266px;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 }
 
 .rich-checkbox__item-title {
@@ -53,4 +50,10 @@
   margin: 0;
   font-size: 12px;
   line-height: 14px;
+}
+
+.rich-checkbox__input + label:hover,
+.rich-checkbox__input + label:hover::before {
+  color: $dark-color-opacity-75;
+  border-color: $dark-color-opacity-75;
 }

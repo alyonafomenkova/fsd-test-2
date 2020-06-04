@@ -1,12 +1,9 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
 
 .toggle__title {
   @include h3-text;
-}
-
-.toggle__list {
-  margin-top: 14px;
+  margin-bottom: 15px;
 }
 
 .toggle__item {

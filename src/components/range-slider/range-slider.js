@@ -8,5 +8,6 @@ jQuery(function() {
     step: 500,
     values_separator: ' - '
   };
-  $('.range-slider__input').ionRangeSlider(settings);
+  const slider = $('.js-range-slider__input');
+  slider.ionRangeSlider(settings);
 });

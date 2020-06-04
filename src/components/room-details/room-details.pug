@@ -5,7 +5,7 @@ mixin roomDetails(data, title=null)
     ul.room-details__list
       each item in data
         li.room-details__item
-          i.room-details__icon !{item.icon}
+          span.room-details__icon !{item.icon}
           div.room-details__text
             span.room-details__name !{item.name}
             span.room-details__description #{item.description}

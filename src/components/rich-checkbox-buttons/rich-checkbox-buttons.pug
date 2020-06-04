@@ -7,11 +7,12 @@ mixin richCheckboxButtons(checkboxData, titleOfList=null)
         li.rich-checkbox__item
           input.rich-checkbox__input.visually-hidden(
             type = 'checkbox',
-            id = item.id,
+            id = item.name+'-id',
             name = item.name,
             checked=(item.isChecked==='true' ? 'checked' : undefined),
+            disabled=(item.isDisabled==='true' ? 'checked' : undefined),
           )
-          label.rich-checkbox__label(for=item.id)
+          label.rich-checkbox__label(for=item.name+'-id')
             div
               p.rich-checkbox__item-title #{item.title}
               p.rich-checkbox__description #{item.description}

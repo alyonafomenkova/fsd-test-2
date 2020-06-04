@@ -9,7 +9,6 @@ mixin toggleButton(toggleData, title=null)
             input.toggle__input.visually-hidden(
               type = 'checkbox',
               name = item.name,
-              class = item.classes,
               checked=(item.isChecked==='true' ? 'checked' : undefined),
             )
             span.toggle__slider

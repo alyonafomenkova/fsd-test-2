@@ -1,4 +1,4 @@
 mixin likeButton(countOfLikes, isActive=false)
-  button.like-button(class=isActive ? 'like-button--active' : '')
-    span.like-button__icon favorite_border
-    span.like-button__count-likes #{countOfLikes}
+  button.like-button.js-like-button(class=isActive ? 'like-button--active js-like-button--active' : '')
+    span.like-button__icon.js-like-button__icon favorite_border
+    span.like-button__count-likes.js-like-button__count-likes #{countOfLikes}

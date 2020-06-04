@@ -1,5 +1,5 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
 
 .rating__list {
   display: flex;
@@ -16,7 +16,7 @@
   @include material-icons;
   line-height: 20px;
   background-image: $purple-gradient;
-  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  color: transparent;
 }

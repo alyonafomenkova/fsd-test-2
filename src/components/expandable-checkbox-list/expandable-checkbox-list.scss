@@ -21,7 +21,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   max-width: 266px;
   cursor: pointer;
 }
@@ -30,7 +30,8 @@
   @include material-icons;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 44px;
-  line-height: 18px;
+  height: 44px;
+  line-height: 24px;
 }

@@ -1,9 +1,11 @@
 import './rating.scss';
 
 jQuery(function() {
-  const toggleSelectedIcon = () => {
-    const allIcons = $('.rating__star');
-    const allSelectedIcons = $('.selected').find('.rating__star');
+  const ratinButtons = $('.js-rating__item');
+
+  function toggleSelectedIcon() {
+    const allIcons = $('.js-rating__star');
+    const allSelectedIcons = $('.js-rating__item--selected').find('.rating__star');
     allIcons.each(function() {
       $(this).html('star_border');
     });
@@ -12,18 +14,19 @@ jQuery(function() {
     });
   };
 
-  toggleSelectedIcon();
-
-  $('.rating__item').on('click', function(){
+  function handleRatingButtonClick() {
     const onStar = parseInt($(this).data('value'), 10);
     const stars = $(this).parent().children('li.rating__item');
     for (let i = 0; i < stars.length; i++) {
-      $(stars[i]).removeClass('selected');
+      $(stars[i]).removeClass('js-rating__item--selected');
       toggleSelectedIcon();
     }
     for (let i = 0; i < onStar; i++) {
-      $(stars[i]).addClass('selected');
+      $(stars[i]).addClass('js-rating__item--selected');
       toggleSelectedIcon();
     }
-  });
+  };
+
+  ratinButtons.click(handleRatingButtonClick);
+  toggleSelectedIcon();
 });

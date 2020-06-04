@@ -1,5 +1,5 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
 
 .room-details {
   max-width: 280px;
@@ -11,6 +11,9 @@
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid $dark-color-opacity-10;
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .room-details__icon {
@@ -21,9 +24,10 @@
   font-size: 48px;
   line-height: 48px;
   background: $purple-gradient;
-  background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .room-details__name {
