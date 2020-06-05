@@ -1,5 +1,6 @@
 import './dropdown.scss';
 import './dropdown.pug';
+import '../button/button.js';
 
 class Dropdown {
   constructor(dropdown) {

@@ -1,5 +1,5 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
 
 .pagination {
   max-width: 240px;
@@ -18,26 +18,29 @@
   justify-content: center;
   align-items: center;
   width: 40px;
-  font-weight: normal;
   height: 40px;
+  font-weight: normal;
   cursor: pointer;
-  &--current {
-    background: $purple-gradient;
-    border-radius: 22px;
-    font-weight: bold;
-    color: $white-color;
-  }
-  &--next {
-    @include material-icons;
-    display: flex;
-    background: $green-gradient;
-    border-radius: 22px;
-    color: $white-color;
-  }
+}
+
+.pagination__link--current {
+  background: $purple-gradient;
+  border-radius: 22px;
+  font-weight: bold;
+  color: $white-color;
+}
+
+.pagination__link--next {
+  @include material-icons;
+  display: flex;
+  background: $green-gradient;
+  border-radius: 22px;
+  color: $white-color;
 }
 
 .pagination__description {
   margin-top: 10px;
+  padding-left: 5px;
   font-size: 1rem;
   line-height: 1.714rem;
 }

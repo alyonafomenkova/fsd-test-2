@@ -1,21 +1,29 @@
+include ../button/button
 include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
-include ../buttons/buttons
--
-  const dateDropdownOptions = [
-  {'id': 'start1-id', 'label': 'прибытие', 'placeholder': 'дд.мм.гггг', 'classes': ''},
-  {'id': 'end1-id', 'label': 'выезд', 'placeholder': 'дд.мм.гггг', 'classes': ''},
-  ];
-  const dropdownOptions = [
-  {'title': 'Взрослые', 'id': 'adult', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-  {'title': 'Дети', 'id': 'children', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-  {'title': 'Младенцы', 'id': 'babies', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
-  ];
+
 mixin bookingForm
+  -
+    const dateDropdownOptions = [
+    {'id': 'start1-id', 'label': 'прибытие', 'placeholder': 'дд.мм.гггг', 'classes': ''},
+    {'id': 'end1-id', 'label': 'выезд', 'placeholder': 'дд.мм.гггг', 'classes': ''},
+    ];
+    const dropdownSettings = {
+    'type': 'people',
+    'label': 'гости',
+    'placeholder': 'Сколько гостей',
+    };
+    const dropdownItems = [
+    {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    ];
+
   form.booking-form(action='url' method='post')
     div.booking-form__header
       div.booking-form__room-info
-        span.booking-form__room-number № 888
+        span №
+        span.booking-form__room-number 888
         span.booking-form__room-type  люкс
       div.booking-form__room-price
         b.booking-form__room-cost 9&nbsp;990₽
@@ -23,7 +31,7 @@ mixin bookingForm
     fieldset.booking-form__fieldset-date
       +date-dropdown(true, dateDropdownOptions)
     fieldset.booking-form__fieldset-guests
-      +dropdown('Сколько гостей', dropdownOptions, 'guests', 'гости', null)
+      +dropdown(dropdownSettings, dropdownItems)
     div.booking-form__price-details
       div.booking-form__price-per-day
         span 9&nbsp;990₽ x 4 суток
@@ -40,4 +48,4 @@ mixin bookingForm
         span.booking-form__total-text Итого
         span.booking-form__dotes
         span.booking-form__total-value 38&nbsp;081₽
-    +button('button', 'button--action', 'забронировать')
+    +button({'view': 'action', 'height': 'high', 'content': 'забронировать'})

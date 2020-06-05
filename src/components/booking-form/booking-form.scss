@@ -15,13 +15,16 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+}
+
+.booking-form__room-info {
+  font-weight: bold;
 }
 
 .booking-form__room-number {
   @include h2-text;
-  font-size: 19px;
-  line-height: 24px;
+  font-size: 1.9rem;
 }
 
 .booking-form__room-type {
@@ -43,14 +46,18 @@
 }
 
 .booking-form__price-details {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
 .booking-form__price-per-day,
 .booking-form__service-charge,
 .booking-form__extra-service {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
+}
+
+.booking-form__extra-service {
+  margin-bottom: 23px;
 }
 
 .booking-form__service-text {
@@ -75,6 +82,7 @@
 .booking-form__total-price {
   display: flex;
   align-items: baseline;
+  margin: 0;
 }
 
 .booking-form__total-text {
@@ -94,6 +102,7 @@
 
 @media (min-width: $tablet-width) {
   .booking-form {
+    width: 380px;
     padding: 40px 30px 30px 30px;
   }
   .booking-form__service-text {

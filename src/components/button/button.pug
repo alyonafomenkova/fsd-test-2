@@ -1,0 +1,14 @@
+mixin button(data)
+  button.button(
+    type=data.type ? data.type : 'button',
+    class=data.height==='high' ? 'button--high' : ''
+    class=data.height==='small' ? 'button--small' : ''
+    class=data.view==='filled' ? 'button--filled' : ''
+    class=data.view==='filled'&&data.isHovered==='true' ? 'button--filled-hovered' : ''
+    class=data.view === 'with-border' ? 'button--with-border' : ''
+    class=data.view === 'with-border' && data.isHovered === 'true' ? 'button--with-border-hovered' : ''
+    class=data.view === 'textual' ? 'button--textual' : ''
+    class=data.view === 'textual' && data.isHovered === 'true' ? 'button--textual-hovered' : ''
+    class=data.view === 'action' ? 'button--action' : ''
+    class=data.mixedClasses  ? data.mixedClasses : ''
+    ) !{data.content}

@@ -1,16 +1,17 @@
-include ../text-field/text-field
+include ../button/button
 include ../radio-buttons/radio-buttons
 include ../masked-text-field/masked-text-field
+include ../text-field/text-field
 include ../toggle-button/toggle-button
-include ../buttons/buttons
+
 mixin loginForm
-  div.login-card
-    form.login-card__form.login-form(action='url' method='post')
+  div.login
+    form.login-form(action='url' method='post')
       h2.login-form__title Войти
       fieldset.login-form__fieldset-data
-        +textField('text', 'email', 'email-id', '', 'Email', null, null)
-        +textField('text', 'password', 'password-id', '', 'Пароль', null, null)
-      +button('button', 'button--action', 'войти')
-    div.login-card__registration-wrapper
-      span.login-card__registration-text Нет аккаунта на Toxin?
-      +button('button', 'button--small button--border', 'создать')
+        +textField({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
+        +textField({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
+      +button({'view': 'action', 'height': 'high', 'content': 'войти'})
+    div.login__registration-wrapper
+      span.login__registration-text Нет аккаунта на Toxin?
+      +button({'view': 'with-border', 'height': 'high', 'content': 'создать'})

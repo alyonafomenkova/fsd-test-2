@@ -1,6 +1,10 @@
 @import '../../base/theme.scss';
 @import '../../base/base.scss';
 
+.dropdown--facilities {
+  max-width: 266px;
+}
+
 .dropdown__info {
   display: flex;
   justify-content: space-between;
@@ -54,10 +58,9 @@
   position: absolute;
   top: 42px;
   left: 0;
-  width: 320px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 7px;
-  padding-bottom: 13px;
   z-index: 2;
   border: 1px solid $dark-color-opacity-25;
   border-bottom-left-radius: 4px;
@@ -120,35 +123,21 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  margin-bottom: 13px;
 }
 
-.dropdown__clear-button,
 .dropdown__apply-button {
-  @include h3-text;
-  padding: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
+  margin-left: auto;
+  //&:focus {
+  //  border-color: $purple-color;
+  //}
 }
 
 .dropdown__clear-button {
-  color: $dark-color-opacity-50;
-  &:hover,
-  &:focus {
-    outline: none;
-    color: $dark-color-opacity-75;
-  }
-  &--invisible {
+  //&:focus {
+  //  border-color: $purple-color;
+  //}
+  &--invisible{
     display: none;
   }
-}
-
-.dropdown__apply-button {
-  &:hover,
-  &:focus {
-    outline: none;
-    color: $purple-hover-color;
-  }
-  margin-left: auto;
-  color: $purple-color;
 }

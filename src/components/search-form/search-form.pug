@@ -1,21 +1,27 @@
 include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
-include ../buttons/buttons
+include ../button/button
 -
-  const dropdownData = [
+  const dataForDateDropdown = [
   {'id': 'start1-id', 'label': 'прибытие', 'placeholder': 'дд.мм.гггг', 'classes': ''},
   {'id': 'end1-id', 'label': 'выезд', 'placeholder': 'дд.мм.гггг', 'classes': ''},
   ];
-  const options = [
-  {'title': 'Взрослые', 'id': 'adult', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-  {'title': 'Дети', 'id': 'children', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-  {'title': 'Младенцы', 'id': 'babies', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+  const dropdownSettings = {
+  'type': 'people',
+  'label': 'гости',
+  'placeholder': 'Сколько гостей',
+  };
+  const dropdownItems = [
+  {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+  {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+  {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
   ];
+
 mixin searchForm
   form.search-form(action='url' method='post')
     h2.search-form__title Найдём номера под ваши пожелания
     fieldset.search-form__fieldset-date
-      +date-dropdown(true, dropdownData)
+      +date-dropdown(true, dataForDateDropdown)
     fieldset.search-form__fieldset-guests
-      +dropdown('Сколько гостей', options, 'guests', 'гости', null)
-    +button('button', 'button--action', 'подобрать номер')
+      +dropdown(dropdownSettings, dropdownItems)
+    +button({'view': 'action', 'height': 'high', 'content': 'подобрать номер'})

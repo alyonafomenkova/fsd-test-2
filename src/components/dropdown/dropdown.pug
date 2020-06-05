@@ -1,5 +1,19 @@
 mixin dropdown(settings, items)
-  div.dropdown(data-type=settings.type)
+  -
+    const dataForClearButton = {
+    'view': 'textual',
+    'height': 'high',
+    'content': 'очистить',
+    'mixedClasses': 'dropdown__clear-button js-dropdown__clear-button'
+    };
+    const dataForApplyButton = {
+    'view': 'textual',
+    'height': 'high',
+    'content': 'применить',
+    'mixedClasses': 'dropdown__apply-button js-dropdown__apply-button'
+    };
+  include ../button/button
+  div.dropdown(class='dropdown--'+settings.type data-type=settings.type)
     if settings.label
       div.dropdown__info
         h3.dropdown__lable !{settings.label}
@@ -31,5 +45,5 @@ mixin dropdown(settings, items)
                 ) +
         if(settings.type=='people')
           div.dropdown__controls-wrapper
-            button.dropdown__button.dropdown__clear-button.js-dropdown__clear-button(type='button') очистить
-            button.dropdown__button.dropdown__apply-button.js-dropdown__apply-button(type='button') применить
+            +button(dataForClearButton)
+            +button(dataForApplyButton)

@@ -1,9 +1,12 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
+
+.bullet__title {
+  margin-bottom: 14px;
+}
 
 .bullet__list {
   max-width: 264px;
-  margin-top: 16px;
 }
 
 .bullet__item {

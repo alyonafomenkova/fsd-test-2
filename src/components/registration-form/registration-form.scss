@@ -1,41 +1,37 @@
 @import '../../base/theme.scss';
 @import '../../base/base.scss';
 
-.registration-card {
+.registration {
+  position: relative;
   max-width: 382px;
   padding: 20px;
   background-color: $white-color;
   border: 1px solid $black-color-opacity-12;
   border-radius: 4px;
   box-shadow: 0 0 25px $black-color-opacity-20;
+  z-index: 0;
 }
 
 .registration-form__title {
   margin-bottom: 20px;
 }
 
-.registration-form {
-  &__fieldset-name,
-  &__fieldset-gender,
-  &__fieldset-birthday,
-  &__fieldset-login {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
-  &__fieldset-name {
-    margin-bottom: 14px;
-  }
-  &__fieldset-gender {
-    margin-bottom: 24px;
-  }
-  &__fieldset-birthday {
-    margin-bottom: 20px;
-  }
-  &__fieldset-login {
-    margin-bottom: 10px;
-  }
+.registration-form__fieldset-name,
+.registration-form__fieldset-gender,
+.registration-form__fieldset-birthday,
+.registration-form__fieldset-login {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.registration-form__fieldset-gender {
+  margin-bottom: 18px;
+}
+
+.registration-form__fieldset-birthday {
+  margin-bottom: 20px;
 }
 
 .registration-form__legend-login {
@@ -44,28 +40,28 @@
 }
 
 .registration-form__offers-wrapper {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 
 .registration-form .text-field {
   margin-bottom: 10px;
 }
 
-.registration-card__login-wrapper {
+.registration__login-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
 }
 
-.registration-card__login-text {
+.registration__login-text {
   font-size: 12px;
   line-height: 15px;
   color: $black-color;
 }
 
 @media (min-width: $tablet-width) {
-  .registration-card {
+  .registration {
     padding: 40px 30px 30px 30px;
   }
   .registration-form__title {
@@ -73,7 +69,7 @@
     font-size: 24px;
     line-height: 30px;
   }
-  .registration-card__login-text {
+  .registration__login-text {
     font-size: 14px;
     line-height: 18px;
   }
