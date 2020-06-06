@@ -1,42 +1,47 @@
 @import '../../base/theme.scss';
 @import '../../base/fonts.scss';
+@import '../button/button';
 @import '../masked-text-field/masked-text-field';
-@import '../buttons/buttons';
 @import '~AirDatepicker/css/datepicker.min.css';
 
 .date-dropdown {
   display: flex;
   justify-content: space-between;
   max-width: 320px;
-  &__item {
-    max-width: 150px;
-    position: relative;
-    cursor: pointer;
+}
+
+.date-dropdown__item {
+  max-width: 150px;
+  position: relative;
+  cursor: pointer;
+}
+
+.date-dropdown__label {
+  @include h3-text;
+  margin-bottom: 4px;
+}
+
+.date-dropdown__input {
+  width: 100%;
+  box-sizing: border-box;
+  height:44px;
+  padding: 13px 0 13px 15px;
+  border: 1px solid $dark-color-opacity-25;
+  border-radius: 4px;
+  font-weight: normal;
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $dark-color-opacity-50;
   }
-  &__label {
-    @include h3-text;
-    margin-bottom: 4px;
-  }
-  &__input {
-    width: 100%;
-    box-sizing: border-box;
-    height:44px;
-    padding: 13px 0 13px 15px;
-    border: 1px solid $dark-color-opacity-25;
-    border-radius: 4px;
-    &:hover,
-    &:focus,
-    &--focused {
-      border-color: $dark-color-opacity-50;
-    }
-    &::placeholder {
-      text-transform: uppercase;
-      color: $dark-color-opacity-25;
-    }
+  &::placeholder {
+    text-transform: uppercase;
+    color: $dark-color-opacity-25;
   }
 }
 
 .date-dropdown__item--filter {
+  width: 100%;
   max-width: 266px;
 }
 
@@ -178,7 +183,7 @@
 }
 
 .datepicker--buttons {
-  margin: 18px 20px 0 20px;
+  margin: 20px 20px 0 20px;
   padding: 0;
   justify-content: space-between;
   align-items: center;
@@ -203,19 +208,8 @@
   }
 }
 
-.datepicker.-from-bottom-.active {
-  left: 20px !important;
-}
-
 @media (min-width: $tablet-width) {
   .datepicker {
     width: 320px;
-  }
-  .datepicker.-from-bottom-.active {
-    left: 30px !important;
-  }
-  .datepicker--buttons {
-    margin-right: 30px;
-    margin-left: 30px;
   }
 }
