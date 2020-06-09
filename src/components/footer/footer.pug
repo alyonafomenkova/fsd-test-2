@@ -1,11 +1,11 @@
 mixin footer(data, isUserAuthorized, isRu)
   include ../logo/logo
-  include ../buttons/buttons
+  include ../button/button
   include ../subscription-text-field/subscription-text-field
   footer.footer
     div.footer__wrapper
       div.footer__description-wrapper
-        +logo('../../../', 'mainLogo')
+        +logo
         p.footer__description !{data.description}
       div.footer__content-wrapper
         each item in data.contentLists
@@ -25,14 +25,14 @@ mixin footer(data, isUserAuthorized, isRu)
       p.footer__copyright-text Copyright © 2018 Toxin UI Kit. All rights reserved.
       ul.footer__social-list
         li
-          a.footer__social-link.footer__social-link--tw(href='https://twitter.com/' target='_blank')
+          a.footer__social-link.footer__social-link--tw(href='https://twitter.com/' target='_blank' rel='noopener noreferrer')
             span.visually-hidden Мы в Твиттер
-            i.footer__social-icon.footer__social-icon--tw
+            span.footer__social-icon.footer__social-icon--tw
         li
-          a.footer__social-link.footer__social-link--fb(href='https://www.facebook.com/' target='_blank')
+          a.footer__social-link.footer__social-link--fb(href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer')
             span.visually-hidden Мы в Фейсбук
-            i.footer__social-icon.footer__social-icon--fb
+            span.footer__social-icon.footer__social-icon--fb
         li
-          a.footer__social-link.footer__social-link--insta(href='https://www.instagram.com/' target='_blank')
+          a.footer__social-link.footer__social-link--insta(href='https://www.instagram.com/' target='_blank' rel='noopener noreferrer')
             span.visually-hidden Мы в Инстаграм
-            i.footer__social-icon.footer__social-icon--insta
+            span.footer__social-icon.footer__social-icon--insta

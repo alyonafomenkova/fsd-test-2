@@ -3,7 +3,8 @@
 @import '../text-field/text-field.scss';
 
 .subscription-text-field {
-  width: 266px;
+  max-width: 266px;
+  min-width: 260px;
   position: relative;
 }
 
