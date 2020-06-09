@@ -2,10 +2,6 @@ include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 include ../button/button
 -
-  const dataForDateDropdown = [
-  {'id': 'start1-id', 'label': 'прибытие', 'placeholder': 'дд.мм.гггг', 'classes': ''},
-  {'id': 'end1-id', 'label': 'выезд', 'placeholder': 'дд.мм.гггг', 'classes': ''},
-  ];
   const dropdownSettings = {
   'type': 'people',
   'label': 'гости',
@@ -21,7 +17,7 @@ mixin searchForm
   form.search-form(action='url' method='post')
     h2.search-form__title Найдём номера под ваши пожелания
     fieldset.search-form__fieldset-date
-      +date-dropdown(true, dataForDateDropdown)
+      +date-dropdown({'startLabel': 'прибытие', 'endLabel': 'выезд'})
     fieldset.search-form__fieldset-guests
       +dropdown(dropdownSettings, dropdownItems)
     +button({'view': 'action', 'height': 'high', 'content': 'подобрать номер'})

@@ -1,27 +1,30 @@
 mixin header(data, isUserAuthorized, isRu)
   include ../logo/logo
-  include ../buttons/buttons
+  include ../button/button
+  include ../modal/modal
   header.header
     div.header__wrapper
-      +logo('../../../', 'mainLogo')
+      +logo
       div.header__content-wrapper.header__content-wrapper-menu--opened
-        div.header__buttons-wrapper
-          button.header__toggle-menu-btn.header__toggle-menu-btn--nojs(type='button')
+        div.header__buttons-wrapper.js-header__buttons-wrapper
+          button.header__toggle-menu-btn.header__toggle-menu-btn--nojs.js-header__toggle-menu-btn(type='button')
             i.header__toggle-menu-icon.header__toggle-menu-icon--open menu
             i.header__toggle-menu-icon.header__toggle-menu-icon--close expand_less
           if(isUserAuthorized)
-            span.header__user-name Cosmin Negoita
+            span.header__user-name.js-header__user-name Cosmin Negoita
           else
             a.header__show-auth-btn.header__show-auth-btn--nojs(href='auth.html') person
             div.header__auth-wrapper
               if(isRu)
-                +button('button', 'button button--border header__login', 'войти')
-                +button('button', 'button button--filled header__register', 'зарегистрироваться')
+                div.header__login-button-wrapper
+                  +button({'isLogin': 'true', 'view': 'with-border', 'height': 'low', 'content': 'войти'})
+                +button({'isRegister': 'true', 'view': 'filled', 'height': 'low', 'content': 'зарегистрироваться'})
               else
-                +button('button', 'button button--border header__login', 'Login')
-                +button('button', 'button button--filled header__register', 'REGISTER')
-        nav.header__main-nav
-          ul.header__nav-list
+                div.header__login-button-wrapper
+                  +button({'isLogin': 'true', 'view': 'with-border', 'height': 'low', 'content': 'Login'})
+                +button({'isRegister': 'true', 'view': 'filled', 'height': 'low', 'content': 'REGISTER'})
+        nav.header__main-nav.js-header__main-nav
+          ul.header__nav-list.js-header__nav-list
             each item in data
               li.header__nav-item(class=item.submenu ? 'header__submenu header__submenu--close' : '')
                 a.header__nav-link(class=item.isActive ? 'header__nav-link--active' : '') !{item.content}
@@ -33,3 +36,6 @@ mixin header(data, isUserAuthorized, isRu)
                     each subitem in item.submenu
                       li.header__submenu-item
                         a.header__submenu-item !{subitem.content}
+  if(!isUserAuthorized)
+    +modal('login')
+    +modal('registration')

@@ -29,7 +29,7 @@ mixin bookingForm
         b.booking-form__room-cost 9&nbsp;990₽
         span.booking-form__room-period  в сутки
     fieldset.booking-form__fieldset-date
-      +date-dropdown(true, dateDropdownOptions)
+      +date-dropdown({'startLabel': 'прибытие', 'endLabel': 'выезд'})
     fieldset.booking-form__fieldset-guests
       +dropdown(dropdownSettings, dropdownItems)
     div.booking-form__price-details

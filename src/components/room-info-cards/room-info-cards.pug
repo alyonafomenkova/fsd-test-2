@@ -7,9 +7,14 @@ mixin roomInfoCards(data, title=null)
       each item in data
         li.room-info-cards__item
           div.room-info-cards__slideshow-container
-            each img in item.images
-              div.room-info-cards__mySlides.room-info-cards__mySlides--fade
-                img.room-info-cards__img(src=img.imgSrc)
+            div.room-info-cards__mySlides.room-info-cards__mySlides--fade
+              img.room-info-cards__img(src=require('../../components/room-info-cards/images/' + item.roomNumber +'/' + item.roomNumber+'_1.png').default alt=`Фото номера`)
+            div.room-info-cards__mySlides.room-info-cards__mySlides--fade
+              img.room-info-cards__img(src=require('../../components/room-info-cards/images/' + item.roomNumber + '/' + item.roomNumber + '_2.png').default alt=`Фото номера`)
+            div.room-info-cards__mySlides.room-info-cards__mySlides--fade
+              img.room-info-cards__img(src=require('../../components/room-info-cards/images/' + item.roomNumber + '/' + item.roomNumber + '_3.png').default alt=`Фото номера`)
+            div.room-info-cards__mySlides.room-info-cards__mySlides--fade
+              img.room-info-cards__img(src=require('../../components/room-info-cards/images/' + item.roomNumber + '/' + item.roomNumber + '_4.png').default alt=`Фото номера`)
             a.room-info-cards__prev-link
               i.room-info-cards__prev-icon expand_more
             a.room-info-cards__next-link

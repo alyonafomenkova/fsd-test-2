@@ -7,8 +7,8 @@ class Carousel {
     this.prevButtons = this.carousel.querySelectorAll('.room-info-cards__prev-link');
     this.nextButtons = this.carousel.querySelectorAll('.room-info-cards__next-link');
     this.dotButtons = this.carousel.querySelectorAll('.room-info-cards__dot');
-    this.controlsButtonClick = this.controlsButtonClick.bind(this);
-    this.dotButtonClick = this.dotButtonClick.bind(this);
+    this.handleControlsButtonClick = this.handleControlsButtonClick.bind(this);
+    this.handleDotButtonClick = this.handleDotButtonClick.bind(this);
     this.slideIndex = 1;
   }
 
@@ -29,27 +29,27 @@ class Carousel {
     this.dotButtons[this.slideIndex-1].className += ' active';
   }
 
-  controlsButtonClick(n) {
+  handleControlsButtonClick(n) {
     return () => {
       this.slideIndex = +this.slideIndex + n;
       this.showSlides();
     };
   }
 
-  dotButtonClick() {
+  handleDotButtonClick() {
     this.slideIndex = event.target.getAttribute('data-number');
     this.showSlides();
   };
 
   addListeners() {
     this.prevButtons.forEach((prevButton) => {
-      prevButton.addEventListener('click', this.controlsButtonClick(-1));
+      prevButton.addEventListener('click', this.handleControlsButtonClick(-1));
     });
     this.nextButtons.forEach((nextButton) => {
-      nextButton.addEventListener('click', this.controlsButtonClick(1));
+      nextButton.addEventListener('click', this.handleControlsButtonClick(1));
     });
     this.dotButtons.forEach((dotButton) => {
-      dotButton.addEventListener('click', this.dotButtonClick);
+      dotButton.addEventListener('click', this.handleDotButtonClick);
     });
   }
 

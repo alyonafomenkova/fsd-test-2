@@ -1,8 +1,10 @@
 mixin button(data)
   button.button(
     type=data.type ? data.type : 'button',
+    class=data.isLogin==='true' ? 'button--login' : ''
+    class=data.isRegister==='true' ? 'button--register' : ''
     class=data.height==='high' ? 'button--high' : ''
-    class=data.height==='small' ? 'button--small' : ''
+    class=data.height==='low' ? 'button--low' : ''
     class=data.view==='filled' ? 'button--filled' : ''
     class=data.view==='filled'&&data.isHovered==='true' ? 'button--filled-hovered' : ''
     class=data.view === 'with-border' ? 'button--with-border' : ''
