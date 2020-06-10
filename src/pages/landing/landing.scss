@@ -1,0 +1,46 @@
+@import '~Base';
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $white-color;
+}
+
+.landing {
+  background-color: pink;;
+  background-image: url('images/landing.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.landing__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 18px;
+}
+
+.landing__form-wrapper {
+  margin-bottom: 80px;
+}
+
+.landing__description {
+  max-width: 300px;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .landing__form-wrapper {
+    align-self: flex-start;
+    margin-bottom: 320px;
+  }
+  .landing__description {
+    align-self: flex-end;
+    margin-left: auto;
+    text-align: end;
+  }
+}
