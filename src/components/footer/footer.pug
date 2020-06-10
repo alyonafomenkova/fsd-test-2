@@ -22,7 +22,7 @@ mixin footer(data, isUserAuthorized, isRu)
                 +subscriptionTextField('Your email address')
     hr.footer__separator
     div.footer__bottom-wrapper
-      p.footer__copyright-text Copyright © 2018 Toxin UI Kit. All rights reserved.
+      p.footer__copyright-text !{data.copyrightText}
       ul.footer__social-list
         li
           a.footer__social-link.footer__social-link--tw(href='https://twitter.com/' target='_blank' rel='noopener noreferrer')

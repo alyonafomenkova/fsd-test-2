@@ -8,8 +8,8 @@ mixin header(data, isUserAuthorized, isRu)
       div.header__content-wrapper.header__content-wrapper-menu--opened
         div.header__buttons-wrapper.js-header__buttons-wrapper
           button.header__toggle-menu-btn.header__toggle-menu-btn--nojs.js-header__toggle-menu-btn(type='button')
-            i.header__toggle-menu-icon.header__toggle-menu-icon--open menu
-            i.header__toggle-menu-icon.header__toggle-menu-icon--close expand_less
+            span.header__toggle-menu-icon.header__toggle-menu-icon--open menu
+            span.header__toggle-menu-icon.header__toggle-menu-icon--close expand_less
           if(isUserAuthorized)
             span.header__user-name.js-header__user-name Cosmin Negoita
           else
@@ -26,12 +26,15 @@ mixin header(data, isUserAuthorized, isRu)
         nav.header__main-nav.js-header__main-nav
           ul.header__nav-list.js-header__nav-list
             each item in data
-              li.header__nav-item(class=item.submenu ? 'header__submenu header__submenu--close' : '')
+              li.header__nav-item(
+                class=item.submenu ? 'header__submenu header__submenu--close' : ''
+                class=isRu ? 'header__nav-item--small-margin' : 'header__nav-item--big-margin'
+                )
                 a.header__nav-link(class=item.isActive ? 'header__nav-link--active' : '') !{item.content}
                 if(item.submenu)
                   button.header__toggle-submenu-btn.header__toggle-submenu-btn--nojs
-                    i.header__toggle-submenu-icon.header__toggle-submenu-icon--open expand_more
-                    i.header__toggle-submenu-icon.header__toggle-submenu-icon--close expand_less
+                    span.header__toggle-submenu-icon.header__toggle-submenu-icon--open expand_more
+                    span.header__toggle-submenu-icon.header__toggle-submenu-icon--close expand_less
                   ul.header__submenu-list
                     each subitem in item.submenu
                       li.header__submenu-item
