@@ -1,0 +1,206 @@
+extends ../../base/base.pug
+
+block vars
+  -
+    const headersData = [
+    {'content': 'О нас'},
+    {'content': 'Услуги', 'submenu': [{'content': 'Услуга_1'}, {'content': 'Услуга_2'}]},
+    {'content': 'Вакансии'},
+    {'content': 'Новости'},
+    {'content': 'Соглашения', 'submenu': [{'content': 'Соглашение_1'}, {'content': 'Соглашение_2'}]},
+    ];
+    const dropdownSettings = {
+    'type': 'people',
+    'isExpanded': 'false',
+    'label': 'гости',
+    'placeholder': 'Сколько гостей',
+    };
+    const dropdownItems = [
+    {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    ];
+    const facilitiesDropdownSettings = {
+    'type': 'facilities',
+    'isExpanded': 'false',
+    'label': 'удобства номера',
+    'placeholder': 'Сколько комнат',
+    };
+    const facilitiesDropdownItems = [
+    {'title': 'спальни', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'кровати', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    ];
+    const checkboxData = [
+    {'name': 'smoke', 'label': 'Можно курить', 'isChecked': 'false', 'isDisabled': 'false'},
+    {'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': 'true', 'isDisabled': 'false'},
+    {'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': 'true', 'isDisabled': 'false'},
+    ];
+    const richCheckboxData = [
+    {'name': 'hall', 'title': 'Широкий коридор',
+    'description': 'Ширина коридоров в номере не менее 91 см.',
+    'isChecked': 'false', 'isDisabled': 'false'},
+    {'name': 'assistant', 'title': 'Помощник для инвалидов',
+    'description': 'На 1 этаже вас встретит специалист  и проводит до номера.',
+    'isChecked': 'false', 'isDisabled': 'false'},
+    ];
+    const dataForexpandableCheckbox = [
+    {'name': 'breakfast', 'label': 'Завтрак', 'isChecked': 'false'},
+    {'name': 'table', 'label': 'Письменный стол', 'isChecked': 'true'},
+    {'name': 'chair', 'label': 'Стул для кормления', 'isChecked': 'true'},
+    {'name': 'cot', 'label': 'Кроватка', 'isChecked': 'true'},
+    {'name': 'tv', 'label': 'Телевизор', 'isChecked': 'false'},
+    {'name': 'shampoo', 'label': 'Шампунь', 'isChecked': 'false'},
+    ];
+    const roomInfoCardsData = [
+    {
+    'roomNumber': '888',
+    'title': '№ 888',
+    'type': 'люкс',
+    'price': '9&nbsp;990',
+    'rating': '5',
+    'reviewsCount': 145,
+    },
+    {
+    'roomNumber': '840',
+    'title': '№ 840',
+    'price': '9&nbsp;990',
+    'rating': '4',
+    'reviewsCount': 65,
+    },
+    {
+    'roomNumber': '980',
+    'type': 'люкс',
+    'title': '№ 980',
+    'price': '8&nbsp;500',
+    'rating': '3',
+    'reviewsCount': 35,
+    },
+    {
+    'roomNumber': '856',
+    'title': '№ 856',
+    'price': '7&nbsp;300',
+    'rating': '5',
+    'reviewsCount': 19,
+    },
+    {
+    'roomNumber': '740',
+    'title': '№ 740',
+    'price': '6&nbsp;000',
+    'rating': '4',
+    'reviewsCount': 44,
+    },
+    {
+    'roomNumber': '982',
+    'title': '№ 982',
+    'price': '5&nbsp;800',
+    'rating': '3',
+    'reviewsCount': 56,
+    },
+    {
+    'roomNumber': '678',
+    'title': '№ 678',
+    'price': '5&nbsp;500',
+    'rating': '5',
+    'reviewsCount': 45,
+    },
+    {
+    'roomNumber': '450',
+    'title': '№ 450',
+    'price': '5&nbsp;300',
+    'rating': '4',
+    'reviewsCount': 39,
+    },
+    {
+    'roomNumber': '350',
+    'title': '№ 350',
+    'price': '5&nbsp;000',
+    'rating': '3',
+    'reviewsCount': 77,
+    },
+    {
+    'roomNumber': '666',
+    'title': '№ 666',
+    'price': '5&nbsp;000',
+    'rating': '5',
+    'reviewsCount': 25,
+    },
+    {
+    'roomNumber': '444',
+    'title': '№ 444',
+    'price': '5&nbsp;000',
+    'rating': '3',
+    'reviewsCount': 15,
+    },
+    {
+    'roomNumber': '352',
+    'title': '№ 352',
+    'price': '5&nbsp;000',
+    'rating': '3',
+    'reviewsCount': 55,
+    },
+    ];
+    const footersData = {
+    'description': 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+    'contentLists': [
+    {
+    'title': 'навигация',
+    'links': ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+    },
+    {
+    'title': 'о нас',
+    'links': ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+    },
+    {
+    'title': 'Служба поддержки',
+    'links': ['Соглашения', 'Сообщества', 'Связь с нами']
+    },
+    {
+    'title': 'Подписка',
+    'subscribe': 'Получайте специальные предложения и новости сервиса'
+    }
+    ],
+    'copyrightText': 'Copyright © 2018 Toxin отель. Все права зачищены.'
+    };
+
+block meta
+  meta(name="keywords", content="toxin")
+  meta(name="description" content="Учебный проект FSD. Search page.")
+
+block title
+  | search
+
+block content
+  include ../../components/header/header
+  include ../../components/date-dropdown/date-dropdown
+  include ../../components/dropdown/dropdown
+  include ../../components/range-slider/range-slider
+  include ../../components/checkbox-buttons/checkbox-buttons
+  include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
+  include ../../components/expandable-checkbox-list/expandable-checkbox-list
+  include ../../components/room-info-cards/room-info-cards
+  include ../../components/pagination/pagination
+  include ../../components/footer/footer
+
+  +header(headersData, false, true)
+  main.search
+    aside.search__aside
+      div.search__element.search__element--bottom-margin-21
+        +date-dropdown({'startLabel': 'даты пребывания в отеле'})
+      div.search__element.search__element--bottom-margin-31
+        +dropdown(dropdownSettings, dropdownItems)
+      div.search__element.search__element--bottom-margin-31
+        +rangeSlider('диапазон цены', '5000', '10000', min=0, max=15500)
+        p.search__cost-comment Стоимость за сутки пребывания в номере
+      div.search__element.search__element--bottom-margin-33
+        +checkboxButtons(checkboxData, 'Checkbox Buttons')
+      div.search__element.search__element--bottom-margin-21
+        +richCheckboxButtons(richCheckboxData, 'доступность')
+      div.search__element.search__element--bottom-margin-18
+        +dropdown(facilitiesDropdownSettings, facilitiesDropdownItems)
+      +expandableCheckboxList(dataForexpandableCheckbox, 'дополнительные удобства')
+    div.search__wrapper
+      article.search__cards
+        +roomInfoCards(roomInfoCardsData, 'Номера, которые мы для вас подобрали')
+      +pagination
+  +footer(footersData)

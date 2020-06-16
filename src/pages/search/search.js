@@ -1,0 +1,11 @@
+import './search.scss';
+import '../../components/header/header.js';
+import '../../components/date-dropdown/date-dropdown.js';
+import '../../components/dropdown/dropdown.js';
+import '../../components/range-slider/range-slider.js';
+import '../../components/checkbox-buttons/checkbox-buttons.js';
+import '../../components/rich-checkbox-buttons/rich-checkbox-buttons.js';
+import '../../components/expandable-checkbox-list/expandable-checkbox-list.js';
+import '../../components/room-info-cards/room-info-cards.js';
+import '../../components/pagination/pagination.js';
+import '../../components/footer/footer.js';
