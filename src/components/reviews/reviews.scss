@@ -1,6 +1,16 @@
 @import '../../base/base.scss';
 @import '../../base/theme.scss';
 
+.reviews__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.reviews__item {
+  margin-bottom: 25px;
+}
+
 .reviews__author {
   display: flex;
   margin-bottom: 12px;
@@ -10,9 +20,6 @@
   width: 48px;
   height: 48px;
   margin-right: 10px;
-  background-image: url('images/avatar-1.png');
-  background-size: contain;
-  background-repeat: no-repeat;
   border: 2px solid $white-color;
   border-radius: 32px;
   box-shadow: 0 10px 20px $dark-color-opacity-10;
