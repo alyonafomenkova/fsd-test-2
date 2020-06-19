@@ -1,10 +1,10 @@
 import './pie-chart.scss';
 
-const pieChart = document.querySelector('.pie-chart');
-const circles = document.querySelectorAll('.pie-chart__circle');
-const labels = document.querySelectorAll('.pie-chart__description-item');
-const count = document.querySelector('.pie-chart__number');
-const text = document.querySelector('.pie-chart__label');
+const pieChart = document.querySelector('.js-pie-chart');
+const circles = document.querySelectorAll('.js-pie-chart__circle');
+const labels = document.querySelectorAll('.js-pie-chart__description-item');
+const count = document.querySelector('.js-pie-chart__number');
+const text = document.querySelector('.js-pie-chart__label');
 const Type = {
   FINE: 'fine',
   GOOD: 'good',
