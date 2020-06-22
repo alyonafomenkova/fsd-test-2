@@ -5,6 +5,10 @@
   margin-bottom: 14px;
 }
 
+.bullet__title--montserrat {
+  @include h3-text;
+}
+
 .bullet__list {
   max-width: 264px;
 }

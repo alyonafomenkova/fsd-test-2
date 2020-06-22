@@ -32,7 +32,7 @@ mixin roomInfoCards(data, title=null)
                 if(item.type)
                   span.room-info-cards__type  !{item.type}
               div.room-info-cards__price-wrapper
-                b.room-info-cards__price 9&nbsp;990₽
+                b.room-info-cards__price !{item.price}
                 span.room-info-cards__price-period  в сутки
             div.room-info-cards__reviews-wrapper
               +rating(item.rating)

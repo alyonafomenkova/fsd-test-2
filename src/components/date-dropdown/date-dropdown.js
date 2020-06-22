@@ -119,4 +119,5 @@ class DateDropdown {
   }
 }
 
-export default DateDropdown;
+const dateDropdownList = document.querySelectorAll('.js-date-dropdown');
+dateDropdownList.forEach((dateDropdown) => new DateDropdown(dateDropdown).init());

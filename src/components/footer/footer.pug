@@ -1,8 +1,15 @@
-mixin footer(data, isUserAuthorized, isRu)
+mixin footer(data, isRu, isUikit)
   include ../logo/logo
   include ../button/button
   include ../subscription-text-field/subscription-text-field
-  footer.footer
+  footer.footer(class=isUikit ? 'footer-uikit' : '')
+    -
+      const subscriptionTextField = {
+      'type': 'Email',
+      'name': 'subscription-text',
+      'id': 'subscription-text-id',
+      'placeholder': 'Email',
+      };
     div.footer__wrapper
       div.footer__description-wrapper
         +logo
@@ -19,7 +26,7 @@ mixin footer(data, isUserAuthorized, isRu)
             if(item.subscribe)
               div.footer__subscribe-wrapper
                 p.footer__subscribe-text !{item.subscribe}
-                +subscriptionTextField('Your email address')
+                +subscriptionTextField(subscriptionTextField)
     hr.footer__separator
     div.footer__bottom-wrapper
       p.footer__copyright-text !{data.copyrightText}

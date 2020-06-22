@@ -1,6 +1,11 @@
 @import '../../base/base.scss';
 @import '../../base/theme.scss';
 
+.room-info-cards__title {
+  margin: 3px auto 20px auto;
+  text-align: center;
+}
+
 .room-info-cards__list {
   display: flex;
   justify-content: center;
@@ -9,10 +14,13 @@
 
 .room-info-cards__item {
   width: 270px;
-  margin: 0 12px 21px 0;
+  margin: 0 12px 20px 0;
   background-color: $white-color;
   box-shadow: 0 10px 20px $dark-color-opacity-5;
   border-radius: 4px;
+  &:nth-child(3n+3){
+    margin-right: 0;
+  }
 }
 
 .room-info-cards__item:hover {
@@ -157,4 +165,14 @@
 @keyframes fade {
   from {opacity: 0.4}
   to {opacity: 1}
+}
+
+@media (min-width: $tablet-width) {
+  .room-info-cards__title {
+    margin: 3px 0 20px 0;
+    text-align: left;
+  }
+  .room-info-cards__list {
+    justify-content: flex-start;
+  }
 }

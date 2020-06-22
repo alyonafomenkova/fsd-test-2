@@ -5,6 +5,10 @@
   max-width: 280px;
 }
 
+.room-details__title {
+  margin-bottom: 20px;
+}
+
 .room-details__item {
   display: flex;
   align-items: center;
@@ -12,6 +16,7 @@
   margin-bottom: 20px;
   border-bottom: 1px solid $dark-color-opacity-10;
   &:last-child {
+    margin-bottom: 0;
     border-bottom: none;
   }
 }
@@ -31,10 +36,10 @@
 }
 
 .room-details__name {
-  display: inline-block;
+  margin: 0;
   font-weight: bold;
 }
 
 .room-details__description {
-  display: inline-block;
+  margin: 0;
 }
