@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PATHS = {
   source: path.join(__dirname, 'src'),
@@ -15,16 +16,16 @@ const config = {
     'form-elements': PATHS.source + '/pages/form-elements/form-elements.js',
     'cards': PATHS.source + '/pages/cards/cards.js',
     'headers-and-footers': PATHS.source + '/pages/headers-and-footers/headers-and-footers.js',
+    'landing': PATHS.source + '/pages/landing/landing.js',
+    'search': PATHS.source + '/pages/search/search.js',
+    'room-details': PATHS.source + '/pages/room-details/room-details.js',
   },
   output: {
     path: PATHS.build,
     filename: '[name].bundle.js'
   },
   devServer: {
-    //index: 'colors-and-type.html',
-    index: 'form-elements.html',
-    //index: 'cards.html',
-    //index: 'headers-and-footers.html',
+    index: 'room-details.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
@@ -35,11 +36,11 @@ const config = {
     alias: {
       Normalize: path.resolve(__dirname, 'node_modules/normalize.scss/normalize.scss'),
       Theme: path.resolve(__dirname, 'src/base/theme.scss'),
-      Fonts: path.resolve(__dirname, 'src/fonts'),
+      Assets: path.resolve(__dirname, 'src/assets'),
+      Fonts: path.resolve(__dirname, 'src/assets/fonts'),
       FontsScss: path.resolve(__dirname, 'src/base/fonts.scss'),
       Base: path.resolve(__dirname, 'src/base/base.scss'),
       AirDatepicker: path.resolve(__dirname, 'node_modules/air-datepicker/dist'),
-      Dropdown: path.resolve(__dirname, 'node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css'),
     }
   },
   module: {
@@ -73,7 +74,7 @@ const config = {
         test: /\.(png|svg|jpe?g|gif)$/i,
         loader: 'file-loader',
         options: {
-          name: 'images/[name].[ext]'
+          name: 'assets/images/[name].[ext]'
         },
         exclude: [/fonts/],
       },
@@ -81,13 +82,17 @@ const config = {
       {
         test: /\.(woff2|woff|ttf|svg)$/,
         include: [/fonts/],
-        loader: 'file-loader?limit=1024&name=fonts/[name].[ext]',
+        loader: 'file-loader?limit=1024&name=assets/fonts/[name].[ext]',
       },
     ],
   },
 
   plugins: [
-    // new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: PATHS.source + '/assets/favicons', to: PATHS.build + '/assets/favicons' },
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
@@ -113,6 +118,24 @@ const config = {
       filename: 'headers-and-footers.html',
       template: PATHS.source + '/pages/headers-and-footers/headers-and-footers.pug',
       chunks: ['headers-and-footers'],
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'landing.html',
+      template: PATHS.source + '/pages/landing/landing.pug',
+      chunks: ['landing'],
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'search.html',
+      template: PATHS.source + '/pages/search/search.pug',
+      chunks: ['search'],
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'room-details.html',
+      template: PATHS.source + '/pages/room-details/room-details.pug',
+      chunks: ['room-details'],
       inject: true,
     }),
     new webpack.ProvidePlugin({
