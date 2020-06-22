@@ -39,6 +39,26 @@
 }
 
 @font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Quicksand");
+  src: url("~Fonts/opensans-regular.woff2") format("woff2"), url("~Fonts/opensans-regular.woff") format("woff"),
+  url("~Fonts/opensans-regular.ttf") format("truetype"), url("~Fonts/opensans-regular.svg#OpenSans") format("svg");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local("Quicksand");
+  src: url("~Fonts/opensans-bold.woff2") format("woff2"), url("~Fonts/opensans-bold.woff") format("woff"),
+  url("~Fonts/opensans-bold.ttf") format("truetype"), url("~Fonts/opensans-bold.svg#OpenSans") format("svg");
+}
+
+@font-face {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: normal;
