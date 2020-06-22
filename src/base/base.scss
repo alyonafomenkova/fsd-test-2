@@ -15,10 +15,10 @@ html {
 
 $mobile-width: 320px;
 $tablet-width: 768px;
-$desktop-width: 1100px;
+$desktop-width: 1165px;
 
 @mixin h1-text {
-  font-family: "Quicksand", "Arial", sans-serif;
+  font-family: "Quicksand", "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.714rem; // 24px
@@ -27,7 +27,7 @@ $desktop-width: 1100px;
 }
 
 @mixin h2-text {
-  font-family: "Quicksand", "Arial", sans-serif;
+  font-family: "Quicksand", "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.357rem; // 19px
