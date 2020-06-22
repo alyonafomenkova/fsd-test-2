@@ -1,0 +1,99 @@
+extends ../../base/base.pug
+
+block vars
+  -
+    const headersData = [
+    {'content': 'О нас'},
+    {'content': 'Услуги', 'submenu': [{'content': 'Услуга_1'}, {'content': 'Услуга_2'}]},
+    {'content': 'Вакансии'},
+    {'content': 'Новости'},
+    {'content': 'Соглашения', 'submenu': [{'content': 'Соглашение_1'}, {'content': 'Соглашение_2'}]},
+    ];
+    const roomDetailsData = [
+    {'icon': 'insert_emoticon', 'name': 'Комфорт', 'description': 'Шумопоглощающие стены'},
+    {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
+    {'icon': 'whatshot', 'name': 'Уют', 'description': 'Номер оснащён камином'},
+    ];
+    const pieChartData = [
+    {'type': 'normal','count': '260', 'label': 'Удовлетворительно'},
+    {'type': 'good', 'count': '260', 'label': 'Хорошо'},
+    {'type': 'fine', 'count': '520', 'label': 'Великолепно'},
+    {'type': 'bad', 'count': '0', 'label': 'Разочарован'},
+    ];
+    const reviewsData = [
+    {'imgName': 'avatar-1.png',
+    'authorName': 'Мурад Сарафанов',
+    'date': '5 дней назад',
+    'likeBtn': {'count': '12', 'isActive': true},
+    'text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+    },
+    {'imgName': 'avatar-2.png',
+    'authorName': 'Патрисия Стёклышкова',
+    'date': 'Неделю назад',
+    'likeBtn': {'count': '2'},
+    'text': 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+    },
+    ];
+    const bulletData = [
+    {'name': 'Нельзя с питомцами', 'classes': ''},
+    {'name': 'Без вечеринок и мероприятий', 'classes': ''},
+    {'name': 'Время прибытия — после 13:00, а выезд до 12:00', 'classes': ''}
+    ];
+    const footersData = {
+    'description': 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+    'contentLists': [
+    {
+    'title': 'навигация',
+    'links': ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+    },
+    {
+    'title': 'о нас',
+    'links': ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+    },
+    {
+    'title': 'Служба поддержки',
+    'links': ['Соглашения', 'Сообщества', 'Связь с нами']
+    },
+    {
+    'title': 'Подписка',
+    'subscribe': 'Получайте специальные предложения и новости сервиса'
+    }
+    ],
+    'copyrightText': 'Copyright © 2018 Toxin отель. Все права зачищены.'
+    };
+
+block meta
+  meta(name="keywords", content="toxin")
+  meta(name="description" content="Учебный проект FSD. Room details page.")
+
+block title
+  | room details
+
+block content
+  include ../../components/header/header
+  include ../../components/room-details/room-details
+  include ../../components/pie-chart/pie-chart
+  include ../../components/reviews/reviews
+  include ../../components/bullet-list/bullet-list
+  include ../../components/booking-form/booking-form
+  include ../../components/footer/footer
+
+  +header(headersData, false, true)
+  main.details
+    div.details__images-wrapper
+      img.details__image(src=require('../../pages/room-details/images/1.png').default width='68.125%' height='100%' alt='Photo of bedroom')
+      img.details__image(src=require('../../pages/room-details/images/2.png').default width='31.875%' height='50%' alt='Photo of cabinet')
+      img.details__image(src=require('../../pages/room-details/images/3.png').default width='31.875%' height='50%' alt='Photo of bedroom')
+    div.details__content-wrapper
+      div.details__content
+        +roomDetails(roomDetailsData, 'Сведения о номере')
+        +pie-chart(pieChartData, 'Впечатления от номера')
+        div.details__reviews-wrapper
+          +reviews(reviewsData, 'Отзывы посетителей номера', 2)
+        div.details__rules-wrapper
+          +bulletList(bulletData, 'Правила')
+          div.details__cancel-rule
+            h2.details__cancel-rule-title Отмена
+            p.details__cancel-rule-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      +bookingForm
+  +footer(footersData)

@@ -1,0 +1,97 @@
+@import '~Base';
+@import '../../components/text-field/text-field.scss';
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-elements {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  grid-template-rows: repeat(4, min-content);
+  justify-content: space-between;
+  max-width: 1160px;
+  margin: 66px auto 0 auto;
+}
+
+.form-elements__elements-wrapper {
+  &--center {
+    justify-self: center;
+  }
+  &--double-column {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
+.form-elements__element {
+  &--top-margin-10 {
+    margin-top: 10px;
+  }
+  &--top-margin-15 {
+    margin-top: 15px;
+  }
+  &--top-margin-82 {
+    margin-top: 82px;
+  }
+  &--top-margin-93 {
+    margin-top: 93px;
+  }
+  &--bottom-margin-21 {
+    margin-bottom: 21px;
+  }
+  &--bottom-margin-24 {
+    margin-bottom: 24px;
+  }
+  &--bottom-margin-35 {
+    margin-bottom: 35px;
+  }
+  &--bottom-margin-38 {
+    margin-bottom: 38px;
+  }
+  &--bottom-margin-41 {
+    margin-bottom: 41px;
+  }
+  &--bottom-margin-42 {
+    margin-bottom: 42px;
+  }
+  &--bottom-margin-45 {
+    margin-bottom: 45px;
+  }
+  &--bottom-margin-103 {
+    margin-bottom: 103px;
+  }
+  &--bottom-margin-160 {
+    margin-bottom: 160px;
+  }
+}
+
+.form-elements__title {
+  @include h3-text;
+  margin-bottom: 16px;
+}
+
+.form-elements__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &--like-buttons {
+    width: 90px;
+  }
+  &--rate-buttons {
+    width: 260px;
+  }
+}
+
+.form-elements__button-wrapper {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  &:nth-of-type(2) {
+    margin-bottom: 25px;
+  }
+  &:last-of-type {
+    margin-bottom: 28px;
+  }
+}

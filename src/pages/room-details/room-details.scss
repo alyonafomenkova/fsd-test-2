@@ -1,0 +1,81 @@
+@import '~Base';
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $white-color;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto 20px auto;
+}
+
+.details__images-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 485px;
+}
+
+.details__image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.details__content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.details__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 707px;
+  width: 100%;
+}
+
+.details__reviews-wrapper {
+  margin-top: 15px;
+}
+
+.details__rules-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-bottom: 44px;
+}
+
+.details__cancel-rule-title {
+  margin-bottom: 17px;
+}
+
+.details__cancel-rule-description {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .details__content-wrapper {
+    margin: 70px auto 0 auto;
+  }
+  .details__rules-wrapper {
+    justify-content: space-between;
+  }
+  .details__cancel-rule {
+    width: 49%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .details__content-wrapper {
+    width: 1160px;
+  }
+}

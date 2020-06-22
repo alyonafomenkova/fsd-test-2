@@ -362,7 +362,7 @@ th {
   font-weight: normal;
   font-display: swap;
   src: local("Montserrat");
-  src: url(fonts/montserrat-regular.woff2) format("woff2"), url(fonts/montserrat-regular.woff) format("woff"), url(fonts/montserrat-regular.ttf) format("truetype"), url(fonts/montserrat-regular.svg#Montserrat) format("svg"); }
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#Montserrat) format("svg"); }
 
 @font-face {
   font-family: "Montserrat";
@@ -370,7 +370,7 @@ th {
   font-weight: bold;
   font-display: swap;
   src: local("Montserrat");
-  src: url(fonts/montserrat-bold.woff2) format("woff2"), url(fonts/montserrat-bold.woff) format("woff"), url(fonts/montserrat-bold.ttf) format("truetype"), url(fonts/montserrat-bold.svg#Montserrat) format("svg"); }
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#Montserrat) format("svg"); }
 
 @font-face {
   font-family: "Quicksand";
@@ -378,7 +378,7 @@ th {
   font-weight: normal;
   font-display: swap;
   src: local("Quicksand");
-  src: url(fonts/quicksand-regular.woff2) format("woff2"), url(fonts/quicksand-regular.woff) format("woff"), url(fonts/quicksand-regular.ttf) format("truetype"), url(fonts/quicksand-regular.svg#Quicksand) format("svg"); }
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#Quicksand) format("svg"); }
 
 @font-face {
   font-family: "Quicksand";
@@ -386,21 +386,37 @@ th {
   font-weight: bold;
   font-display: swap;
   src: local("Quicksand");
-  src: url(fonts/quicksand-bold.woff2) format("woff2"), url(fonts/quicksand-bold.woff) format("woff"), url(fonts/quicksand-bold.ttf) format("truetype"), url(fonts/quicksand-bold.svg#Quicksand) format("svg"); }
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Quicksand");
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url(assets/fonts/opensans-regular.svg#OpenSans) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local("Quicksand");
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url(assets/fonts/opensans-bold.svg#OpenSans) format("svg"); }
 
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url(fonts/materialIcons-regular.woff2) format("woff2"), url(fonts/materialIcons-regular.woff) format("woff"), url(fonts/materialIcons-regular.ttf) format("truetype"), url(fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url(assets/fonts/materialIcons-regular.svg#MaterialIcons-Regular) format("svg"); }
 
 @font-face {
   font-family: "font-awesome-5-brands-regular";
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url(fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(fonts/font-awesome-5-brands-regular.woff) format("woff"), url(fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#FontAwesome5BrandsRegular) format("svg"); }
 
 html {
   box-sizing: border-box;
@@ -424,7 +440,7 @@ body {
   color: rgba(31, 32, 65, 0.75); }
 
 h1 {
-  font-family: "Quicksand", "Arial", sans-serif;
+  font-family: "Quicksand", "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.714rem;
@@ -432,7 +448,7 @@ h1 {
   color: #1F2041; }
 
 h2 {
-  font-family: "Quicksand", "Arial", sans-serif;
+  font-family: "Quicksand", "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.357rem;

@@ -2,11 +2,19 @@
 
 body {
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   background-color: #E5E5E5;
 }
 
+.container {
+  margin-top: 72px;
+}
+
 .container__item {
   margin-bottom: 40px;
+  background-color: $white-color;
+}
+
+.container__footer-wrapper {
+  padding-bottom: 100px;
 }

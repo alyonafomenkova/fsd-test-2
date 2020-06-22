@@ -1,0 +1,29 @@
+@import '~Base';
+@import '../../components/logo/logo';
+@import '../../components/search-form/search-form.scss';
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #E5E5E5;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1160px;
+  margin: 72px auto 140px auto;
+}
+
+.cards__wrapper:last-of-type {
+  width: 320px;
+}
+
+.cards__card {
+  margin-bottom: 40px;
+  &--with-room {
+    width: 282px;
+    margin-top: 410px;
+    margin-right: auto;
+  }
+}
