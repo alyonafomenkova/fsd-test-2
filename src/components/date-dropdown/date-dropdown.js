@@ -6,6 +6,7 @@ class DateDropdown {
     this.dropdown = dateDropdown;
     this.baseOptions = {
       multipleDates: 2,
+      minDate: new Date(),
       startDate: new Date(),
       prevHtml: '<button class="button datepicker--nav-prev" type="button"><span>arrow_back</span></button>',
       nextHtml: '<button class="button datepicker--nav-next" type="button"><span>arrow_forward</span></button>',
