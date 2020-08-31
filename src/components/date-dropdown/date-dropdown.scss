@@ -162,26 +162,27 @@
 .datepicker--cell.-range-from-,
 .datepicker--cell.-range-to- {
   position: relative;
+  border: none;
   border-radius: 50%;
-  background:  $purple-gradient-25;
+  background:  $purple-gradient;
   z-index: 1;
   &::before {
     content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
     width: 50%;
-    height: 100%;
+    height: inherit;
+    position: absolute;
+    right: 0;
+    border: none;
     z-index: -1;
     background: $purple-gradient-25;
   }
 }
 
 .datepicker--cell.-range-to-::before {
-  left: 0;
+  right: 50%;
 }
 
-.datepicker--cell.-selected-{
+.datepicker--cell.-selected- {
   background:  $purple-gradient;
 }
 
