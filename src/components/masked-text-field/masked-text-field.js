@@ -7,6 +7,6 @@ jQuery(function() {
     alias: 'datetime',
     inputFormat: 'dd.mm.yyyy',
     placeholder: 'дд.мм.гггг'
-  }
+  };
   $selector.inputmask(options);
 });
