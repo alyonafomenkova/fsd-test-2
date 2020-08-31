@@ -151,9 +151,11 @@
 .datepicker--cell.-selected-.-current-,
 .datepicker--cell.-selected-.-focus- {
   background: $purple-gradient;
+
 }
 
-.datepicker--cell.-in-range- {
+.datepicker--cell.-in-range-,
+.datepicker--cell.-in-range-:hover {
   background:  $purple-gradient-25;
 }
 
