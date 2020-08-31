@@ -2,25 +2,25 @@
 @import '../../base/base.scss';
 
 .dropdown {
-  max-width: 320px;
+  max-width: 22.857rem;
 }
 
 .dropdown--facilities {
-  max-width: 266px;
+  max-width: 19rem;
 }
 
 .dropdown__info {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 4px;
+  margin-bottom: 0.286rem;
 }
 
 .dropdown__label {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 4px;
+  margin-bottom: 0.286rem;
 }
 
 .dropdown__state {
@@ -38,9 +38,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 15px;
-  border: 1px solid $dark-color-opacity-25;
-  border-radius: 4px;
+  padding-left: 1.071rem;
+  border: 0.071rem solid $dark-color-opacity-25;
+  border-radius: 0.286rem;
   cursor: pointer;
 }
 
@@ -50,9 +50,9 @@
 
 .dropdown__selection-icon {
   @include material-icons;
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
   text-align: center;
   color: $dark-color-opacity-50;
 }
@@ -60,16 +60,16 @@
 .dropdown__menu {
   display: none;
   position: absolute;
-  top: 42px;
+  top: 3rem;
   left: 0;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 7px;
+  padding-left: 1.071rem;
+  padding-right: 0.5rem;
   z-index: 3;
-  border: 1px solid $dark-color-opacity-25;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-shadow: 0 10px 20px $dark-color-opacity-5;
+  border: 0.071rem solid $dark-color-opacity-25;
+  border-bottom-left-radius: 0.286rem;
+  border-bottom-right-radius: 0.286rem;
+  box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
   background-color: $white-color;
 }
 
@@ -81,25 +81,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 7px 0;
+  margin: 0.5rem 0;
 }
 
 .dropdown__buttons-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 92px;
+  width: 6.571rem;
 }
 
 .dropdown__decrement-button,
 .dropdown__increment-button {
-  width: 30px;
-  height: 30px;
-  border: 1px solid $dark-color-opacity-25;
+  width: 2.143rem;
+  height: 2.143rem;
+  border: 0.071rem solid $dark-color-opacity-25;
   background: none;
-  border-radius: 22px;
-  font-size: 18px;
-  line-height: 22px;
+  border-radius: 1.571rem;
+  font-size: 1.286rem;
+  line-height: 1.571rem;
   color: $dark-color-opacity-25;
   cursor: pointer;
 }
@@ -126,21 +126,15 @@
 .dropdown__controls-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 13px;
+  margin-top: 1.429rem;
+  margin-bottom: 0.929rem;
 }
 
 .dropdown__apply-button {
   margin-left: auto;
-  //&:focus {
-  //  border-color: $purple-color;
-  //}
 }
 
 .dropdown__clear-button {
-  //&:focus {
-  //  border-color: $purple-color;
-  //}
   &--invisible{
     display: none;
   }
