@@ -197,7 +197,7 @@
 .datepicker--button {
   @include h3-text;
   display: inline-block;
-  color: $dark-color-opacity-50;
+  color: $purple-color;
   &:hover {
     background: inherit;
     color: $dark-color-opacity-75;
@@ -205,11 +205,7 @@
 }
 
 .datepicker--button[data-action$='apply'] {
-  color: $purple-color;
   text-align: right;
-  &:hover {
-    color: $purple-hover-color;
-  }
 }
 
 .datepicker .datepicker--button[data-action$='clear'] {
