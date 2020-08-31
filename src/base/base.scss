@@ -4,7 +4,11 @@
 
 html {
   box-sizing: border-box;
+  font-family: 'Montserrat', 'Arial', sans-serif;
   font-size: 14px;
+  line-height: 24px;
+  color: $dark-color-opacity-75;
+  background-color: $white-color;
 }
 
 *,
@@ -46,12 +50,12 @@ $desktop-width: 1165px;
 }
 
 @mixin body-text {
-  font-family: "Montserrat", "Arial", sans-serif;
+  //font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1rem; //14px
-  line-height: 1.714rem; //24px
-  color: $dark-color-opacity-75;
+  //line-height: 1.714rem; //24px
+  //color: $dark-color-opacity-75;
 }
 
 @mixin material-icons {
