@@ -212,6 +212,14 @@
   }
 }
 
+.datepicker .datepicker--button[data-action$='clear'] {
+  display: none;
+}
+
+.datepicker--selected .datepicker--button[data-action$='clear'] {
+  display: block;
+}
+
 @media (min-width: $tablet-width) {
   .datepicker {
     width: 22.857rem;

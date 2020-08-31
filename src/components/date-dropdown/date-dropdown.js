@@ -16,6 +16,11 @@ class DateDropdown {
       autoClose: false,
       range: true,
       multipleDatesSeparator: ' - ',
+      onShow(inst) {
+        if (inst.el.value.length > 0) {
+          inst.$datepicker.addClass('datepicker--selected');
+        }
+      }
     };
   }
 
@@ -54,6 +59,9 @@ class DateDropdown {
           $startDateInput.val(fd.split('-')[0]);
           $endDateInput.val(fd.split('-')[1]);
         });
+        if (d) {
+          picker.$datepicker.addClass('datepicker--selected');
+        }
      }
     };
     const additionalOptionsForEndInput = {
@@ -68,6 +76,9 @@ class DateDropdown {
           $startDateInput.val(fd.split('-')[0]);
           $endDateInput.val(fd.split('-')[1]);
         });
+        if (d) {
+          picker.$datepicker.addClass('datepicker--selected');
+        }
       }
     };
 
@@ -83,6 +94,7 @@ class DateDropdown {
     $inlineDatepicker.addClass('datepicker-here');
     $inlineDatepicker.datepicker(this.baseOptions);
     this.setSelectedDate($inlineDatepicker);
+    $(this.dropdown).addClass('datepicker--selected');
     this.addApplyButton($inlineDatepicker);
   }
 
@@ -90,14 +102,17 @@ class DateDropdown {
     const $filterDateInput = $(this.dropdown).find('.js-date-dropdown__input--filter');
     const additionalOptionsForFilterInput = {
       dateFormat: 'd M',
-      onSelect: function (formattedDate, date) {
+      onSelect: function (formattedDate, date, picker) {
         const $applyButton = $filterDateInput.datepicker().data('datepicker').$datepicker.find('.datepicker--button[data-action="apply"]');
         $applyButton.click(() => {
           event.preventDefault();
           event.stopPropagation();
           $filterDateInput.datepicker().data('datepicker').hide();
-        })
-      },
+        });
+        if (date) {
+          picker.$datepicker.addClass('datepicker--selected');
+        }
+      }
     };
 
     $filterDateInput.addClass('datepicker-here');
