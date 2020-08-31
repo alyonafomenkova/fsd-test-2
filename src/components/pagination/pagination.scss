@@ -2,7 +2,7 @@
 @import '../../base/theme.scss';
 
 .pagination {
-  max-width: 240px;
+  max-width: 17.143rem;
 }
 
 .pagination__list {
@@ -17,15 +17,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 2.857rem;
+  height: 2.857rem;
   font-weight: normal;
   cursor: pointer;
 }
 
 .pagination__link--current {
   background: $purple-gradient;
-  border-radius: 22px;
+  border-radius: 1.571rem;
   font-weight: bold;
   color: $white-color;
 }
@@ -34,13 +34,13 @@
   @include material-icons;
   display: flex;
   background: $green-gradient;
-  border-radius: 22px;
+  border-radius: 1.571rem;
   color: $white-color;
 }
 
 .pagination__description {
-  margin-top: 10px;
-  padding-left: 5px;
+  margin-top: 0.714rem;
+  padding-left: 0.357rem;
   font-size: 1rem;
   line-height: 1.714rem;
 }

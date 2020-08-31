@@ -3,16 +3,16 @@
 
 .header {
   margin: 0 auto;
-  padding: 0 20px 0 20px;
+  padding: 0 1.429rem 0 1.429rem;
   background-color: $white-color;
-  box-shadow: 0 10px 20px $dark-color-opacity-5;
+  box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
 }
 
 .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 500px;
+  max-width: 35.714rem;
   margin: 0 auto;
 }
 
@@ -49,14 +49,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  min-height: 48px;
+  min-height: 3.429rem;
   &--authorized {
     justify-content: flex-end;
   }
 }
 
 .header__login-button-wrapper {
-  margin-right: 20px;
+  margin-right: 1.429rem;
 }
 
 .header__toggle-menu-btn {
@@ -83,25 +83,25 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  line-height: 17px;
+  line-height: 1.214rem;
   color: $dark-color-opacity-50;
   text-align: center;
 }
 
 .header__nav-item {
-  min-width: 110px;
+  min-width: 7.857rem;
   text-align: center;
   &--small-margin {
-    margin-right: 20px;
+    margin-right: 1.429rem;
   }
   &--big-margin {
-    margin-right: 27px;
+    margin-right: 1.929rem;
   }
 }
 
 .header__nav-link {
   display: block;
-  padding: 6px;
+  padding: 0.429rem;
   cursor: pointer;
   &--active {
     font-weight: bold;
@@ -138,7 +138,7 @@
 .header__toggle-submenu-btn {
   @include material-icons;
   position: absolute;
-  top: 5px;
+  top: 0.357rem;
   right: 0;
   margin: 0;
   padding: 0;
@@ -155,7 +155,7 @@
 
 .header__submenu-item {
   display: block;
-  padding: 5px;
+  padding: 0.357rem;
   font-style: italic;
   cursor: pointer;
 }
@@ -172,11 +172,11 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    padding-bottom: 10px;
+    padding-bottom: 0.714rem;
   }
   .header__wrapper {
-    max-width: 1160px;
-    padding-top: 12px;
+    max-width: 82.857rem;
+    padding-top: 0.857rem;
   }
   .header__content-wrapper {
     display: flex;
@@ -195,11 +195,11 @@
     min-width: auto;
   }
   .header__nav-link {
-    padding: 10px 0;
+    padding: 0.714rem 0;
   }
   .header__submenu {
     width: auto;
-    padding-right: 24px;
+    padding-right: 1.714rem;
     position: relative;
     &:hover {
       .header__submenu-list {
@@ -215,13 +215,13 @@
     width: auto;
     order: 1;
     &--authorized {
-      margin-left: 7px;
+      margin-left: 0.5rem;
     }
   }
   .header__user-name {
     display: block;
-    padding: 6px 0 6px 30px;
-    border-left: 1px solid $dark-color-opacity-10;
+    padding: 0.429rem 0 0.429rem 2.143rem;
+    border-left: 0.071rem solid $dark-color-opacity-10;
     color: $dark-color-opacity-50;
   }
 }

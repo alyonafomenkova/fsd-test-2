@@ -10,13 +10,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1160px;
-  margin: 27px auto 20px auto;
-  padding: 0 20px;
+  max-width: 82.857rem;
+  margin: 1.929rem auto 1.429rem auto;
+  padding: 0 1.429rem;
 }
 
 .search__aside {
-  max-width: 266px;
+  max-width: 19rem;
   margin: 0 auto;
 }
 
@@ -28,34 +28,34 @@ body {
 }
 
 .search__cards {
-  margin-bottom: 21px;
+  margin-bottom: 1.5rem;
 }
 
 .search__element {
   &--bottom-margin-18 {
-    margin-bottom: 18px;
+    margin-bottom: 1.286rem;
   }
   &--bottom-margin-21 {
-    margin-bottom: 21px;
+    margin-bottom: 1.5rem;
   }
   &--bottom-margin-31 {
-    margin-bottom: 31px;
+    margin-bottom: 2.214rem;
   }
   &--bottom-margin-33 {
-    margin-bottom: 33px;
+    margin-bottom: 2.357rem;
   }
 }
 
 .search__cost-comment {
-  margin: 4px 0 0 0;
-  font-size: 12px;
-  line-height: 14px;
+  margin: 0.286rem 0 0 0;
+  font-size: 0.857rem;
+  line-height: 1rem;
 }
 
 @media (min-width: $tablet-width) {
   .search {
     flex-wrap: nowrap;
-    margin-bottom: 56px;
+    margin-bottom: 4rem;
   }
   .search__aside {
     margin-right: 5%;

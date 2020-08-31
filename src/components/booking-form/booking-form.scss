@@ -3,19 +3,19 @@
 @import '../date-dropdown/date-dropdown.scss';
 
 .booking-form {
-  max-width: 382px;
-  padding: 20px;
+  max-width: 27.286rem;
+  padding: 1.429rem;
   background-color: $white-color;
-  border: 1px solid $black-color-opacity-12;
-  border-radius: 4px;
-  box-shadow: 0 0 25px $black-color-opacity-20;
+  border: 0.071rem solid $black-color-opacity-12;
+  border-radius: 0.286rem;
+  box-shadow: 0 0 1.786rem $black-color-opacity-20;
 }
 
 .booking-form__header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 18px;
+  margin-bottom: 1.286rem;
 }
 
 .booking-form__room-info {
@@ -34,43 +34,43 @@
 
 .booking-form__room-cost,
 .booking-form__room-period {
-  line-height: 18px;
+  line-height: 1.286rem;
   color: $dark-color-opacity-50;
 }
 
 .booking-form__fieldset-date,
 .booking-form__fieldset-guests {
-  margin: 0 0 20px 0;
+  margin: 0 0 1.429rem 0;
   padding: 0;
   border: none;
 }
 
 .booking-form__price-details {
-  margin-bottom: 22px;
+  margin-bottom: 1.571rem;
 }
 
 .booking-form__price-per-day,
 .booking-form__service-charge,
 .booking-form__extra-service {
   display: flex;
-  margin-bottom: 11px;
+  margin-bottom: 0.786rem;
 }
 
 .booking-form__extra-service {
-  margin-bottom: 23px;
+  margin-bottom: 1.643rem;
 }
 
 .booking-form__service-text {
-  width: 190px;
+  width: 13.571rem;
 }
 
 .booking-form__more-info-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
-  border: 1px solid $dark-color-opacity-25;
+  width: 1.429rem;
+  height: 1.429rem;
+  border: 0.071rem solid $dark-color-opacity-25;
   border-radius: 50%;
   color: $dark-color-opacity-25;
 }
@@ -87,25 +87,25 @@
 
 .booking-form__total-text {
   @include h2-text;
-  margin-right: 5px;
+  margin-right: 0.357rem;
 }
 
 .booking-form__dotes {
   flex-grow: 1;
-  border-bottom: 1px dashed $dark-color-opacity-25;
+  border-bottom: 0.071rem dashed $dark-color-opacity-25;
 }
 
 .booking-form__total-value {
   @include h2-text;
-  margin-left: 5px;
+  margin-left: 0.357rem;
 }
 
 @media (min-width: $tablet-width) {
   .booking-form {
-    width: 380px;
-    padding: 40px 30px 30px 30px;
+    width: 27.143rem;
+    padding: 2.857rem 2.143rem 2.143rem 2.143rem;
   }
   .booking-form__service-text {
-    width: 217px;
+    width: 15.5rem;
   }
 }

@@ -3,7 +3,7 @@
 
 .rich-checkbox__title {
   @include h3-text;
-  margin-bottom: 16px;
+  margin-bottom: 1.143rem;
 }
 
 .rich-checkbox__input + label {
@@ -18,12 +18,12 @@
 .rich-checkbox__input + label::before {
   content: '';
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 1.429rem;
+  height: 1.429rem;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 1px solid $dark-color-opacity-25;
-  border-radius: 4px;
+  border: 0.071rem solid $dark-color-opacity-25;
+  border-radius: 0.286rem;
   margin-right: 0.5em;
   background-repeat: no-repeat;
   background-position: center center;
@@ -37,19 +37,19 @@
 
 .rich-checkbox__label {
   flex-direction: column;
-  width: 266px;
-  margin-bottom: 10px;
+  width: 19rem;
+  margin-bottom: 0.714rem;
 }
 
 .rich-checkbox__item-title {
-  margin: 0 0 6px 0;
+  margin: 0 0 0.429rem 0;
   font-weight: bold;
 }
 
 .rich-checkbox__description {
   margin: 0;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.857rem;
+  line-height: 1rem;
 }
 
 .rich-checkbox__input + label:hover,

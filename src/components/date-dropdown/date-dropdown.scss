@@ -7,27 +7,27 @@
 .date-dropdown {
   display: flex;
   justify-content: space-between;
-  max-width: 320px;
+  max-width: 22.857rem;
 }
 
 .date-dropdown__item {
-  max-width: 150px;
+  max-width: 10.714rem;
   position: relative;
   cursor: pointer;
 }
 
 .date-dropdown__label {
   @include h3-text;
-  margin-bottom: 4px;
+  margin-bottom: 0.286rem;
 }
 
 .date-dropdown__input {
   width: 100%;
   box-sizing: border-box;
-  height:44px;
-  padding: 13px 0 13px 15px;
-  border: 1px solid $dark-color-opacity-25;
-  border-radius: 4px;
+  height:3.143rem;
+  padding: 0.929rem 0 0.929rem 1.071rem;
+  border: 0.071rem solid $dark-color-opacity-25;
+  border-radius: 0.286rem;
   font-weight: normal;
   &:hover,
   &:focus {
@@ -42,7 +42,7 @@
 
 .date-dropdown__item--filter {
   width: 100%;
-  max-width: 266px;
+  max-width: 19rem;
 }
 
 .date-dropdown__item--filter .date-dropdown__input::placeholder {
@@ -55,8 +55,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 44px;
-  height: 44px;
+  width: 3.143rem;
+  height: 3.143rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,9 +73,9 @@
 }
 
 .datepicker {
-  width: 280px;
-  border: 1px solid $dark-color-opacity-25;
-  box-shadow: 0 10px 20px $dark-color-opacity-5;
+  width: 20rem;
+  border: 0.071rem solid $dark-color-opacity-25;
+  box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
 }
 
 .datepicker--pointer {
@@ -83,7 +83,7 @@
 }
 
 .datepicker--nav {
-  padding: 18px 20px 26px 18px;
+  padding: 1.286rem 1.429rem 1.857rem 1.286rem;
   border: none;
   &-title {
     @include h2-text;
@@ -92,7 +92,7 @@
 
 .datepicker--nav-prev,
 .datepicker--nav-next {
-  height: 25px;
+  height: 1.786rem;
  }
 
 .datepicker--nav-action:hover,
@@ -103,7 +103,7 @@
 .datepicker--nav-prev span,
 .datepicker--nav-next span {
   @include material-icons;
-  width: 24px;
+  width: 1.714rem;
   color: $purple-color;
 }
 
@@ -113,11 +113,11 @@
 }
 
 .datepicker--content {
-  padding: 0 20px 0 21px;
+  padding: 0 1.429rem 0 1.5rem;
 }
 
 .datepicker--days-names {
-  margin-bottom: 15px;
+  margin-bottom: 1.071rem;
 }
 
 .datepicker--day-name {
@@ -126,12 +126,12 @@
 }
 
 .datepicker--cells {
-  border-right: 22px;
+  border-right: 1.571rem;
 }
 
 .datepicker--cell-day {
-  height: 40px;
-  border-radius: 22px;
+  height: 2.857rem;
+  border-radius: 1.571rem;
 }
 
 .datepicker--cell-day.-other-month-,
@@ -183,7 +183,7 @@
 }
 
 .datepicker--buttons {
-  margin: 20px 20px 0 20px;
+  margin: 1.429rem 1.429rem 0 1.429rem;
   padding: 0;
   justify-content: space-between;
   align-items: center;
@@ -200,7 +200,7 @@
   }
 }
 
-.datepicker--button[data-action$="apply"] {
+.datepicker--button[data-action$='apply'] {
   color: $purple-color;
   text-align: right;
   &:hover {
@@ -210,6 +210,6 @@
 
 @media (min-width: $tablet-width) {
   .datepicker {
-    width: 320px;
+    width: 22.857rem;
   }
 }

@@ -6,10 +6,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  min-width: 40px;
-  height: 20px;
-  border: 1px solid $dark-color-opacity-25;
-  border-radius: 10px;
+  min-width: 2.857rem;
+  height: 1.429rem;
+  border: 0.071rem solid $dark-color-opacity-25;
+  border-radius: 0.714rem;
   background-color: inherit;
   &:focus {
     outline-color: $purple-color;
@@ -19,15 +19,15 @@
 .like-button__icon {
   @include material-icons;
   color: $dark-color-opacity-25;
-  font-size: 10px;
-  line-height: 9px;
+  font-size: 0.714rem;
+  line-height: 0.643rem;
   pointer-events: none;
 }
 
 .like-button__count-likes {
   @include body-text;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 0.714rem;
+  line-height: 0.857rem;
   color: $dark-color-opacity-25;
   pointer-events: none;
 }

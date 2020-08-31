@@ -3,32 +3,32 @@
 
 .footer {
   margin: 0 auto;
-  padding-top: 89px;
+  padding-top: 6.357rem;
   background-color: $white-color;
-  border-top: 1px solid $dark-color-opacity-25;
+  border-top: 0.071rem solid $dark-color-opacity-25;
 }
 
 .footer__wrapper {
   display: flex;
-  max-width: 1160px;
+  max-width: 82.857rem;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 75px;
+  padding-top: 0.714rem;
+  padding-bottom: 5.357rem;
 }
 
 .footer__description-wrapper {
   width: 24%;
-  margin-right: 30px;
+  margin-right: 2.143rem;
 }
 
 .footer__description {
-  margin: 18px 0 0 0;
+  margin: 1.286rem 0 0 0;
 }
 
 .footer__content-wrapper {
   display: flex;
   width: 76%;
-  padding-top: 5px;
+  padding-top: 0.357rem;
 }
 
 .footer__content-item {
@@ -36,20 +36,20 @@
 }
 
 .footer__content-list {
-  margin-top: 17px;
+  margin-top: 1.214rem;
 }
 
 .footer__content-link {
   display: block;
-  padding-bottom: 15px;
+  padding-bottom: 1.071rem;
 }
 
 .footer__subscribe-text {
-  margin: 18px 0 24px 0;
+  margin: 1.286rem 0 1.714rem 0;
 }
 
 .footer__separator {
-  height: 1px;
+  height: 0.071rem;
   background-color: $dark-color-opacity-10;
   border: none;
 }
@@ -57,23 +57,23 @@
 .footer__bottom-wrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 1160px;
-  margin: 11px auto 0 auto;
-  padding-bottom: 10px;
+  max-width: 82.857rem;
+  margin: 0.786rem auto 0 auto;
+  padding-bottom: 0.714rem;
 }
 
 .footer__social-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 112px;
+  width: 8rem;
 
 }
 
 .footer__social-link {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 1.714rem;
+  height: 1.714rem;
   background: $purple-gradient;
   text-decoration: none;
   -webkit-background-clip: text;
@@ -84,7 +84,7 @@
 .footer__social-icon {
   font-family: 'font-awesome-5-brands-regular';
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.714rem;
   &--tw::before {
     content: '\f099';
   }
@@ -97,7 +97,7 @@
 }
 
 .footer-uikit .footer__wrapper {
-  padding-bottom: 28px;
+  padding-bottom: 2rem;
 }
 
 .footer-uikit .footer__description-wrapper {
@@ -109,7 +109,7 @@
 }
 
 .footer-uikit .footer__description {
-  max-width: 560px;
+  max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -132,10 +132,10 @@
 
 @media (max-width: $desktop-width) {
   .footer {
-    padding-bottom: 100px;
+    padding-bottom: 7.143rem;
   }
   .footer__wrapper {
-    padding-bottom: 28px;
+    padding-bottom: 2rem;
   }
   .footer__description-wrapper {
     width: 100%;
@@ -145,7 +145,7 @@
     }
   }
   .footer__description {
-    max-width: 560px;
+    max-width: 40rem;
     margin-left: auto;
     margin-right: auto;
     text-align: center;

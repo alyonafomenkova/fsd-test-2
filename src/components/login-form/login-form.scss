@@ -2,55 +2,55 @@
 @import '../../base/theme.scss';
 
 .login {
-  max-width: 382px;
-  padding: 20px;
+  max-width: 27.286rem;
+  padding: 1.429rem;
   position: relative;
   background-color: $white-color;
   z-index: 0;
-  border: 1px solid $black-color-opacity-12;
-  border-radius: 4px;
-  box-shadow: 0 0 25px $black-color-opacity-20;
+  border: 0.071rem solid $black-color-opacity-12;
+  border-radius: 0.286rem;
+  box-shadow: 0 0 1.786rem $black-color-opacity-20;
 }
 
 .login-form__title {
-  margin-bottom: 20px;
+  margin-bottom: 1.429rem;
 }
 
 .login-form__fieldset-data {
   width: 100%;
-  margin: 0 0 10px 0;
+  margin: 0 0 0.714rem 0;
   padding: 0;
   border: none;
 }
 
 .login-form .text-field {
-  margin-bottom: 10px;
+  margin-bottom: 0.714rem;
 }
 
 .login__registration-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 2.143rem;
 }
 
 .login__registration-text {
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.857rem;
+  line-height: 1.071rem;
   color: $black-color;
 }
 
 @media (min-width: $tablet-width) {
   .login {
-    padding: 40px 30px 30px 30px;
+    padding: 2.857rem 2.143rem 2.143rem 2.143rem;
   }
   .login-form__title {
-    width: 305px;
-    font-size: 24px;
-    line-height: 30px;
+    width: 21.786rem;
+    font-size: 1.714rem;
+    line-height: 2.143rem;
   }
   .login__registration-text {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.286rem;
   }
 }

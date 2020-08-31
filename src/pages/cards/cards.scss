@@ -11,19 +11,19 @@ body {
 .cards {
   display: flex;
   justify-content: space-between;
-  max-width: 1160px;
-  margin: 72px auto 140px auto;
+  max-width: 82.857rem;
+  margin: 5.143rem auto 10rem auto;
 }
 
 .cards__wrapper:last-of-type {
-  width: 320px;
+  width: 22.857rem;
 }
 
 .cards__card {
-  margin-bottom: 40px;
+  margin-bottom: 2.857rem;
   &--with-room {
-    width: 282px;
-    margin-top: 410px;
+    width: 20.143rem;
+    margin-top: 29.286rem;
     margin-right: auto;
   }
 }

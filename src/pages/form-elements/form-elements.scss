@@ -8,11 +8,11 @@ body {
 
 .form-elements {
   display: grid;
-  grid-template-columns: repeat(3, 320px);
+  grid-template-columns: repeat(3, 22.857rem);
   grid-template-rows: repeat(4, min-content);
   justify-content: space-between;
-  max-width: 1160px;
-  margin: 66px auto 0 auto;
+  max-width: 82.857rem;
+  margin: 4.714rem auto 0 auto;
 }
 
 .form-elements__elements-wrapper {
@@ -27,49 +27,49 @@ body {
 
 .form-elements__element {
   &--top-margin-10 {
-    margin-top: 10px;
+    margin-top: 0.714rem;
   }
   &--top-margin-15 {
-    margin-top: 15px;
+    margin-top: 1.071rem;
   }
   &--top-margin-82 {
-    margin-top: 82px;
+    margin-top: 5.857rem;
   }
   &--top-margin-93 {
-    margin-top: 93px;
+    margin-top: 6.643rem;
   }
   &--bottom-margin-21 {
-    margin-bottom: 21px;
+    margin-bottom: 1.5rem;
   }
   &--bottom-margin-24 {
-    margin-bottom: 24px;
+    margin-bottom: 1.714rem;
   }
   &--bottom-margin-35 {
-    margin-bottom: 35px;
+    margin-bottom: 2.5rem;
   }
   &--bottom-margin-38 {
-    margin-bottom: 38px;
+    margin-bottom: 2.714rem;
   }
   &--bottom-margin-41 {
-    margin-bottom: 41px;
+    margin-bottom: 2.929rem;
   }
   &--bottom-margin-42 {
-    margin-bottom: 42px;
+    margin-bottom: 3rem;
   }
   &--bottom-margin-45 {
-    margin-bottom: 45px;
+    margin-bottom: 3.214rem;
   }
   &--bottom-margin-103 {
-    margin-bottom: 103px;
+    margin-bottom: 7.357rem;
   }
   &--bottom-margin-160 {
-    margin-bottom: 160px;
+    margin-bottom: 11.429rem;
   }
 }
 
 .form-elements__title {
   @include h3-text;
-  margin-bottom: 16px;
+  margin-bottom: 1.143rem;
 }
 
 .form-elements__wrapper {
@@ -77,21 +77,21 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   &--like-buttons {
-    width: 90px;
+    width: 6.429rem;
   }
   &--rate-buttons {
-    width: 260px;
+    width: 18.571rem;
   }
 }
 
 .form-elements__button-wrapper {
   display: inline-block;
-  margin-right: 15px;
-  margin-bottom: 30px;
+  margin-right: 1.071rem;
+  margin-bottom: 2.143rem;
   &:nth-of-type(2) {
-    margin-bottom: 25px;
+    margin-bottom: 1.786rem;
   }
   &:last-of-type {
-    margin-bottom: 28px;
+    margin-bottom: 2rem;
   }
 }

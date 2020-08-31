@@ -2,19 +2,19 @@
 @import '../../base/theme.scss';
 
 .room-details {
-  max-width: 280px;
+  max-width: 20rem;
 }
 
 .room-details__title {
-  margin-bottom: 20px;
+  margin-bottom: 1.429rem;
 }
 
 .room-details__item {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid $dark-color-opacity-10;
+  padding-bottom: 1.429rem;
+  margin-bottom: 1.429rem;
+  border-bottom: 0.071rem solid $dark-color-opacity-10;
   &:last-child {
     margin-bottom: 0;
     border-bottom: none;
@@ -23,11 +23,11 @@
 
 .room-details__icon {
   @include material-icons;
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
-  font-size: 48px;
-  line-height: 48px;
+  width: 3.429rem;
+  height: 3.429rem;
+  margin-right: 0.714rem;
+  font-size: 3.429rem;
+  line-height: 3.429rem;
   background: $purple-gradient;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

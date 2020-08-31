@@ -8,13 +8,13 @@
 
 .rating__item {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 1.714rem;
+  height: 1.714rem;
 }
 
 .rating__star {
   @include material-icons;
-  line-height: 20px;
+  line-height: 1.429rem;
   background-image: $purple-gradient;
   -webkit-background-clip: text;
   background-clip: text;

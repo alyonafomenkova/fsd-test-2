@@ -3,7 +3,7 @@
 @import '../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css';
 
 .range-slider {
-  width: 266px;
+  width: 19rem;
   position: relative;
 }
 
@@ -13,27 +13,27 @@
 }
 
 .irs--flat .irs-line {
-  height: 6px;
+  height: 0.429rem;
   box-sizing: border-box;
   background-color: $white-color;
-  border: 1px solid $dark-color-opacity-25;
-  border-radius: 3px;
+  border: 0.071rem solid $dark-color-opacity-25;
+  border-radius: 0.214rem;
 }
 
 .irs--flat .irs-bar {
-  height: 6px;
+  height: 0.429rem;
   background: $green-gradient;
-  border-radius: 3px;
+  border-radius: 0.214rem;
 }
 
 .irs--flat .irs-handle {
-  top: 20px;
-  width: 16px;
-  height: 16px;
+  top: 1.429rem;
+  width: 1.143rem;
+  height: 1.143rem;
   box-sizing: border-box;
   background: $green-gradient;
-  border: 2px solid $white-color;
-  border-radius: 10px;
+  border: 0.143rem solid $white-color;
+  border-radius: 0.714rem;
   cursor: pointer;
 }
 
@@ -44,7 +44,7 @@
 .irs--flat .irs-single {
   @include h3-text;
   display: block;
-  top: -15px;
+  top: -1.071rem;
   right: 0;
   left: auto !important;
   visibility: visible !important;

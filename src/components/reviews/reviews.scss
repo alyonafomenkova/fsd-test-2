@@ -4,25 +4,25 @@
 .reviews__wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 1.429rem;
 }
 
 .reviews__item {
-  margin-bottom: 25px;
+  margin-bottom: 1.786rem;
 }
 
 .reviews__author {
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: 0.857rem;
 }
 
 .reviews__avatar {
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
-  border: 2px solid $white-color;
-  border-radius: 32px;
-  box-shadow: 0 10px 20px $dark-color-opacity-10;
+  width: 3.429rem;
+  height: 3.429rem;
+  margin-right: 0.714rem;
+  border: 0.143rem solid $white-color;
+  border-radius: 2.286rem;
+  box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-10;
 }
 
 .reviews__author-info {
@@ -36,10 +36,10 @@
 
 .reviews__text-wrapper {
   display: flex;
-  padding-left: 5px;
+  padding-left: 0.357rem;
 }
 
 .reviews__text {
-  max-width: 653px;
-  margin: 0 0 0 14px;
+  max-width: 46.643rem;
+  margin: 0 0 0 1rem;
 }

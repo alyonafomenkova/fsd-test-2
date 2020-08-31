@@ -2,7 +2,7 @@
 @import '../../base/base.scss';
 
 .expandable-checkbox {
-  max-width: 266px;
+  max-width: 19rem;
 }
 
 .expandable-checkbox .checkbox__list {
@@ -22,7 +22,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 266px;
+  max-width: 19rem;
   cursor: pointer;
 }
 
@@ -31,7 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 44px;
-  line-height: 24px;
+  width: 3.143rem;
+  height: 3.143rem;
+  line-height: 1.714rem;
 }
