@@ -22,7 +22,7 @@ $tablet-width: 768px;
 $desktop-width: 1165px;
 
 @mixin h1-text {
-  font-family: "Quicksand", "Open Sans", "Arial", sans-serif;
+  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.714rem; // 24px
@@ -31,7 +31,7 @@ $desktop-width: 1165px;
 }
 
 @mixin h2-text {
-  font-family: "Quicksand", "Open Sans", "Arial", sans-serif;
+  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.357rem; // 19px
@@ -40,7 +40,7 @@ $desktop-width: 1165px;
 }
 
 @mixin h3-text {
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: 'Montserrat', 'Arial', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 0.857rem; // 12px;
@@ -60,7 +60,7 @@ $desktop-width: 1165px;
 
 @mixin material-icons {
   display: inline-block;
-  font-family: "Material icons";
+  font-family: 'Material icons';
   font-size: 24px;
   line-height: 1;
   font-style: normal;
@@ -70,8 +70,8 @@ $desktop-width: 1165px;
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  font-feature-settings: "liga";
-  -webkit-font-feature-settings: "liga";
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
 
