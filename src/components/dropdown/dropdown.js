@@ -30,6 +30,18 @@ class Dropdown {
     this.menu.classList.toggle('dropdown__menu--expanded');
   };
 
+  handleDocumentClick(evt) {
+    const target = evt.target.closest('.dropdown__container');
+    if (target) {
+      return;
+    } else {
+      const menus = document.querySelectorAll('.dropdown__menu--expanded');
+      menus.forEach((menu) => {
+        menu.classList.remove('dropdown__menu--expanded');
+      });
+    }
+  };
+
   toggleClearButton() {
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear-button');
     this.updateTotalCount();
@@ -210,6 +222,7 @@ class Dropdown {
     this.disableButtons();
     this.updateTotalCount();
     this.updatePlaceholder();
+    document.addEventListener('click', this.handleDocumentClick);
     if (this.type === this.Mode.PEOPLE) {
       this.addListenersForPeopleMode();
     } else if (this.type === this.Mode.FACILITIES) {
