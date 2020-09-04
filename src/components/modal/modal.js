@@ -3,8 +3,8 @@ import '../modal/modal.scss';
 import '../registration-form/registration-form.js';
 
 const body = document.querySelector('body');
-const loginButton = document.querySelector('.button--login');
-const registerButton = document.querySelector('.button--register');
+const loginButton = document.querySelector('.button_type_login');
+const registerButton = document.querySelector('.button_type_register');
 const loginPopup = document.querySelector('.js-login-modal');
 const registrationPopup = document.querySelector('.js-registration-modal');
 const loginOverlay = document.querySelector('.js-login-modal__overlay');

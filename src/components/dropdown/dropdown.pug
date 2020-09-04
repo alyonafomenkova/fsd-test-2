@@ -13,7 +13,7 @@ mixin dropdown(settings, items)
     'mixedClasses': 'dropdown__apply-button js-dropdown__apply-button'
     };
   include ../button/button
-  div.dropdown(class='dropdown--'+settings.type data-type=settings.type)
+  div.dropdown(class='dropdown_'+settings.type data-type=settings.type)
     if settings.label
       div.dropdown__info
         h3.dropdown__lable !{settings.label}
@@ -23,7 +23,7 @@ mixin dropdown(settings, items)
       div.dropdown__selection.js-dropdown__selection
         p.dropdown__selection-text.js-dropdown__selection-text(data-placeholder=settings.placeholder) !{settings.placeholder}
         span.dropdown__selection-icon expand_more
-      div.dropdown__menu.js-dropdown__menu(class=settings.isExpanded==='true' ? 'dropdown__menu--expanded' : '')
+      div.dropdown__menu.js-dropdown__menu(class=settings.isExpanded==='true' ? 'dropdown__menu_state_expanded' : '')
         div.dropdown__options
           each item, index in items
             div.dropdown__option.js-dropdown__option(data-index=index)

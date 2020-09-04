@@ -16,53 +16,50 @@ body {
 }
 
 .form-elements__elements-wrapper {
-  &--center {
+  &_alignment_center {
     justify-self: center;
   }
-  &--double-column {
+  &_column_double {
     grid-column-start: 2;
     grid-column-end: 4;
   }
 }
 
 .form-elements__element {
-  &--top-margin-10 {
-    margin-top: 0.714rem;
-  }
-  &--top-margin-15 {
+  &_margin_top-15 {
     margin-top: 1.071rem;
   }
-  &--top-margin-82 {
+  &_margin_top-82 {
     margin-top: 5.857rem;
   }
-  &--top-margin-93 {
+  &_margin_top-93 {
     margin-top: 6.643rem;
   }
-  &--bottom-margin-21 {
+  &_margin_bottom-21 {
     margin-bottom: 1.5rem;
   }
-  &--bottom-margin-24 {
+  &_margin_bottom-24 {
     margin-bottom: 1.714rem;
   }
-  &--bottom-margin-35 {
+  &_margin_bottom-35 {
     margin-bottom: 2.5rem;
   }
-  &--bottom-margin-38 {
+  &_margin_bottom-38 {
     margin-bottom: 2.714rem;
   }
-  &--bottom-margin-41 {
+  &_margin_bottom-41 {
     margin-bottom: 2.929rem;
   }
-  &--bottom-margin-42 {
+  &_margin_bottom-42 {
     margin-bottom: 3rem;
   }
-  &--bottom-margin-45 {
+  &_margin_bottom-45 {
     margin-bottom: 3.214rem;
   }
-  &--bottom-margin-103 {
+  &_margin_bottom-103 {
     margin-bottom: 7.357rem;
   }
-  &--bottom-margin-160 {
+  &_margin_bottom-160 {
     margin-bottom: 11.429rem;
   }
 }
@@ -76,10 +73,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  &--like-buttons {
+  &_buttons-type_like {
     width: 6.429rem;
   }
-  &--rate-buttons {
+  &_buttons-type_rate {
     width: 18.571rem;
   }
 }

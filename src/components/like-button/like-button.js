@@ -1,9 +1,9 @@
 import './like-button.scss';
 
 jQuery(function() {
-  const ACTIVE_BUTTON_CLASS = 'js-like-button--active';
+  const ACTIVE_BUTTON_CLASS = 'js-like-button_active';
   const likeButtons = $('.js-like-button');
-  const activeLikeButtons = $('.js-like-button--active');
+  const activeLikeButtons = $('.js-like-button_active');
   const toggleLikeIcon = (button) => {
     if (button.hasClass(ACTIVE_BUTTON_CLASS)) {
       const likeIcon = button.find('.js-like-button__icon');

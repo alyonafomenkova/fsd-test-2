@@ -1,16 +1,16 @@
 mixin button(data)
   button.button(
     type=data.type ? data.type : 'button',
-    class=data.isLogin==='true' ? 'button--login' : ''
-    class=data.isRegister==='true' ? 'button--register' : ''
-    class=data.height==='high' ? 'button--high' : ''
-    class=data.height==='low' ? 'button--low' : ''
-    class=data.view==='filled' ? 'button--filled' : ''
-    class=data.view==='filled'&&data.isHovered==='true' ? 'button--filled-hovered' : ''
-    class=data.view === 'with-border' ? 'button--with-border' : ''
-    class=data.view === 'with-border' && data.isHovered === 'true' ? 'button--with-border-hovered' : ''
-    class=data.view === 'textual' ? 'button--textual' : ''
-    class=data.view === 'textual' && data.isHovered === 'true' ? 'button--textual-hovered' : ''
-    class=data.view === 'action' ? 'button--action' : ''
+    class=data.isLogin === 'true' ? 'button_type_login' : ''
+    class=data.isRegister === 'true' ? 'button_type_register' : ''
+    class=data.height === 'high' ? 'button_height_high' : ''
+    class=data.height === 'low' ? 'button_height_low' : ''
+    class=data.view === 'filled' ? 'button_view_filled' : ''
+    class=data.view === 'filled'&&data.isHovered==='true' ? 'button_view_filled-on-hover' : ''
+    class=data.view === 'bordered' ? 'button_view_bordered' : ''
+    class=data.view === 'bordered' && data.isHovered === 'true' ? 'button_view_bordered-on-hover' : ''
+    class=data.view === 'textual' ? 'button_view_textual' : ''
+    class=data.view === 'textual' && data.isHovered === 'true' ? 'button_view_textual-on-hover' : ''
+    class=data.view === 'actionable' ? 'button_view_actionable' : ''
     class=data.mixedClasses  ? data.mixedClasses : ''
     ) !{data.content}

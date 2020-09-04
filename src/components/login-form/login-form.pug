@@ -11,7 +11,7 @@ mixin loginForm
       fieldset.login-form__fieldset-data
         +textField({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
         +textField({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
-      +button({'view': 'action', 'height': 'high', 'content': 'войти'})
+      +button({'view': 'actionable', 'height': 'high', 'content': 'войти'})
     div.login__registration-wrapper
       span.login__registration-text Нет аккаунта на Toxin?
-      +button({'view': 'with-border', 'height': 'high', 'content': 'создать'})
+      +button({'view': 'bordered', 'height': 'high', 'content': 'создать'})

@@ -32,7 +32,7 @@
   border-radius: 0.286rem;
   &:hover,
   &:focus,
-  &--hovered {
+  &_hovered {
     outline: none;
     border-color: $dark-color-opacity-50;
   }
@@ -43,6 +43,6 @@
 
 .text-field__input:hover::placeholder,
 .text-field__input:focus::placeholder,
-.text-field__input--hovered::placeholder {
+.text-field__input_hovered::placeholder {
   color: $dark-color-opacity-75;
 }

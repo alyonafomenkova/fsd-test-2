@@ -27,7 +27,7 @@ class Dropdown {
   }
 
   toggleMenu() {
-    this.menu.classList.toggle('dropdown__menu--expanded');
+    this.menu.classList.toggle('dropdown__menu_state_expanded');
   };
 
   handleDocumentClick(evt) {
@@ -35,9 +35,9 @@ class Dropdown {
     if (target) {
       return;
     } else {
-      const menus = document.querySelectorAll('.dropdown__menu--expanded');
+      const menus = document.querySelectorAll('.dropdown__menu_state_expanded');
       menus.forEach((menu) => {
-        menu.classList.remove('dropdown__menu--expanded');
+        menu.classList.remove('dropdown__menu_state_expanded');
       });
     }
   };
@@ -46,9 +46,9 @@ class Dropdown {
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear-button');
     this.updateTotalCount();
     if (this.totalCount > 0) {
-      clearButton.classList.remove('dropdown__clear-button--invisible');
+      clearButton.classList.remove('dropdown__clear-button_visibility_invisible');
     } else {
-      clearButton.classList.add('dropdown__clear-button--invisible');
+      clearButton.classList.add('dropdown__clear-button_visibility_invisible');
     }
   }
 

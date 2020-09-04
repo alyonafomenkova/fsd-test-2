@@ -4,6 +4,6 @@ mixin rating(currentRating)
   div.rating
     ul.rating__list
       while n <= maxRating
-        li.rating__item.js-rating__item(data-value = n, class = currentRating >= n ? 'rating__item--selected js-rating__item--selected' : '')
+        li.rating__item.js-rating__item(data-value = n, class = currentRating >= n ? 'rating__item_selected js-rating__item_selected' : '')
           i.rating__star.js-rating__star
         - n++

@@ -52,13 +52,13 @@ body {
   font-weight: normal;
   text-align: right;
   color: rgba(31, 32, 65, 0.25);
-  &--h2 {
+  &_type_h2 {
     width: 2rem;
   }
-  &--h3 {
+  &_type_h3 {
     width: 2rem;
   }
-  &--body {
+  &_type_body {
     margin-right: 1.429rem;
   }
 }

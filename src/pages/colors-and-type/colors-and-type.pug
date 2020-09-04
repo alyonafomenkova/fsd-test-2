@@ -46,5 +46,5 @@ mixin colors
 mixin types
   each item in types
     div.type-block
-      #{item.tag}(class="type-block__title type-block__title--" + item.title.toLowerCase()) #{item.title}
+      #{item.tag}(class="type-block__title type-block__title_type_" + item.title.toLowerCase()) #{item.title}
       #{item.tag}.type-block__description #{item.description}

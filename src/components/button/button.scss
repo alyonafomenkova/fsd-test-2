@@ -14,24 +14,25 @@
   }
 }
 
-.button--low {
+.button_height_low {
   padding: 0.643rem 1.357rem;
 }
-.button--high {
+
+.button_height_high {
   width: 7.071rem;
   padding: 1rem 0;
 }
 
-.button--filled {
+.button_view_filled {
   background: $purple-gradient;
   color: $white-color;
   &:hover,
-  &-hovered {
+  &-on-hover {
     opacity: 0.5;
   }
 }
 
-.button--with-border {
+.button_view_bordered {
   position: relative;
   border: 0.143rem solid transparent;
   background-color: $white-color;
@@ -49,23 +50,23 @@
     border-radius: inherit;
     background: $purple-gradient;
   }
-  &-hovered::after,
+  &-on-hover::after,
   &:hover::after {
     opacity: 0.5;
   }
 }
 
-.button--textual {
+.button_view_textual {
   width: auto;
   padding: 0;
   color: $purple-color;
   &:hover,
-  &-hovered {
+  &-on-hover {
     color: $dark-color-opacity-50;
   }
 }
 
-.button--action {
+.button_view_actionable {
   width: 100%;
   max-width: 22.857rem;
   position: relative;

@@ -8,7 +8,7 @@ mixin maskedTextField(options)
       type = options.type,
       name = options.name,
       id = options.name+'-id',,
-      class=options.mixedClasses ? 'masked-text-field__input--' + options.mixedClasses : '',
+      class=options.mixedClasses ? 'masked-text-field__input_' + options.mixedClasses : '',
       placeholder = options.placeholder || '',
       :readonly=(options.readOnly)
     )

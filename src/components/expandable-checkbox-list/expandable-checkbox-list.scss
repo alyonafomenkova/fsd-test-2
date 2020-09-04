@@ -9,11 +9,11 @@
   display: none;
 }
 
-.expandable-checkbox--expanded .checkbox__list {
+.expandable-checkbox_state_expanded .checkbox__list {
   display: block;
 }
 
-.expandable-checkbox--expanded .expandable-checkbox__more-icon {
+.expandable-checkbox_state_expanded .expandable-checkbox__more-icon {
   transform: rotate(-180deg);
 }
 

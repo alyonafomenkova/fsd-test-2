@@ -122,13 +122,13 @@
   font-family: 'font-awesome-5-brands-regular';
   font-weight: normal;
   font-size: 1.714rem;
-  &--tw::before {
+  &_social-network_tw::before {
     content: '\f099';
   }
-  &--fb::before {
+  &_social-network_fb::before {
     content: '\f082';
   }
-  &--insta::before {
+  &_social-network_insta::before {
     content: '\f16d';
   }
 }

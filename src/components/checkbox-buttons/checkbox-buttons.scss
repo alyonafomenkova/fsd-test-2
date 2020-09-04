@@ -3,7 +3,7 @@
 
 .checkbox__item {
   margin-bottom: 0.714rem;
-  &--disabled  {
+  &_disabled  {
     opacity: 0.5;
   }
 }
@@ -16,7 +16,7 @@
   margin-top: 1.214rem;
 }
 
-.checkbox--expandable .checkbox__list {
+.checkbox_type_expandable .checkbox__list {
   margin-top: 0;
 }
 

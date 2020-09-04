@@ -8,8 +8,8 @@ mixin textField(options)
       type = options.type ? options.type : 'text',
       name = options.name,
       id = options.name+'-id',
-      class=options.isHovered==='true' ? 'text-field__input--hovered' + options.classes : '',
-      class=options.mixedClasses ? 'text-field__input--' + options.mixedClasses : '',
+      class=options.isHovered==='true' ? 'text-field__input_hovered' + options.classes : '',
+      class=options.mixedClasses ? 'text-field__input_' + options.mixedClasses : '',
       placeholder = options.placeholder || '',
       :readonly=(options.readOnly)
   )

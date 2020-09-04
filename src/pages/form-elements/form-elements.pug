@@ -162,63 +162,63 @@ block content
   +logo('uikit')
   main.form-elements
     div.form-elements__elements-wrapper
-      div.form-elements__element.form-elements__element--bottom-margin-21
+      div.form-elements__element.form-elements__element_margin_bottom-21
         +textField(defaultTextField)
-      div.form-elements__element.form-elements__element--bottom-margin-21
+      div.form-elements__element.form-elements__element_margin_bottom-21
         +textField(hoveredTextField)
-      div.form-elements__element.form-elements__element--bottom-margin-24
+      div.form-elements__element.form-elements__element_margin_bottom-24
         +dropdown(dropdownSettings1, dropdownItems1)
-      div.form-elements__element.form-elements__element--bottom-margin-38
+      div.form-elements__element.form-elements__element_margin_bottom-38
         +maskedTextField(maskedTextField)
-      div.form-elements__element.form-elements__element--bottom-margin-38
+      div.form-elements__element.form-elements__element_margin_bottom-38
         +date-dropdown({'startLabel': 'date Dropdown', 'endLabel': 'date Dropdown'})
-      div.form-elements__element.form-elements__element--bottom-margin-41
+      div.form-elements__element.form-elements__element_margin_bottom-41
         +date-dropdown({'startLabel': 'filter date dropdown'})
-      div.form-elements__element.form-elements__element--bottom-margin-103
+      div.form-elements__element.form-elements__element_margin_bottom-103
         +subscriptionTextField(subscriptionTextField)
 
-    div.form-elements__elements-wrapper.form-elements__elements-wrapper--center
-      div.form-elements__element.form-elements__element--bottom-margin-42
+    div.form-elements__elements-wrapper.form-elements__elements-wrapper_alignment_center
+      div.form-elements__element.form-elements__element_margin_bottom-42
         +checkboxButtons(checkboxData, 'Checkbox Buttons')
-      div.form-elements__element.form-elements__element--bottom-margin-35
+      div.form-elements__element.form-elements__element_margin_bottom-35
         +radioButtons(radioData, 'Radio Buttons')
-      div.form-elements__element.form-elements__element--bottom-margin-45
+      div.form-elements__element.form-elements__element_margin_bottom-45
         +toggleButton(toggleData, 'Toggle')
-      div.form-elements__element.form-elements__element--bottom-margin-41
+      div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title like button
-        div.form-elements__wrapper.form-elements__wrapper--like-buttons
+        div.form-elements__wrapper.form-elements__wrapper_buttons-type_like
           +likeButton(2)
           +likeButton(12, true)
-      div.form-elements__element.form-elements__element--bottom-margin-41
+      div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title rate button
-        div.form-elements__wrapper.form-elements__wrapper--rate-buttons
+        div.form-elements__wrapper.form-elements__wrapper_buttons-type_rate
           +rating(4)
           +rating(5)
 
     div.form-elements__elements-wrapper
-      div.form-elements__element.form-elements__element--bottom-margin-35
+      div.form-elements__element.form-elements__element_margin_bottom-35
         +rangeSlider('Range Slider', 5000, 10000)
-      div.form-elements__element.form-elements__element--bottom-margin-41
+      div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title buttons
         div.form-elements__button-wrapper
           +button({'view': 'filled', 'height': 'high', 'content': 'click me'})
         +button({'view': 'filled', 'height': 'high', 'isHovered': 'true', 'content': 'click me'})
         div.form-elements__button-wrapper
-          +button({'view': 'with-border', 'height': 'high', 'content': 'click me'})
-        +button({'view': 'with-border', 'height': 'high', 'isHovered': 'true', 'content': 'click me'})
+          +button({'view': 'bordered', 'height': 'high', 'content': 'click me'})
+        +button({'view': 'bordered', 'height': 'high', 'isHovered': 'true', 'content': 'click me'})
         div
           div.form-elements__button-wrapper
             +button({'view': 'textual', 'height': 'high', 'content': 'click me'})
           +button({'view': 'textual', 'height': 'high', 'isHovered': 'true', 'content': 'click me'})
-        +button({'view': 'action', 'height': 'high', 'content': 'Перейти к оплате'})
-      div.form-elements__element.form-elements__element--bottom-margin-41
+        +button({'view': 'actionable', 'height': 'high', 'content': 'Перейти к оплате'})
+      div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title pagination
         +pagination
 
     div.form-elements__elements-wrapper
-      div.form-elements__element.form-elements__element--bottom-margin-21
+      div.form-elements__element.form-elements__element_margin_bottom-21
         +dropdown(dropdownSettings2, dropdownItems2)
-      div.form-elements__element.form-elements__element--bottom-margin-160
+      div.form-elements__element.form-elements__element_margin_bottom-160
         +dropdown(dropdownSettings3, dropdownItems3)
 
     div.form-elements__elements-wrapper
@@ -230,23 +230,23 @@ block content
         +dropdown(dropdownSettings4, dropdownItems5)
 
     div.form-elements__elements-wrapper
-      div.form-elements__element.form-elements__element--bottom-margin-21
+      div.form-elements__element.form-elements__element_margin_bottom-21
         +expandableCheckboxList(dataForexpandableCheckbox, 'expandable checkbox list')
       div.form-elements__element
         +expandableCheckboxList(dataForExpandedCheckbox, 'expandable checkbox list', true)
 
     div.form-elements__elements-wrapper
-      div.form-elements__element.form-elements__element--top-margin-15
+      div.form-elements__element.form-elements__element_margin_top-15
         +richCheckboxButtons(richCheckboxData, 'rich Checkbox Buttons')
 
     div.form-elements__elements-wrapper
-      div.form-elements__element.form-elements__element--top-margin-15
+      div.form-elements__element.form-elements__element_margin_top-15
         +bulletList(bulletData, 'Bullet list', 'uikit')
 
     div.form-elements__elements-wrapper
-      div.form-elements__element.form-elements__element--top-margin-93
+      div.form-elements__element.form-elements__element_margin_top-93
         +roomDetails(roomDetailsData)
 
-    div.form-elements__elements-wrapper.form-elements__elements-wrapper--double-column
-      div.form-elements__element.form-elements__element--top-margin-82
+    div.form-elements__elements-wrapper.form-elements__elements-wrapper_column_double
+      div.form-elements__element.form-elements__element_margin_top-82
         +reviews(reviewsData)

@@ -32,7 +32,7 @@
   border-radius: 0.286rem;
   &:hover,
   &:focus,
-  &--hovered {
+  &_hovered {
     outline: none;
     border-color: $dark-color-opacity-50;
   }

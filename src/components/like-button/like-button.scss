@@ -32,7 +32,7 @@
   pointer-events: none;
 }
 
-.js-like-button--active {
+.js-like-button_active {
   border-color: $purple-color;
   .like-button__icon,
   .like-button__count-likes {

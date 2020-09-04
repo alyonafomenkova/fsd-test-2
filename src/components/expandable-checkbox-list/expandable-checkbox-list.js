@@ -1,7 +1,7 @@
 import './expandable-checkbox-list.scss';
 
 jQuery(function() {
-  const EXPANDED_CLASS = 'expandable-checkbox--expanded';
+  const EXPANDED_CLASS = 'expandable-checkbox_state_expanded';
   const selection = $('.js-expandable-checkbox__selection');
 
   selection.click(function() {

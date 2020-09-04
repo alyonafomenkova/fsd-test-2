@@ -185,18 +185,18 @@ block content
   +header(headersData, false, true)
   main.search
     aside.search__aside
-      div.search__element.search__element--bottom-margin-21
+      div.search__element.search__element_margin_bottom-21
         +date-dropdown({'startLabel': 'даты пребывания в отеле'})
-      div.search__element.search__element--bottom-margin-31
+      div.search__element.search__element_margin_bottom-31
         +dropdown(dropdownSettings, dropdownItems)
-      div.search__element.search__element--bottom-margin-31
+      div.search__element.search__element_margin_bottom-31
         +rangeSlider('диапазон цены', '5000', '10000', min=0, max=15500)
         p.search__cost-comment Стоимость за сутки пребывания в номере
-      div.search__element.search__element--bottom-margin-33
+      div.search__element.search__element_margin_bottom-33
         +checkboxButtons(checkboxData, 'Checkbox Buttons')
-      div.search__element.search__element--bottom-margin-21
+      div.search__element.search__element_margin_bottom-21
         +richCheckboxButtons(richCheckboxData, 'доступность')
-      div.search__element.search__element--bottom-margin-18
+      div.search__element.search__element_margin_bottom-18
         +dropdown(facilitiesDropdownSettings, facilitiesDropdownItems)
       +expandableCheckboxList(dataForexpandableCheckbox, 'дополнительные удобства')
     div.search__wrapper

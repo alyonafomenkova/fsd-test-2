@@ -1,10 +1,10 @@
 mixin checkboxButtons(checkboxData, titleOfList, isExpandable=null)
-  div.checkbox.js-checkbox(class=isExpandable ? 'checkbox--expandable' : '')
+  div.checkbox.js-checkbox(class=isExpandable ? 'checkbox_type_expandable' : '')
     if titleOfList
       h2.checkbox__title !{titleOfList}
     ul.checkbox__list
       each item in checkboxData
-        li.checkbox__item(class=item.isDisabled==='true' ? 'checkbox__item--disabled' : '')
+        li.checkbox__item(class=item.isDisabled==='true' ? 'checkbox__item_disabled' : '')
           input.checkbox__input.visually-hidden(
             type = 'checkbox',
             id = item.name+'-id',
