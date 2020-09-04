@@ -166,6 +166,15 @@
   justify-content: space-between;
 }
 
+.room-info-cards__reviews {
+  text-decoration: none;
+  @include body-text;
+  color: $dark-color-opacity-50;
+  &:hover {
+    color: $dark-color-opacity-75;
+  }
+}
+
 @-webkit-keyframes fade {
   from {opacity: 0.4}
   to {opacity: 1}

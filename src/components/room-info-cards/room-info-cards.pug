@@ -36,4 +36,4 @@ mixin roomInfoCards(data, title=null)
                 span.room-info-cards__price-period  в сутки
             div.room-info-cards__reviews-wrapper
               +rating(item.rating)
-              span <b> !{item.reviewsCount} </b>Отзывов
+              a.room-info-cards__reviews(href='reviews.html') <b> !{item.reviewsCount} </b>Отзывов
