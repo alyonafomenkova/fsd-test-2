@@ -9,6 +9,11 @@
   border: 0.071rem solid $black-color-opacity-12;
   border-radius: 0.286rem;
   box-shadow: 0 0 1.786rem $black-color-opacity-20;
+
+  @media (min-width: $tablet-width) {
+    width: 27.143rem;
+    padding: 2.857rem 2.143rem 2.143rem 2.143rem;
+  }
 }
 
 .booking-form__header {
@@ -62,6 +67,10 @@
 
 .booking-form__service-text {
   width: 13.571rem;
+
+  @media (min-width: $tablet-width) {
+    width: 15.5rem;
+  }
 }
 
 .booking-form__more-info-icon {
@@ -98,14 +107,4 @@
 .booking-form__total-value {
   @include h2-text;
   margin-left: 0.357rem;
-}
-
-@media (min-width: $tablet-width) {
-  .booking-form {
-    width: 27.143rem;
-    padding: 2.857rem 2.143rem 2.143rem 2.143rem;
-  }
-  .booking-form__service-text {
-    width: 15.5rem;
-  }
 }

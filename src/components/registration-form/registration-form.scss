@@ -1,5 +1,5 @@
-@import '../../base/theme.scss';
 @import '../../base/base.scss';
+@import '../../base/theme.scss';
 
 .registration {
   position: relative;
@@ -10,10 +10,20 @@
   border-radius: 0.286rem;
   box-shadow: 0 0 1.786rem $black-color-opacity-20;
   z-index: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 2.857rem 2.143rem 2.143rem 2.143rem;
+  }
 }
 
 .registration-form__title {
   margin-bottom: 1.429rem;
+
+  @media (min-width: $tablet-width) {
+    width: 21.786rem;
+    font-size: 1.714rem;
+    line-height: 2.143rem;
+  }
 }
 
 .registration-form__fieldset-name,
@@ -58,18 +68,8 @@
   font-size: 0.857rem;
   line-height: 1.071rem;
   color: $black-color;
-}
 
-@media (min-width: $tablet-width) {
-  .registration {
-    padding: 2.857rem 2.143rem 2.143rem 2.143rem;
-  }
-  .registration-form__title {
-    width: 21.786rem;
-    font-size: 1.714rem;
-    line-height: 2.143rem;
-  }
-  .registration__login-text {
+  @media (min-width: $tablet-width) {
     font-size: 1rem;
     line-height: 1.286rem;
   }

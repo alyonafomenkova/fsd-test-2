@@ -1,5 +1,5 @@
-import '../modal/modal.scss';
 import '../login-form/login-form.js';
+import '../modal/modal.scss';
 import '../registration-form/registration-form.js';
 
 const body = document.querySelector('body');

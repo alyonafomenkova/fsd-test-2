@@ -9,10 +9,21 @@
   border: 0.071rem solid $black-color-opacity-12;
   border-radius: 0.286rem;
   box-shadow: 0 0 1.786rem $black-color-opacity-20;
+
+  @media (min-width: $tablet-width) {
+    width: 27.143rem;
+    padding: 2.857rem 2.143rem 2.143rem 2.143rem;
+  }
 }
 
 .search-form__title {
   margin-bottom: 1.286rem;
+
+  @media (min-width: $tablet-width) {
+    width: 21.786rem;
+    font-size: 1.714rem;
+    line-height: 2.14rem;
+  }
 }
 
 .search-form__fieldset-date,
@@ -28,16 +39,4 @@
 
 .search-form__fieldset-guests {
   margin-bottom: 2.357rem;
-}
-
-@media (min-width: $tablet-width) {
-  .search-form {
-    width: 27.143rem;
-    padding: 2.857rem 2.143rem 2.143rem 2.143rem;
-  }
-  .search-form__title {
-    width: 21.786rem;
-    font-size: 1.714rem;
-    line-height: 2.14rem;
-  }
 }

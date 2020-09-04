@@ -4,12 +4,21 @@
 .room-info-cards__title {
   margin: 0.214rem auto 1.429rem auto;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0.214rem 0 1.429rem 0;
+    text-align: left;
+  }
 }
 
 .room-info-cards__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+  }
 }
 
 .room-info-cards__item {
@@ -165,14 +174,4 @@
 @keyframes fade {
   from {opacity: 0.4}
   to {opacity: 1}
-}
-
-@media (min-width: $tablet-width) {
-  .room-info-cards__title {
-    margin: 0.214rem 0 1.429rem 0;
-    text-align: left;
-  }
-  .room-info-cards__list {
-    justify-content: flex-start;
-  }
 }

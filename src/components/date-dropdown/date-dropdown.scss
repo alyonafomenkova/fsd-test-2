@@ -77,6 +77,10 @@
   width: 20rem;
   border: 0.071rem solid $dark-color-opacity-25;
   box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
+
+  @media (min-width: $tablet-width) {
+    width: 22.857rem;
+  }
 }
 
 .datepicker--pointer {
@@ -214,10 +218,4 @@
 
 .datepicker--selected .datepicker--button[data-action$='clear'] {
   display: block;
-}
-
-@media (min-width: $tablet-width) {
-  .datepicker {
-    width: 22.857rem;
-  }
 }

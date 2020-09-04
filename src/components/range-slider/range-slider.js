@@ -1,5 +1,5 @@
-import './range-slider.scss';
 import '../../../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js';
+import './range-slider.scss';
 
 jQuery(function() {
   const settings = {

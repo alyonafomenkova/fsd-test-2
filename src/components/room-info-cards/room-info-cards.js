@@ -1,5 +1,5 @@
-import './room-info-cards.scss';
 import '../rating/rating.js';
+import './room-info-cards.scss';
 
 class Carousel {
   constructor(carousel) {

@@ -1,7 +1,7 @@
-import './header.scss';
-import '../logo/logo.js';
 import '../button/button.js';
+import '../logo/logo.js';
 import '../modal/modal.js';
+import './header.scss';
 
 const toggleMenuButtons = document.querySelectorAll('.js-header__toggle-menu-btn');
 const toggleSubmenuList = document.querySelectorAll('.header__nav-item.header__submenu');

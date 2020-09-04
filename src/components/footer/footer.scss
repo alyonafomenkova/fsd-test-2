@@ -6,6 +6,10 @@
   padding-top: 6.357rem;
   background-color: $white-color;
   border-top: 0.071rem solid $dark-color-opacity-25;
+
+  @media (max-width: $desktop-width) {
+    padding-bottom: 7.143rem;
+  }
 }
 
 .footer__wrapper {
@@ -14,21 +18,44 @@
   margin: 0 auto;
   padding-top: 0.714rem;
   padding-bottom: 5.357rem;
+
+  @media (max-width: $desktop-width) {
+    padding-bottom: 2rem;
+  }
 }
 
 .footer__description-wrapper {
   width: 24%;
   margin-right: 2.143rem;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+    margin: 0 auto;
+    .logo {
+      margin: 0 auto;
+    }
+  }
 }
 
 .footer__description {
   margin: 1.286rem 0 0 0;
+
+  @media (max-width: $desktop-width) {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 
 .footer__content-wrapper {
   display: flex;
   width: 76%;
   padding-top: 0.357rem;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .footer__content-item {
@@ -52,6 +79,10 @@
   height: 0.071rem;
   background-color: $dark-color-opacity-10;
   border: none;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .footer__bottom-wrapper {
@@ -60,6 +91,12 @@
   max-width: 82.857rem;
   margin: 0.786rem auto 0 auto;
   padding-bottom: 0.714rem;
+
+  @media (max-width: $desktop-width) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
 }
 
 .footer__social-list {
@@ -96,6 +133,12 @@
   }
 }
 
+.footer__copyright-text {
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .footer-uikit .footer__wrapper {
   padding-bottom: 2rem;
 }
@@ -128,38 +171,4 @@
 
 .footer-uikit .footer__copyright-text {
   display: none;
-}
-
-@media (max-width: $desktop-width) {
-  .footer {
-    padding-bottom: 7.143rem;
-  }
-  .footer__wrapper {
-    padding-bottom: 2rem;
-  }
-  .footer__description-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    .logo {
-      margin: 0 auto;
-    }
-  }
-  .footer__description {
-    max-width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  .footer__content-wrapper,
-  .footer__separator {
-    display: none;
-  }
-  .footer__bottom-wrapper {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-  }
-  .footer__copyright-text {
-    display: none;
-  }
 }
