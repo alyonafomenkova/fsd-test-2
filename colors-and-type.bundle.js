@@ -117,7 +117,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _colors_and_type_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./colors-and-type.scss */ \"./src/pages/colors-and-type/colors-and-type.scss\");\n/* harmony import */ var _colors_and_type_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_colors_and_type_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/logo/logo.js */ \"./src/components/logo/logo.js\");\n\n\n\n\n//# sourceURL=webpack:///./src/pages/colors-and-type/colors-and-type.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_logo_logo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _colors_and_type_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./colors-and-type.scss */ \"./src/pages/colors-and-type/colors-and-type.scss\");\n/* harmony import */ var _colors_and_type_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_colors_and_type_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n\n//# sourceURL=webpack:///./src/pages/colors-and-type/colors-and-type.js?");
 
 /***/ }),
 
