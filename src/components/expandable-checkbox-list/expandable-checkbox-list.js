@@ -7,8 +7,10 @@ jQuery(function() {
   function handleDocumentClick(evt) {
     const target = evt.target.closest('.js-expandable-checkbox__selection') || evt.target.closest('.checkbox_type_expandable');
     if (target) {
+      console.log('selection or checkbox_type_expandable click');//
       return;
     } else {
+      console.log('click on document');//
       const expandedCheckboxes = document.querySelectorAll('.expandable-checkbox_state_expanded');
       expandedCheckboxes.forEach((checkbox) => {
         checkbox.classList.remove('expandable-checkbox_state_expanded');
