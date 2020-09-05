@@ -5,7 +5,7 @@ mixin checkboxButtons(checkboxData, titleOfList, isExpandable=null)
     ul.checkbox__list
       each item in checkboxData
         li.checkbox__item(class=item.isDisabled==='true' ? 'checkbox__item_disabled' : '')
-          input.checkbox__input.visually-hidden(
+          input.checkbox__input(
             type = 'checkbox',
             id = item.name+'-id',
             name = item.name,

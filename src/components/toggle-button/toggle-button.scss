@@ -38,6 +38,10 @@
   border-radius: 50%;
 }
 
+.toggle__input {
+  @include visually-hidden;
+}
+
 .toggle__input:checked + .toggle__slider {
   border-color: $purple-color;
 }

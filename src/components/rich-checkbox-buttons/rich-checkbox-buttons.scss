@@ -6,6 +6,10 @@
   margin-bottom: 1.143rem;
 }
 
+.rich-checkbox__input {
+  @include visually-hidden;
+}
+
 .rich-checkbox__input + label {
   display: inline-flex;
   flex-direction: row;

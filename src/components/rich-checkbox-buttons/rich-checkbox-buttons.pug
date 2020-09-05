@@ -5,7 +5,7 @@ mixin richCheckboxButtons(checkboxData, titleOfList=null)
     ul.rich-checkbox__list
       each item in checkboxData
         li.rich-checkbox__item
-          input.rich-checkbox__input.visually-hidden(
+          input.rich-checkbox__input(
             type = 'checkbox',
             id = item.name+'-id',
             name = item.name,

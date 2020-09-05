@@ -6,7 +6,7 @@ mixin toggleButton(toggleData, title=null)
       each item in toggleData
         li.toggle__item
           label.toggle__label(for=item.id) #{item.label}
-            input.toggle__input.visually-hidden(
+            input.toggle__input(
               type = 'checkbox',
               name = item.name,
               checked=(item.isChecked==='true' ? 'checked' : undefined),

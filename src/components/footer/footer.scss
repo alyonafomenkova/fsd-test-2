@@ -118,6 +118,10 @@
   color: transparent;
 }
 
+.footer__social-text {
+  @include visually-hidden;
+}
+
 .footer__social-icon {
   font-family: 'font-awesome-5-brands-regular';
   font-weight: normal;

@@ -5,7 +5,7 @@ mixin radioButtons(radioData, titleOfList=null)
     ul.radio__list
       each item, index in radioData
         li.radio__item
-          input.radio__input.visually-hidden(
+          input.radio__input(
             type = 'radio',
             id = item.name+'-'+index+'-id',
             name = item.name,
