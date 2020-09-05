@@ -15,38 +15,33 @@
 
 .radio__input {
   @include visually-hidden;
-}
-
-.radio__input + label {
-  display: inline-flex;
-  align-items: flex-start;
-  cursor: pointer;
-}
-
-.radio__input + label::before {
-  content: '';
-  display: inline-block;
-  width: 1.429rem;
-  height: 1.429rem;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 0.071rem solid $dark-color-opacity-25;
-  border-radius: 50%;
-  margin-right: 0.5em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-}
-
-.radio__input:checked + label::before {
-  border-color:$purple-color;
-  background-image: url('images/radio.svg');
-}
-
-.radio__input + label:hover {
-  color: $dark-color-opacity-75;
-}
-
-.radio__input + label:hover::before {
-  border-color: $purple-hover-color;
+  & + label {
+    display: inline-flex;
+    align-items: flex-start;
+    cursor: pointer;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 1.429rem;
+      height: 1.429rem;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 0.071rem solid $dark-color-opacity-25;
+      border-radius: 50%;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+    &:hover {
+      color: $dark-color-opacity-75;
+      &::before {
+        border-color: $purple-hover-color;
+      }
+    }
+  }
+  &:checked + label::before {
+    border-color:$purple-color;
+    background-image: url('images/radio.svg');
+  }
 }

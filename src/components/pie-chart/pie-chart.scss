@@ -5,79 +5,67 @@
   max-width: 24.643rem;
   flex-grow: 1;
   margin: 0;
-}
-
-.pie-chart__title {
-  @include h2-text;
-  margin-bottom: 1.5rem;
-}
-
-.pie-chart__wrapper {
-  display: flex;
-  align-items: flex-end;
-}
-
-.pie-chart__text {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.pie-chart__number {
-  @include h1-text;
-  font-size: 0.45em;
-  line-height: 1;
-  text-anchor: middle;
-}
-
-.pie-chart__label {
-  @include h3-text;
-  font-size: 0.3em;
-  text-anchor: middle;
-  -moz-transform: translateY(1.2em);
-  -ms-transform: translateY(1.2em);
-  -webkit-transform: translateY(1.2em);
-  transform: translateY(1.2em);
-}
-
-.pie-chart__donut-wrapper {
-  height: 8.571rem;
-  margin-right: 2.143rem;
-}
-
-.pie-chart__donut {
-  width: 8.571rem;
-  height: 8.571rem;
+  &__title {
+    @include h2-text;
+    margin-bottom: 1.5rem;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__text {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__number {
+    @include h1-text;
+    font-size: 0.45em;
+    line-height: 1;
+    text-anchor: middle;
+  }
+  &__label {
+    @include h3-text;
+    font-size: 0.3em;
+    text-anchor: middle;
+    -moz-transform: translateY(1.2em);
+    -ms-transform: translateY(1.2em);
+    -webkit-transform: translateY(1.2em);
+    transform: translateY(1.2em);
+  }
+  &__donut-wrapper {
+    height: 8.571rem;
+    margin-right: 2.143rem;
+  }
+  &__donut {
+    width: 8.571rem;
+    height: 8.571rem;
+  }
 }
 
 .pie-chart__description-item {
   position: relative;
   padding-left: 1.071rem;
   cursor: pointer;
-}
-
-.pie-chart__description-item::before {
-  content: '';
-  position: absolute;
-  width: 0.714rem;
-  height: 0.714rem;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  border-radius: 50%;
-}
-
-.pie-chart__description-item_rating_fine::before {
-  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-}
-
-.pie-chart__description-item_rating_good::before {
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-}
-
-.pie-chart__description-item_rating_normal::before {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-
-.pie-chart__description-item_rating_bad::before {
-  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0.714rem;
+    height: 0.714rem;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+  }
+  &_rating_fine::before {
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  }
+  &_rating_good::before {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+  &_rating_normal::before {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+  &_rating_bad::before {
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+  }
 }

@@ -6,22 +6,21 @@
   max-width: 19rem;
   min-width: 18.571rem;
   position: relative;
-}
-
-.subscription-text-field__arrow {
-  @include material-icons;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 3.143rem;
-  height: 3.143rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1.714rem;
-  background: $purple-gradient;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  &__arrow {
+    @include material-icons;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 3.143rem;
+    height: 3.143rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.714rem;
+    background: $purple-gradient;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

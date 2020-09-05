@@ -3,10 +3,9 @@
 
 .bullet__title {
   margin-bottom: 1rem;
-}
-
-.bullet__title_font_montserrat {
-  @include h3-text;
+  &_font_montserrat {
+    @include h3-text;
+  }
 }
 
 .bullet__list {
@@ -17,15 +16,14 @@
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.786rem;
-}
-
-.bullet__item::before {
-  content: '';
-  position: absolute;
-  top: 0.357rem;
-  left: 0;
-  width: 0.714rem;
-  height: 0.714rem;
-  border-radius: 0.714rem;
-  background-color: $dark-color-opacity-25;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.357rem;
+    left: 0;
+    width: 0.714rem;
+    height: 0.714rem;
+    border-radius: 0.714rem;
+    background-color: $dark-color-opacity-25;
+  }
 }

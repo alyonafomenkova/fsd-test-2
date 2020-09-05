@@ -14,22 +14,20 @@
   &:focus {
     outline-color: $purple-color;
   }
-}
-
-.like-button__icon {
-  @include material-icons;
-  color: $dark-color-opacity-25;
-  font-size: 0.714rem;
-  line-height: 0.643rem;
-  pointer-events: none;
-}
-
-.like-button__count-likes {
-  @include body-text;
-  font-size: 0.714rem;
-  line-height: 0.857rem;
-  color: $dark-color-opacity-25;
-  pointer-events: none;
+  &__icon {
+    @include material-icons;
+    color: $dark-color-opacity-25;
+    font-size: 0.714rem;
+    line-height: 0.643rem;
+    pointer-events: none;
+  }
+  &__count-likes {
+    @include body-text;
+    font-size: 0.714rem;
+    line-height: 0.857rem;
+    color: $dark-color-opacity-25;
+    pointer-events: none;
+  }
 }
 
 .js-like-button_active {

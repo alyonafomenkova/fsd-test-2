@@ -10,7 +10,12 @@
   border-radius: 0.286rem;
   box-shadow: 0 0 1.786rem $black-color-opacity-20;
   z-index: 0;
-
+  &__login-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.143rem;
+  }
   @media (min-width: $tablet-width) {
     padding: 2.857rem 2.143rem 2.143rem 2.143rem;
   }
@@ -18,7 +23,6 @@
 
 .registration-form__title {
   margin-bottom: 1.429rem;
-
   @media (min-width: $tablet-width) {
     width: 21.786rem;
     font-size: 1.714rem;
@@ -26,49 +30,38 @@
   }
 }
 
-.registration-form__fieldset-name,
-.registration-form__fieldset-gender,
-.registration-form__fieldset-birthday,
-.registration-form__fieldset-login {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.registration-form__fieldset-gender {
-  margin-bottom: 1.286rem;
-}
-
-.registration-form__fieldset-birthday {
-  margin-bottom: 1.429rem;
-}
-
-.registration-form__legend-login {
-  @include h3-text;
-  margin-bottom: 0.286rem;
-}
-
-.registration-form__offers-wrapper {
-  margin-bottom: 1.643rem;
-}
-
-.registration-form .text-field {
-  margin-bottom: 0.714rem;
-}
-
-.registration__login-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2.143rem;
+.registration-form {
+  &__fieldset-name,
+  &__fieldset-gender,
+  &__fieldset-birthday,
+  &__fieldset-login {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  &__fieldset-gender {
+    margin-bottom: 1.286rem;
+  }
+  &__fieldset-birthday {
+    margin-bottom: 1.429rem;
+  }
+  &__legend-login {
+    @include h3-text;
+    margin-bottom: 0.286rem;
+  }
+  &__offers-wrapper {
+    margin-bottom: 1.643rem;
+  }
+  .text-field {
+    margin-bottom: 0.714rem;
+  }
 }
 
 .registration__login-text {
   font-size: 0.857rem;
   line-height: 1.071rem;
   color: $black-color;
-
   @media (min-width: $tablet-width) {
     font-size: 1rem;
     line-height: 1.286rem;

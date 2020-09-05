@@ -8,13 +8,11 @@ body {
 
 .container {
   margin-top: 5.143rem;
-}
-
-.container__item {
-  margin-bottom: 2.857rem;
-  background-color: $white-color;
-}
-
-.container__footer-wrapper {
-  padding-bottom: 7.143rem;
+  &__item {
+    margin-bottom: 2.857rem;
+    background-color: $white-color;
+  }
+  &__footer-wrapper {
+    padding-bottom: 7.143rem;
+  }
 }

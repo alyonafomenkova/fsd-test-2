@@ -1,6 +1,109 @@
 @import '../../base/base.scss';
 @import '../../base/theme.scss';
 
+.room-info-cards {
+  &__slideshow-container {
+    width: 100%;
+    height: 10.786rem;
+    position: relative;
+  }
+  &__mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0.286rem;
+    border-top-right-radius: 0.286rem;
+    object-fit: cover;
+  }
+  &__prev-link,
+  &__next-link {
+    display: block;
+    width: 3rem;
+    height: 10.786rem;
+    position: absolute;
+    top: 0;
+  }
+  &__prev-link,
+  &__next-icon {
+    left: 0;
+  }
+  &__next-link {
+    right: 0;
+  }
+  &__prev-icon,
+  &__next-icon {
+    @include material-icons;
+    display: none;
+  }
+  &__dots-wrapper {
+    position: absolute;
+    right: 0.857rem;
+    bottom: 0.571rem;
+  }
+  &__dot {
+    display: inline-block;
+    width: 0.536rem;
+    height: 0.536rem;
+    margin: 0 0.143rem;
+    border: 0.071rem solid $white-color;
+    border-radius: 50%;
+    box-shadow: 0 0.357rem 0.357rem rgba(31, 32, 65, 0.3);
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+    &_active,
+    &:hover {
+      background-color: $white-color;
+    }
+  }
+  &__mySlides_faded {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  &__info-wrapper {
+    padding: 1.429rem 1.429rem 1.357rem 1.429rem;
+  }
+  &__room-wrapper {
+    align-items: baseline;
+    padding-bottom: 0.714rem;
+    border-bottom: solid 0.071rem $dark-color-opacity-10;
+  }
+  &__number {
+    @include h2-text;
+  }
+  &__type {
+    font-weight: bold;
+    color: $purple-color;
+  }
+  &__price-wrapper,
+  &__reviews-wrapper {
+    color: $dark-color-opacity-50;
+  }
+  &__reviews-wrapper {
+    margin-top: 0.571rem;
+  }
+  &__room-wrapper,
+  &__reviews-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__reviews {
+    text-decoration: none;
+    @include body-text;
+    color: $dark-color-opacity-50;
+    &:hover {
+      color: $dark-color-opacity-75;
+    }
+  }
+}
+
 .room-info-cards__title {
   margin: 0.214rem auto 1.429rem auto;
   text-align: center;
@@ -30,148 +133,28 @@
   &:nth-child(3n+3){
     margin-right: 0;
   }
-}
-
-.room-info-cards__item:hover {
-  .room-info-cards__prev-link,
-  .room-info-cards__next-link {
-    background: $gray-gradient;
-  }
-  .room-info-cards__next-link {
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-  .room-info-cards__prev-icon,
-  .room-info-cards__next-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 35%;
-    width: 3.143rem;
-    height: 3.143rem;
-    transform: rotate(90deg);
-    line-height: 1.714rem;
-    color: $white-color;
-    cursor: pointer;
-  }
-}
-
-.room-info-cards__slideshow-container {
-  width: 100%;
-  height: 10.786rem;
-  position: relative;
-}
-
-.room-info-cards__mySlides {
-  display: none;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.room-info-cards__img {
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: 0.286rem;
-  border-top-right-radius: 0.286rem;
-  object-fit: cover;
-}
-
-.room-info-cards__prev-link,
-.room-info-cards__next-link {
-  display: block;
-  width: 3rem;
-  height: 10.786rem;
-  position: absolute;
-  top: 0;
-}
-
-.room-info-cards__prev-link,
-.room-info-cards__next-icon {
-  left: 0;
-}
-
-.room-info-cards__next-link {
-  right: 0;
-}
-
-.room-info-cards__prev-icon,
-.room-info-cards__next-icon {
-  @include material-icons;
-  display: none;
-}
-
-.room-info-cards__dots-wrapper {
-  position: absolute;
-  right: 0.857rem;
-  bottom: 0.571rem;
-}
-
-.room-info-cards__dot {
-  display: inline-block;
-  width: 0.536rem;
-  height: 0.536rem;
-  margin: 0 0.143rem;
-  border: 0.071rem solid $white-color;
-  border-radius: 50%;
-  box-shadow: 0 0.357rem 0.357rem rgba(31, 32, 65, 0.3);
-  transition: background-color 0.6s ease;
-  cursor: pointer;
-}
-
-.active,
-.room-info-cards__dot:hover {
-  background-color: $white-color;
-}
-
-.room-info-cards__mySlides_faded {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-.room-info-cards__info-wrapper {
-  padding: 1.429rem 1.429rem 1.357rem 1.429rem;
-}
-
-.room-info-cards__room-wrapper {
-  align-items: baseline;
-  padding-bottom: 0.714rem;
-  border-bottom: solid 0.071rem $dark-color-opacity-10;
-}
-
-.room-info-cards__number {
-  @include h2-text;
-}
-
-.room-info-cards__type {
-  font-weight: bold;
-  color: $purple-color;
-}
-
-.room-info-cards__price-wrapper,
-.room-info-cards__reviews-wrapper {
-  color: $dark-color-opacity-50;
-}
-
-.room-info-cards__reviews-wrapper {
-  margin-top: 0.571rem;
-}
-
-.room-info-cards__room-wrapper,
-.room-info-cards__reviews-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.room-info-cards__reviews {
-  text-decoration: none;
-  @include body-text;
-  color: $dark-color-opacity-50;
   &:hover {
-    color: $dark-color-opacity-75;
+    .room-info-cards__prev-link,
+    .room-info-cards__next-link {
+      background: $gray-gradient;
+    }
+    .room-info-cards__next-link {
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+    .room-info-cards__prev-icon,
+    .room-info-cards__next-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 35%;
+      width: 3.143rem;
+      height: 3.143rem;
+      transform: rotate(90deg);
+      line-height: 1.714rem;
+      color: $white-color;
+      cursor: pointer;
+    }
   }
 }
 

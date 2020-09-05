@@ -23,10 +23,10 @@ class Carousel {
       slides[i].style.display = 'none';
     }
     for (i = 0; i < this.dotButtons.length; i++) {
-      this.dotButtons[i].className = this.dotButtons[i].className.replace(' active', '');
+      this.dotButtons[i].className = this.dotButtons[i].className.replace(' room-info-cards__dot_active', '');
     }
     slides[this.slideIndex-1].style.display = 'block';
-    this.dotButtons[this.slideIndex-1].className += ' active';
+    this.dotButtons[this.slideIndex-1].className += ' room-info-cards__dot_active';
   }
 
   handleControlsButtonClick(n) {

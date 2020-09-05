@@ -23,32 +23,29 @@
   border-radius: 0.714rem;
   border: 0.071rem solid $dark-color-opacity-25;
   cursor: pointer;
-}
-
-.toggle__slider::before {
-  content: '';
-  position: absolute;
-  width: 0.857rem;
-  height: 0.857rem;
-  left: 0.214rem;
-  bottom: 0.214rem;
-  background-color: $dark-color-opacity-25;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0.857rem;
+    height: 0.857rem;
+    left: 0.214rem;
+    bottom: 0.214rem;
+    background-color: $dark-color-opacity-25;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
 }
 
 .toggle__input {
   @include visually-hidden;
-}
-
-.toggle__input:checked + .toggle__slider {
-  border-color: $purple-color;
-}
-
-.toggle__input:checked + .toggle__slider:before {
-  -webkit-transform: translateX(1.429rem);
-  -ms-transform: translateX(1.429rem);
-  transform: translateX(1.429rem);
-  background-image: $purple-gradient;
+  &:checked + .toggle__slider {
+    border-color: $purple-color;
+    &:before {
+      -webkit-transform: translateX(1.429rem);
+      -ms-transform: translateX(1.429rem);
+      transform: translateX(1.429rem);
+      background-image: $purple-gradient;
+    }
+  }
 }

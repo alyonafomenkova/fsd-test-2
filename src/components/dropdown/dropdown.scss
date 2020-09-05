@@ -3,35 +3,81 @@
 
 .dropdown {
   max-width: 22.857rem;
-}
-
-.dropdown_type_facilities {
-  max-width: 19rem;
-}
-
-.dropdown__info {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 0.286rem;
-}
-
-.dropdown__label {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 0.286rem;
-}
-
-.dropdown__state {
-  @include h3-text;
-  margin: 0;
-  font-weight: normal;
-  color: $dark-color-opacity-50;
-}
-
-.dropdown__container {
-  position: relative;
+  &_type_facilities {
+    max-width: 19rem;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0.286rem;
+  }
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0.286rem;
+  }
+  &__state {
+    @include h3-text;
+    margin: 0;
+    font-weight: normal;
+    color: $dark-color-opacity-50;
+  }
+  &__container {
+    position: relative;
+  }
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+  &__quantity {
+    @include h3-text;
+  }
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 6.571rem;
+  }
+  &__controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.429rem;
+    margin-bottom: 0.929rem;
+  }
+  &__apply-button {
+    margin-left: auto;
+  }
+  &__clear-button {
+    &_visibility_invisible {
+      display: none;
+    }
+  }
+  &__decrement-button,
+  &__increment-button {
+    width: 2.143rem;
+    height: 2.143rem;
+    border: 0.071rem solid $dark-color-opacity-25;
+    background: none;
+    border-radius: 1.571rem;
+    font-size: 1.286rem;
+    line-height: 1.571rem;
+    color: $dark-color-opacity-25;
+    cursor: pointer;
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    &:hover,
+    &:focus {
+      color: $dark-color-opacity-50;
+      border-color: $dark-color-opacity-50;
+      outline: none;
+    }
+  }
 }
 
 .dropdown__selection {
@@ -42,19 +88,17 @@
   border: 0.071rem solid $dark-color-opacity-25;
   border-radius: 0.286rem;
   cursor: pointer;
-}
-
-.dropdown__selection-text {
-  margin: 0;
-}
-
-.dropdown__selection-icon {
-  @include material-icons;
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
-  text-align: center;
-  color: $dark-color-opacity-50;
+  &-text {
+    margin: 0;
+  }
+  &-icon {
+    @include material-icons;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: $dark-color-opacity-50;
+  }
 }
 
 .dropdown__menu {
@@ -71,71 +115,7 @@
   border-bottom-right-radius: 0.286rem;
   box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
   background-color: $white-color;
-}
-
-.dropdown__menu_state_expanded {
-  display: block;
-}
-
-.dropdown__option {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0.5rem 0;
-}
-
-.dropdown__buttons-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 6.571rem;
-}
-
-.dropdown__decrement-button,
-.dropdown__increment-button {
-  width: 2.143rem;
-  height: 2.143rem;
-  border: 0.071rem solid $dark-color-opacity-25;
-  background: none;
-  border-radius: 1.571rem;
-  font-size: 1.286rem;
-  line-height: 1.571rem;
-  color: $dark-color-opacity-25;
-  cursor: pointer;
-}
-
-.dropdown__decrement-button:disabled,
-.dropdown__increment-button:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
-.dropdown__decrement-button:hover,
-.dropdown__increment-button:hover,
-.dropdown__decrement-button:focus,
-.dropdown__increment-button:focus {
-  color: $dark-color-opacity-50;
-  border-color: $dark-color-opacity-50;
-  outline: none;
-}
-
-.dropdown__quantity {
-  @include h3-text;
-}
-
-.dropdown__controls-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1.429rem;
-  margin-bottom: 0.929rem;
-}
-
-.dropdown__apply-button {
-  margin-left: auto;
-}
-
-.dropdown__clear-button {
-  &_visibility_invisible {
-    display: none;
+  &_state_expanded {
+    display: block;
   }
 }

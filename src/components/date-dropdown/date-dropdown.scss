@@ -8,65 +8,59 @@
   display: flex;
   justify-content: space-between;
   max-width: 22.857rem;
-}
-
-.date-dropdown__item {
-  max-width: 10.714rem;
-  position: relative;
-  cursor: pointer;
-}
-
-.date-dropdown__label {
-  @include h3-text;
-  margin-bottom: 0.286rem;
-}
-
-.date-dropdown__input {
-  width: 100%;
-  box-sizing: border-box;
-  height:3.143rem;
-  padding: 0.929rem 0 0.929rem 1.071rem;
-  border: 0.071rem solid $dark-color-opacity-25;
-  border-radius: 0.286rem;
-  font-weight: normal;
-  cursor: pointer;
-  &:hover,
-  &:focus {
-    outline: none;
-    border-color: $dark-color-opacity-50;
+  &__item {
+    max-width: 10.714rem;
+    position: relative;
+    cursor: pointer;
+    &::after {
+      @include material-icons;
+      content: 'expand_more';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 3.143rem;
+      height: 3.143rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $dark-color-opacity-50;
+      pointer-events: none;
+    }
   }
-  &::placeholder {
-    text-transform: uppercase;
-    color: $dark-color-opacity-25;
+  &__label {
+    @include h3-text;
+    margin-bottom: 0.286rem;
+  }
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    height:3.143rem;
+    padding: 0.929rem 0 0.929rem 1.071rem;
+    border: 0.071rem solid $dark-color-opacity-25;
+    border-radius: 0.286rem;
+    font-weight: normal;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: $dark-color-opacity-50;
+    }
+    &::placeholder {
+      text-transform: uppercase;
+      color: $dark-color-opacity-25;
+    }
+  }
+  &:hover::after {
+    color: $dark-color-opacity-75;
   }
 }
 
 .date-dropdown__item--filter {
   width: 100%;
   max-width: 19rem;
-}
-
-.date-dropdown__item--filter .date-dropdown__input::placeholder {
-  text-transform: lowercase;
-}
-
-.date-dropdown__item::after {
-  @include material-icons;
-  content: 'expand_more';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 3.143rem;
-  height: 3.143rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $dark-color-opacity-50;
-  pointer-events: none;
-}
-
-.date-dropdown:hover::after {
-  color: $dark-color-opacity-75;
+  .date-dropdown__input::placeholder {
+    text-transform: lowercase;
+  }
 }
 
 .datepicker-inline .datepicker {
@@ -77,14 +71,25 @@
   width: 20rem;
   border: 0.071rem solid $dark-color-opacity-25;
   box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
-
+  &--pointer {
+    display: none;
+  }
+  &--content {
+    padding: 0 1.429rem 0 1.5rem;
+  }
+  &--days-names {
+    margin-bottom: 1.071rem;
+  }
+  &--day-name {
+    @include h3-text;
+    color: $purple-color;
+  }
+  &--cells {
+    border-right: 1.571rem;
+  }
   @media (min-width: $tablet-width) {
     width: 22.857rem;
   }
-}
-
-.datepicker--pointer {
-  display: none;
 }
 
 .datepicker--nav {
@@ -92,17 +97,17 @@
   border: none;
   &-title {
     @include h2-text;
+    &:hover {
+      background-color: inherit;
+    }
   }
-}
-
-.datepicker--nav-prev,
-.datepicker--nav-next {
-  height: 1.786rem;
- }
-
-.datepicker--nav-action:hover,
-.datepicker--nav-title:hover {
-  background-color: inherit;
+  &-prev,
+  &-next {
+    height: 1.786rem;
+  }
+  &-action:hover {
+    background-color: inherit;
+  }
 }
 
 .datepicker--nav-prev span,
@@ -110,28 +115,9 @@
   @include material-icons;
   width: 1.714rem;
   color: $purple-color;
-}
-
-.datepicker--nav-prev span:hover,
-.datepicker--nav-next span:hover {
-  color: $purple-hover-color;
-}
-
-.datepicker--content {
-  padding: 0 1.429rem 0 1.5rem;
-}
-
-.datepicker--days-names {
-  margin-bottom: 1.071rem;
-}
-
-.datepicker--day-name {
-  @include h3-text;
-  color: $purple-color;
-}
-
-.datepicker--cells {
-  border-right: 1.571rem;
+  &:hover {
+    color: $dark-color-opacity-75;
+  }
 }
 
 .datepicker--cell-day {
@@ -155,7 +141,6 @@
 .datepicker--cell.-selected-.-current-,
 .datepicker--cell.-selected-.-focus- {
   background: $purple-gradient;
-
 }
 
 .datepicker--cell.-in-range-,
