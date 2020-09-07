@@ -10,27 +10,25 @@ block vars
     {'content': 'Соглашения', 'submenu': [{'content': 'Соглашение_1'}, {'content': 'Соглашение_2'}]},
     ];
     const dropdownSettings = {
-    'type': 'people',
-    'isExpanded': 'false',
-    'label': 'гости',
-    'placeholder': 'Сколько гостей',
+      'type': 'people',
+      'label': 'гости',
+      'placeholder': 'Сколько гостей',
+      'items': [
+        {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+      ],
     };
-    const dropdownItems = [
-    {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    ];
     const facilitiesDropdownSettings = {
-    'type': 'facilities',
-    'isExpanded': 'false',
-    'label': 'удобства номера',
-    'placeholder': 'Сколько комнат',
+      'type': 'facilities',
+      'label': 'удобства номера',
+      'placeholder': 'Сколько комнат',
+      'items': [
+        {'title': 'спальни', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'кровати', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+      ]
     };
-    const facilitiesDropdownItems = [
-    {'title': 'спальни', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'кровати', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    ];
     const checkboxData = [
     {'name': 'smoke', 'label': 'Можно курить', 'isChecked': 'false', 'isDisabled': 'false'},
     {'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': 'true', 'isDisabled': 'false'},
@@ -188,7 +186,7 @@ block content
       div.search__element.search__element_margin_bottom-21
         +date-dropdown({'startLabel': 'даты пребывания в отеле'})
       div.search__element.search__element_margin_bottom-31
-        +dropdown(dropdownSettings, dropdownItems)
+        +dropdown(dropdownSettings)
       div.search__element.search__element_margin_bottom-31
         +rangeSlider('диапазон цены', '5000', '10000', min=0, max=15500)
         p.search__cost-comment Стоимость за сутки пребывания в номере
@@ -197,7 +195,7 @@ block content
       div.search__element.search__element_margin_bottom-21
         +richCheckboxButtons(richCheckboxData, 'доступность')
       div.search__element.search__element_margin_bottom-18
-        +dropdown(facilitiesDropdownSettings, facilitiesDropdownItems)
+        +dropdown(facilitiesDropdownSettings)
       +expandableCheckboxList(dataForexpandableCheckbox, 'дополнительные удобства')
     div.search__wrapper
       article.search__cards

@@ -10,72 +10,82 @@ block vars
       'uikitState': 'default',
     };
     const hoveredTextField = {
-    'name': 'text',
-    'placeholder': 'This is pretty awesome',
-    'label': 'Text Field',
-    'uikitState': 'Hover / Focus',
-    'isHovered': true,
+      'name': 'text',
+      'placeholder': 'This is pretty awesome',
+      'label': 'Text Field',
+      'uikitState': 'Hover / Focus',
+      'isHovered': true,
     };
     const maskedTextField = {
-    'name': 'masked-text',
-    'placeholder': 'дд.мм.гггг',
-    'label': 'masked text field',
-    'uikitState': 'default',
+      'name': 'masked-text',
+      'placeholder': 'дд.мм.гггг',
+      'label': 'masked text field',
+      'uikitState': 'default',
     };
     const subscriptionTextField = {
-    'type': 'Email',
-    'name': 'subscription-text',
-    'placeholder': 'Email',
-    'label': 'subscription text field',
+      'type': 'Email',
+      'name': 'subscription-text',
+      'placeholder': 'Email',
+      'label': 'subscription text field',
     };
     const dropdownSettings1 = {
       'type': 'people',
-      'isExpanded': 'false',
       'label': 'Dropdown',
       'uikitState': 'default',
       'placeholder': 'Сколько гостей',
+      'items': [
+        {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+      ],
     };
-    const dropdownItems1 = [
-      {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-      {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-      {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    ];
     const dropdownSettings2 = {
-    'type': 'facilities',
-    'isExpanded': 'false',
-    'label': 'Dropdown',
-    'uikitState': 'default',
-    'placeholder': 'Сколько комнат',
+      'type': 'facilities',
+      'label': 'Dropdown',
+      'uikitState': 'default',
+      'placeholder': 'Сколько комнат',
+      'items': [
+        {'title': 'спальни', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'кровати', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+      ],
     };
-    const dropdownItems2 = [
-    {'title': 'спальни', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'кровати', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    ];
     const dropdownSettings3 = {
-    'type': 'facilities',
-    'isExpanded': 'true',
-    'label': 'Dropdown',
-    'uikitState': 'expanded',
-    'placeholder': 'Сколько комнат',
+      'type': 'facilities',
+      'isExpanded': true,
+      'label': 'Dropdown',
+      'uikitState': 'expanded',
+      'placeholder': 'Сколько комнат',
+      'items': [
+        {'title': 'спальни', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'кровати', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+      ],
     };
-    const dropdownItems3 = [
-    {'title': 'спальни', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'кровати', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    ];
     const dropdownSettings4 = {
-    'type': 'people',
-    'isExpanded': 'true',
-    'label': 'Dropdown',
-    'uikitState': 'expanded',
-    'placeholder': 'Сколько гостей',
+      'type': 'people',
+      'isExpanded': true,
+      'label': 'Dropdown',
+      'uikitState': 'expanded',
+      'placeholder': 'Сколько гостей',
+      'items': [
+        {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+      ],
     };
-    const dropdownItems5 = [
-    {'title': 'Взрослые', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'Дети', 'defaultCount': '1', 'minCount': '0', 'maxCount': '10'},
-    {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-    ];
+    const dropdownSettings5 = {
+      'type': 'people',
+      'isExpanded': true,
+      'label': 'Dropdown',
+      'uikitState': 'expanded',
+      'placeholder': 'Сколько гостей',
+      'items': [
+        {'title': 'Взрослые', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'Дети', 'defaultCount': '1', 'minCount': '0', 'maxCount': '10'},
+        {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+      ],
+    };
     const checkboxData = [
     {'name': 'smoke', 'label': 'Можно курить', 'isChecked': 'false', 'isDisabled': 'false'},
     {'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': 'true', 'isDisabled': 'false'},
@@ -162,7 +172,7 @@ block content
       div.form-elements__element.form-elements__element_margin_bottom-21
         +textField(hoveredTextField)
       div.form-elements__element.form-elements__element_margin_bottom-24
-        +dropdown(dropdownSettings1, dropdownItems1)
+        +dropdown(dropdownSettings1)
       div.form-elements__element.form-elements__element_margin_bottom-38
         +maskedTextField(maskedTextField)
       div.form-elements__element.form-elements__element_margin_bottom-38
@@ -197,14 +207,14 @@ block content
         h2.form-elements__title buttons
         div.form-elements__button-wrapper
           +button({'view': 'filled', 'height': 'high', 'content': 'click me'})
-        +button({'view': 'filled', 'height': 'high', 'isHovered': 'true', 'content': 'click me'})
+        +button({'view': 'filled', 'height': 'high', 'isHovered': true, 'content': 'click me'})
         div.form-elements__button-wrapper
           +button({'view': 'bordered', 'height': 'high', 'content': 'click me'})
-        +button({'view': 'bordered', 'height': 'high', 'isHovered': 'true', 'content': 'click me'})
+        +button({'view': 'bordered', 'height': 'high', 'isHovered': true, 'content': 'click me'})
         div
           div.form-elements__button-wrapper
             +button({'view': 'textual', 'height': 'high', 'content': 'click me'})
-          +button({'view': 'textual', 'height': 'high', 'isHovered': 'true', 'content': 'click me'})
+          +button({'view': 'textual', 'height': 'high', 'isHovered': true, 'content': 'click me'})
         +button({'view': 'actionable', 'height': 'high', 'content': 'Перейти к оплате'})
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title pagination
@@ -212,17 +222,17 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
-        +dropdown(dropdownSettings2, dropdownItems2)
+        +dropdown(dropdownSettings2)
       div.form-elements__element.form-elements__element_margin_bottom-160
-        +dropdown(dropdownSettings3, dropdownItems3)
+        +dropdown(dropdownSettings3)
 
     div.form-elements__elements-wrapper
       div.form-elements__element
-        +dropdown(dropdownSettings4, dropdownItems1)
+        +dropdown(dropdownSettings4)
 
     div.form-elements__elements-wrapper
       div.form-elements__element
-        +dropdown(dropdownSettings4, dropdownItems5)
+        +dropdown(dropdownSettings5)
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
