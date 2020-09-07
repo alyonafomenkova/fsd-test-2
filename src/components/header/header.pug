@@ -17,12 +17,12 @@ mixin header(data, isUserAuthorized, isRu)
             div.header__auth-wrapper
               if(isRu)
                 div.header__login-button-wrapper
-                  +button({'isLogin': 'true', 'view': 'bordered', 'height': 'low', 'content': 'войти'})
-                +button({'isRegister': 'true', 'view': 'filled', 'height': 'low', 'content': 'зарегистрироваться'})
+                  +button({'isLogin': true, 'view': 'bordered', 'height': 'low', 'content': 'войти'})
+                +button({'isRegister': true, 'view': 'filled', 'height': 'low', 'content': 'зарегистрироваться'})
               else
                 div.header__login-button-wrapper
-                  +button({'isLogin': 'true', 'view': 'bordered', 'height': 'low', 'content': 'Login'})
-                +button({'isRegister': 'true', 'view': 'filled', 'height': 'low', 'content': 'REGISTER'})
+                  +button({'isLogin': true, 'view': 'bordered', 'height': 'low', 'content': 'Login'})
+                +button({'isRegister': true, 'view': 'filled', 'height': 'low', 'content': 'REGISTER'})
         nav.header__main-nav.js-header__main-nav
           ul.header__nav-list.js-header__nav-list
             each item in data
