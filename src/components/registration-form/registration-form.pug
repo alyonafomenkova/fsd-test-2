@@ -23,7 +23,7 @@ mixin registrationForm
       fieldset.registration-form__fieldset-gender
         +radioButtons(radioData)
       fieldset.registration-form__fieldset-birthday
-        +maskedTextField({'name': 'birthday', 'placeholder': 'дд.мм.гггг', 'label': 'дата рождения', 'mixedClasses': 'date'})
+        +maskedTextField({'name': 'birthday', 'placeholder': 'дд.мм.гггг', 'label': 'дата рождения'})
       fieldset.registration-form__fieldset-login
         legend.registration-form__legend-login данные для входа в сервис
         +textField({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
