@@ -2,12 +2,6 @@ extends ../../base/base.pug
 
 block vars
   -
-    const pieChartData = [
-    {'type': 'normal','count': '260', 'label': 'Удовлетворительно'},
-    {'type': 'good', 'count': '260', 'label': 'Хорошо'},
-    {'type': 'fine', 'count': '520', 'label': 'Великолепно'},
-    {'type': 'bad', 'count': '0', 'label': 'Разочарован'},
-    ];
     const reviewsData = {
       'title': 'Отзывы посетителей номера',
       'items': [
@@ -55,7 +49,7 @@ block content
     div.details__content-wrapper
       div.details__content
         +roomDetails({'title': 'Сведения о номере'})
-        +pie-chart(pieChartData, 'Впечатления от номера')
+        +pie-chart()
         div.details__reviews-wrapper
           +reviews(reviewsData)
         div.details__rules-wrapper

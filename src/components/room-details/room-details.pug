@@ -5,13 +5,12 @@ mixin roomDetails({title, items} = {})
       {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
       {'icon': 'whatshot', 'name': 'Уют', 'description': 'Номер оснащён камином'}
     ];
-    let settings;
+    const settings = items ?  items: defaultItems;
 
   div.room-details
     if (title)
       h2.room-details__title !{title}
     ul.room-details__list
-      - settings = items ?  items: defaultItems
       each item in settings
         li.room-details__item
           span.room-details__icon !{item.icon}

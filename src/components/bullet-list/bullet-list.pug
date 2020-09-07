@@ -5,12 +5,11 @@ mixin bulletList({title, items, isUikit} = {})
       {'name': 'Без вечеринок и мероприятий'},
       {'name': 'Время прибытия — после 13:00, а выезд до 12:00'}
     ];
-    let settings;
+    const settings = items ?  items: defaultItems;
 
   div.bullet
     if (title)
       h2.bullet__title(class = isUikit ? 'bullet__title_font_montserrat' : '') !{title}
     ul.bullet__list
-      - settings = items ?  items: defaultItems
       each item in settings
         li.bullet__item #{item.name}

@@ -1,8 +1,8 @@
 mixin button({type, isLogin, isRegister, height, view, isHovered, content} = options)
   button.button(
     type = type ? type : 'button',
-    class = isLogin ? 'button_type_login' : '',
-    class = isRegister ? 'button_type_register' : '',
+    class = isLogin ? 'button_type_login js-button_type_login' : '',
+    class = isRegister ? 'button_type_register js-button_type_register' : '',
     class = height === 'high' ? 'button_height_high' : '',
     class = height === 'low' ? 'button_height_low' : '',
     class = view === 'filled' ? 'button_view_filled' : '',

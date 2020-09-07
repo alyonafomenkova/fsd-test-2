@@ -4,13 +4,12 @@ mixin radioButtons({title, items} = {})
       {'name': 'sex', 'label': 'Мужчина', 'isChecked': true},
       {'name': 'sex', 'label': 'Женщина'}
     ];
-    let settings;
+    const settings = items ?  items: defaultItems
 
   div.radio
     if (title)
       h2.radio__title !{title}
     ul.radio__list
-      - settings = items ?  items: defaultItems
       each item, index in settings
         li.radio__item
           input.radio__input(

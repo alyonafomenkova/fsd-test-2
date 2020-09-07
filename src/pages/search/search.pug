@@ -41,94 +41,97 @@ block vars
         {'name': 'shampoo', 'label': 'Шампунь'},
       ]
     };
-    const roomInfoCardsData = [
-    {
-    'roomNumber': '888',
-    'title': '№ 888',
-    'type': 'люкс',
-    'price': '9&nbsp;990',
-    'rating': '5',
-    'reviewsCount': 145,
-    },
-    {
-    'roomNumber': '840',
-    'title': '№ 840',
-    'price': '9&nbsp;990',
-    'rating': '4',
-    'reviewsCount': 65,
-    },
-    {
-    'roomNumber': '980',
-    'type': 'люкс',
-    'title': '№ 980',
-    'price': '8&nbsp;500',
-    'rating': '3',
-    'reviewsCount': 35,
-    },
-    {
-    'roomNumber': '856',
-    'title': '№ 856',
-    'price': '7&nbsp;300',
-    'rating': '5',
-    'reviewsCount': 19,
-    },
-    {
-    'roomNumber': '740',
-    'title': '№ 740',
-    'price': '6&nbsp;000',
-    'rating': '4',
-    'reviewsCount': 44,
-    },
-    {
-    'roomNumber': '982',
-    'title': '№ 982',
-    'price': '5&nbsp;800',
-    'rating': '3',
-    'reviewsCount': 56,
-    },
-    {
-    'roomNumber': '678',
-    'title': '№ 678',
-    'price': '5&nbsp;500',
-    'rating': '5',
-    'reviewsCount': 45,
-    },
-    {
-    'roomNumber': '450',
-    'title': '№ 450',
-    'price': '5&nbsp;300',
-    'rating': '4',
-    'reviewsCount': 39,
-    },
-    {
-    'roomNumber': '350',
-    'title': '№ 350',
-    'price': '5&nbsp;000',
-    'rating': '3',
-    'reviewsCount': 77,
-    },
-    {
-    'roomNumber': '666',
-    'title': '№ 666',
-    'price': '5&nbsp;000',
-    'rating': '5',
-    'reviewsCount': 25,
-    },
-    {
-    'roomNumber': '444',
-    'title': '№ 444',
-    'price': '5&nbsp;000',
-    'rating': '3',
-    'reviewsCount': 15,
-    },
-    {
-    'roomNumber': '352',
-    'title': '№ 352',
-    'price': '5&nbsp;000',
-    'rating': '3',
-    'reviewsCount': 55,
-    },
-    ];
+    const roomInfoCardsData = {
+      'title': 'Номера, которые мы для вас подобрали',
+      'items': [
+        {
+          'roomNumber': '888',
+          'title': '№ 888',
+          'type': 'люкс',
+          'price': '9&nbsp;990',
+          'rating': '5',
+          'reviewsCount': 145,
+        },
+        {
+          'roomNumber': '840',
+          'title': '№ 840',
+          'price': '9&nbsp;990',
+          'rating': '4',
+          'reviewsCount': 65,
+        },
+        {
+          'roomNumber': '980',
+          'type': 'люкс',
+          'title': '№ 980',
+          'price': '8&nbsp;500',
+          'rating': '3',
+          'reviewsCount': 35,
+        },
+        {
+          'roomNumber': '856',
+          'title': '№ 856',
+          'price': '7&nbsp;300',
+          'rating': '5',
+          'reviewsCount': 19,
+        },
+        {
+          'roomNumber': '740',
+          'title': '№ 740',
+          'price': '6&nbsp;000',
+          'rating': '4',
+          'reviewsCount': 44,
+        },
+        {
+          'roomNumber': '982',
+          'title': '№ 982',
+          'price': '5&nbsp;800',
+          'rating': '3',
+          'reviewsCount': 56,
+        },
+        {
+          'roomNumber': '678',
+          'title': '№ 678',
+          'price': '5&nbsp;500',
+          'rating': '5',
+          'reviewsCount': 45,
+        },
+        {
+          'roomNumber': '450',
+          'title': '№ 450',
+          'price': '5&nbsp;300',
+          'rating': '4',
+          'reviewsCount': 39,
+        },
+        {
+          'roomNumber': '350',
+          'title': '№ 350',
+          'price': '5&nbsp;000',
+          'rating': '3',
+          'reviewsCount': 77,
+        },
+        {
+          'roomNumber': '666',
+          'title': '№ 666',
+          'price': '5&nbsp;000',
+          'rating': '5',
+          'reviewsCount': 25,
+        },
+        {
+          'roomNumber': '444',
+          'title': '№ 444',
+          'price': '5&nbsp;000',
+          'rating': '3',
+          'reviewsCount': 15,
+        },
+        {
+          'roomNumber': '352',
+          'title': '№ 352',
+          'price': '5&nbsp;000',
+          'rating': '3',
+        'reviewsCount': 55,
+        },
+      ]
+    };
 
 block meta
   meta(name="keywords", content="toxin")
@@ -168,6 +171,6 @@ block content
       +expandableCheckboxList(dataForexpandableCheckbox)
     div.search__wrapper
       article.search__cards
-        +roomInfoCards(roomInfoCardsData, 'Номера, которые мы для вас подобрали')
+        +roomInfoCards(roomInfoCardsData)
       +pagination
   +footer()
