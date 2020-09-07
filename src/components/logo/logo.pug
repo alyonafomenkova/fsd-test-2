@@ -1,5 +1,5 @@
 mixin logo(type)
-  a.logo
+  a.logo(href='landing.html')
     if type === 'uikit'
       img.logo__img.logo__img_view_uikit(src=require('../../components/logo/images/uikit-logo.svg').default width='48' height='48' alt='Logo for Uikit')
     else
