@@ -43,7 +43,7 @@ mixin header({isUserAuthorized, items} = {})
                   ul.header__submenu-list
                     each subitem in item.submenu
                       li.header__submenu-item
-                        a.header__submenu-item !{subitem.content}
+                        a.header__submenu-link !{subitem.content}
   if(!isUserAuthorized)
     +modal('login')
     +modal('registration')
