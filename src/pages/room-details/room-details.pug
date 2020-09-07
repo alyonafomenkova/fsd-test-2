@@ -29,28 +29,6 @@ block vars
         }
       ]
     };
-    const footersData = {
-    'description': 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-    'contentLists': [
-    {
-    'title': 'навигация',
-    'links': ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
-    },
-    {
-    'title': 'о нас',
-    'links': ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
-    },
-    {
-    'title': 'Служба поддержки',
-    'links': ['Соглашения', 'Сообщества', 'Связь с нами']
-    },
-    {
-    'title': 'Подписка',
-    'subscribe': 'Получайте специальные предложения и новости сервиса'
-    }
-    ],
-    'copyrightText': 'Copyright © 2018 Toxin отель. Все права зачищены.'
-    };
 
 block meta
   meta(name="keywords", content="toxin")
@@ -68,7 +46,7 @@ block content
   include ../../components/booking-form/booking-form
   include ../../components/footer/footer
 
-  +header({'isRu': true})
+  +header()
   main.details
     div.details__images-wrapper
       img.details__image(src=require('../../pages/room-details/images/1.png').default width='68.125%' height='100%' alt='Photo of bedroom')
@@ -86,4 +64,4 @@ block content
             h2.details__cancel-rule-title Отмена
             p.details__cancel-rule-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       +bookingForm
-  +footer(footersData)
+  +footer()
