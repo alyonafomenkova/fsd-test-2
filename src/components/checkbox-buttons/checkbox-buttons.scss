@@ -10,14 +10,7 @@
 
 .checkbox__title {
   @include h3-text;
-}
-
-.checkbox__list {
-  margin-top: 1.214rem;
-}
-
-.checkbox_type_expandable .checkbox__list {
-  margin-top: 0;
+  margin-bottom: 1.214rem;
 }
 
 .checkbox__input {

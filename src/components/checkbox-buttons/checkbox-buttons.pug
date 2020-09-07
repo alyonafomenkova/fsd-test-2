@@ -1,15 +1,16 @@
-mixin checkboxButtons(checkboxData, titleOfList, isExpandable=null)
-  div.checkbox.js-checkbox(class=isExpandable ? 'checkbox_type_expandable' : '')
-    if titleOfList
-      h2.checkbox__title !{titleOfList}
+mixin checkboxButtons({title, items} = options)
+  div.checkbox.js-checkbox
+    if (title)
+      h2.checkbox__title !{title}
     ul.checkbox__list
-      each item in checkboxData
-        li.checkbox__item(class=item.isDisabled==='true' ? 'checkbox__item_disabled' : '')
-          input.checkbox__input(
-            type = 'checkbox',
-            id = item.name+'-id',
-            name = item.name,
-            checked=(item.isChecked==='true' ? 'checked' : undefined),
-            disabled=(item.isDisabled==='true' ? 'checked' : undefined),
-          )
-          label.checkbox__label(for=item.name+'-id') #{item.label}
+      if (items)
+        each item in items
+          li.checkbox__item(class = item.isDisabled ? 'checkbox__item_disabled' : '')
+            input.checkbox__input(
+              type = 'checkbox',
+              id = item.name + '-id',
+              name = item.name,
+              checked = item.isChecked,
+              disabled = item.isDisabled,
+            )
+            label.checkbox__label(for = item.name + '-id') #{item.label}

@@ -3,7 +3,7 @@
 
 .expandable-checkbox {
   max-width: 19rem;
-  .checkbox__list {
+  &__wrapper {
     display: none;
   }
   &__selection {
@@ -26,7 +26,7 @@
 }
 
 .expandable-checkbox_state_expanded {
-  .checkbox__list {
+  .expandable-checkbox__wrapper {
     display: block;
   }
   .expandable-checkbox__more-icon {
