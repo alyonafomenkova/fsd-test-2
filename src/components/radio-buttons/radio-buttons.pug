@@ -1,15 +1,16 @@
-mixin radioButtons(radioData, titleOfList=null)
+mixin radioButtons({title, items} = options)
   div.radio
-    if titleOfList
-      h2.radio__title !{titleOfList}
+    if (title)
+      h2.radio__title !{title}
     ul.radio__list
-      each item, index in radioData
-        li.radio__item
-          input.radio__input(
-            type = 'radio',
-            id = item.name+'-'+index+'-id',
-            name = item.name,
-            checked=(item.isChecked==='true' ? 'checked' : undefined),
-            disabled=(item.isDisabled==='true' ? 'checked' : undefined),
-          )
-          label.radio__label(for=item.name+'-'+index+'-id') #{item.label}
+      if (items)
+        each item, index in items
+          li.radio__item
+            input.radio__input(
+              type = 'radio',
+              id = item.name + '-' + index + '-id',
+              name = item.name,
+              checked = item.isChecked,
+              disabled = item.isDisabled,
+            )
+            label.radio__label(for = item.name + '-' + index + '-id') #{item.label}

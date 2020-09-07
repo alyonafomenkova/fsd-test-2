@@ -1,14 +1,13 @@
-mixin maskedTextField(options)
+mixin maskedTextField({type, name, placeholder, label, readOnly, uikitState, isHovered} = options)
   div.masked-text-field
-    if options.label
-      label.masked-text-field__label(for=options.name+'-id',) !{options.label}
-    if options.uikitState
-      span.masked-text-field__state !{options.uikitState}
+    if label
+      label.masked-text-field__label(for = name + '-id',) !{label}
+    if uikitState
+      span.masked-text-field__state !{uikitState}
     input.masked-text-field__input.js-masked-text-field__input(
-      type = options.type,
-      name = options.name,
-      id = options.name+'-id',,
-      class=options.mixedClasses ? 'masked-text-field__input_' + options.mixedClasses : '',
-      placeholder = options.placeholder || '',
-      :readonly=(options.readOnly)
+      type = type ? type : 'text',
+      name = name,
+      id = name + '-id',
+      placeholder = placeholder || '',
+      readonly = readOnly,
     )

@@ -20,20 +20,27 @@ block vars
     {'type': 'fine', 'count': '520', 'label': 'Великолепно'},
     {'type': 'bad', 'count': '0', 'label': 'Разочарован'},
     ];
-    const reviewsData = [
-    {'imgName': 'avatar-1.png',
-    'authorName': 'Мурад Сарафанов',
-    'date': '5 дней назад',
-    'likeBtn': {'count': '12', 'isActive': true},
-    'text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-    },
-    {'imgName': 'avatar-2.png',
-    'authorName': 'Патрисия Стёклышкова',
-    'date': 'Неделю назад',
-    'likeBtn': {'count': '2'},
-    'text': 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
-    },
-    ];
+    const reviewsData = {
+      'title': 'Отзывы посетителей номера',
+      'items': [
+        {
+          'imgName': 'avatar-1.png',
+          'authorName': 'Мурад Сарафанов',
+          'date': '5 дней назад',
+          'likeButton': {'countOfLikes': 12, 'isActive': true},
+          'text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. ' +
+            'И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+        },
+        {
+          'imgName': 'avatar-2.png',
+          'authorName': 'Патрисия Стёклышкова',
+          'date': 'Неделю назад',
+          'likeButton': {'countOfLikes': '2'},
+          'text': 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое ' +
+            'блюдо и десерт как комплимент',
+        }
+      ]
+    };
     const bulletData = [
     {'name': 'Нельзя с питомцами', 'classes': ''},
     {'name': 'Без вечеринок и мероприятий', 'classes': ''},
@@ -89,7 +96,7 @@ block content
         +roomDetails(roomDetailsData, 'Сведения о номере')
         +pie-chart(pieChartData, 'Впечатления от номера')
         div.details__reviews-wrapper
-          +reviews(reviewsData, 'Отзывы посетителей номера', 2)
+          +reviews(reviewsData)
         div.details__rules-wrapper
           +bulletList(bulletData, 'Правила')
           div.details__cancel-rule

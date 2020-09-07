@@ -1,18 +1,34 @@
-mixin richCheckboxButtons(checkboxData, titleOfList=null)
+mixin richCheckboxButtons({title, items} = options)
+  -
+    const defaultItems = [
+      {
+        'name': 'hall',
+        'title': 'Широкий коридор',
+        'description': 'Ширина коридоров в номере не менее 91 см.'
+      },
+      {
+        'name': 'assistant',
+        'title': 'Помощник для инвалидов',
+        'description': 'На 1 этаже вас встретит специалист  и проводит до номера.',
+      }
+    ];
+    let options;
+
   div.rich-checkbox
-    if titleOfList
-      h2.rich-checkbox__title !{titleOfList}
+    if (title)
+      h2.rich-checkbox__title !{title}
     ul.rich-checkbox__list
-      each item in checkboxData
+      - options = items ?  items: defaultItems
+      each item in options
         li.rich-checkbox__item
           input.rich-checkbox__input(
             type = 'checkbox',
-            id = item.name+'-id',
+            id = item.name + '-id',
             name = item.name,
-            checked=(item.isChecked==='true' ? 'checked' : undefined),
-            disabled=(item.isDisabled==='true' ? 'checked' : undefined),
+            checked = item.isChecked,
+            disabled = item.isDisabled,
           )
-          label.rich-checkbox__label(for=item.name+'-id')
-            div
+          label.rich-checkbox__label(for = item.name + '-id')
+            div.rich-checkbox__info-wrapper
               p.rich-checkbox__item-title #{item.title}
               p.rich-checkbox__description #{item.description}

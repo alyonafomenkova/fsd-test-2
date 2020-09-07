@@ -86,39 +86,62 @@ block vars
         {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
       ],
     };
-    const checkboxData = [
-    {'name': 'smoke', 'label': 'Можно курить', 'isChecked': 'false', 'isDisabled': 'false'},
-    {'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': 'true', 'isDisabled': 'false'},
-    {'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': 'true', 'isDisabled': 'false'},
-    ];
-    const dataForexpandableCheckbox = [
-    {'name': 'wifi', 'label': 'wi-fi', 'isChecked': 'false'},
-    {'name': 'parking', 'label': 'Парковка', 'isChecked': 'true'},
-    ];
-    const dataForExpandedCheckbox = [
-    {'name': 'breakfast', 'label': 'Завтрак', 'isChecked': 'false'},
-    {'name': 'table', 'label': 'Письменный стол', 'isChecked': 'true'},
-    {'name': 'chair', 'label': 'Стул для кормления', 'isChecked': 'true'},
-    {'name': 'cot', 'label': 'Кроватка', 'isChecked': 'true'},
-    {'name': 'tv', 'label': 'Телевизор', 'isChecked': 'false'},
-    {'name': 'shampoo', 'label': 'Шампунь', 'isChecked': 'false'},
-    ];
-    const richCheckboxData = [
-    {'name': 'hall', 'title': 'Широкий коридор',
-      'description': 'Ширина коридоров в номере не менее 91 см.',
-      'isChecked': 'false', 'isDisabled': 'false'},
-    {'name': 'assistant', 'title': 'Помощник для инвалидов',
-      'description': 'На 1 этаже вас встретит специалист  и проводит до номера.',
-      'isChecked': 'false', 'isDisabled': 'false'},
-    ];
-    const radioData = [
-    {'name': 'sex', 'label': 'Мужчина', 'isChecked': 'true', 'isDisabled': 'false'},
-    {'name': 'sex', 'label': 'Женщина', 'isChecked': 'false', 'isDisabled': 'false'},
-    ];
-    const toggleData = [
-    {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': 'true'},
-    {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': 'false'},
-    ];
+    const checkboxData = {
+      'title': 'Checkbox Buttons',
+      'items': [
+        {'name': 'smoke', 'label': 'Можно курить'},
+        {'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': true},
+        {'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': true},
+      ]
+    };
+    const dataForexpandableCheckbox = {
+      'title': 'expandable checkbox list',
+      'items': [
+        {'name': 'wifi', 'label': 'wi-fi', 'isChecked': true},
+        {'name': 'parking', 'label': 'Парковка'},
+      ]
+    };
+    const dataForExpandedCheckbox = {
+      'title': 'expandable checkbox list',
+      'isExpanded': true,
+      'items': [
+        {'name': 'breakfast', 'label': 'Завтрак'},
+        {'name': 'table', 'label': 'Письменный стол', 'isChecked': true},
+        {'name': 'chair', 'label': 'Стул для кормления', 'isChecked': true},
+        {'name': 'cot', 'label': 'Кроватка', 'isChecked': true},
+        {'name': 'tv', 'label': 'Телевизор'},
+        {'name': 'shampoo', 'label': 'Шампунь'},
+      ]
+    };
+    // const richCheckboxData = {
+    //   'title': 'rich Checkbox Buttons',
+    //   'items': [
+    //     {
+    //       'name': 'hall',
+    //       'title': 'Широкий коридор',
+    //       'description': 'Ширина коридоров в номере не менее 91 см.'
+    //     },
+    //     {
+    //       'name': 'assistant',
+    //       'title': 'Помощник для инвалидов',
+    //       'description': 'На 1 этаже вас встретит специалист  и проводит до номера.',
+    //     }
+    //   ]
+    // };
+    const radioData = {
+      'title': 'Radio Buttons',
+      'items': [
+        {'name': 'sex', 'label': 'Мужчина', 'isChecked': true},
+        {'name': 'sex', 'label': 'Женщина'},
+      ]
+    };
+    const toggleData = {
+      'title': 'Toggle',
+      'items': [
+        {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': true},
+        {'name': 'toggle', 'label': 'Получать спецпредложения'},
+      ]
+    };
     const bulletData = [
     {'name': 'Нельзя с питомцами', 'classes': ''},
     {'name': 'Без вечеринок и мероприятий', 'classes': ''},
@@ -128,14 +151,16 @@ block vars
     {'icon': 'insert_emoticon', 'name': 'Комфорт', 'description': 'Шумопоглощающие стены'},
     {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
     ];
-    const reviewsData = [
-    {'imgName': 'avatar-1.png',
-    'authorName': 'Мурад Сарафанов',
-    'date': '5 дней назад',
-    'likeBtn': {'count': '12', 'isActive': true},
-    'text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-    },
-    ];
+    const reviewsData = {
+      'items': [{
+        'imgName': 'avatar-1.png',
+        'authorName': 'Мурад Сарафанов',
+        'date': '5 дней назад',
+        'likeButton': {'countOfLikes': 12, 'isActive': true},
+        'text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. ' +
+          'И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+      }]
+    };
 
 block meta
   meta(name="keywords", content="toxin")
@@ -184,16 +209,16 @@ block content
 
     div.form-elements__elements-wrapper.form-elements__elements-wrapper_alignment_center
       div.form-elements__element.form-elements__element_margin_bottom-42
-        +checkboxButtons(checkboxData, 'Checkbox Buttons')
+        +checkboxButtons(checkboxData)
       div.form-elements__element.form-elements__element_margin_bottom-35
-        +radioButtons(radioData, 'Radio Buttons')
+        +radioButtons(radioData)
       div.form-elements__element.form-elements__element_margin_bottom-45
-        +toggleButton(toggleData, 'Toggle')
+        +toggleButton(toggleData)
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title like button
         div.form-elements__wrapper.form-elements__wrapper_buttons-type_like
-          +likeButton(2)
-          +likeButton(12, true)
+          +likeButton({'countOfLikes': 2})
+          +likeButton({'countOfLikes': 12, 'isActive': true})
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title rate button
         div.form-elements__wrapper.form-elements__wrapper_buttons-type_rate
@@ -202,7 +227,7 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-35
-        +rangeSlider('Range Slider', 5000, 10000)
+        +rangeSlider({'title': 'Range Slider'})
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title buttons
         div.form-elements__button-wrapper
@@ -236,13 +261,13 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
-        +expandableCheckboxList(dataForexpandableCheckbox, 'expandable checkbox list')
+        +expandableCheckboxList(dataForexpandableCheckbox)
       div.form-elements__element
-        +expandableCheckboxList(dataForExpandedCheckbox, 'expandable checkbox list', true)
+        +expandableCheckboxList(dataForExpandedCheckbox)
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-15
-        +richCheckboxButtons(richCheckboxData, 'rich Checkbox Buttons')
+        +richCheckboxButtons({'title': 'rich Checkbox Buttons'})
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-15

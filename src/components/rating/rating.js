@@ -1,11 +1,11 @@
 import './rating.scss';
 
 jQuery(function() {
-  const ratinButtons = $('.js-rating__item');
+  const ratingButtons = $('.js-rating__item');
 
   function toggleSelectedIcon() {
     const allIcons = $('.js-rating__star');
-    const allSelectedIcons = $('.js-rating__item_selected').find('.rating__star');
+    const allSelectedIcons = $('.js-rating__item_selected').find('.js-rating__star');
     allIcons.each(function() {
       $(this).html('star_border');
     });
@@ -27,6 +27,6 @@ jQuery(function() {
     }
   }
 
-  ratinButtons.click(handleRatingButtonClick);
+  ratingButtons.click(handleRatingButtonClick);
   toggleSelectedIcon();
 });

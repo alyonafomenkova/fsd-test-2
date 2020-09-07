@@ -6,13 +6,17 @@ include ../button/button
 
 mixin registrationForm
   -
-    const radioData = [
-    {'id': 'male-id', 'name': 'sex', 'label': 'Мужчина', 'isChecked': 'true'},
-    {'id': 'female-id', 'name': 'sex', 'label': 'Женщина', 'isChecked': 'false'},
-    ];
-    const toggleData = [
-    {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': 'false'},
-    ];
+    const radioData = {
+      'items': [
+        {'id': 'male-id', 'name': 'sex', 'label': 'Мужчина', 'isChecked': true},
+        {'id': 'female-id', 'name': 'sex', 'label': 'Женщина'}
+      ]
+    };
+    const toggleData = {
+      'items': [
+        {'name': 'toggle', 'label': 'Получать спецпредложения'},
+      ]
+    };
 
   div.registration
     form.registration-form(action='url' method='post')

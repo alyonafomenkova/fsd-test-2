@@ -1,49 +1,39 @@
-mixin dropdown(settings, items)
-  -
-    const dataForClearButton = {
-    'view': 'textual',
-    'height': 'high',
-    'content': 'очистить',
-    'mixedClasses': 'dropdown__clear-button js-dropdown__clear-button'
-    };
-    const dataForApplyButton = {
-    'view': 'textual',
-    'height': 'high',
-    'content': 'применить',
-    'mixedClasses': 'dropdown__apply-button js-dropdown__apply-button'
-    };
+mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = options)
   include ../button/button
-  div.dropdown.js-dropdown(class='dropdown_'+settings.type data-type=settings.type)
-    if settings.label
+  div.dropdown.js-dropdown(class='dropdown_' + type data-type = type)
+    if (label)
       div.dropdown__info
-        h3.dropdown__lable !{settings.label}
-        if settings.uikitState
-          span.dropdown__state !{settings.uikitState}
+        h3.dropdown__lable !{label}
+        if (uikitState)
+          span.dropdown__state !{uikitState}
     div.dropdown__container
       div.dropdown__selection.js-dropdown__selection
-        p.dropdown__selection-text.js-dropdown__selection-text(data-placeholder=settings.placeholder) !{settings.placeholder}
+        p.dropdown__selection-text.js-dropdown__selection-text(data-placeholder = placeholder) !{placeholder}
         span.dropdown__selection-icon expand_more
-      div.dropdown__menu.js-dropdown__menu(class=settings.isExpanded==='true' ? 'dropdown__menu_state_expanded js-dropdown__menu_state_expanded' : '')
+      div.dropdown__menu.js-dropdown__menu(class = isExpanded ? 'dropdown__menu_state_expanded js-dropdown__menu_state_expanded' : '')
         div.dropdown__options
-          each item, index in items
-            div.dropdown__option.js-dropdown__option(data-index=index)
-              h3.dropdown__option-title !{item.title}
-              div.dropdown__buttons-wrapper
-                button.dropdown__button.dropdown__decrement-button.js-dropdown__decrement-button(
-                  type='button'
-                  data-min-count=item.minCount
-                  data-index=index
-                ) -
-                span.dropdown__quantity.js-dropdown__quantity(
-                  data-default-count=item.defaultCount
-                  data-index=index
-                ) !{item.defaultCount}
-                button.dropdown__button.dropdown__increment-button.js-dropdown__increment-button(
-                  type='button'
-                  data-max-count=item.maxCount
-                  data-index=index
-                ) +
-        if(settings.type=='people')
+          if (items)
+            each item, index in items
+              div.dropdown__option.js-dropdown__option(data-index = index)
+                h3.dropdown__option-title !{item.title}
+                div.dropdown__buttons-wrapper
+                  button.dropdown__button.dropdown__decrement-button.js-dropdown__decrement-button(
+                    type = 'button'
+                    data-min-count = item.minCount
+                    data-index = index
+                    ) -
+                  span.dropdown__quantity.js-dropdown__quantity(
+                    data-default-count = item.defaultCount
+                    data-index = index
+                  ) !{item.defaultCount}
+                  button.dropdown__button.dropdown__increment-button.js-dropdown__increment-button(
+                    type = 'button'
+                    data-max-count = item.maxCount
+                    data-index = index
+                  ) +
+        if (type === 'people')
           div.dropdown__controls-wrapper
-            +button(dataForClearButton)
-            +button(dataForApplyButton)
+            div.dropdown__clear-button.js-dropdown__clear-button
+              +button({'view': 'textual', 'height': 'high', 'content': 'очистить'})
+            div.dropdown__apply-button.js-dropdown__apply-button
+              +button({'view': 'textual', 'height': 'high', 'content': 'применить'})

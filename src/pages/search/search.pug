@@ -29,27 +29,25 @@ block vars
         {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
       ]
     };
-    const checkboxData = [
-    {'name': 'smoke', 'label': 'Можно курить', 'isChecked': 'false', 'isDisabled': 'false'},
-    {'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': 'true', 'isDisabled': 'false'},
-    {'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': 'true', 'isDisabled': 'false'},
-    ];
-    const richCheckboxData = [
-    {'name': 'hall', 'title': 'Широкий коридор',
-    'description': 'Ширина коридоров в номере не менее 91 см.',
-    'isChecked': 'false', 'isDisabled': 'false'},
-    {'name': 'assistant', 'title': 'Помощник для инвалидов',
-    'description': 'На 1 этаже вас встретит специалист  и проводит до номера.',
-    'isChecked': 'false', 'isDisabled': 'false'},
-    ];
-    const dataForexpandableCheckbox = [
-    {'name': 'breakfast', 'label': 'Завтрак', 'isChecked': 'false'},
-    {'name': 'table', 'label': 'Письменный стол', 'isChecked': 'true'},
-    {'name': 'chair', 'label': 'Стул для кормления', 'isChecked': 'true'},
-    {'name': 'cot', 'label': 'Кроватка', 'isChecked': 'true'},
-    {'name': 'tv', 'label': 'Телевизор', 'isChecked': 'false'},
-    {'name': 'shampoo', 'label': 'Шампунь', 'isChecked': 'false'},
-    ];
+    const checkboxData = {
+      'title': 'Checkbox Buttons',
+      'items': [
+        {'name': 'smoke', 'label': 'Можно курить'},
+        {'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': true},
+        {'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': true},
+      ]
+    };
+    const dataForexpandableCheckbox = {
+      'title': 'дополнительные удобства',
+      'items': [
+        {'name': 'breakfast', 'label': 'Завтрак'},
+        {'name': 'table', 'label': 'Письменный стол', 'isChecked': true},
+        {'name': 'chair', 'label': 'Стул для кормления', 'isChecked': true},
+        {'name': 'cot', 'label': 'Кроватка', 'isChecked': true},
+        {'name': 'tv', 'label': 'Телевизор'},
+        {'name': 'shampoo', 'label': 'Шампунь'},
+      ]
+    };
     const roomInfoCardsData = [
     {
     'roomNumber': '888',
@@ -188,15 +186,15 @@ block content
       div.search__element.search__element_margin_bottom-31
         +dropdown(dropdownSettings)
       div.search__element.search__element_margin_bottom-31
-        +rangeSlider('диапазон цены', '5000', '10000', min=0, max=15500)
+        +rangeSlider({'title': 'диапазон цены'})
         p.search__cost-comment Стоимость за сутки пребывания в номере
       div.search__element.search__element_margin_bottom-33
-        +checkboxButtons(checkboxData, 'Checkbox Buttons')
+        +checkboxButtons(checkboxData)
       div.search__element.search__element_margin_bottom-21
-        +richCheckboxButtons(richCheckboxData, 'доступность')
+        +richCheckboxButtons({'title': 'доступность'})
       div.search__element.search__element_margin_bottom-18
         +dropdown(facilitiesDropdownSettings)
-      +expandableCheckboxList(dataForexpandableCheckbox, 'дополнительные удобства')
+      +expandableCheckboxList(dataForexpandableCheckbox)
     div.search__wrapper
       article.search__cards
         +roomInfoCards(roomInfoCardsData, 'Номера, которые мы для вас подобрали')
