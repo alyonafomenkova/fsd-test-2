@@ -1,16 +1,23 @@
-mixin radioButtons({title, items} = options)
+mixin radioButtons({title, items} = {})
+  -
+    const defaultItems = [
+      {'name': 'sex', 'label': 'Мужчина', 'isChecked': true},
+      {'name': 'sex', 'label': 'Женщина'}
+    ];
+    let settings;
+
   div.radio
     if (title)
       h2.radio__title !{title}
     ul.radio__list
-      if (items)
-        each item, index in items
-          li.radio__item
-            input.radio__input(
-              type = 'radio',
-              id = item.name + '-' + index + '-id',
-              name = item.name,
-              checked = item.isChecked,
-              disabled = item.isDisabled,
-            )
-            label.radio__label(for = item.name + '-' + index + '-id') #{item.label}
+      - settings = items ?  items: defaultItems
+      each item, index in settings
+        li.radio__item
+          input.radio__input(
+            type = 'radio',
+            id = item.name + '-' + index + '-id',
+            name = item.name,
+            checked = item.isChecked,
+            disabled = item.isDisabled,
+          )
+          label.radio__label(for = item.name + '-' + index + '-id') #{item.label}

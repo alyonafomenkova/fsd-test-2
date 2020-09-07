@@ -6,15 +6,9 @@ include ../button/button
 
 mixin registrationForm
   -
-    const radioData = {
-      'items': [
-        {'id': 'male-id', 'name': 'sex', 'label': 'Мужчина', 'isChecked': true},
-        {'id': 'female-id', 'name': 'sex', 'label': 'Женщина'}
-      ]
-    };
     const toggleData = {
       'items': [
-        {'name': 'toggle', 'label': 'Получать спецпредложения'},
+        {'name': 'toggle', 'label': 'Получать спецпредложения'}
       ]
     };
 
@@ -25,7 +19,7 @@ mixin registrationForm
         +textField({'name': 'text', 'placeholder': 'Имя'})
         +textField({'name': 'surname', 'placeholder': 'Фамилия'})
       fieldset.registration-form__fieldset-gender
-        +radioButtons(radioData)
+        +radioButtons()
       fieldset.registration-form__fieldset-birthday
         +maskedTextField({'name': 'birthday', 'placeholder': 'дд.мм.гггг', 'label': 'дата рождения'})
       fieldset.registration-form__fieldset-login

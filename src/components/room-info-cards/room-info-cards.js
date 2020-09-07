@@ -4,16 +4,16 @@ import './room-info-cards.scss';
 class Carousel {
   constructor(carousel) {
     this.carousel = carousel;
-    this.prevButtons = this.carousel.querySelectorAll('.room-info-cards__prev-link');
-    this.nextButtons = this.carousel.querySelectorAll('.room-info-cards__next-link');
-    this.dotButtons = this.carousel.querySelectorAll('.room-info-cards__dot');
+    this.prevButtons = this.carousel.querySelectorAll('.js-room-info-cards__prev-link');
+    this.nextButtons = this.carousel.querySelectorAll('.js-room-info-cards__next-link');
+    this.dotButtons = this.carousel.querySelectorAll('.js-room-info-cards__dot');
     this.handleControlsButtonClick = this.handleControlsButtonClick.bind(this);
     this.handleDotButtonClick = this.handleDotButtonClick.bind(this);
     this.slideIndex = 1;
   }
 
   showSlides() {
-    const slides = this.carousel.querySelectorAll('.room-info-cards__mySlides');
+    const slides = this.carousel.querySelectorAll('.js-room-info-cards__mySlides');
     let i;
     if (this.slideIndex > slides.length) {this.slideIndex = 1}
     if (this.slideIndex < 1) {

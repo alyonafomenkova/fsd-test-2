@@ -12,14 +12,14 @@ mixin richCheckboxButtons({title, items} = options)
         'description': 'На 1 этаже вас встретит специалист  и проводит до номера.',
       }
     ];
-    let options;
+    let settings;
 
   div.rich-checkbox
     if (title)
       h2.rich-checkbox__title !{title}
     ul.rich-checkbox__list
-      - options = items ?  items: defaultItems
-      each item in options
+      - settings = items ?  items: defaultItems
+      each item in settings
         li.rich-checkbox__item
           input.rich-checkbox__input(
             type = 'checkbox',

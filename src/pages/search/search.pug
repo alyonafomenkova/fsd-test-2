@@ -2,13 +2,6 @@ extends ../../base/base.pug
 
 block vars
   -
-    const headersData = [
-    {'content': 'О нас'},
-    {'content': 'Услуги', 'submenu': [{'content': 'Услуга_1'}, {'content': 'Услуга_2'}]},
-    {'content': 'Вакансии'},
-    {'content': 'Новости'},
-    {'content': 'Соглашения', 'submenu': [{'content': 'Соглашение_1'}, {'content': 'Соглашение_2'}]},
-    ];
     const dropdownSettings = {
       'type': 'people',
       'label': 'гости',
@@ -178,7 +171,7 @@ block content
   include ../../components/pagination/pagination
   include ../../components/footer/footer
 
-  +header(headersData, false, true)
+  +header({'isRu': true})
   main.search
     aside.search__aside
       div.search__element.search__element_margin_bottom-21

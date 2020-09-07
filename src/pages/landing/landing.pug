@@ -2,13 +2,6 @@ extends ../../base/base.pug
 
 block vars
   -
-    const headersData = [
-    {'content': 'О нас'},
-    {'content': 'Услуги', 'submenu': [{'content': 'Услуга_1'}, {'content': 'Услуга_2'}]},
-    {'content': 'Вакансии'},
-    {'content': 'Новости'},
-    {'content': 'Соглашения', 'submenu': [{'content': 'Соглашение_1'}, {'content': 'Соглашение_2'}]},
-    ];
     const footersData = {
     'description': 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
     'contentLists': [
@@ -44,7 +37,7 @@ block content
   include ../../components/search-form/search-form
   include ../../components/footer/footer
 
-  +header(headersData, false, true)
+  +header({'isRu': true})
   main.landing
     div.landing__wrapper
       div.landing__form-wrapper

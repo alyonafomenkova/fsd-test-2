@@ -4,7 +4,7 @@ import '../modal/modal.js';
 import './header.scss';
 
 const toggleMenuButtons = document.querySelectorAll('.js-header__toggle-menu-btn');
-const toggleSubmenuList = document.querySelectorAll('.header__nav-item.header__submenu');
+const toggleSubmenuList = document.querySelectorAll('.js-header__nav-item.header__submenu');
 const headerNavMenu = document.querySelectorAll('.js-header__main-nav');
 const userNames = document.querySelectorAll('.js-header__user-name');
 const handleSubmenuButtonClick = () => {
@@ -49,7 +49,7 @@ toggleMenuButtons.forEach((button) => {
 });
 
 toggleSubmenuList.forEach((submenu) => {
-  const button = submenu.querySelector('.header__toggle-submenu-btn');
+  const button = submenu.querySelector('.js-header__toggle-submenu-btn');
   button.classList.remove('header__toggle-submenu-btn_state_without-js');
   button.classList.add('header__toggle-submenu-btn_state_with-js');
   submenu.addEventListener('click', handleSubmenuButtonClick)

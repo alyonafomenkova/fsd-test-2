@@ -1,14 +1,39 @@
-mixin footer(data, isRu, isUikit)
+mixin footer({items, isRu, isUikit} = options)
   include ../logo/logo
   include ../button/button
   include ../subscription-text-field/subscription-text-field
+  -
+    const defaultItems = {
+      'description': 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+      'contentLists': [
+        {
+          'title': 'навигация',
+          'links': ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+        },
+        {
+          'title': 'о нас',
+          'links': ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+        },
+        {
+          'title': 'Служба поддержки',
+          'links': ['Соглашения', 'Сообщества', 'Связь с нами']
+        },
+        {
+          'title': 'Подписка',
+          'subscribe': 'Получайте специальные предложения и новости сервиса'
+        }
+      ],
+      'copyrightText': 'Copyright © 2018 Toxin отель. Все права зачищены.'
+    };
+    const settings = items ?  items: defaultItems;
+
   footer.footer(class=isUikit ? 'footer-uikit' : '')
     div.footer__wrapper
       div.footer__description-wrapper
         +logo
-        p.footer__description !{data.description}
+        p.footer__description !{settings.description}
       div.footer__content-wrapper
-        each item in data.contentLists
+        each item in settings.contentLists
           div.footer__content-item
             h3 !{item.title}
             if(item.links)
@@ -22,7 +47,7 @@ mixin footer(data, isRu, isUikit)
                 +subscriptionTextField({'type': 'Email', 'name': 'subscription-text', 'placeholder': 'Email'})
     hr.footer__separator
     div.footer__bottom-wrapper
-      p.footer__copyright-text !{data.copyrightText}
+      p.footer__copyright-text !{settings.copyrightText}
       ul.footer__social-list
         li
           a.footer__social-link.footer__social-link_social-network_tw(href='https://twitter.com/' target='_blank' rel='noopener noreferrer')

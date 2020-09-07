@@ -2,18 +2,6 @@ extends ../../base/base.pug
 
 block vars
   -
-    const headersData = [
-    {'content': 'О нас'},
-    {'content': 'Услуги', 'submenu': [{'content': 'Услуга_1'}, {'content': 'Услуга_2'}]},
-    {'content': 'Вакансии'},
-    {'content': 'Новости'},
-    {'content': 'Соглашения', 'submenu': [{'content': 'Соглашение_1'}, {'content': 'Соглашение_2'}]},
-    ];
-    const roomDetailsData = [
-    {'icon': 'insert_emoticon', 'name': 'Комфорт', 'description': 'Шумопоглощающие стены'},
-    {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
-    {'icon': 'whatshot', 'name': 'Уют', 'description': 'Номер оснащён камином'},
-    ];
     const pieChartData = [
     {'type': 'normal','count': '260', 'label': 'Удовлетворительно'},
     {'type': 'good', 'count': '260', 'label': 'Хорошо'},
@@ -41,11 +29,6 @@ block vars
         }
       ]
     };
-    const bulletData = [
-    {'name': 'Нельзя с питомцами', 'classes': ''},
-    {'name': 'Без вечеринок и мероприятий', 'classes': ''},
-    {'name': 'Время прибытия — после 13:00, а выезд до 12:00', 'classes': ''}
-    ];
     const footersData = {
     'description': 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
     'contentLists': [
@@ -85,7 +68,7 @@ block content
   include ../../components/booking-form/booking-form
   include ../../components/footer/footer
 
-  +header(headersData, false, true)
+  +header({'isRu': true})
   main.details
     div.details__images-wrapper
       img.details__image(src=require('../../pages/room-details/images/1.png').default width='68.125%' height='100%' alt='Photo of bedroom')
@@ -93,12 +76,12 @@ block content
       img.details__image(src=require('../../pages/room-details/images/3.png').default width='31.875%' height='50%' alt='Photo of bedroom')
     div.details__content-wrapper
       div.details__content
-        +roomDetails(roomDetailsData, 'Сведения о номере')
+        +roomDetails({'title': 'Сведения о номере'})
         +pie-chart(pieChartData, 'Впечатления от номера')
         div.details__reviews-wrapper
           +reviews(reviewsData)
         div.details__rules-wrapper
-          +bulletList(bulletData, 'Правила')
+          +bulletList({'title': 'Правила'})
           div.details__cancel-rule
             h2.details__cancel-rule-title Отмена
             p.details__cancel-rule-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

@@ -1,9 +1,18 @@
-mixin roomDetails(data, title=null)
+mixin roomDetails({title, items} = {})
+  -
+    const defaultItems = [
+      {'icon': 'insert_emoticon', 'name': 'Комфорт', 'description': 'Шумопоглощающие стены'},
+      {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
+      {'icon': 'whatshot', 'name': 'Уют', 'description': 'Номер оснащён камином'}
+    ];
+    let settings;
+
   div.room-details
-    if title
+    if (title)
       h2.room-details__title !{title}
     ul.room-details__list
-      each item in data
+      - settings = items ?  items: defaultItems
+      each item in settings
         li.room-details__item
           span.room-details__icon !{item.icon}
           div.room-details__text

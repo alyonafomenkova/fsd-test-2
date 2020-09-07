@@ -94,7 +94,7 @@ block vars
         {'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': true},
       ]
     };
-    const dataForexpandableCheckbox = {
+    const dataForExpandableCheckbox = {
       'title': 'expandable checkbox list',
       'items': [
         {'name': 'wifi', 'label': 'wi-fi', 'isChecked': true},
@@ -113,28 +113,6 @@ block vars
         {'name': 'shampoo', 'label': 'Шампунь'},
       ]
     };
-    // const richCheckboxData = {
-    //   'title': 'rich Checkbox Buttons',
-    //   'items': [
-    //     {
-    //       'name': 'hall',
-    //       'title': 'Широкий коридор',
-    //       'description': 'Ширина коридоров в номере не менее 91 см.'
-    //     },
-    //     {
-    //       'name': 'assistant',
-    //       'title': 'Помощник для инвалидов',
-    //       'description': 'На 1 этаже вас встретит специалист  и проводит до номера.',
-    //     }
-    //   ]
-    // };
-    const radioData = {
-      'title': 'Radio Buttons',
-      'items': [
-        {'name': 'sex', 'label': 'Мужчина', 'isChecked': true},
-        {'name': 'sex', 'label': 'Женщина'},
-      ]
-    };
     const toggleData = {
       'title': 'Toggle',
       'items': [
@@ -142,15 +120,12 @@ block vars
         {'name': 'toggle', 'label': 'Получать спецпредложения'},
       ]
     };
-    const bulletData = [
-    {'name': 'Нельзя с питомцами', 'classes': ''},
-    {'name': 'Без вечеринок и мероприятий', 'classes': ''},
-    {'name': 'Время прибытия — после 13:00, а выезд до 12:00', 'classes': ''}
-    ];
-    const roomDetailsData = [
-    {'icon': 'insert_emoticon', 'name': 'Комфорт', 'description': 'Шумопоглощающие стены'},
-    {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
-    ];
+    const roomDetailsData = {
+      'items': [
+        {'icon': 'insert_emoticon', 'name': 'Комфорт', 'description': 'Шумопоглощающие стены'},
+        {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
+      ]
+    };
     const reviewsData = {
       'items': [{
         'imgName': 'avatar-1.png',
@@ -211,7 +186,7 @@ block content
       div.form-elements__element.form-elements__element_margin_bottom-42
         +checkboxButtons(checkboxData)
       div.form-elements__element.form-elements__element_margin_bottom-35
-        +radioButtons(radioData)
+        +radioButtons({'title': 'Radio Buttons'})
       div.form-elements__element.form-elements__element_margin_bottom-45
         +toggleButton(toggleData)
       div.form-elements__element.form-elements__element_margin_bottom-41
@@ -261,7 +236,7 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
-        +expandableCheckboxList(dataForexpandableCheckbox)
+        +expandableCheckboxList(dataForExpandableCheckbox)
       div.form-elements__element
         +expandableCheckboxList(dataForExpandedCheckbox)
 
@@ -271,7 +246,7 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-15
-        +bulletList(bulletData, 'Bullet list', 'uikit')
+        +bulletList({'title': 'Bullet list', 'isUikit': true})
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-93

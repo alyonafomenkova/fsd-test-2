@@ -2,35 +2,48 @@ extends ../../base/base.pug
 
 block vars
   -
-    const headersData = [
-    {'content': 'Home', 'isActive': 'true'},
-    {'content': 'About Us'},
-    {'content': 'Services', 'submenu': [{'content': 'Service_1'}, {'content': 'Service_2'}]},
-    {'content': 'Careers'},
-    {'content': 'News'},
-    {'content': 'Documentation'},
-    ];
+    const headersData = {
+      'items': [
+        {'content': 'Home', 'isActive': 'true'},
+        {'content': 'About Us'},
+        {'content': 'Services', 'submenu': [{'content': 'Service_1'}, {'content': 'Service_2'}]},
+        {'content': 'Careers'},
+        {'content': 'News'},
+        {'content': 'Documentation'},
+      ]
+    };
+    const headersDataForAuthorizedUser = {
+      'isUserAuthorized': true,
+      'items': [
+        {'content': 'Home', 'isActive': 'true'},
+        {'content': 'About Us'},
+        {'content': 'Services', 'submenu': [{'content': 'Service_1'}, {'content': 'Service_2'}]},
+        {'content': 'Careers'},
+        {'content': 'News'},
+        {'content': 'Documentation'},
+      ]
+    };
     const footersData = {
-    'description': 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
-    'contentLists': [
-    {
-    'title': 'Navigation',
-    'links': ['About Us', 'News', 'Support', 'Products']
-    },
-    {
-    'title': 'About us',
-    'links': ['Who we are', 'Our team', 'Careers', 'Investors']
-    },
-    {
-    'title': 'Support',
-    'links': ['Documentation', 'Community', 'Get in Touch']
-    },
-    {
-    'title': 'Subscribe to our newsletter',
-    'subscribe': 'Receive our latest news and promotions in your inbox!'
-    }
-    ],
-    'copyrightText': 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+      'description': 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+      'contentLists': [
+        {
+          'title': 'Navigation',
+          'links': ['About Us', 'News', 'Support', 'Products']
+        },
+        {
+          'title': 'About us',
+          'links': ['Who we are', 'Our team', 'Careers', 'Investors']
+        },
+        {
+          'title': 'Support',
+          'links': ['Documentation', 'Community', 'Get in Touch']
+        },
+        {
+          'title': 'Subscribe to our newsletter',
+          'subscribe': 'Receive our latest news and promotions in your inbox!'
+        }
+      ],
+      'copyrightText': 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
     };
 
 block meta
@@ -48,10 +61,10 @@ block content
 
   main.container
     div.container__item
-      +header(headersData, false, false)
+      +header(headersData)
     div.container__item
-      +header(headersData, true)
+      +header(headersDataForAuthorizedUser)
     div.container__item
       +footer(footersData)
     div.container__item.container__footer-wrapper
-      +footer(footersData, false, true)
+      +footer({'isUikit': true, 'items': footersData})
