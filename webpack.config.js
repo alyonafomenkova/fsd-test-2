@@ -36,6 +36,7 @@ const config = {
   resolve: {
     alias: {
       Normalize: path.resolve(__dirname, 'node_modules/normalize.scss/normalize.scss'),
+      Mixins: path.resolve(__dirname, 'src/base/mixins.scss'),
       Theme: path.resolve(__dirname, 'src/base/theme.scss'),
       Assets: path.resolve(__dirname, 'src/assets'),
       Fonts: path.resolve(__dirname, 'src/assets/fonts'),
