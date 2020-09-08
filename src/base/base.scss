@@ -1,6 +1,12 @@
 @import '~FontsScss';
+@import '~Mixins';
 @import '~Normalize';
 @import '~Theme';
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1165px;
+$max-desktop-width: 1440px;
 
 html {
   box-sizing: border-box;
@@ -13,97 +19,6 @@ html {
   background-color: $white-color;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-$mobile-width: 320px;
-$tablet-width: 768px;
-$desktop-width: 1165px;
-
-@mixin h1-text {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: $dark-color;
-}
-
-@mixin h2-text {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: $dark-color;
-}
-
-@mixin h3-text {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: $dark-color;
-}
-
-@mixin body-text {
-  font-size: 1rem;
-}
-
-@mixin material-icons {
-  display: inline-block;
-  font-family: 'Material icons';
-  font-size: 1.714rem;
-  line-height: 1;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  font-feature-settings: 'liga';
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-}
-
-@mixin visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   @include body-text;
-}
-
-h1 {
-  @include h1-text;
-}
-
-h2 {
-  @include h2-text;
-}
-
-h3 {
-  @include h3-text;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
