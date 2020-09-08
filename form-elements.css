@@ -54,6 +54,62 @@
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -225,7 +281,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -354,8 +409,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -422,62 +475,39 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
+.bullet__title {
+  margin: 0;
+  padding: 0;
   font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 1.357rem;
   line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.bullet__title {
-  margin-bottom: 1rem; }
+  color: #1F2041;
+  margin: 0 0 1.286rem 1.429rem; }
   .bullet__title_font_montserrat {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
     line-height: 1.071rem;
     text-transform: uppercase;
-    color: #1F2041; }
+    color: #1F2041;
+    margin: 0 0 1rem 0; }
 
 .bullet__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   max-width: 18.857rem; }
 
 .bullet__item {
   position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 0.786rem; }
+  margin-bottom: 0.714rem; }
   .bullet__item::before {
     content: '';
     position: absolute;
@@ -487,6 +517,62 @@ ul {
     height: 0.714rem;
     border-radius: 0.714rem;
     background-color: rgba(31, 32, 65, 0.25); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
 @font-face {
   font-family: "Montserrat";
@@ -715,7 +801,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -844,8 +929,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -912,46 +995,12 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
+.button {
   margin: 0;
   padding: 0;
-  list-style: none; }
-
-.button {
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
@@ -969,7 +1018,7 @@ ul {
   .button_height_low {
     padding: 0.643rem 1.357rem; }
   .button_height_high {
-    width: 7.071rem;
+    min-width: 7.071rem;
     padding: 1rem 0; }
   .button_view_filled {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -996,6 +1045,7 @@ ul {
     .button_view_bordered-on-hover::after, .button_view_bordered:hover::after {
       opacity: 0.5; }
   .button_view_textual {
+    min-width: 4.429rem;
     width: auto;
     padding: 0;
     color: #BC9CFF; }
@@ -1084,6 +1134,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1255,7 +1361,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -1384,8 +1489,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -1452,41 +1555,10 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
+.checkbox__list {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -1497,18 +1569,15 @@ ul {
     opacity: 0.5; }
 
 .checkbox__title {
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
   line-height: 1.071rem;
   text-transform: uppercase;
-  color: #1F2041; }
-
-.checkbox__list {
-  margin-top: 1.214rem; }
-
-.checkbox_type_expandable .checkbox__list {
-  margin-top: 0; }
+  color: #1F2041;
+  margin-bottom: 1.214rem; }
 
 .checkbox__input {
   position: absolute;
@@ -1518,19 +1587,21 @@ ul {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
-  .checkbox__input + label {
+  .checkbox__input + .checkbox__label {
     display: flex;
     align-items: flex-start;
     width: 17.143rem;
     cursor: pointer;
     color: rgba(31, 32, 65, 0.5);
     line-height: 1.286rem; }
-    .checkbox__input + label::before {
+    .checkbox__input + .checkbox__label::before {
       content: '';
       display: inline-block;
+      box-sizing: border-box;
       width: 1.429rem;
       height: 1.429rem;
       flex-shrink: 0;
@@ -1541,11 +1612,11 @@ ul {
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%; }
-    .checkbox__input + label:hover {
+    .checkbox__input + .checkbox__label:hover {
       color: rgba(31, 32, 65, 0.75); }
-      .checkbox__input + label:hover::before {
+      .checkbox__input + .checkbox__label:hover::before {
         border-color: #7635ff; }
-  .checkbox__input:checked + label::before {
+  .checkbox__input:checked + .checkbox__label::before {
     border-color: #BC9CFF;
     background-image: url(assets/images/tick.svg); }
 
@@ -1833,7 +1904,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -1962,8 +2032,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -2030,46 +2098,12 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
+.button {
   margin: 0;
   padding: 0;
-  list-style: none; }
-
-.button {
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
@@ -2087,7 +2121,7 @@ ul {
   .button_height_low {
     padding: 0.643rem 1.357rem; }
   .button_height_high {
-    width: 7.071rem;
+    min-width: 7.071rem;
     padding: 1rem 0; }
   .button_view_filled {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -2114,6 +2148,7 @@ ul {
     .button_view_bordered-on-hover::after, .button_view_bordered:hover::after {
       opacity: 0.5; }
   .button_view_textual {
+    min-width: 4.429rem;
     width: auto;
     padding: 0;
     color: #BC9CFF; }
@@ -2202,6 +2237,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2373,7 +2464,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -2502,8 +2592,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -2570,44 +2658,8 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
 
 .masked-text-field {
   display: flex;
@@ -2615,6 +2667,8 @@ ul {
   flex-wrap: wrap;
   max-width: 22.857rem; }
   .masked-text-field__label {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -2626,6 +2680,8 @@ ul {
     flex-wrap: wrap;
     margin-bottom: 0.357rem; }
   .masked-text-field__state {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -2645,8 +2701,490 @@ ul {
     .masked-text-field__input:hover, .masked-text-field__input:focus, .masked-text-field__input_hovered {
       outline: none;
       border-color: rgba(31, 32, 65, 0.5); }
+    .masked-text-field__input::-moz-placeholder {
+      color: rgba(31, 32, 65, 0.25); }
     .masked-text-field__input::placeholder {
       color: rgba(31, 32, 65, 0.25); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
+/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  color: rgba(31, 32, 65, 0.75);
+  background-color: #FFFFFF; }
+
+body {
+  font-size: 1rem; }
 
 .date-dropdown {
   display: flex;
@@ -2682,6 +3220,8 @@ ul {
       color: rgba(31, 32, 65, 0.5);
       pointer-events: none; }
   .date-dropdown__label {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -2701,6 +3241,9 @@ ul {
     .date-dropdown__input:hover, .date-dropdown__input:focus {
       outline: none;
       border-color: rgba(31, 32, 65, 0.5); }
+    .date-dropdown__input::-moz-placeholder {
+      text-transform: uppercase;
+      color: rgba(31, 32, 65, 0.25); }
     .date-dropdown__input::placeholder {
       text-transform: uppercase;
       color: rgba(31, 32, 65, 0.25); }
@@ -2710,6 +3253,8 @@ ul {
 .date-dropdown__item--filter {
   width: 100%;
   max-width: 19rem; }
+  .date-dropdown__item--filter .date-dropdown__input::-moz-placeholder {
+    text-transform: lowercase; }
   .date-dropdown__item--filter .date-dropdown__input::placeholder {
     text-transform: lowercase; }
 
@@ -2727,6 +3272,8 @@ ul {
   .datepicker--days-names {
     margin-bottom: 1.071rem; }
   .datepicker--day-name {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -2744,6 +3291,8 @@ ul {
   padding: 1.286rem 1.429rem 1.857rem 1.286rem;
   border: none; }
   .datepicker--nav-title {
+    margin: 0;
+    padding: 0;
     font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 1.357rem;
@@ -2832,6 +3381,8 @@ ul {
   border-top: none; }
 
 .datepicker--button {
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
@@ -2909,6 +3460,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -3080,7 +3687,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -3209,8 +3815,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -3277,44 +3881,8 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
 
 .dropdown {
   max-width: 22.857rem; }
@@ -3326,11 +3894,20 @@ ul {
     flex-wrap: wrap;
     margin-bottom: 0.286rem; }
   .dropdown__label {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.857rem;
+    line-height: 1.071rem;
+    text-transform: uppercase;
+    color: #1F2041;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 0.286rem; }
+    flex-wrap: wrap; }
   .dropdown__state {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -3347,7 +3924,9 @@ ul {
     justify-content: space-between;
     align-items: center;
     margin: 0.5rem 0; }
-  .dropdown__quantity {
+  .dropdown__option-title, .dropdown__quantity {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -3362,8 +3941,8 @@ ul {
   .dropdown__controls-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 1.429rem;
-    margin-bottom: 0.929rem; }
+    margin-top: 1.071rem;
+    margin-bottom: 0.5rem; }
   .dropdown__apply-button {
     margin-left: auto; }
   .dropdown__clear-button_visibility_invisible {
@@ -3421,6 +4000,7 @@ ul {
   position: absolute;
   top: 3rem;
   left: 0;
+  box-sizing: border-box;
   width: 100%;
   padding-left: 1.071rem;
   padding-right: 0.5rem;
@@ -3489,6 +4069,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -3660,7 +4296,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -3789,8 +4424,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -3857,48 +4490,12 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
 .expandable-checkbox {
   max-width: 19rem; }
-  .expandable-checkbox .checkbox__list {
+  .expandable-checkbox__wrapper {
     display: none; }
   .expandable-checkbox__selection {
     display: flex;
@@ -3907,6 +4504,15 @@ ul {
     align-items: center;
     max-width: 19rem;
     cursor: pointer; }
+  .expandable-checkbox__title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.857rem;
+    line-height: 1.071rem;
+    text-transform: uppercase;
+    color: #1F2041; }
   .expandable-checkbox__more-icon {
     display: inline-block;
     font-family: 'Material icons';
@@ -3928,7 +4534,7 @@ ul {
     height: 3.143rem;
     line-height: 1.714rem; }
 
-.expandable-checkbox_state_expanded .checkbox__list {
+.expandable-checkbox_state_expanded .expandable-checkbox__wrapper {
   display: block; }
 
 .expandable-checkbox_state_expanded .expandable-checkbox__more-icon {
@@ -3990,6 +4596,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -4161,7 +4823,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -4290,8 +4951,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -4358,44 +5017,8 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
 
 .like-button {
   display: flex;
@@ -4403,7 +5026,8 @@ ul {
   justify-content: space-between;
   align-items: center;
   min-width: 2.857rem;
-  height: 1.429rem;
+  min-height: 1.429rem;
+  padding: 0 0.786rem 0 0.286rem;
   border: 0.071rem solid rgba(31, 32, 65, 0.25);
   border-radius: 0.714rem;
   background-color: inherit; }
@@ -4434,10 +5058,10 @@ ul {
     color: rgba(31, 32, 65, 0.25);
     pointer-events: none; }
 
-.js-like-button_active {
+.like-button_active {
   border-color: #BC9CFF; }
-  .js-like-button_active .like-button__icon,
-  .js-like-button_active .like-button__count-likes {
+  .like-button_active .like-button__icon,
+  .like-button_active .like-button__count-likes {
     color: #BC9CFF; }
 
 .logo {
@@ -4448,6 +5072,64 @@ ul {
   .logo__img_view_uikit {
     margin-top: 2.143rem;
     margin-left: 2.143rem; }
+  .logo:hover {
+    opacity: 0.75; }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
 @font-face {
   font-family: "Montserrat";
@@ -4676,7 +5358,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -4805,8 +5486,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -4873,44 +5552,8 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
 
 .masked-text-field {
   display: flex;
@@ -4918,6 +5561,8 @@ ul {
   flex-wrap: wrap;
   max-width: 22.857rem; }
   .masked-text-field__label {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -4929,6 +5574,8 @@ ul {
     flex-wrap: wrap;
     margin-bottom: 0.357rem; }
   .masked-text-field__state {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -4948,6 +5595,8 @@ ul {
     .masked-text-field__input:hover, .masked-text-field__input:focus, .masked-text-field__input_hovered {
       outline: none;
       border-color: rgba(31, 32, 65, 0.5); }
+    .masked-text-field__input::-moz-placeholder {
+      color: rgba(31, 32, 65, 0.25); }
     .masked-text-field__input::placeholder {
       color: rgba(31, 32, 65, 0.25); }
 
@@ -5007,6 +5656,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -5178,7 +5883,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -5307,8 +6011,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -5375,44 +6077,8 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
 
 .pagination {
   max-width: 17.143rem; }
@@ -5420,7 +6086,10 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
   .pagination__description {
     margin-top: 0.714rem;
     padding-left: 0.357rem;
@@ -5428,6 +6097,8 @@ ul {
     line-height: 1.714rem; }
 
 .pagination__link {
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
@@ -5521,465 +6192,6 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
-/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
-
-/**
- * Remove default margin.
- */
-body {
-  margin: 0; }
-
-/* HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block; }
-
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
- */
-[hidden],
-template {
-  display: none; }
-
-/* Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
-a {
-  background-color: transparent; }
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-a:active,
-a:hover {
-  outline: 0; }
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-b,
-strong {
-  font-weight: bold; }
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-dfn {
-  font-style: italic; }
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-/**
- * Address styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000; }
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 80%; }
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-img {
-  border: 0; }
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-svg:not(:root) {
-  overflow: hidden; }
-
-/* Grouping content
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-figure {
-  margin: 1em 40px; }
-
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
-
-/**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto; }
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
-
-/* Forms
-   ========================================================================== */
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */ }
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-button {
-  overflow: visible; }
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-button,
-select {
-  text-transform: none; }
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */ }
-
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-input {
-  line-height: normal; }
-
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box; }
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-textarea {
-  overflow: auto; }
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-optgroup {
-  font-weight: bold; }
-
-/* Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-td,
-th {
-  padding: 0; }
-
-html {
-  box-sizing: border-box;
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  font-style: normal;
-  font-weight: normal;
-  color: rgba(31, 32, 65, 0.75);
-  background-color: #FFFFFF; }
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
-body {
-  font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.radio__title {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041;
-  margin-bottom: 1.143rem; }
-
-.radio__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 15.714rem; }
-
-.radio__input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden; }
-  .radio__input + label {
-    display: inline-flex;
-    align-items: flex-start;
-    cursor: pointer; }
-    .radio__input + label::before {
-      content: '';
-      display: inline-block;
-      width: 1.429rem;
-      height: 1.429rem;
-      flex-shrink: 0;
-      flex-grow: 0;
-      border: 0.071rem solid rgba(31, 32, 65, 0.25);
-      border-radius: 50%;
-      margin-right: 0.5em;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 50% 50%; }
-    .radio__input + label:hover {
-      color: rgba(31, 32, 65, 0.75); }
-      .radio__input + label:hover::before {
-        border-color: #7635ff; }
-  .radio__input:checked + label::before {
-    border-color: #BC9CFF;
-    background-image: url(assets/images/radio.svg); }
-
-/*!Ion.RangeSlider, 2.3.1, © Denis Ineshin, 2010 - 2019, IonDen.com, Build date: 2019-12-19 16:51:02*/.irs{position:relative;display:block;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:12px;font-family:Arial,sans-serif}.irs-line{position:relative;display:block;overflow:hidden;outline:none !important}.irs-bar{position:absolute;display:block;left:0;width:0}.irs-shadow{position:absolute;display:none;left:0;width:0}.irs-handle{position:absolute;display:block;box-sizing:border-box;cursor:default;z-index:1}.irs-handle.type_last{z-index:2}.irs-min,.irs-max{position:absolute;display:block;cursor:default}.irs-min{left:0}.irs-max{right:0}.irs-from,.irs-to,.irs-single{position:absolute;display:block;top:0;left:0;cursor:default;white-space:nowrap}.irs-grid{position:absolute;display:none;bottom:0;left:0;width:100%;height:20px}.irs-with-grid .irs-grid{display:block}.irs-grid-pol{position:absolute;top:0;left:0;width:1px;height:8px;background:#000}.irs-grid-pol.small{height:4px}.irs-grid-text{position:absolute;bottom:0;left:0;white-space:nowrap;text-align:center;font-size:9px;line-height:9px;padding:0 3px;color:#000}.irs-disable-mask{position:absolute;display:block;top:0;left:-1%;width:102%;height:100%;cursor:default;background:rgba(0,0,0,0);z-index:2}.lt-ie9 .irs-disable-mask{background:#000;filter:alpha(opacity=0);cursor:not-allowed}.irs-disabled{opacity:.4}.irs-hidden-input{position:absolute !important;display:block !important;top:0 !important;left:0 !important;width:0 !important;height:0 !important;font-size:0 !important;line-height:0 !important;padding:0 !important;margin:0 !important;overflow:hidden;outline:none !important;z-index:-9999 !important;background:none !important;border-style:solid !important;border-color:transparent !important}.irs--flat{height:40px}.irs--flat.irs-with-grid{height:60px}.irs--flat .irs-line{top:25px;height:12px;background-color:#e1e4e9;border-radius:4px}.irs--flat .irs-bar{top:25px;height:12px;background-color:#ed5565}.irs--flat .irs-bar--single{border-radius:4px 0 0 4px}.irs--flat .irs-shadow{height:1px;bottom:16px;background-color:#e1e4e9}.irs--flat .irs-handle{top:22px;width:16px;height:18px;background-color:transparent}.irs--flat .irs-handle>i:first-child{position:absolute;display:block;top:0;left:50%;width:2px;height:100%;margin-left:-1px;background-color:#da4453}.irs--flat .irs-handle.state_hover>i:first-child,.irs--flat .irs-handle:hover>i:first-child{background-color:#a43540}.irs--flat .irs-min,.irs--flat .irs-max{top:0;padding:1px 3px;color:#999;font-size:10px;line-height:1.333;text-shadow:none;background-color:#e1e4e9;border-radius:4px}.irs--flat .irs-from,.irs--flat .irs-to,.irs--flat .irs-single{color:white;font-size:10px;line-height:1.333;text-shadow:none;padding:1px 5px;background-color:#ed5565;border-radius:4px}.irs--flat .irs-from:before,.irs--flat .irs-to:before,.irs--flat .irs-single:before{position:absolute;display:block;content:"";bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;overflow:hidden;border:3px solid transparent;border-top-color:#ed5565}.irs--flat .irs-grid-pol{background-color:#e1e4e9}.irs--flat .irs-grid-text{color:#999}.irs--big{height:55px}.irs--big.irs-with-grid{height:70px}.irs--big .irs-line{top:33px;height:12px;background-color:white;background:linear-gradient(to bottom, #ddd -50%, white 150%);border:1px solid #ccc;border-radius:12px}.irs--big .irs-bar{top:33px;height:12px;background-color:#92bce0;border:1px solid #428bca;background:linear-gradient(to bottom, #ffffff 0%, #428bca 30%, #b9d4ec 100%);box-shadow:inset 0 0 1px 1px rgba(255,255,255,0.5)}.irs--big .irs-bar--single{border-radius:12px 0 0 12px}.irs--big .irs-shadow{height:1px;bottom:16px;background-color:rgba(66,139,202,0.5)}.irs--big .irs-handle{top:25px;width:30px;height:30px;border:1px solid rgba(0,0,0,0.3);background-color:#cbcfd5;background:linear-gradient(to bottom, white 0%, #B4B9BE 30%, white 100%);box-shadow:1px 1px 2px rgba(0,0,0,0.2),inset 0 0 3px 1px white;border-radius:30px}.irs--big .irs-handle.state_hover,.irs--big .irs-handle:hover{border-color:rgba(0,0,0,0.45);background-color:#939ba7;background:linear-gradient(to bottom, white 0%, #919BA5 30%, white 100%)}.irs--big .irs-min,.irs--big .irs-max{top:0;padding:1px 5px;color:white;text-shadow:none;background-color:#9f9f9f;border-radius:3px}.irs--big .irs-from,.irs--big .irs-to,.irs--big .irs-single{color:white;text-shadow:none;padding:1px 5px;background-color:#428bca;background:linear-gradient(to bottom, #428bca 0%, #3071a9 100%);border-radius:3px}.irs--big .irs-grid-pol{background-color:#428bca}.irs--big .irs-grid-text{color:#428bca}.irs--modern{height:55px}.irs--modern.irs-with-grid{height:55px}.irs--modern .irs-line{top:25px;height:5px;background-color:#d1d6e0;background:linear-gradient(to bottom, #e0e4ea 0%, #d1d6e0 100%);border:1px solid #a3adc1;border-bottom-width:0;border-radius:5px}.irs--modern .irs-bar{top:25px;height:5px;background:#20b426;background:linear-gradient(to bottom, #20b426 0%, #18891d 100%)}.irs--modern .irs-bar--single{border-radius:5px 0 0 5px}.irs--modern .irs-shadow{height:1px;bottom:21px;background-color:rgba(209,214,224,0.5)}.irs--modern .irs-handle{top:37px;width:12px;height:13px;border:1px solid #a3adc1;border-top-width:0;box-shadow:1px 1px 1px rgba(0,0,0,0.1);border-radius:0 0 3px 3px}.irs--modern .irs-handle>i:nth-child(1){position:absolute;display:block;top:-4px;left:1px;width:6px;height:6px;border:1px solid #a3adc1;background:white;transform:rotate(45deg)}.irs--modern .irs-handle>i:nth-child(2){position:absolute;display:block;box-sizing:border-box;top:0;left:0;width:10px;height:12px;background:#e9e6e6;background:linear-gradient(to bottom, white 0%, #e9e6e6 100%);border-radius:0 0 3px 3px}.irs--modern .irs-handle>i:nth-child(3){position:absolute;display:block;box-sizing:border-box;top:3px;left:3px;width:4px;height:5px;border-left:1px solid #a3adc1;border-right:1px solid #a3adc1}.irs--modern .irs-handle.state_hover,.irs--modern .irs-handle:hover{border-color:#7685a2;background:#c3c7cd;background:linear-gradient(to bottom, #ffffff 0%, #919ba5 30%, #ffffff 100%)}.irs--modern .irs-handle.state_hover>i:nth-child(1),.irs--modern .irs-handle:hover>i:nth-child(1){border-color:#7685a2}.irs--modern .irs-handle.state_hover>i:nth-child(3),.irs--modern .irs-handle:hover>i:nth-child(3){border-color:#48536a}.irs--modern .irs-min,.irs--modern .irs-max{top:0;font-size:10px;line-height:1.333;text-shadow:none;padding:1px 5px;color:white;background-color:#d1d6e0;border-radius:5px}.irs--modern .irs-from,.irs--modern .irs-to,.irs--modern .irs-single{font-size:10px;line-height:1.333;text-shadow:none;padding:1px 5px;background-color:#20b426;color:white;border-radius:5px}.irs--modern .irs-from:before,.irs--modern .irs-to:before,.irs--modern .irs-single:before{position:absolute;display:block;content:"";bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;overflow:hidden;border:3px solid transparent;border-top-color:#20b426}.irs--modern .irs-grid{height:25px}.irs--modern .irs-grid-pol{background-color:#dedede}.irs--modern .irs-grid-text{color:silver;font-size:13px}.irs--sharp{height:50px;font-size:12px;line-height:1}.irs--sharp.irs-with-grid{height:57px}.irs--sharp .irs-line{top:30px;height:2px;background-color:black;border-radius:2px}.irs--sharp .irs-bar{top:30px;height:2px;background-color:#ee22fa}.irs--sharp .irs-bar--single{border-radius:2px 0 0 2px}.irs--sharp .irs-shadow{height:1px;bottom:21px;background-color:rgba(0,0,0,0.5)}.irs--sharp .irs-handle{top:25px;width:10px;height:10px;background-color:#a804b2}.irs--sharp .irs-handle>i:first-child{position:absolute;display:block;top:100%;left:0;width:0;height:0;border:5px solid transparent;border-top-color:#a804b2}.irs--sharp .irs-handle.state_hover,.irs--sharp .irs-handle:hover{background-color:black}.irs--sharp .irs-handle.state_hover>i:first-child,.irs--sharp .irs-handle:hover>i:first-child{border-top-color:black}.irs--sharp .irs-min,.irs--sharp .irs-max{color:white;font-size:14px;line-height:1;top:0;padding:3px 4px;opacity:.4;background-color:#a804b2;border-radius:2px}.irs--sharp .irs-from,.irs--sharp .irs-to,.irs--sharp .irs-single{font-size:14px;line-height:1;text-shadow:none;padding:3px 4px;background-color:#a804b2;color:white;border-radius:2px}.irs--sharp .irs-from:before,.irs--sharp .irs-to:before,.irs--sharp .irs-single:before{position:absolute;display:block;content:"";bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;overflow:hidden;border:3px solid transparent;border-top-color:#a804b2}.irs--sharp .irs-grid{height:25px}.irs--sharp .irs-grid-pol{background-color:#dedede}.irs--sharp .irs-grid-text{color:silver;font-size:13px}.irs--round{height:50px}.irs--round.irs-with-grid{height:65px}.irs--round .irs-line{top:36px;height:4px;background-color:#dee4ec;border-radius:4px}.irs--round .irs-bar{top:36px;height:4px;background-color:#006cfa}.irs--round .irs-bar--single{border-radius:4px 0 0 4px}.irs--round .irs-shadow{height:4px;bottom:21px;background-color:rgba(222,228,236,0.5)}.irs--round .irs-handle{top:26px;width:24px;height:24px;border:4px solid #006cfa;background-color:white;border-radius:24px;box-shadow:0 1px 3px rgba(0,0,255,0.3)}.irs--round .irs-handle.state_hover,.irs--round .irs-handle:hover{background-color:#f0f6ff}.irs--round .irs-min,.irs--round .irs-max{color:#333;font-size:14px;line-height:1;top:0;padding:3px 5px;background-color:rgba(0,0,0,0.1);border-radius:4px}.irs--round .irs-from,.irs--round .irs-to,.irs--round .irs-single{font-size:14px;line-height:1;text-shadow:none;padding:3px 5px;background-color:#006cfa;color:white;border-radius:4px}.irs--round .irs-from:before,.irs--round .irs-to:before,.irs--round .irs-single:before{position:absolute;display:block;content:"";bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;overflow:hidden;border:3px solid transparent;border-top-color:#006cfa}.irs--round .irs-grid{height:25px}.irs--round .irs-grid-pol{background-color:#dedede}.irs--round .irs-grid-text{color:silver;font-size:13px}.irs--square{height:50px}.irs--square.irs-with-grid{height:60px}.irs--square .irs-line{top:31px;height:4px;background-color:#dedede}.irs--square .irs-bar{top:31px;height:4px;background-color:black}.irs--square .irs-shadow{height:2px;bottom:21px;background-color:#dedede}.irs--square .irs-handle{top:25px;width:16px;height:16px;border:3px solid black;background-color:white;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.irs--square .irs-handle.state_hover,.irs--square .irs-handle:hover{background-color:#f0f6ff}.irs--square .irs-min,.irs--square .irs-max{color:#333;font-size:14px;line-height:1;top:0;padding:3px 5px;background-color:rgba(0,0,0,0.1)}.irs--square .irs-from,.irs--square .irs-to,.irs--square .irs-single{font-size:14px;line-height:1;text-shadow:none;padding:3px 5px;background-color:black;color:white}.irs--square .irs-grid{height:25px}.irs--square .irs-grid-pol{background-color:#dedede}.irs--square .irs-grid-text{color:silver;font-size:11px}
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
@@ -6207,7 +6419,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -6336,8 +6547,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -6404,48 +6613,560 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
+.radio__title {
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
   line-height: 1.071rem;
   text-transform: uppercase;
-  color: #1F2041; }
+  color: #1F2041;
+  margin-bottom: 1.143rem; }
 
-ul {
+.radio__list {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 15.714rem; }
+
+.radio__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+  .radio__input + .radio__label {
+    display: inline-flex;
+    align-items: flex-start;
+    cursor: pointer; }
+    .radio__input + .radio__label::before {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      width: 1.429rem;
+      height: 1.429rem;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 0.071rem solid rgba(31, 32, 65, 0.25);
+      border-radius: 50%;
+      margin-right: 0.714rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%; }
+    .radio__input + .radio__label:hover {
+      color: rgba(31, 32, 65, 0.75); }
+      .radio__input + .radio__label:hover::before {
+        border-color: #7635ff; }
+  .radio__input:checked + .radio__label::before {
+    border-color: #BC9CFF;
+    background-image: url(assets/images/radio.svg); }
+
+/*!Ion.RangeSlider, 2.3.1, © Denis Ineshin, 2010 - 2019, IonDen.com, Build date: 2019-12-19 16:51:02*/.irs{position:relative;display:block;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:12px;font-family:Arial,sans-serif}.irs-line{position:relative;display:block;overflow:hidden;outline:none !important}.irs-bar{position:absolute;display:block;left:0;width:0}.irs-shadow{position:absolute;display:none;left:0;width:0}.irs-handle{position:absolute;display:block;box-sizing:border-box;cursor:default;z-index:1}.irs-handle.type_last{z-index:2}.irs-min,.irs-max{position:absolute;display:block;cursor:default}.irs-min{left:0}.irs-max{right:0}.irs-from,.irs-to,.irs-single{position:absolute;display:block;top:0;left:0;cursor:default;white-space:nowrap}.irs-grid{position:absolute;display:none;bottom:0;left:0;width:100%;height:20px}.irs-with-grid .irs-grid{display:block}.irs-grid-pol{position:absolute;top:0;left:0;width:1px;height:8px;background:#000}.irs-grid-pol.small{height:4px}.irs-grid-text{position:absolute;bottom:0;left:0;white-space:nowrap;text-align:center;font-size:9px;line-height:9px;padding:0 3px;color:#000}.irs-disable-mask{position:absolute;display:block;top:0;left:-1%;width:102%;height:100%;cursor:default;background:rgba(0,0,0,0);z-index:2}.lt-ie9 .irs-disable-mask{background:#000;filter:alpha(opacity=0);cursor:not-allowed}.irs-disabled{opacity:.4}.irs-hidden-input{position:absolute !important;display:block !important;top:0 !important;left:0 !important;width:0 !important;height:0 !important;font-size:0 !important;line-height:0 !important;padding:0 !important;margin:0 !important;overflow:hidden;outline:none !important;z-index:-9999 !important;background:none !important;border-style:solid !important;border-color:transparent !important}.irs--flat{height:40px}.irs--flat.irs-with-grid{height:60px}.irs--flat .irs-line{top:25px;height:12px;background-color:#e1e4e9;border-radius:4px}.irs--flat .irs-bar{top:25px;height:12px;background-color:#ed5565}.irs--flat .irs-bar--single{border-radius:4px 0 0 4px}.irs--flat .irs-shadow{height:1px;bottom:16px;background-color:#e1e4e9}.irs--flat .irs-handle{top:22px;width:16px;height:18px;background-color:transparent}.irs--flat .irs-handle>i:first-child{position:absolute;display:block;top:0;left:50%;width:2px;height:100%;margin-left:-1px;background-color:#da4453}.irs--flat .irs-handle.state_hover>i:first-child,.irs--flat .irs-handle:hover>i:first-child{background-color:#a43540}.irs--flat .irs-min,.irs--flat .irs-max{top:0;padding:1px 3px;color:#999;font-size:10px;line-height:1.333;text-shadow:none;background-color:#e1e4e9;border-radius:4px}.irs--flat .irs-from,.irs--flat .irs-to,.irs--flat .irs-single{color:white;font-size:10px;line-height:1.333;text-shadow:none;padding:1px 5px;background-color:#ed5565;border-radius:4px}.irs--flat .irs-from:before,.irs--flat .irs-to:before,.irs--flat .irs-single:before{position:absolute;display:block;content:"";bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;overflow:hidden;border:3px solid transparent;border-top-color:#ed5565}.irs--flat .irs-grid-pol{background-color:#e1e4e9}.irs--flat .irs-grid-text{color:#999}.irs--big{height:55px}.irs--big.irs-with-grid{height:70px}.irs--big .irs-line{top:33px;height:12px;background-color:white;background:linear-gradient(to bottom, #ddd -50%, white 150%);border:1px solid #ccc;border-radius:12px}.irs--big .irs-bar{top:33px;height:12px;background-color:#92bce0;border:1px solid #428bca;background:linear-gradient(to bottom, #ffffff 0%, #428bca 30%, #b9d4ec 100%);box-shadow:inset 0 0 1px 1px rgba(255,255,255,0.5)}.irs--big .irs-bar--single{border-radius:12px 0 0 12px}.irs--big .irs-shadow{height:1px;bottom:16px;background-color:rgba(66,139,202,0.5)}.irs--big .irs-handle{top:25px;width:30px;height:30px;border:1px solid rgba(0,0,0,0.3);background-color:#cbcfd5;background:linear-gradient(to bottom, white 0%, #B4B9BE 30%, white 100%);box-shadow:1px 1px 2px rgba(0,0,0,0.2),inset 0 0 3px 1px white;border-radius:30px}.irs--big .irs-handle.state_hover,.irs--big .irs-handle:hover{border-color:rgba(0,0,0,0.45);background-color:#939ba7;background:linear-gradient(to bottom, white 0%, #919BA5 30%, white 100%)}.irs--big .irs-min,.irs--big .irs-max{top:0;padding:1px 5px;color:white;text-shadow:none;background-color:#9f9f9f;border-radius:3px}.irs--big .irs-from,.irs--big .irs-to,.irs--big .irs-single{color:white;text-shadow:none;padding:1px 5px;background-color:#428bca;background:linear-gradient(to bottom, #428bca 0%, #3071a9 100%);border-radius:3px}.irs--big .irs-grid-pol{background-color:#428bca}.irs--big .irs-grid-text{color:#428bca}.irs--modern{height:55px}.irs--modern.irs-with-grid{height:55px}.irs--modern .irs-line{top:25px;height:5px;background-color:#d1d6e0;background:linear-gradient(to bottom, #e0e4ea 0%, #d1d6e0 100%);border:1px solid #a3adc1;border-bottom-width:0;border-radius:5px}.irs--modern .irs-bar{top:25px;height:5px;background:#20b426;background:linear-gradient(to bottom, #20b426 0%, #18891d 100%)}.irs--modern .irs-bar--single{border-radius:5px 0 0 5px}.irs--modern .irs-shadow{height:1px;bottom:21px;background-color:rgba(209,214,224,0.5)}.irs--modern .irs-handle{top:37px;width:12px;height:13px;border:1px solid #a3adc1;border-top-width:0;box-shadow:1px 1px 1px rgba(0,0,0,0.1);border-radius:0 0 3px 3px}.irs--modern .irs-handle>i:nth-child(1){position:absolute;display:block;top:-4px;left:1px;width:6px;height:6px;border:1px solid #a3adc1;background:white;transform:rotate(45deg)}.irs--modern .irs-handle>i:nth-child(2){position:absolute;display:block;box-sizing:border-box;top:0;left:0;width:10px;height:12px;background:#e9e6e6;background:linear-gradient(to bottom, white 0%, #e9e6e6 100%);border-radius:0 0 3px 3px}.irs--modern .irs-handle>i:nth-child(3){position:absolute;display:block;box-sizing:border-box;top:3px;left:3px;width:4px;height:5px;border-left:1px solid #a3adc1;border-right:1px solid #a3adc1}.irs--modern .irs-handle.state_hover,.irs--modern .irs-handle:hover{border-color:#7685a2;background:#c3c7cd;background:linear-gradient(to bottom, #ffffff 0%, #919ba5 30%, #ffffff 100%)}.irs--modern .irs-handle.state_hover>i:nth-child(1),.irs--modern .irs-handle:hover>i:nth-child(1){border-color:#7685a2}.irs--modern .irs-handle.state_hover>i:nth-child(3),.irs--modern .irs-handle:hover>i:nth-child(3){border-color:#48536a}.irs--modern .irs-min,.irs--modern .irs-max{top:0;font-size:10px;line-height:1.333;text-shadow:none;padding:1px 5px;color:white;background-color:#d1d6e0;border-radius:5px}.irs--modern .irs-from,.irs--modern .irs-to,.irs--modern .irs-single{font-size:10px;line-height:1.333;text-shadow:none;padding:1px 5px;background-color:#20b426;color:white;border-radius:5px}.irs--modern .irs-from:before,.irs--modern .irs-to:before,.irs--modern .irs-single:before{position:absolute;display:block;content:"";bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;overflow:hidden;border:3px solid transparent;border-top-color:#20b426}.irs--modern .irs-grid{height:25px}.irs--modern .irs-grid-pol{background-color:#dedede}.irs--modern .irs-grid-text{color:silver;font-size:13px}.irs--sharp{height:50px;font-size:12px;line-height:1}.irs--sharp.irs-with-grid{height:57px}.irs--sharp .irs-line{top:30px;height:2px;background-color:black;border-radius:2px}.irs--sharp .irs-bar{top:30px;height:2px;background-color:#ee22fa}.irs--sharp .irs-bar--single{border-radius:2px 0 0 2px}.irs--sharp .irs-shadow{height:1px;bottom:21px;background-color:rgba(0,0,0,0.5)}.irs--sharp .irs-handle{top:25px;width:10px;height:10px;background-color:#a804b2}.irs--sharp .irs-handle>i:first-child{position:absolute;display:block;top:100%;left:0;width:0;height:0;border:5px solid transparent;border-top-color:#a804b2}.irs--sharp .irs-handle.state_hover,.irs--sharp .irs-handle:hover{background-color:black}.irs--sharp .irs-handle.state_hover>i:first-child,.irs--sharp .irs-handle:hover>i:first-child{border-top-color:black}.irs--sharp .irs-min,.irs--sharp .irs-max{color:white;font-size:14px;line-height:1;top:0;padding:3px 4px;opacity:.4;background-color:#a804b2;border-radius:2px}.irs--sharp .irs-from,.irs--sharp .irs-to,.irs--sharp .irs-single{font-size:14px;line-height:1;text-shadow:none;padding:3px 4px;background-color:#a804b2;color:white;border-radius:2px}.irs--sharp .irs-from:before,.irs--sharp .irs-to:before,.irs--sharp .irs-single:before{position:absolute;display:block;content:"";bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;overflow:hidden;border:3px solid transparent;border-top-color:#a804b2}.irs--sharp .irs-grid{height:25px}.irs--sharp .irs-grid-pol{background-color:#dedede}.irs--sharp .irs-grid-text{color:silver;font-size:13px}.irs--round{height:50px}.irs--round.irs-with-grid{height:65px}.irs--round .irs-line{top:36px;height:4px;background-color:#dee4ec;border-radius:4px}.irs--round .irs-bar{top:36px;height:4px;background-color:#006cfa}.irs--round .irs-bar--single{border-radius:4px 0 0 4px}.irs--round .irs-shadow{height:4px;bottom:21px;background-color:rgba(222,228,236,0.5)}.irs--round .irs-handle{top:26px;width:24px;height:24px;border:4px solid #006cfa;background-color:white;border-radius:24px;box-shadow:0 1px 3px rgba(0,0,255,0.3)}.irs--round .irs-handle.state_hover,.irs--round .irs-handle:hover{background-color:#f0f6ff}.irs--round .irs-min,.irs--round .irs-max{color:#333;font-size:14px;line-height:1;top:0;padding:3px 5px;background-color:rgba(0,0,0,0.1);border-radius:4px}.irs--round .irs-from,.irs--round .irs-to,.irs--round .irs-single{font-size:14px;line-height:1;text-shadow:none;padding:3px 5px;background-color:#006cfa;color:white;border-radius:4px}.irs--round .irs-from:before,.irs--round .irs-to:before,.irs--round .irs-single:before{position:absolute;display:block;content:"";bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;overflow:hidden;border:3px solid transparent;border-top-color:#006cfa}.irs--round .irs-grid{height:25px}.irs--round .irs-grid-pol{background-color:#dedede}.irs--round .irs-grid-text{color:silver;font-size:13px}.irs--square{height:50px}.irs--square.irs-with-grid{height:60px}.irs--square .irs-line{top:31px;height:4px;background-color:#dedede}.irs--square .irs-bar{top:31px;height:4px;background-color:black}.irs--square .irs-shadow{height:2px;bottom:21px;background-color:#dedede}.irs--square .irs-handle{top:25px;width:16px;height:16px;border:3px solid black;background-color:white;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.irs--square .irs-handle.state_hover,.irs--square .irs-handle:hover{background-color:#f0f6ff}.irs--square .irs-min,.irs--square .irs-max{color:#333;font-size:14px;line-height:1;top:0;padding:3px 5px;background-color:rgba(0,0,0,0.1)}.irs--square .irs-from,.irs--square .irs-to,.irs--square .irs-single{font-size:14px;line-height:1;text-shadow:none;padding:3px 5px;background-color:black;color:white}.irs--square .irs-grid{height:25px}.irs--square .irs-grid-pol{background-color:#dedede}.irs--square .irs-grid-text{color:silver;font-size:11px}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
+/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  color: rgba(31, 32, 65, 0.75);
+  background-color: #FFFFFF; }
+
+body {
+  font-size: 1rem; }
 
 .range-slider {
   width: 19rem;
   position: relative; }
+  .range-slider__title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.857rem;
+    line-height: 1.071rem;
+    text-transform: uppercase;
+    color: #1F2041; }
 
 .irs {
   display: block;
@@ -6476,6 +7197,8 @@ ul {
     display: none; }
 
 .irs--flat .irs-single {
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
@@ -6559,6 +7282,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -6730,7 +7509,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -6859,8 +7637,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -6927,46 +7703,13 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
+.rating__list {
   margin: 0;
   padding: 0;
-  list-style: none; }
-
-.rating__list {
+  list-style: none;
   display: flex;
   cursor: pointer; }
 
@@ -6992,8 +7735,64 @@ ul {
   line-height: 1.429rem;
   background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   -webkit-background-clip: text;
-  background-clip: text;
+          background-clip: text;
   color: transparent; }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
 @font-face {
   font-family: "Montserrat";
@@ -7222,7 +8021,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -7351,8 +8149,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -7419,61 +8215,43 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
+.reviews__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.429rem; }
 
-h2 {
+.reviews__title {
+  margin: 0;
+  padding: 0;
   font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 1.357rem;
   line-height: 1.714rem;
   color: #1F2041; }
 
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
+.reviews__count {
+  line-height: 1rem; }
 
-ul {
+.reviews__list {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-.reviews__wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.429rem; }
-
 .reviews__item {
-  margin-bottom: 1.786rem; }
+  margin-bottom: 1.571rem; }
 
 .reviews__author {
   display: flex;
-  margin-bottom: 0.857rem; }
+  margin-bottom: 0.5rem; }
 
 .reviews__avatar {
   width: 3.429rem;
   height: 3.429rem;
-  margin-right: 0.714rem;
+  margin-right: 0.357rem;
   border: 0.143rem solid #FFFFFF;
   border-radius: 2.286rem;
   box-shadow: 0 0.714rem 1.429rem rgba(31, 32, 65, 0.1); }
@@ -7487,7 +8265,8 @@ ul {
 
 .reviews__text-wrapper {
   display: flex;
-  padding-left: 0.357rem; }
+  align-items: baseline;
+  padding-left: 0.286rem; }
 
 .reviews__text {
   max-width: 46.643rem;
@@ -7549,6 +8328,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -7720,7 +8555,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -7849,8 +8683,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -7917,46 +8749,12 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
+.rich-checkbox__title {
   margin: 0;
   padding: 0;
-  list-style: none; }
-
-.rich-checkbox__title {
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
@@ -7964,6 +8762,11 @@ ul {
   text-transform: uppercase;
   color: #1F2041;
   margin-bottom: 1.143rem; }
+
+.rich-checkbox__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
 .rich-checkbox__label {
   flex-direction: column;
@@ -7988,35 +8791,99 @@ ul {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
-  .rich-checkbox__input + label {
+  .rich-checkbox__input + .rich-checkbox__label {
     display: inline-flex;
     flex-direction: row;
     align-items: flex-start;
     cursor: pointer;
     color: rgba(31, 32, 65, 0.5);
     line-height: 1.286rem; }
-    .rich-checkbox__input + label::before {
+    .rich-checkbox__input + .rich-checkbox__label::before {
       content: '';
       display: inline-block;
+      box-sizing: border-box;
       width: 1.429rem;
       height: 1.429rem;
       flex-shrink: 0;
       flex-grow: 0;
       border: 0.071rem solid rgba(31, 32, 65, 0.25);
       border-radius: 0.286rem;
-      margin-right: 0.5em;
+      margin-right: 0.714rem;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%; }
-    .rich-checkbox__input + label:hover, .rich-checkbox__input + label:hover::before {
+    .rich-checkbox__input + .rich-checkbox__label:hover, .rich-checkbox__input + .rich-checkbox__label:hover::before {
       color: rgba(31, 32, 65, 0.75);
       border-color: rgba(31, 32, 65, 0.75); }
-  .rich-checkbox__input:checked + label::before {
+  .rich-checkbox__input:checked + .rich-checkbox__label::before {
     border-color: #BC9CFF;
     background-image: url(assets/images/tick.svg); }
+
+.rich-checkbox__item:first-of-type .rich-checkbox__description {
+  max-width: 14.286rem; }
+
+.rich-checkbox__item:last-of-type .rich-checkbox__description {
+  max-width: 16.643rem; }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
 @font-face {
   font-family: "Montserrat";
@@ -8245,7 +9112,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -8374,8 +9240,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -8442,49 +9306,24 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
 
 .room-details {
   max-width: 20rem; }
   .room-details__title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.357rem;
+    line-height: 1.714rem;
+    color: #1F2041;
     margin-bottom: 1.429rem; }
+  .room-details__list {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
   .room-details__item {
     display: flex;
     align-items: center;
@@ -8514,10 +9353,9 @@ ul {
     font-size: 3.429rem;
     line-height: 3.429rem;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-clip: text;
-    text-fill-color: transparent; }
+            background-clip: text;
+    -webkit-text-fill-color: transparent; }
   .room-details__name {
     margin: 0;
     font-weight: bold; }
@@ -8580,6 +9418,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -8751,7 +9645,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -8880,8 +9773,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -8948,44 +9839,112 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
+.text-field {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 22.857rem; }
+  .text-field__label {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.857rem;
+    line-height: 1.071rem;
+    text-transform: uppercase;
+    color: #1F2041;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0.357rem; }
+  .text-field__state {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.857rem;
+    line-height: 1.071rem;
+    text-transform: uppercase;
+    color: #1F2041;
+    font-weight: normal;
+    color: rgba(31, 32, 65, 0.5); }
+  .text-field__input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 3.143rem;
+    padding: 0.929rem 0 0.929rem 1.071rem;
+    border: 0.071rem solid rgba(31, 32, 65, 0.25);
+    border-radius: 0.286rem; }
+    .text-field__input:hover, .text-field__input:focus, .text-field__input_hovered {
+      outline: none;
+      border-color: rgba(31, 32, 65, 0.5); }
+    .text-field__input::-moz-placeholder {
+      color: rgba(31, 32, 65, 0.25); }
+    .text-field__input::placeholder {
+      color: rgba(31, 32, 65, 0.25); }
+    .text-field__input:hover::-moz-placeholder, .text-field__input:focus::-moz-placeholder, .text-field__input_hovered::-moz-placeholder {
+      color: rgba(31, 32, 65, 0.75); }
+    .text-field__input:hover::placeholder, .text-field__input:focus::placeholder, .text-field__input_hovered::placeholder {
+      color: rgba(31, 32, 65, 0.75); }
 
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
 
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
   font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
 @font-face {
   font-family: "Montserrat";
@@ -9214,7 +10173,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -9343,8 +10301,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -9411,85 +10367,8 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.text-field {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 22.857rem; }
-  .text-field__label {
-    font-family: 'Montserrat', 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 0.857rem;
-    line-height: 1.071rem;
-    text-transform: uppercase;
-    color: #1F2041;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 0.357rem; }
-  .text-field__state {
-    font-family: 'Montserrat', 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 0.857rem;
-    line-height: 1.071rem;
-    text-transform: uppercase;
-    color: #1F2041;
-    margin: 0;
-    font-weight: normal;
-    color: rgba(31, 32, 65, 0.5); }
-  .text-field__input {
-    box-sizing: border-box;
-    width: 100%;
-    height: 3.143rem;
-    padding: 0.929rem 0 0.929rem 1.071rem;
-    border: 0.071rem solid rgba(31, 32, 65, 0.25);
-    border-radius: 0.286rem; }
-    .text-field__input:hover, .text-field__input:focus, .text-field__input_hovered {
-      outline: none;
-      border-color: rgba(31, 32, 65, 0.5); }
-    .text-field__input::placeholder {
-      color: rgba(31, 32, 65, 0.25); }
-    .text-field__input:hover::placeholder, .text-field__input:focus::placeholder, .text-field__input_hovered::placeholder {
-      color: rgba(31, 32, 65, 0.75); }
 
 .subscription-text-field {
   max-width: 19rem;
@@ -9520,9 +10399,65 @@ ul {
     line-height: 1.714rem;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; }
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
 @font-face {
   font-family: "Montserrat";
@@ -9751,7 +10686,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -9880,8 +10814,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -9948,46 +10880,12 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
+.toggle__title {
   margin: 0;
   padding: 0;
-  list-style: none; }
-
-.toggle__title {
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
@@ -9996,6 +10894,11 @@ ul {
   color: #1F2041;
   margin-bottom: 1.071rem; }
 
+.toggle__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .toggle__item {
   position: relative;
   margin-bottom: 0.786rem;
@@ -10003,11 +10906,11 @@ ul {
 
 .toggle__slider {
   position: absolute;
+  box-sizing: border-box;
   width: 2.857rem;
   height: 1.429rem;
   top: 0;
   left: 0;
-  -webkit-transition: .4s;
   transition: .4s;
   border-radius: 0.714rem;
   border: 0.071rem solid rgba(31, 32, 65, 0.25);
@@ -10020,7 +10923,6 @@ ul {
     left: 0.214rem;
     bottom: 0.214rem;
     background-color: rgba(31, 32, 65, 0.25);
-    -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%; }
 
@@ -10032,14 +10934,13 @@ ul {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
   .toggle__input:checked + .toggle__slider {
     border-color: #BC9CFF; }
     .toggle__input:checked + .toggle__slider:before {
-      -webkit-transform: translateX(1.429rem);
-      -ms-transform: translateX(1.429rem);
       transform: translateX(1.429rem);
       background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
 
@@ -10099,6 +11000,62 @@ ul {
   font-display: swap;
   src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -10270,7 +11227,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -10399,8 +11355,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -10467,44 +11421,8 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
 
 .text-field {
   display: flex;
@@ -10512,6 +11430,8 @@ ul {
   flex-wrap: wrap;
   max-width: 22.857rem; }
   .text-field__label {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -10523,13 +11443,14 @@ ul {
     flex-wrap: wrap;
     margin-bottom: 0.357rem; }
   .text-field__state {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
     line-height: 1.071rem;
     text-transform: uppercase;
     color: #1F2041;
-    margin: 0;
     font-weight: normal;
     color: rgba(31, 32, 65, 0.5); }
   .text-field__input {
@@ -10542,10 +11463,70 @@ ul {
     .text-field__input:hover, .text-field__input:focus, .text-field__input_hovered {
       outline: none;
       border-color: rgba(31, 32, 65, 0.5); }
+    .text-field__input::-moz-placeholder {
+      color: rgba(31, 32, 65, 0.25); }
     .text-field__input::placeholder {
       color: rgba(31, 32, 65, 0.25); }
+    .text-field__input:hover::-moz-placeholder, .text-field__input:focus::-moz-placeholder, .text-field__input_hovered::-moz-placeholder {
+      color: rgba(31, 32, 65, 0.75); }
     .text-field__input:hover::placeholder, .text-field__input:focus::placeholder, .text-field__input_hovered::placeholder {
       color: rgba(31, 32, 65, 0.75); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
 @font-face {
   font-family: "Montserrat";
@@ -10774,7 +11755,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -10903,8 +11883,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -10971,44 +11949,8 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
-
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
-
-h2 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.357rem;
-  line-height: 1.714rem;
-  color: #1F2041; }
-
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 0.857rem;
-  line-height: 1.071rem;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
 
 body {
   width: 100%;
@@ -11017,11 +11959,14 @@ body {
 .form-elements {
   display: grid;
   grid-template-columns: repeat(3, 22.857rem);
+  grid-template-rows: repeat(4, -webkit-min-content);
   grid-template-rows: repeat(4, min-content);
   justify-content: space-between;
   max-width: 82.857rem;
   margin: 4.714rem auto 0 auto; }
   .form-elements__title {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 0.857rem;
@@ -11029,6 +11974,8 @@ body {
     text-transform: uppercase;
     color: #1F2041;
     margin-bottom: 1.143rem; }
+  .form-elements__title_view_rating {
+    margin-bottom: 1.286rem; }
   .form-elements__button-wrapper {
     display: inline-block;
     margin-right: 1.071rem;
@@ -11036,7 +11983,7 @@ body {
     .form-elements__button-wrapper:nth-of-type(2) {
       margin-bottom: 1.786rem; }
     .form-elements__button-wrapper:last-of-type {
-      margin-bottom: 2rem; }
+      margin-bottom: 1.929rem; }
 
 .form-elements__elements-wrapper_alignment_center {
   justify-self: center; }
@@ -11057,20 +12004,26 @@ body {
 .form-elements__element_margin_bottom-21 {
   margin-bottom: 1.5rem; }
 
+.form-elements__element_margin_bottom-22 {
+  margin-bottom: 1.571rem; }
+
 .form-elements__element_margin_bottom-24 {
   margin-bottom: 1.714rem; }
 
 .form-elements__element_margin_bottom-35 {
   margin-bottom: 2.5rem; }
 
-.form-elements__element_margin_bottom-38 {
-  margin-bottom: 2.714rem; }
+.form-elements__element_margin_bottom-36 {
+  margin-bottom: 2.571rem; }
 
 .form-elements__element_margin_bottom-41 {
   margin-bottom: 2.929rem; }
 
 .form-elements__element_margin_bottom-42 {
   margin-bottom: 3rem; }
+
+.form-elements__element_margin_bottom-43 {
+  margin-bottom: 3.071rem; }
 
 .form-elements__element_margin_bottom-45 {
   margin-bottom: 3.214rem; }

@@ -116,7 +116,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button.scss */ \"./src/components/button/button.scss\");\n/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/button/button.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button.scss */ \"./src/components/button/button.scss\");\n/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/button/button.js?");
 
 /***/ }),
 
@@ -139,7 +139,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../subscription-text-field/subscription-text-field.js */ \"./src/components/subscription-text-field/subscription-text-field.js\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer.scss */ \"./src/components/footer/footer.scss\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/components/footer/footer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../subscription-text-field/subscription-text-field.js */ \"./src/components/subscription-text-field/subscription-text-field.js\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer.scss */ \"./src/components/footer/footer.scss\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/components/footer/footer.js?");
 
 /***/ }),
 
@@ -162,7 +162,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _modal_modal_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modal/modal.js */ \"./src/components/modal/modal.js\");\n/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header.scss */ \"./src/components/header/header.scss\");\n/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nconst toggleMenuButtons = document.querySelectorAll('.js-header__toggle-menu-btn');\nconst toggleSubmenuList = document.querySelectorAll('.header__nav-item.header__submenu');\nconst headerNavMenu = document.querySelectorAll('.js-header__main-nav');\nconst userNames = document.querySelectorAll('.js-header__user-name');\nconst handleSubmenuButtonClick = () => {\n  const submenu = event.target.closest('.header__submenu');\n  if (submenu.classList.contains('header__submenu_state_closed')) {\n    submenu.classList.remove('header__submenu_state_closed');\n    submenu.classList.add('header__submenu_state_opened');\n  } else {\n    submenu.classList.add('header__submenu_state_closed');\n    submenu.classList.remove('header__submenu_state_opened');\n  }\n};\n\nuserNames.forEach((name) => {\n  const headerWrapper = name.closest('.js-header__buttons-wrapper');\n  headerWrapper.classList.add('header__buttons-wrapper_state_authorized');\n});\n\ntoggleMenuButtons.forEach((button) => {\n  button.classList.remove('header__toggle-menu-btn_state_without-js');\n  button.classList.add('header__toggle-menu-btn_state_with-js');\n});\n\nheaderNavMenu.forEach((navMenu) => {\n  const wrapper = navMenu.closest('.header__content-wrapper');\n  const list = navMenu.querySelector('.js-header__nav-list');\n  wrapper.classList.remove('header__content-wrapper-menu_state_opened');\n  wrapper.classList.add('header__content-wrapper-menu_state_closed');\n});\n\ntoggleMenuButtons.forEach((button) => {\n  button.addEventListener('click', function() {\n    const wrapper = button.closest('.header__content-wrapper');\n    if (wrapper.classList.contains('header__content-wrapper-menu_state_closed')) {\n      wrapper.classList.remove('header__content-wrapper-menu_state_closed');\n      wrapper.classList.add('header__content-wrapper-menu_state_opened');\n    } else {\n      wrapper.classList.add('header__content-wrapper-menu_state_closed');\n      wrapper.classList.remove('header__content-wrapper-menu_state_opened');\n    }\n  });\n});\n\ntoggleSubmenuList.forEach((submenu) => {\n  const button = submenu.querySelector('.header__toggle-submenu-btn');\n  button.classList.remove('header__toggle-submenu-btn_state_without-js');\n  button.classList.add('header__toggle-submenu-btn_state_with-js');\n  submenu.addEventListener('click', handleSubmenuButtonClick)\n});\n\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _modal_modal_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modal/modal.js */ \"./src/components/modal/modal.js\");\n/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header.scss */ \"./src/components/header/header.scss\");\n/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nconst toggleMenuButtons = document.querySelectorAll('.js-header__toggle-menu-btn');\nconst toggleSubmenuList = document.querySelectorAll('.js-header__nav-item.header__submenu');\nconst headerNavMenu = document.querySelectorAll('.js-header__main-nav');\nconst userNames = document.querySelectorAll('.js-header__user-name');\nconst handleSubmenuButtonClick = () => {\n  const submenu = event.target.closest('.header__submenu');\n  if (submenu.classList.contains('header__submenu_state_closed')) {\n    submenu.classList.remove('header__submenu_state_closed');\n    submenu.classList.add('header__submenu_state_opened');\n  } else {\n    submenu.classList.add('header__submenu_state_closed');\n    submenu.classList.remove('header__submenu_state_opened');\n  }\n};\n\nuserNames.forEach((name) => {\n  const headerWrapper = name.closest('.js-header__buttons-wrapper');\n  headerWrapper.classList.add('header__buttons-wrapper_state_authorized');\n});\n\ntoggleMenuButtons.forEach((button) => {\n  button.classList.remove('header__toggle-menu-btn_state_without-js');\n  button.classList.add('header__toggle-menu-btn_state_with-js');\n});\n\nheaderNavMenu.forEach((navMenu) => {\n  const wrapper = navMenu.closest('.header__content-wrapper');\n  const list = navMenu.querySelector('.js-header__nav-list');\n  wrapper.classList.remove('header__content-wrapper-menu_state_opened');\n  wrapper.classList.add('header__content-wrapper-menu_state_closed');\n});\n\ntoggleMenuButtons.forEach((button) => {\n  button.addEventListener('click', function() {\n    const wrapper = button.closest('.header__content-wrapper');\n    if (wrapper.classList.contains('header__content-wrapper-menu_state_closed')) {\n      wrapper.classList.remove('header__content-wrapper-menu_state_closed');\n      wrapper.classList.add('header__content-wrapper-menu_state_opened');\n    } else {\n      wrapper.classList.add('header__content-wrapper-menu_state_closed');\n      wrapper.classList.remove('header__content-wrapper-menu_state_opened');\n    }\n  });\n});\n\ntoggleSubmenuList.forEach((submenu) => {\n  const button = submenu.querySelector('.js-header__toggle-submenu-btn');\n  button.classList.remove('header__toggle-submenu-btn_state_without-js');\n  button.classList.add('header__toggle-submenu-btn_state_with-js');\n  submenu.addEventListener('click', handleSubmenuButtonClick)\n});\n\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
 
 /***/ }),
 
@@ -177,26 +177,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/components/login-form/login-form.js":
-/*!*************************************************!*\
-  !*** ./src/components/login-form/login-form.js ***!
-  \*************************************************/
+/***/ "./src/components/login/login.js":
+/*!***************************************!*\
+  !*** ./src/components/login/login.js ***!
+  \***************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _login_form_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login-form.scss */ \"./src/components/login-form/login-form.scss\");\n/* harmony import */ var _login_form_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_login_form_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/login-form/login-form.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _login_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login.scss */ \"./src/components/login/login.scss\");\n/* harmony import */ var _login_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_login_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/login/login.js?");
 
 /***/ }),
 
-/***/ "./src/components/login-form/login-form.scss":
-/*!***************************************************!*\
-  !*** ./src/components/login-form/login-form.scss ***!
-  \***************************************************/
+/***/ "./src/components/login/login.scss":
+/*!*****************************************!*\
+  !*** ./src/components/login/login.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/login-form/login-form.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/login/login.scss?");
 
 /***/ }),
 
@@ -208,7 +208,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logo.scss */ \"./src/components/logo/logo.scss\");\n/* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_logo_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/logo/logo.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logo.scss */ \"./src/components/logo/logo.scss\");\n/* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_logo_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/logo/logo.js?");
 
 /***/ }),
 
@@ -231,7 +231,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var _masked_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./masked-text-field.scss */ \"./src/components/masked-text-field/masked-text-field.scss\");\n/* harmony import */ var _masked_text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_masked_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var inputmask_dist_jquery_inputmask__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! inputmask/dist/jquery.inputmask */ \"./node_modules/inputmask/dist/jquery.inputmask.js\");\n/* harmony import */ var inputmask_dist_jquery_inputmask__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(inputmask_dist_jquery_inputmask__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\njQuery(function() {\n  const $selector = $('.masked-text-field__input');\n  const options = {\n    alias: 'datetime',\n    inputFormat: 'dd.mm.yyyy',\n    placeholder: 'дд.мм.гггг'\n  };\n  $selector.inputmask(options);\n});\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"), __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/masked-text-field/masked-text-field.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var _masked_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./masked-text-field.scss */ \"./src/components/masked-text-field/masked-text-field.scss\");\n/* harmony import */ var _masked_text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_masked_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var inputmask_dist_jquery_inputmask__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! inputmask/dist/jquery.inputmask */ \"./node_modules/inputmask/dist/jquery.inputmask.js\");\n/* harmony import */ var inputmask_dist_jquery_inputmask__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(inputmask_dist_jquery_inputmask__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\njQuery(function() {\n  const $selector = $('.js-masked-text-field__input');\n  const options = {\n    alias: 'datetime',\n    inputFormat: 'dd.mm.yyyy',\n    placeholder: 'дд.мм.гггг'\n  };\n  $selector.inputmask(options);\n});\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"), __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/masked-text-field/masked-text-field.js?");
 
 /***/ }),
 
@@ -254,7 +254,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _login_form_login_form_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../login-form/login-form.js */ \"./src/components/login-form/login-form.js\");\n/* harmony import */ var _modal_modal_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modal/modal.scss */ \"./src/components/modal/modal.scss\");\n/* harmony import */ var _modal_modal_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modal_modal_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _registration_form_registration_form_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../registration-form/registration-form.js */ \"./src/components/registration-form/registration-form.js\");\n\n\n\n\nconst body = document.querySelector('body');\nconst loginButton = document.querySelector('.button_type_login');\nconst registerButton = document.querySelector('.button_type_register');\nconst loginPopup = document.querySelector('.js-login-modal');\nconst registrationPopup = document.querySelector('.js-registration-modal');\nconst loginOverlay = document.querySelector('.js-login-modal__overlay');\nconst registrationOverlay = document.querySelector('.js-registration-modal__overlay');\nconst SwitchingClassName = {\n  LOGIN: 'login-modal__show',\n  REGISTER: 'registration-modal__show'\n};\nconst KeyCode = {\n  ESC: '27'\n};\n\nconst hidePopups = () => {\n  hideElementByClassName(loginPopup, SwitchingClassName.LOGIN);\n  hideElementByClassName(registrationPopup, SwitchingClassName.REGISTER);\n};\n\nconst hideElementByClassName = (element, className) => {\n  if (element.classList.contains(className)) {\n    element.classList.remove(className);\n  }\n};\n\nconst toggleClassOnElement = (element, className) => {\n  element.classList.toggle(className);\n};\n\nconst handleLoginButtonClick = () => {\n  toggleClassOnElement(loginPopup, SwitchingClassName.LOGIN);\n};\n\nconst handleRegisterButtonClick = () => {\n  toggleClassOnElement(registrationPopup, SwitchingClassName.REGISTER);\n};\n\nconst handleEscKeydown = (evt) => {\n  if (evt.keyCode == KeyCode.ESC) {\n    hidePopups();\n  }\n};\n\nif (loginOverlay) {\n  loginOverlay.addEventListener('click', hidePopups);\n}\n\nif (registrationOverlay) {\n  registrationOverlay.addEventListener('click', hidePopups);\n}\n\nloginButton.addEventListener('click', handleLoginButtonClick);\nregisterButton.addEventListener('click', handleRegisterButtonClick);\nbody.addEventListener('keydown', handleEscKeydown);\n\n\n//# sourceURL=webpack:///./src/components/modal/modal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _login_login_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../login/login.js */ \"./src/components/login/login.js\");\n/* harmony import */ var _modal_modal_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modal/modal.scss */ \"./src/components/modal/modal.scss\");\n/* harmony import */ var _modal_modal_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modal_modal_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _registration_registration_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../registration/registration.js */ \"./src/components/registration/registration.js\");\n\n\n\n\nconst body = document.querySelector('body');\nconst loginButton = document.querySelector('.js-button_type_login');\nconst registerButton = document.querySelector('.js-button_type_register');\nconst loginPopup = document.querySelector('.js-login-modal');\nconst registrationPopup = document.querySelector('.js-registration-modal');\nconst loginOverlay = document.querySelector('.js-login-modal__overlay');\nconst registrationOverlay = document.querySelector('.js-registration-modal__overlay');\nconst SwitchingClassName = {\n  LOGIN: 'login-modal__show',\n  REGISTER: 'registration-modal__show'\n};\nconst KeyCode = {\n  ESC: '27'\n};\n\nconst hidePopups = () => {\n  hideElementByClassName(loginPopup, SwitchingClassName.LOGIN);\n  hideElementByClassName(registrationPopup, SwitchingClassName.REGISTER);\n};\n\nconst hideElementByClassName = (element, className) => {\n  if (element.classList.contains(className)) {\n    element.classList.remove(className);\n  }\n};\n\nconst toggleClassOnElement = (element, className) => {\n  element.classList.toggle(className);\n};\n\nconst handleLoginButtonClick = () => {\n  toggleClassOnElement(loginPopup, SwitchingClassName.LOGIN);\n};\n\nconst handleRegisterButtonClick = () => {\n  toggleClassOnElement(registrationPopup, SwitchingClassName.REGISTER);\n};\n\nconst handleEscKeydown = (evt) => {\n  if (evt.keyCode == KeyCode.ESC) {\n    hidePopups();\n  }\n};\n\nif (loginOverlay) {\n  loginOverlay.addEventListener('click', hidePopups);\n}\n\nif (registrationOverlay) {\n  registrationOverlay.addEventListener('click', hidePopups);\n}\n\nloginButton.addEventListener('click', handleLoginButtonClick);\nregisterButton.addEventListener('click', handleRegisterButtonClick);\nbody.addEventListener('keydown', handleEscKeydown);\n\n\n//# sourceURL=webpack:///./src/components/modal/modal.js?");
 
 /***/ }),
 
@@ -277,7 +277,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-buttons.scss */ \"./src/components/radio-buttons/radio-buttons.scss\");\n/* harmony import */ var _radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/radio-buttons/radio-buttons.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-buttons.scss */ \"./src/components/radio-buttons/radio-buttons.scss\");\n/* harmony import */ var _radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/radio-buttons/radio-buttons.js?");
 
 /***/ }),
 
@@ -292,26 +292,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/components/registration-form/registration-form.js":
-/*!***************************************************************!*\
-  !*** ./src/components/registration-form/registration-form.js ***!
-  \***************************************************************/
+/***/ "./src/components/registration/registration.js":
+/*!*****************************************************!*\
+  !*** ./src/components/registration/registration.js ***!
+  \*****************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _masked_text_field_masked_text_field_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../masked-text-field/masked-text-field.js */ \"./src/components/masked-text-field/masked-text-field.js\");\n/* harmony import */ var _radio_buttons_radio_buttons_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../radio-buttons/radio-buttons.js */ \"./src/components/radio-buttons/radio-buttons.js\");\n/* harmony import */ var _text_field_text_field_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../text-field/text-field.js */ \"./src/components/text-field/text-field.js\");\n/* harmony import */ var _toggle_button_toggle_button_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../toggle-button/toggle-button.js */ \"./src/components/toggle-button/toggle-button.js\");\n/* harmony import */ var _registration_form_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./registration-form.scss */ \"./src/components/registration-form/registration-form.scss\");\n/* harmony import */ var _registration_form_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_registration_form_scss__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/components/registration-form/registration-form.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _masked_text_field_masked_text_field_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../masked-text-field/masked-text-field.js */ \"./src/components/masked-text-field/masked-text-field.js\");\n/* harmony import */ var _radio_buttons_radio_buttons_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../radio-buttons/radio-buttons.js */ \"./src/components/radio-buttons/radio-buttons.js\");\n/* harmony import */ var _text_field_text_field_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../text-field/text-field.js */ \"./src/components/text-field/text-field.js\");\n/* harmony import */ var _toggle_button_toggle_button_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../toggle-button/toggle-button.js */ \"./src/components/toggle-button/toggle-button.js\");\n/* harmony import */ var _registration_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./registration.scss */ \"./src/components/registration/registration.scss\");\n/* harmony import */ var _registration_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_registration_scss__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/components/registration/registration.js?");
 
 /***/ }),
 
-/***/ "./src/components/registration-form/registration-form.scss":
-/*!*****************************************************************!*\
-  !*** ./src/components/registration-form/registration-form.scss ***!
-  \*****************************************************************/
+/***/ "./src/components/registration/registration.scss":
+/*!*******************************************************!*\
+  !*** ./src/components/registration/registration.scss ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/registration-form/registration-form.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/registration/registration.scss?");
 
 /***/ }),
 
@@ -323,7 +323,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subscription-text-field.scss */ \"./src/components/subscription-text-field/subscription-text-field.scss\");\n/* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/subscription-text-field/subscription-text-field.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subscription-text-field.scss */ \"./src/components/subscription-text-field/subscription-text-field.scss\");\n/* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/subscription-text-field/subscription-text-field.js?");
 
 /***/ }),
 
@@ -346,7 +346,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text-field.scss */ \"./src/components/text-field/text-field.scss\");\n/* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/text-field/text-field.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text-field.scss */ \"./src/components/text-field/text-field.scss\");\n/* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/text-field/text-field.js?");
 
 /***/ }),
 
@@ -369,7 +369,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _toggle_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle-button.scss */ \"./src/components/toggle-button/toggle-button.scss\");\n/* harmony import */ var _toggle_button_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_toggle_button_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/toggle-button/toggle-button.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _toggle_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle-button.scss */ \"./src/components/toggle-button/toggle-button.scss\");\n/* harmony import */ var _toggle_button_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_toggle_button_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/toggle-button/toggle-button.js?");
 
 /***/ }),
 
@@ -392,7 +392,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/header/header.js */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_logo_logo_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./headers-and-footers.scss */ \"./src/pages/headers-and-footers/headers-and-footers.scss\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/pages/headers-and-footers/headers-and-footers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/header/header.js */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_logo_logo_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./headers-and-footers.scss */ \"./src/pages/headers-and-footers/headers-and-footers.scss\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/headers-and-footers/headers-and-footers.js?");
 
 /***/ }),
 

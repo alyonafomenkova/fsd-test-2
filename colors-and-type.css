@@ -6,6 +6,64 @@
   .logo__img_view_uikit {
     margin-top: 2.143rem;
     margin-left: 2.143rem; }
+  .logo:hover {
+    opacity: 0.75; }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-regular.woff2) format("woff2"), url(assets/fonts/montserrat-regular.woff) format("woff"), url(assets/fonts/montserrat-regular.ttf) format("truetype"), url(assets/fonts/montserrat-regular.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/montserrat-bold.woff2) format("woff2"), url(assets/fonts/montserrat-bold.woff) format("woff"), url(assets/fonts/montserrat-bold.ttf) format("truetype"), url(assets/fonts/montserrat-bold.svg#+Montserrat) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-regular.woff2) format("woff2"), url(assets/fonts/quicksand-regular.woff) format("woff"), url(assets/fonts/quicksand-regular.ttf) format("truetype"), url(assets/fonts/quicksand-regular.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/quicksand-bold.woff2) format("woff2"), url(assets/fonts/quicksand-bold.woff) format("woff"), url(assets/fonts/quicksand-bold.ttf) format("truetype"), url(assets/fonts/quicksand-bold.svg#+Quicksand) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/opensans-regular.woff2) format("woff2"), url(assets/fonts/opensans-regular.woff) format("woff"), url(assets/fonts/opensans-regular.ttf) format("truetype"), url("assets/fonts/opensans-regular.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(assets/fonts/opensans-bold.woff2) format("woff2"), url(assets/fonts/opensans-bold.woff) format("woff"), url(assets/fonts/opensans-bold.ttf) format("truetype"), url("assets/fonts/opensans-bold.svg#+Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/materialIcons-regular.woff2) format("woff2"), url(assets/fonts/materialIcons-regular.woff) format("woff"), url(assets/fonts/materialIcons-regular.ttf) format("truetype"), url("assets/fonts/materialIcons-regular.svg#+Material Icons") format("svg"); }
+
+@font-face {
+  font-family: "font-awesome-5-brands-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(assets/fonts/font-awesome-5-brands-regular.woff2) format("woff2"), url(assets/fonts/font-awesome-5-brands-regular.woff) format("woff"), url(assets/fonts/font-awesome-5-brands-regular.ttf) format("truetype"), url(assets/fonts/font-awesome-5-brands-regular.svg#+font-awesome-5-brands-regular) format("svg"); }
 
 @font-face {
   font-family: "Montserrat";
@@ -234,7 +292,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -363,8 +420,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -431,33 +486,103 @@ html {
   color: rgba(31, 32, 65, 0.75);
   background-color: #FFFFFF; }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-size: 1rem; }
 
-h1 {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.714rem;
-  line-height: 2.143rem;
-  color: #1F2041; }
+body {
+  max-width: 1440px;
+  margin: 0 auto; }
 
-h2 {
+.theme__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 4.786rem 13.214rem 0 10.714rem; }
+
+.theme__color {
+  display: flex;
+  margin-bottom: 1.429rem; }
+
+.theme__color-example {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2.857rem;
+  border-radius: 0.429rem; }
+
+.theme__color-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+
+.theme__color-title {
+  margin: 0;
+  padding: 0;
   font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 1.357rem;
   line-height: 1.714rem;
   color: #1F2041; }
 
-h3 {
+.theme__color-description {
+  margin: 0;
+  font-family: 'Quicksand', 'Arial', sans-serif;
+  font-weight: normal;
+  font-size: 1.357rem;
+  line-height: 2.071; }
+
+.theme__type {
+  display: flex;
+  justify-content: space-between;
+  width: 28.571rem;
+  margin-bottom: 3.714rem; }
+  .theme__type:nth-child(3) {
+    width: 17.429rem;
+    margin-bottom: 2.429rem; }
+
+.theme__type-description {
+  text-align: left; }
+
+.theme__type-wrapper_type_h1 .theme__type-title_type_h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1.714rem;
+  line-height: 2.143rem;
+  color: #1F2041;
+  margin-right: 2.286rem; }
+
+.theme__type-wrapper_type_h1 .theme__type-description {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1.714rem;
+  line-height: 2.143rem;
+  color: #1F2041; }
+
+.theme__type-wrapper_type_h2 .theme__type-title_type_h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1.357rem;
+  line-height: 1.714rem;
+  color: #1F2041;
+  margin-right: 2.429rem; }
+
+.theme__type-wrapper_type_h2 .theme__type-description {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1.357rem;
+  line-height: 1.714rem;
+  color: #1F2041; }
+
+.theme__type-wrapper_type_h3 .theme__type-title_type_h3,
+.theme__type-wrapper_type_h3 .theme__type-description {
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 0.857rem;
@@ -465,58 +590,10 @@ h3 {
   text-transform: uppercase;
   color: #1F2041; }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+.theme__type-wrapper_type_body .theme__type-title_type_body {
+  font-size: 1rem;
+  margin-right: 1.429rem; }
 
-body {
-  width: 100%;
-  margin: 0 auto; }
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  padding: 4.786rem 13.214rem 0 10.714rem; }
-
-.color-block {
-  display: flex;
-  margin-bottom: 1.429rem; }
-  .color-block__example {
-    width: 5rem;
-    height: 5rem;
-    margin-right: 2.857rem;
-    border-radius: 0.429rem; }
-  .color-block__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; }
-  .color-block__description {
-    margin: 0;
-    font-family: 'Quicksand', 'Arial', sans-serif;
-    font-weight: normal;
-    font-size: 1.357rem;
-    line-height: 2.071; }
-
-.type-block {
-  display: flex;
-  width: 28.571rem;
-  margin-bottom: 3.714rem; }
-  .type-block:nth-child(3) {
-    margin-bottom: 2.429rem; }
-  .type-block__description {
-    text-align: left; }
-
-.type-block__title {
-  width: 2.643rem;
-  margin-right: 2.143rem;
-  font-weight: normal;
-  text-align: right;
-  color: rgba(31, 32, 65, 0.25); }
-  .type-block__title_type_h2 {
-    width: 2rem; }
-  .type-block__title_type_h3 {
-    width: 2rem; }
-  .type-block__title_type_body {
-    margin-right: 1.429rem; }
+.theme__type-wrapper_type_body .theme__type-description {
+  font-size: 1rem; }
 

@@ -15,359 +15,389 @@
     <title>headers-and-footers
     </title>
   <link href="headers-and-footers.css" rel="stylesheet"></head>
-  <body><a class="logo"><img class="logo__img logo__img_view_uikit" src="assets/images/uikit-logo.svg" width="48" height="48" alt="Logo for Uikit"></a>
+  <body><a class="logo" href="landing.html"><img class="logo__img logo__img_view_uikit" src="assets/images/uikit-logo.svg" width="48" height="48" alt="Logo for Uikit"></a>
     <main class="container">
       <div class="container__item">
-            <header class="header">
-              <div class="header__wrapper"><a class="logo"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
-                <div class="header__content-wrapper header__content-wrapper-menu_state_opened">
-                  <div class="header__buttons-wrapper js-header__buttons-wrapper">
-                    <button class="header__toggle-menu-btn header__toggle-menu-btn_state_without-js js-header__toggle-menu-btn" type="button"><span class="header__toggle-menu-icon header__toggle-menu-icon_state_opened">menu</span><span class="header__toggle-menu-icon header__toggle-menu-icon_state_closed">expand_less</span></button><a class="header__show-auth-btn header__show-auth-btn_state_without-js" href="auth.html">person</a>
-                    <div class="header__auth-wrapper">
-                      <div class="header__login-button-wrapper">
-                            <button class="button button_type_login button_height_low button_view_bordered" type="button">Login</button>
-                      </div>
-                          <button class="button button_type_register button_height_low button_view_filled" type="button">REGISTER</button>
+        <header class="header">
+          <div class="header__wrapper"><a class="logo" href="landing.html"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
+            <div class="header__content-wrapper header__content-wrapper-menu_state_opened">
+              <div class="header__buttons-wrapper js-header__buttons-wrapper">
+                <button class="header__toggle-menu-btn header__toggle-menu-btn_state_without-js js-header__toggle-menu-btn" type="button"><span class="header__toggle-menu-icon header__toggle-menu-icon_state_opened">menu</span><span class="header__toggle-menu-icon header__toggle-menu-icon_state_closed">expand_less</span></button><a class="header__show-auth-btn header__show-auth-btn_state_without-js" href="auth.html">person</a>
+                <div class="header__auth-wrapper">
+                  <div class="header__login-button-wrapper">
+                    <button class="button button_type_login js-button_type_login button_height_low button_view_bordered" type="button">войти</button>
+                  </div>
+                  <button class="button button_type_register js-button_type_register button_height_low button_view_filled" type="button">зарегистрироваться</button>
+                </div>
+              </div>
+              <nav class="header__main-nav js-header__main-nav">
+                <ul class="header__nav-list js-header__nav-list">
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small"><a class="header__nav-link">О нас</a>
+                  </li>
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small header__submenu js-header__submenu header__submenu_state_closed"><a class="header__nav-link">Услуги</a>
+                    <button class="header__toggle-submenu-btn js-header__toggle-submenu-btn header__toggle-submenu-btn_state_without-js"><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_opened">expand_more</span><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_closed">expand_less</span></button>
+                    <ul class="header__submenu-list">
+                      <li class="header__submenu-item"><a class="header__submenu-link">Услуга_1</a></li>
+                      <li class="header__submenu-item"><a class="header__submenu-link">Услуга_2</a></li>
+                    </ul>
+                  </li>
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small"><a class="header__nav-link">Вакансии</a>
+                  </li>
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small"><a class="header__nav-link">Новости</a>
+                  </li>
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small header__submenu js-header__submenu header__submenu_state_closed"><a class="header__nav-link">Соглашения</a>
+                    <button class="header__toggle-submenu-btn js-header__toggle-submenu-btn header__toggle-submenu-btn_state_without-js"><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_opened">expand_more</span><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_closed">expand_less</span></button>
+                    <ul class="header__submenu-list">
+                      <li class="header__submenu-item"><a class="header__submenu-link">Соглашение_1</a></li>
+                      <li class="header__submenu-item"><a class="header__submenu-link">Соглашение_2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <section class="login-modal js-login-modal">
+          <div class="login-modal__overlay js-login-modal__overlay"></div>
+          <div class="login-modal__form">
+            <div class="login">
+              <form class="login__form" action="url" method="post">
+                <h2 class="login__title">Войти</h2>
+                <fieldset class="login__fieldset-data">
+                  <div class="login__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="email" name="email" id="email-id" placeholder="Email">
                     </div>
                   </div>
-                  <nav class="header__main-nav js-header__main-nav">
-                    <ul class="header__nav-list js-header__nav-list">
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link header__nav-link_state_active">Home</a>
-                      </li>
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link">About Us</a>
-                      </li>
-                      <li class="header__nav-item header__submenu header__submenu_state_closed header__nav-item_margin_big"><a class="header__nav-link">Services</a>
-                        <button class="header__toggle-submenu-btn header__toggle-submenu-btn_state_without-js"><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_opened">expand_more</span><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_closed">expand_less</span></button>
-                        <ul class="header__submenu-list">
-                          <li class="header__submenu-item"><a class="header__submenu-item">Service_1</a></li>
-                          <li class="header__submenu-item"><a class="header__submenu-item">Service_2</a></li>
-                        </ul>
-                      </li>
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link">Careers</a>
-                      </li>
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link">News</a>
-                      </li>
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link">Documentation</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </header>
-                <section class="login-modal js-login-modal">
-                  <div class="login-modal__overlay js-login-modal__overlay"></div>
-                  <div class="login-modal__form">
-                        <div class="login">
-                          <form class="login-form" action="url" method="post">
-                            <h2 class="login-form__title">Войти</h2>
-                            <fieldset class="login-form__fieldset-data">
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="email" name="email" id="email-id" placeholder="Email">
-                                  </div>
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="password" name="password" id="password-id" placeholder="Пароль">
-                                  </div>
-                            </fieldset>
-                                <button class="button button_height_high button_view_actionable" type="button">войти</button>
-                          </form>
-                          <div class="login__registration-wrapper"><span class="login__registration-text">Нет аккаунта на Toxin?</span>
-                                <button class="button button_height_high button_view_bordered" type="button">создать</button>
-                          </div>
-                        </div>
-                  </div>
-                </section>
-                <section class="registration-modal js-registration-modal">
-                  <div class="registration-modal__overlay js-registration-modal__overlay"></div>
-                  <div class="registration-modal__form">
-                        <div class="registration">
-                          <form class="registration-form" action="url" method="post">
-                            <h2 class="registration-form__title">Регистрация аккаунта</h2>
-                            <fieldset class="registration-form__fieldset-name">
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="text" name="text" id="text-id" placeholder="Имя">
-                                  </div>
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="text" name="surname" id="surname-id" placeholder="Фамилия">
-                                  </div>
-                            </fieldset>
-                            <fieldset class="registration-form__fieldset-gender">
-                                  <div class="radio">
-                                    <ul class="radio__list">
-                                      <li class="radio__item">
-                                        <input class="radio__input" type="radio" id="sex-0-id" name="sex" checked="checked">
-                                        <label class="radio__label" for="sex-0-id">Мужчина</label>
-                                      </li>
-                                      <li class="radio__item">
-                                        <input class="radio__input" type="radio" id="sex-1-id" name="sex">
-                                        <label class="radio__label" for="sex-1-id">Женщина</label>
-                                      </li>
-                                    </ul>
-                                  </div>
-                            </fieldset>
-                            <fieldset class="registration-form__fieldset-birthday">
-                                  <div class="masked-text-field">
-                                    <label class="masked-text-field__label" for="birthday-id">дата рождения</label>
-                                    <input class="masked-text-field__input masked-text-field__input_date" name="birthday" id="birthday-id"  placeholder="дд.мм.гггг">
-                                  </div>
-                            </fieldset>
-                            <fieldset class="registration-form__fieldset-login">
-                              <legend class="registration-form__legend-login">данные для входа в сервис</legend>
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="email" name="email" id="email-id" placeholder="Email">
-                                  </div>
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="password" name="password" id="password-id" placeholder="Пароль">
-                                  </div>
-                            </fieldset>
-                            <div class="registration-form__offers-wrapper">
-                                  <div class="toggle">
-                                    <ul class="toggle__list">
-                                      <li class="toggle__item">
-                                        <label class="toggle__label">Получать спецпредложения
-                                          <input class="toggle__input" type="checkbox" name="toggle"><span class="toggle__slider"></span>
-                                        </label>
-                                      </li>
-                                    </ul>
-                                  </div>
-                            </div>
-                                <button class="button button_height_high button_view_actionable" type="button">Перейти к оплате</button>
-                          </form>
-                          <div class="registration__login-wrapper"><span class="registration__login-text">Уже есть аккаунт на Toxin</span>
-                                <button class="button button_height_high button_view_bordered" type="button">войти</button>
-                          </div>
-                        </div>
-                  </div>
-                </section>
-                <section class="login-modal js-login-modal">
-                  <div class="login-modal__overlay js-login-modal__overlay"></div>
-                  <div class="login-modal__form">
-                        <div class="login">
-                          <form class="login-form" action="url" method="post">
-                            <h2 class="login-form__title">Войти</h2>
-                            <fieldset class="login-form__fieldset-data">
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="email" name="email" id="email-id" placeholder="Email">
-                                  </div>
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="password" name="password" id="password-id" placeholder="Пароль">
-                                  </div>
-                            </fieldset>
-                                <button class="button button_height_high button_view_actionable" type="button">войти</button>
-                          </form>
-                          <div class="login__registration-wrapper"><span class="login__registration-text">Нет аккаунта на Toxin?</span>
-                                <button class="button button_height_high button_view_bordered" type="button">создать</button>
-                          </div>
-                        </div>
-                  </div>
-                </section>
-                <section class="registration-modal js-registration-modal">
-                  <div class="registration-modal__overlay js-registration-modal__overlay"></div>
-                  <div class="registration-modal__form">
-                        <div class="registration">
-                          <form class="registration-form" action="url" method="post">
-                            <h2 class="registration-form__title">Регистрация аккаунта</h2>
-                            <fieldset class="registration-form__fieldset-name">
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="text" name="text" id="text-id" placeholder="Имя">
-                                  </div>
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="text" name="surname" id="surname-id" placeholder="Фамилия">
-                                  </div>
-                            </fieldset>
-                            <fieldset class="registration-form__fieldset-gender">
-                                  <div class="radio">
-                                    <ul class="radio__list">
-                                      <li class="radio__item">
-                                        <input class="radio__input" type="radio" id="sex-0-id" name="sex" checked="checked">
-                                        <label class="radio__label" for="sex-0-id">Мужчина</label>
-                                      </li>
-                                      <li class="radio__item">
-                                        <input class="radio__input" type="radio" id="sex-1-id" name="sex">
-                                        <label class="radio__label" for="sex-1-id">Женщина</label>
-                                      </li>
-                                    </ul>
-                                  </div>
-                            </fieldset>
-                            <fieldset class="registration-form__fieldset-birthday">
-                                  <div class="masked-text-field">
-                                    <label class="masked-text-field__label" for="birthday-id">дата рождения</label>
-                                    <input class="masked-text-field__input masked-text-field__input_date" name="birthday" id="birthday-id"  placeholder="дд.мм.гггг">
-                                  </div>
-                            </fieldset>
-                            <fieldset class="registration-form__fieldset-login">
-                              <legend class="registration-form__legend-login">данные для входа в сервис</legend>
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="email" name="email" id="email-id" placeholder="Email">
-                                  </div>
-                                  <div class="text-field">
-                                    <input class="text-field__input" type="password" name="password" id="password-id" placeholder="Пароль">
-                                  </div>
-                            </fieldset>
-                            <div class="registration-form__offers-wrapper">
-                                  <div class="toggle">
-                                    <ul class="toggle__list">
-                                      <li class="toggle__item">
-                                        <label class="toggle__label">Получать спецпредложения
-                                          <input class="toggle__input" type="checkbox" name="toggle"><span class="toggle__slider"></span>
-                                        </label>
-                                      </li>
-                                    </ul>
-                                  </div>
-                            </div>
-                                <button class="button button_height_high button_view_actionable" type="button">Перейти к оплате</button>
-                          </form>
-                          <div class="registration__login-wrapper"><span class="registration__login-text">Уже есть аккаунт на Toxin</span>
-                                <button class="button button_height_high button_view_bordered" type="button">войти</button>
-                          </div>
-                        </div>
-                  </div>
-                </section>
-      </div>
-      <div class="container__item">
-            <header class="header">
-              <div class="header__wrapper"><a class="logo"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
-                <div class="header__content-wrapper header__content-wrapper-menu_state_opened">
-                  <div class="header__buttons-wrapper js-header__buttons-wrapper">
-                    <button class="header__toggle-menu-btn header__toggle-menu-btn_state_without-js js-header__toggle-menu-btn" type="button"><span class="header__toggle-menu-icon header__toggle-menu-icon_state_opened">menu</span><span class="header__toggle-menu-icon header__toggle-menu-icon_state_closed">expand_less</span></button><span class="header__user-name js-header__user-name">Cosmin Negoita</span>
-                  </div>
-                  <nav class="header__main-nav js-header__main-nav">
-                    <ul class="header__nav-list js-header__nav-list">
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link header__nav-link_state_active">Home</a>
-                      </li>
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link">About Us</a>
-                      </li>
-                      <li class="header__nav-item header__submenu header__submenu_state_closed header__nav-item_margin_big"><a class="header__nav-link">Services</a>
-                        <button class="header__toggle-submenu-btn header__toggle-submenu-btn_state_without-js"><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_opened">expand_more</span><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_closed">expand_less</span></button>
-                        <ul class="header__submenu-list">
-                          <li class="header__submenu-item"><a class="header__submenu-item">Service_1</a></li>
-                          <li class="header__submenu-item"><a class="header__submenu-item">Service_2</a></li>
-                        </ul>
-                      </li>
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link">Careers</a>
-                      </li>
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link">News</a>
-                      </li>
-                      <li class="header__nav-item header__nav-item_margin_big"><a class="header__nav-link">Documentation</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </header>
-      </div>
-      <div class="container__item">
-            <footer class="footer">
-              <div class="footer__wrapper">
-                <div class="footer__description-wrapper"><a class="logo"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
-                  <p class="footer__description">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</p>
-                </div>
-                <div class="footer__content-wrapper">
-                  <div class="footer__content-item">
-                    <h3>Navigation</h3>
-                    <ul class="footer__content-list">
-                      <li><a class="footer__content-link">About Us</a></li>
-                      <li><a class="footer__content-link">News</a></li>
-                      <li><a class="footer__content-link">Support</a></li>
-                      <li><a class="footer__content-link">Products</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer__content-item">
-                    <h3>About us</h3>
-                    <ul class="footer__content-list">
-                      <li><a class="footer__content-link">Who we are</a></li>
-                      <li><a class="footer__content-link">Our team</a></li>
-                      <li><a class="footer__content-link">Careers</a></li>
-                      <li><a class="footer__content-link">Investors</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer__content-item">
-                    <h3>Support</h3>
-                    <ul class="footer__content-list">
-                      <li><a class="footer__content-link">Documentation</a></li>
-                      <li><a class="footer__content-link">Community</a></li>
-                      <li><a class="footer__content-link">Get in Touch</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer__content-item">
-                    <h3>Subscribe to our newsletter</h3>
-                    <div class="footer__subscribe-wrapper">
-                      <p class="footer__subscribe-text">Receive our latest news and promotions in your inbox!</p>
-                          <div class="subscription-text-field">
-                                <div class="text-field">
-                                  <input class="text-field__input" type="Email" name="subscription-text" id="subscription-text-id" placeholder="Email">
-                                </div><span class="subscription-text-field__arrow">arrow_forward</span>
-                          </div>
+                  <div class="login__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="password" name="password" id="password-id" placeholder="Пароль">
                     </div>
                   </div>
-                </div>
+                </fieldset>
+                <button class="button button_height_high button_view_actionable" type="button">войти</button>
+              </form>
+              <div class="login__registration-wrapper"><span class="login__registration-text">Нет аккаунта на Toxin?</span>
+                <button class="button button_height_high button_view_bordered" type="button">создать</button>
               </div>
-              <hr class="footer__separator">
-              <div class="footer__bottom-wrapper">
-                <p class="footer__copyright-text">Copyright © 2018 Toxin UI Kit. All rights reserved.</p>
-                <ul class="footer__social-list">
-                  <li><a class="footer__social-link footer__social-link_social-network_tw" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Твиттер</span><span class="footer__social-icon footer__social-icon_social-network_tw"></span></a></li>
-                  <li><a class="footer__social-link footer__social-link_social-network_fb" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Фейсбук</span><span class="footer__social-icon footer__social-icon_social-network_fb"></span></a></li>
-                  <li><a class="footer__social-link footer__social-link_social-network_insta" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Инстаграм</span><span class="footer__social-icon footer__social-icon_social-network_insta"></span></a></li>
+            </div>
+          </div>
+        </section>
+        <section class="registration-modal js-registration-modal">
+          <div class="registration-modal__overlay js-registration-modal__overlay"></div>
+          <div class="registration-modal__form">
+            <div class="registration">
+              <form class="registration__form" action="url" method="post">
+                <h2 class="registration__title">Регистрация аккаунта</h2>
+                <fieldset class="registration__fieldset-name">
+                  <div class="registration__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="text" name="text" id="text-id" placeholder="Имя">
+                    </div>
+                  </div>
+                  <div class="registration__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="text" name="surname" id="surname-id" placeholder="Фамилия">
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="registration__fieldset-gender">
+                  <div class="radio">
+                    <ul class="radio__list">
+                      <li class="radio__item">
+                        <input class="radio__input" type="radio" id="sex-0-id" name="sex" checked>
+                        <label class="radio__label" for="sex-0-id">Мужчина</label>
+                      </li>
+                      <li class="radio__item">
+                        <input class="radio__input" type="radio" id="sex-1-id" name="sex">
+                        <label class="radio__label" for="sex-1-id">Женщина</label>
+                      </li>
+                    </ul>
+                  </div>
+                </fieldset>
+                <fieldset class="registration__fieldset-birthday">
+                  <div class="masked-text-field">
+                    <label class="masked-text-field__label" for="birthday-id">дата рождения</label>
+                    <input class="masked-text-field__input js-masked-text-field__input" type="text" name="birthday" id="birthday-id" placeholder="дд.мм.гггг">
+                  </div>
+                </fieldset>
+                <fieldset class="registration__fieldset-login">
+                  <legend class="registration__legend-login">данные для входа в сервис</legend>
+                  <div class="registration__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="email" name="email" id="email-id" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="registration__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="password" name="password" id="password-id" placeholder="Пароль">
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="registration__offers-wrapper">
+                  <div class="toggle">
+                    <ul class="toggle__list">
+                      <li class="toggle__item">
+                        <label class="toggle__label">Получать спецпредложения
+                          <input class="toggle__input" type="checkbox" name="toggle"><span class="toggle__slider"></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="button button_height_high button_view_actionable" type="button">Перейти к оплате</button>
+              </form>
+              <div class="registration__login-wrapper"><span class="registration__login-text">Уже есть аккаунт на Toxin</span>
+                <button class="button button_height_high button_view_bordered" type="button">войти</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="login-modal js-login-modal">
+          <div class="login-modal__overlay js-login-modal__overlay"></div>
+          <div class="login-modal__form">
+            <div class="login">
+              <form class="login__form" action="url" method="post">
+                <h2 class="login__title">Войти</h2>
+                <fieldset class="login__fieldset-data">
+                  <div class="login__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="email" name="email" id="email-id" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="login__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="password" name="password" id="password-id" placeholder="Пароль">
+                    </div>
+                  </div>
+                </fieldset>
+                <button class="button button_height_high button_view_actionable" type="button">войти</button>
+              </form>
+              <div class="login__registration-wrapper"><span class="login__registration-text">Нет аккаунта на Toxin?</span>
+                <button class="button button_height_high button_view_bordered" type="button">создать</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="registration-modal js-registration-modal">
+          <div class="registration-modal__overlay js-registration-modal__overlay"></div>
+          <div class="registration-modal__form">
+            <div class="registration">
+              <form class="registration__form" action="url" method="post">
+                <h2 class="registration__title">Регистрация аккаунта</h2>
+                <fieldset class="registration__fieldset-name">
+                  <div class="registration__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="text" name="text" id="text-id" placeholder="Имя">
+                    </div>
+                  </div>
+                  <div class="registration__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="text" name="surname" id="surname-id" placeholder="Фамилия">
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="registration__fieldset-gender">
+                  <div class="radio">
+                    <ul class="radio__list">
+                      <li class="radio__item">
+                        <input class="radio__input" type="radio" id="sex-0-id" name="sex" checked>
+                        <label class="radio__label" for="sex-0-id">Мужчина</label>
+                      </li>
+                      <li class="radio__item">
+                        <input class="radio__input" type="radio" id="sex-1-id" name="sex">
+                        <label class="radio__label" for="sex-1-id">Женщина</label>
+                      </li>
+                    </ul>
+                  </div>
+                </fieldset>
+                <fieldset class="registration__fieldset-birthday">
+                  <div class="masked-text-field">
+                    <label class="masked-text-field__label" for="birthday-id">дата рождения</label>
+                    <input class="masked-text-field__input js-masked-text-field__input" type="text" name="birthday" id="birthday-id" placeholder="дд.мм.гггг">
+                  </div>
+                </fieldset>
+                <fieldset class="registration__fieldset-login">
+                  <legend class="registration__legend-login">данные для входа в сервис</legend>
+                  <div class="registration__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="email" name="email" id="email-id" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="registration__text-field-wrapper">
+                    <div class="text-field">
+                      <input class="text-field__input" type="password" name="password" id="password-id" placeholder="Пароль">
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="registration__offers-wrapper">
+                  <div class="toggle">
+                    <ul class="toggle__list">
+                      <li class="toggle__item">
+                        <label class="toggle__label">Получать спецпредложения
+                          <input class="toggle__input" type="checkbox" name="toggle"><span class="toggle__slider"></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="button button_height_high button_view_actionable" type="button">Перейти к оплате</button>
+              </form>
+              <div class="registration__login-wrapper"><span class="registration__login-text">Уже есть аккаунт на Toxin</span>
+                <button class="button button_height_high button_view_bordered" type="button">войти</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container__item">
+        <header class="header">
+          <div class="header__wrapper"><a class="logo" href="landing.html"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
+            <div class="header__content-wrapper header__content-wrapper-menu_state_opened">
+              <div class="header__buttons-wrapper js-header__buttons-wrapper">
+                <button class="header__toggle-menu-btn header__toggle-menu-btn_state_without-js js-header__toggle-menu-btn" type="button"><span class="header__toggle-menu-icon header__toggle-menu-icon_state_opened">menu</span><span class="header__toggle-menu-icon header__toggle-menu-icon_state_closed">expand_less</span></button><span class="header__user-name js-header__user-name">Юлий Цезарь</span>
+              </div>
+              <nav class="header__main-nav js-header__main-nav">
+                <ul class="header__nav-list js-header__nav-list">
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small"><a class="header__nav-link">О нас</a>
+                  </li>
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small header__submenu js-header__submenu header__submenu_state_closed"><a class="header__nav-link">Услуги</a>
+                    <button class="header__toggle-submenu-btn js-header__toggle-submenu-btn header__toggle-submenu-btn_state_without-js"><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_opened">expand_more</span><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_closed">expand_less</span></button>
+                    <ul class="header__submenu-list">
+                      <li class="header__submenu-item"><a class="header__submenu-link">Услуга_1</a></li>
+                      <li class="header__submenu-item"><a class="header__submenu-link">Услуга_2</a></li>
+                    </ul>
+                  </li>
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small"><a class="header__nav-link">Вакансии</a>
+                  </li>
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small"><a class="header__nav-link">Новости</a>
+                  </li>
+                  <li class="header__nav-item js-header__nav-item header__nav-item_margin_small header__submenu js-header__submenu header__submenu_state_closed"><a class="header__nav-link">Соглашения</a>
+                    <button class="header__toggle-submenu-btn js-header__toggle-submenu-btn header__toggle-submenu-btn_state_without-js"><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_opened">expand_more</span><span class="header__toggle-submenu-icon header__toggle-submenu-icon_state_closed">expand_less</span></button>
+                    <ul class="header__submenu-list">
+                      <li class="header__submenu-item"><a class="header__submenu-link">Соглашение_1</a></li>
+                      <li class="header__submenu-item"><a class="header__submenu-link">Соглашение_2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="container__item">
+        <footer class="footer">
+          <div class="footer__wrapper">
+            <div class="footer__description-wrapper"><a class="logo" href="landing.html"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
+              <p class="footer__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+            </div>
+            <div class="footer__content-wrapper">
+              <div class="footer__content-item">
+                <h3 class="footer__title">навигация</h3>
+                <ul class="footer__content-list">
+                  <li class="footer__content-unit"><a class="footer__content-link">О нас</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Новости</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Служба поддержки</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Услуги</a></li>
                 </ul>
               </div>
-            </footer>
+              <div class="footer__content-item">
+                <h3 class="footer__title">о нас</h3>
+                <ul class="footer__content-list">
+                  <li class="footer__content-unit"><a class="footer__content-link">О сервисе</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Наша команда</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Вакансии</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Инвесторы</a></li>
+                </ul>
+              </div>
+              <div class="footer__content-item">
+                <h3 class="footer__title">Служба поддержки</h3>
+                <ul class="footer__content-list">
+                  <li class="footer__content-unit"><a class="footer__content-link">Соглашения</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Сообщества</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Связь с нами</a></li>
+                </ul>
+              </div>
+              <div class="footer__content-item">
+                <h3 class="footer__title">Подписка</h3>
+                <div class="footer__subscribe-wrapper">
+                  <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
+                  <div class="subscription-text-field">
+                    <div class="text-field">
+                      <input class="text-field__input" type="Email" name="subscription-text" id="subscription-text-id" placeholder="Email">
+                    </div><span class="subscription-text-field__arrow">arrow_forward</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="footer__separator">
+          <div class="footer__bottom-wrapper">
+            <p class="footer__copyright-text">Copyright © 2018 Toxin отель. Все права зачищены.</p>
+            <ul class="footer__social-list">
+              <li class="footer__social-item"><a class="footer__social-link footer__social-link_social-network_tw" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Твиттер</span><span class="footer__social-icon footer__social-icon_social-network_tw"></span></a></li>
+              <li class="footer__social-item"><a class="footer__social-link footer__social-link_social-network_fb" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Фейсбук</span><span class="footer__social-icon footer__social-icon_social-network_fb"></span></a></li>
+              <li class="footer__social-item"><a class="footer__social-link footer__social-link_social-network_insta" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Инстаграм</span><span class="footer__social-icon footer__social-icon_social-network_insta"></span></a></li>
+            </ul>
+          </div>
+        </footer>
       </div>
       <div class="container__item container__footer-wrapper">
-            <footer class="footer footer-uikit">
-              <div class="footer__wrapper">
-                <div class="footer__description-wrapper"><a class="logo"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
-                  <p class="footer__description">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</p>
-                </div>
-                <div class="footer__content-wrapper">
-                  <div class="footer__content-item">
-                    <h3>Navigation</h3>
-                    <ul class="footer__content-list">
-                      <li><a class="footer__content-link">About Us</a></li>
-                      <li><a class="footer__content-link">News</a></li>
-                      <li><a class="footer__content-link">Support</a></li>
-                      <li><a class="footer__content-link">Products</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer__content-item">
-                    <h3>About us</h3>
-                    <ul class="footer__content-list">
-                      <li><a class="footer__content-link">Who we are</a></li>
-                      <li><a class="footer__content-link">Our team</a></li>
-                      <li><a class="footer__content-link">Careers</a></li>
-                      <li><a class="footer__content-link">Investors</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer__content-item">
-                    <h3>Support</h3>
-                    <ul class="footer__content-list">
-                      <li><a class="footer__content-link">Documentation</a></li>
-                      <li><a class="footer__content-link">Community</a></li>
-                      <li><a class="footer__content-link">Get in Touch</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer__content-item">
-                    <h3>Subscribe to our newsletter</h3>
-                    <div class="footer__subscribe-wrapper">
-                      <p class="footer__subscribe-text">Receive our latest news and promotions in your inbox!</p>
-                          <div class="subscription-text-field">
-                                <div class="text-field">
-                                  <input class="text-field__input" type="Email" name="subscription-text" id="subscription-text-id" placeholder="Email">
-                                </div><span class="subscription-text-field__arrow">arrow_forward</span>
-                          </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr class="footer__separator">
-              <div class="footer__bottom-wrapper">
-                <p class="footer__copyright-text">Copyright © 2018 Toxin UI Kit. All rights reserved.</p>
-                <ul class="footer__social-list">
-                  <li><a class="footer__social-link footer__social-link_social-network_tw" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Твиттер</span><span class="footer__social-icon footer__social-icon_social-network_tw"></span></a></li>
-                  <li><a class="footer__social-link footer__social-link_social-network_fb" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Фейсбук</span><span class="footer__social-icon footer__social-icon_social-network_fb"></span></a></li>
-                  <li><a class="footer__social-link footer__social-link_social-network_insta" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Инстаграм</span><span class="footer__social-icon footer__social-icon_social-network_insta"></span></a></li>
+        <footer class="footer footer-uikit">
+          <div class="footer__wrapper">
+            <div class="footer__description-wrapper"><a class="logo" href="landing.html"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
+              <p class="footer__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+            </div>
+            <div class="footer__content-wrapper">
+              <div class="footer__content-item">
+                <h3 class="footer__title">навигация</h3>
+                <ul class="footer__content-list">
+                  <li class="footer__content-unit"><a class="footer__content-link">О нас</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Новости</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Служба поддержки</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Услуги</a></li>
                 </ul>
               </div>
-            </footer>
+              <div class="footer__content-item">
+                <h3 class="footer__title">о нас</h3>
+                <ul class="footer__content-list">
+                  <li class="footer__content-unit"><a class="footer__content-link">О сервисе</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Наша команда</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Вакансии</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Инвесторы</a></li>
+                </ul>
+              </div>
+              <div class="footer__content-item">
+                <h3 class="footer__title">Служба поддержки</h3>
+                <ul class="footer__content-list">
+                  <li class="footer__content-unit"><a class="footer__content-link">Соглашения</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Сообщества</a></li>
+                  <li class="footer__content-unit"><a class="footer__content-link">Связь с нами</a></li>
+                </ul>
+              </div>
+              <div class="footer__content-item">
+                <h3 class="footer__title">Подписка</h3>
+                <div class="footer__subscribe-wrapper">
+                  <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
+                  <div class="subscription-text-field">
+                    <div class="text-field">
+                      <input class="text-field__input" type="Email" name="subscription-text" id="subscription-text-id" placeholder="Email">
+                    </div><span class="subscription-text-field__arrow">arrow_forward</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="footer__separator">
+          <div class="footer__bottom-wrapper">
+            <p class="footer__copyright-text">Copyright © 2018 Toxin отель. Все права зачищены.</p>
+            <ul class="footer__social-list">
+              <li class="footer__social-item"><a class="footer__social-link footer__social-link_social-network_tw" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Твиттер</span><span class="footer__social-icon footer__social-icon_social-network_tw"></span></a></li>
+              <li class="footer__social-item"><a class="footer__social-link footer__social-link_social-network_fb" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Фейсбук</span><span class="footer__social-icon footer__social-icon_social-network_fb"></span></a></li>
+              <li class="footer__social-item"><a class="footer__social-link footer__social-link_social-network_insta" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span class="footer__social-text">Мы в Инстаграм</span><span class="footer__social-icon footer__social-icon_social-network_insta"></span></a></li>
+            </ul>
+          </div>
+        </footer>
       </div>
     </main>
   <script src="headers-and-footers.bundle.js"></script></body>
