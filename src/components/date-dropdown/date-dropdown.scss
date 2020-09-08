@@ -1,17 +1,18 @@
-@import '../../base/theme.scss';
-@import '../../base/fonts.scss';
 @import '../button/button';
 @import '../masked-text-field/masked-text-field';
 @import '~AirDatepicker/css/datepicker.min.css';
+@import '~Base';
 
 .date-dropdown {
   display: flex;
   justify-content: space-between;
   max-width: 22.857rem;
+
   &__item {
     max-width: 10.714rem;
     position: relative;
     cursor: pointer;
+
     &::after {
       @include material-icons;
       content: 'expand_more';
@@ -27,10 +28,12 @@
       pointer-events: none;
     }
   }
+
   &__label {
     @include h3-text;
     margin-bottom: 0.286rem;
   }
+
   &__input {
     width: 100%;
     box-sizing: border-box;
@@ -40,16 +43,19 @@
     border-radius: 0.286rem;
     font-weight: normal;
     cursor: pointer;
+
     &:hover,
     &:focus {
       outline: none;
       border-color: $dark-color-opacity-50;
     }
+
     &::placeholder {
       text-transform: uppercase;
       color: $dark-color-opacity-25;
     }
   }
+
   &:hover::after {
     color: $dark-color-opacity-75;
   }
@@ -58,6 +64,7 @@
 .date-dropdown__item--filter {
   width: 100%;
   max-width: 19rem;
+
   .date-dropdown__input::placeholder {
     text-transform: lowercase;
   }
@@ -71,22 +78,28 @@
   width: 20rem;
   border: 0.071rem solid $dark-color-opacity-25;
   box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
+
   &--pointer {
     display: none;
   }
+
   &--content {
     padding: 0 1.429rem 0 1.5rem;
   }
+
   &--days-names {
     margin-bottom: 1.071rem;
   }
+
   &--day-name {
     @include h3-text;
     color: $purple-color;
   }
+
   &--cells {
     border-right: 1.571rem;
   }
+
   @media (min-width: $tablet-width) {
     width: 22.857rem;
   }
@@ -95,16 +108,20 @@
 .datepicker--nav {
   padding: 1.286rem 1.429rem 1.857rem 1.286rem;
   border: none;
+
   &-title {
     @include h2-text;
+
     &:hover {
       background-color: inherit;
     }
   }
+
   &-prev,
   &-next {
     height: 1.786rem;
   }
+
   &-action:hover {
     background-color: inherit;
   }
@@ -115,6 +132,7 @@
   @include material-icons;
   width: 1.714rem;
   color: $purple-color;
+
   &:hover {
     color: $dark-color-opacity-75;
   }
@@ -155,6 +173,7 @@
   border-radius: 50%;
   background:  $purple-gradient;
   z-index: 1;
+
   &::before {
     content: '';
     width: 50%;
@@ -187,6 +206,7 @@
   @include h3-text;
   display: inline-block;
   color: $purple-color;
+
   &:hover {
     background: inherit;
     color: $dark-color-opacity-75;

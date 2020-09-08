@@ -1,22 +1,30 @@
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .room-details {
   max-width: 20rem;
+
   &__title {
+    @include h2-text;
     margin-bottom: 1.429rem;
   }
+
+  &__list {
+    @include reset-list-style;
+  }
+
   &__item {
     display: flex;
     align-items: center;
     padding-bottom: 1.429rem;
     margin-bottom: 1.429rem;
     border-bottom: 0.071rem solid $dark-color-opacity-10;
+
     &:last-child {
       margin-bottom: 0;
       border-bottom: none;
     }
   }
+
   &__icon {
     @include material-icons;
     width: 3.429rem;
@@ -25,15 +33,15 @@
     font-size: 3.429rem;
     line-height: 3.429rem;
     background: $purple-gradient;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
     background-clip: text;
-    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
   }
+
   &__name {
     margin: 0;
     font-weight: bold;
   }
+
   &__description {
     margin: 0;
   }

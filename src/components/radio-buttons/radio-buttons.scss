@@ -1,5 +1,4 @@
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .radio__title {
   @include h3-text;
@@ -7,6 +6,7 @@
 }
 
 .radio__list {
+  @include reset-list-style;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -15,33 +15,39 @@
 
 .radio__input {
   @include visually-hidden;
-  & + label {
+
+  & + .radio__label {
     display: inline-flex;
     align-items: flex-start;
     cursor: pointer;
+
     &::before {
       content: '';
       display: inline-block;
+      box-sizing: border-box;
       width: 1.429rem;
       height: 1.429rem;
       flex-shrink: 0;
       flex-grow: 0;
       border: 0.071rem solid $dark-color-opacity-25;
       border-radius: 50%;
-      margin-right: 0.5em;
+      margin-right: 0.714rem;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%;
     }
+
     &:hover {
       color: $dark-color-opacity-75;
+
       &::before {
         border-color: $purple-hover-color;
       }
     }
   }
-  &:checked + label::before {
-    border-color:$purple-color;
+
+  &:checked + .radio__label::before {
+    border-color: $purple-color;
     background-image: url('images/radio.svg');
   }
 }

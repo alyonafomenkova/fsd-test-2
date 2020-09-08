@@ -1,10 +1,13 @@
 @import '../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css';
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .range-slider {
   width: 19rem;
   position: relative;
+
+  &__title {
+    @include h3-text;
+  }
 }
 
 .irs {
@@ -20,11 +23,13 @@
     border: 0.071rem solid $dark-color-opacity-25;
     border-radius: 0.214rem;
   }
+
   .irs-bar {
     height: 0.429rem;
     background: $green-gradient;
     border-radius: 0.214rem;
   }
+
   .irs-handle {
     top: 1.429rem;
     width: 1.143rem;
@@ -34,10 +39,12 @@
     border: 0.143rem solid $white-color;
     border-radius: 0.714rem;
     cursor: pointer;
+
     &>i:first-child {
       display: none;
     }
   }
+
   .irs-single {
     @include h3-text;
     display: block;
@@ -50,6 +57,7 @@
     background-color: inherit;
     pointer-events: none;
   }
+
   .irs-from:before,
   .irs-to:before,
   .irs-single:before {

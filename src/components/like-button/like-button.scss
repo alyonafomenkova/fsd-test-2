@@ -1,5 +1,4 @@
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .like-button {
   display: flex;
@@ -7,13 +6,16 @@
   justify-content: space-between;
   align-items: center;
   min-width: 2.857rem;
-  height: 1.429rem;
+  min-height: 1.429rem;
+  padding: 0 0.786rem 0 0.286rem;
   border: 0.071rem solid $dark-color-opacity-25;
   border-radius: 0.714rem;
   background-color: inherit;
+
   &:focus {
     outline-color: $purple-color;
   }
+
   &__icon {
     @include material-icons;
     color: $dark-color-opacity-25;
@@ -21,6 +23,7 @@
     line-height: 0.643rem;
     pointer-events: none;
   }
+
   &__count-likes {
     @include body-text;
     font-size: 0.714rem;
@@ -30,8 +33,9 @@
   }
 }
 
-.js-like-button_active {
+.like-button_active {
   border-color: $purple-color;
+
   .like-button__icon,
   .like-button__count-likes {
     color: $purple-color;

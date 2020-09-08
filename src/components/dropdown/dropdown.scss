@@ -1,61 +1,71 @@
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .dropdown {
   max-width: 22.857rem;
+
   &_type_facilities {
     max-width: 19rem;
   }
+
   &__info {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 0.286rem;
   }
+
   &__label {
+    @include h3-text;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 0.286rem;
   }
+
   &__state {
     @include h3-text;
     margin: 0;
     font-weight: normal;
     color: $dark-color-opacity-50;
   }
+
   &__container {
     position: relative;
   }
+
   &__option {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0.5rem 0;
   }
+
+  &__option-title,
   &__quantity {
     @include h3-text;
   }
+
   &__buttons-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 6.571rem;
   }
+
   &__controls-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 1.429rem;
-    margin-bottom: 0.929rem;
+    margin-top: 1.071rem;
+    margin-bottom: 0.5rem;
   }
+
   &__apply-button {
     margin-left: auto;
   }
-  &__clear-button {
-    &_visibility_invisible {
-      display: none;
-    }
+
+  &__clear-button_visibility_invisible {
+    display: none;
   }
+
   &__decrement-button,
   &__increment-button {
     width: 2.143rem;
@@ -67,10 +77,12 @@
     line-height: 1.571rem;
     color: $dark-color-opacity-25;
     cursor: pointer;
+
     &:disabled {
       opacity: 0.3;
       cursor: default;
     }
+
     &:hover,
     &:focus {
       color: $dark-color-opacity-50;
@@ -88,9 +100,11 @@
   border: 0.071rem solid $dark-color-opacity-25;
   border-radius: 0.286rem;
   cursor: pointer;
+
   &-text {
     margin: 0;
   }
+
   &-icon {
     @include material-icons;
     width: 3rem;
@@ -106,6 +120,7 @@
   position: absolute;
   top: 3rem;
   left: 0;
+  box-sizing: border-box;
   width: 100%;
   padding-left: 1.071rem;
   padding-right: 0.5rem;
@@ -115,6 +130,7 @@
   border-bottom-right-radius: 0.286rem;
   box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
   background-color: $white-color;
+
   &_state_expanded {
     display: block;
   }

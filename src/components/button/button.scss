@@ -1,5 +1,4 @@
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .button {
   @include h3-text;
@@ -9,30 +8,37 @@
   border-radius: 1.571rem;
   background: none;
   word-break: break-all;
+
   &:focus {
     outline-color: $purple-color;
   }
+
   &_height_low {
     padding: 0.643rem 1.357rem;
   }
+
   &_height_high {
-    width: 7.071rem;
+    min-width: 7.071rem;
     padding: 1rem 0;
   }
+
   &_view_filled {
     background: $purple-gradient;
     color: $white-color;
+
     &:hover,
     &-on-hover {
       opacity: 0.5;
     }
   }
+
   &_view_bordered {
     position: relative;
     border: 0.143rem solid transparent;
     background-color: $white-color;
     background-clip: padding-box;
     color: $purple-color;
+
     &::after {
       content: '';
       position: absolute;
@@ -45,26 +51,32 @@
       border-radius: inherit;
       background: $purple-gradient;
     }
+
     &-on-hover::after,
     &:hover::after {
       opacity: 0.5;
     }
   }
+
   &_view_textual {
+    min-width: 4.429rem;
     width: auto;
     padding: 0;
     color: $purple-color;
+
     &:hover,
     &-on-hover {
       color: $dark-color-opacity-50;
     }
   }
+
   &_view_actionable {
     width: 100%;
     max-width: 22.857rem;
     position: relative;
     background: $purple-gradient;
     color: $white-color;
+
     &::after {
       @include material-icons;
       content: 'arrow_forward';
@@ -72,6 +84,7 @@
       top: 0.7rem;
       right: 0.6rem;
     }
+
     &:hover {
       opacity: 0.5;
     }

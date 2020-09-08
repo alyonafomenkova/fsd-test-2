@@ -1,9 +1,9 @@
 mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = options)
   include ../button/button
-  div.dropdown.js-dropdown(class='dropdown_' + type data-type = type)
+  div.dropdown.js-dropdown(class='dropdown_type_' + type data-type = type)
     if (label)
       div.dropdown__info
-        h3.dropdown__lable !{label}
+        h3.dropdown__label !{label}
         if (uikitState)
           span.dropdown__state !{uikitState}
     div.dropdown__container

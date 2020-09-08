@@ -1,7 +1,7 @@
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .rating__list {
+  @include reset-list-style;
   display: flex;
   cursor: pointer;
 }
@@ -16,7 +16,6 @@
   @include material-icons;
   line-height: 1.429rem;
   background-image: $purple-gradient;
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }

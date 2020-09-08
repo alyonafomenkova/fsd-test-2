@@ -1,5 +1,4 @@
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .reviews {
   &__wrapper {
@@ -7,32 +6,48 @@
     justify-content: space-between;
     margin-bottom: 1.429rem;
   }
+
+  &__title {
+    @include h2-text;
+  }
+
+  &__list {
+    @include reset-list-style;
+  }
+
   &__item {
     margin-bottom: 1.786rem;
   }
+
   &__author {
     display: flex;
-    margin-bottom: 0.857rem;
+    margin-bottom: 0.571rem;
   }
+
   &__avatar {
     width: 3.429rem;
     height: 3.429rem;
-    margin-right: 0.714rem;
+    margin-right: 0.357rem;
     border: 0.143rem solid $white-color;
     border-radius: 2.286rem;
     box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-10;
   }
+
   &__author-info {
     display: flex;
     flex-direction: column;
   }
+
   &__author-name {
     font-weight: bold;
   }
+
   &__text-wrapper {
     display: flex;
-    padding-left: 0.357rem;
+    align-items: flex-start;
+    padding-left: 0.286rem;
   }
+
   &__text {
     max-width: 46.643rem;
     margin: 0 0 0 1rem;

@@ -1,14 +1,18 @@
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .pagination {
   max-width: 17.143rem;
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
+
   &__description {
     margin-top: 0.714rem;
     padding-left: 0.357rem;
@@ -26,12 +30,14 @@
   height: 2.857rem;
   font-weight: normal;
   cursor: pointer;
+
   &_value_current {
     background: $purple-gradient;
     border-radius: 1.571rem;
     font-weight: bold;
     color: $white-color;
   }
+
   &_value_next {
     @include material-icons;
     display: flex;

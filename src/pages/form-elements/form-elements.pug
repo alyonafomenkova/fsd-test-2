@@ -169,25 +169,25 @@ block content
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
         +textField(defaultTextField)
-      div.form-elements__element.form-elements__element_margin_bottom-21
+      div.form-elements__element.form-elements__element_margin_bottom-22
         +textField(hoveredTextField)
       div.form-elements__element.form-elements__element_margin_bottom-24
         +dropdown(dropdownSettings1)
-      div.form-elements__element.form-elements__element_margin_bottom-38
+      div.form-elements__element.form-elements__element_margin_bottom-35
         +maskedTextField(maskedTextField)
-      div.form-elements__element.form-elements__element_margin_bottom-38
+      div.form-elements__element.form-elements__element_margin_bottom-36
         +date-dropdown({'startLabel': 'date Dropdown', 'endLabel': 'date Dropdown'})
-      div.form-elements__element.form-elements__element_margin_bottom-41
+      div.form-elements__element.form-elements__element_margin_bottom-43
         +date-dropdown({'startLabel': 'filter date dropdown'})
       div.form-elements__element.form-elements__element_margin_bottom-103
         +subscriptionTextField(subscriptionTextField)
 
     div.form-elements__elements-wrapper.form-elements__elements-wrapper_alignment_center
-      div.form-elements__element.form-elements__element_margin_bottom-42
+      div.form-elements__element.form-elements__element_margin_bottom-43
         +checkboxButtons(checkboxData)
       div.form-elements__element.form-elements__element_margin_bottom-35
         +radioButtons({'title': 'Radio Buttons'})
-      div.form-elements__element.form-elements__element_margin_bottom-45
+      div.form-elements__element.form-elements__element_margin_bottom-41
         +toggleButton(toggleData)
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title like button
@@ -195,7 +195,7 @@ block content
           +likeButton({'countOfLikes': 2})
           +likeButton({'countOfLikes': 12, 'isActive': true})
       div.form-elements__element.form-elements__element_margin_bottom-41
-        h2.form-elements__title rate button
+        h2.form-elements__title.form-elements__title_view_rating rate button
         div.form-elements__wrapper.form-elements__wrapper_buttons-type_rate
           +rating(4)
           +rating(5)
@@ -211,7 +211,7 @@ block content
         div.form-elements__button-wrapper
           +button({'view': 'bordered', 'height': 'high', 'content': 'click me'})
         +button({'view': 'bordered', 'height': 'high', 'isHovered': true, 'content': 'click me'})
-        div
+        div.form-elements__buttons-wrapper
           div.form-elements__button-wrapper
             +button({'view': 'textual', 'height': 'high', 'content': 'click me'})
           +button({'view': 'textual', 'height': 'high', 'isHovered': true, 'content': 'click me'})
