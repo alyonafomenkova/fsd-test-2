@@ -1,4 +1,11 @@
 extends ../../base/base.pug
+include ../../components/logo/logo
+include ../../components/date-dropdown/date-dropdown
+include ../../components/search-form/search-form
+include ../../components/registration/registration
+include ../../components/login/login
+include ../../components/booking-form/booking-form
+include ../../components/room-info-cards/room-info-cards
 
 block vars
   -
@@ -27,13 +34,6 @@ block title
   | Cards
 
 block content
-  include ../../components/logo/logo
-  include ../../components/date-dropdown/date-dropdown
-  include ../../components/search-form/search-form
-  include ../../components/registration/registration
-  include ../../components/login/login
-  include ../../components/booking-form/booking-form
-  include ../../components/room-info-cards/room-info-cards
   +logo('uikit')
 
   main.cards

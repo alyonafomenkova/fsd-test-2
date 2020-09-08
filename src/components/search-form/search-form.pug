@@ -1,19 +1,20 @@
 include ../button/button
 include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
--
-  const dropdownSettings = {
+
+mixin searchForm
+  -
+    const dropdownSettings = {
     'type': 'people',
     'label': 'гости',
     'placeholder': 'Сколько гостей',
     'items': [
-      {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-      {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-      {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
     ]
-  };
+    };
 
-mixin searchForm
   form.search-form(action='url' method='post')
     h2.search-form__title Найдём номера под ваши пожелания
     fieldset.search-form__fieldset-date

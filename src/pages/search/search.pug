@@ -1,4 +1,14 @@
 extends ../../base/base.pug
+include ../../components/header/header
+include ../../components/date-dropdown/date-dropdown
+include ../../components/dropdown/dropdown
+include ../../components/range-slider/range-slider
+include ../../components/checkbox-buttons/checkbox-buttons
+include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
+include ../../components/expandable-checkbox-list/expandable-checkbox-list
+include ../../components/room-info-cards/room-info-cards
+include ../../components/pagination/pagination
+include ../../components/footer/footer
 
 block vars
   -
@@ -141,16 +151,6 @@ block title
   | search
 
 block content
-  include ../../components/header/header
-  include ../../components/date-dropdown/date-dropdown
-  include ../../components/dropdown/dropdown
-  include ../../components/range-slider/range-slider
-  include ../../components/checkbox-buttons/checkbox-buttons
-  include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
-  include ../../components/expandable-checkbox-list/expandable-checkbox-list
-  include ../../components/room-info-cards/room-info-cards
-  include ../../components/pagination/pagination
-  include ../../components/footer/footer
 
   +header()
   main.search

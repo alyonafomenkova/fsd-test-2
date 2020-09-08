@@ -1,7 +1,8 @@
+include ../button/button
+include ../logo/logo
+include ../modal/modal
+
 mixin header({isUserAuthorized, items} = {})
-  include ../button/button
-  include ../logo/logo
-  include ../modal/modal
   -
     const defaultItems = [
       {'content': 'О нас'},

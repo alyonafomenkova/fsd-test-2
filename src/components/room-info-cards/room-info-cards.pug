@@ -1,5 +1,6 @@
+include ../../components/rating/rating
+
 mixin roomInfoCards({title, items} = options)
-  include ../../components/rating/rating
   div.room-info-cards
     if (title)
       h1.room-info-cards__title !{title}

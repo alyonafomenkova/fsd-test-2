@@ -1,4 +1,11 @@
 extends ../../base/base.pug
+include ../../components/header/header
+include ../../components/room-details/room-details
+include ../../components/pie-chart/pie-chart
+include ../../components/reviews/reviews
+include ../../components/bullet-list/bullet-list
+include ../../components/booking-form/booking-form
+include ../../components/footer/footer
 
 block vars
   -
@@ -33,13 +40,6 @@ block title
   | room details
 
 block content
-  include ../../components/header/header
-  include ../../components/room-details/room-details
-  include ../../components/pie-chart/pie-chart
-  include ../../components/reviews/reviews
-  include ../../components/bullet-list/bullet-list
-  include ../../components/booking-form/booking-form
-  include ../../components/footer/footer
 
   +header()
   main.details

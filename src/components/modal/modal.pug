@@ -1,6 +1,7 @@
+include ../login/login
+include ../registration/registration
+
 mixin modal(type)
-  include ../login/login
-  include ../registration/registration
   if(type='login')
     section.login-modal.js-login-modal
       div.login-modal__overlay.js-login-modal__overlay
