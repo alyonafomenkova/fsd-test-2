@@ -1,4 +1,5 @@
 extends ../../base/base.pug
+include ../../components/logo/logo
 
 block vars
   -
@@ -26,25 +27,18 @@ block title
   | Colors and Type
 
 block content
-  include ../../components/logo/logo
   +logo('uikit')
-  main
-    div.container
-      div.container__content
-        +colors
-      div.container__content
-        +types
-
-mixin colors
-  each item in colors
-    div.color-block
-      div.color-block__example(style='background-color:' + item.value)
-      div.color-block__info
-        h2.color-block__title #{item.title}
-        p.color-block__description #{item.valueInHex}
-
-mixin types
-  each item in types
-    div.type-block
-      #{item.tag}(class="type-block__title type-block__title_type_" + item.title.toLowerCase()) #{item.title}
-      #{item.tag}.type-block__description #{item.description}
+  main.theme
+    div.theme__container
+      div.theme__content
+        each item in colors
+          div.theme__color
+            div.theme__color-example(style='background-color:' + item.value)
+            div.theme__color-info
+              h2.theme__color-title #{item.title}
+              p.theme__color-description #{item.valueInHex}
+      div.theme__content
+        each item in types
+          div.theme__type(class="theme__type-wrapper_type_" + item.title.toLowerCase())
+            #{item.tag}(class="theme__type-title theme__type-title_type_" + item.title.toLowerCase()) #{item.title}
+            #{item.tag}.theme__type-description #{item.description}

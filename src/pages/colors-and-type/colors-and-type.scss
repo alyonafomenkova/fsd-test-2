@@ -1,64 +1,100 @@
 @import '~Base';
 
 body {
-  width: 100%;
+  max-width: $max-desktop-width;
   margin: 0 auto;
  }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  padding: 4.786rem 13.214rem 0 10.714rem;
-}
+.theme {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.786rem 13.214rem 0 10.714rem;
+  }
 
-.color-block {
-  display: flex;
-  margin-bottom: 1.429rem;
-  &__example {
+  &__color {
+    display: flex;
+    margin-bottom: 1.429rem;
+  }
+
+  &__color-example {
     width: 5rem;
     height: 5rem;
     margin-right: 2.857rem;
     border-radius: 0.429rem;
   }
-  &__info {
+
+  &__color-info {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
-  &__description {
+
+  &__color-title {
+    @include h2-text;
+  }
+
+  &__color-description {
     margin: 0;
     font-family: 'Quicksand', 'Arial', sans-serif;
     font-weight: normal;
     font-size: 1.357rem;
     line-height: 2.071;
   }
-}
 
-.type-block {
-  display: flex;
-  width: 28.571rem;
-  margin-bottom: 3.714rem;
-  &:nth-child(3) {
-    margin-bottom: 2.429rem;
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    width: 28.571rem;
+    margin-bottom: 3.714rem;
+
+    &:nth-child(3) {
+      width: 17.429rem;
+      margin-bottom: 2.429rem;
+    }
   }
-  &__description {
+
+  &__type-description {
     text-align: left;
   }
 }
 
-.type-block__title {
-  width: 2.643rem;
-  margin-right: 2.143rem;
-  font-weight: normal;
-  text-align: right;
-  color: rgba(31, 32, 65, 0.25);
-  &_type_h2 {
-    width: 2rem;
+.theme__type-wrapper_type_h1 {
+  .theme__type-title_type_h1 {
+    @include h1-text;
+    margin-right: 2.286rem;
   }
-  &_type_h3 {
-    width: 2rem;
+
+  .theme__type-description {
+    @include h1-text;
   }
-  &_type_body {
+}
+
+.theme__type-wrapper_type_h2 {
+  .theme__type-title_type_h2 {
+    @include h2-text;
+    margin-right: 2.429rem;
+  }
+
+  .theme__type-description {
+    @include h2-text;
+  }
+}
+
+.theme__type-wrapper_type_h3 {
+  .theme__type-title_type_h3,
+  .theme__type-description {
+    @include h3-text;
+  }
+}
+
+.theme__type-wrapper_type_body {
+  .theme__type-title_type_body {
+    @include body-text;
     margin-right: 1.429rem;
+  }
+
+  .theme__type-description {
+    @include body-text;
   }
 }
