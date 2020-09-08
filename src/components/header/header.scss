@@ -1,35 +1,41 @@
-@import '../../base/base.scss';
-@import '../../base/theme.scss';
+@import '~Base';
 
 .header {
   margin: 0 auto;
   padding: 0 1.429rem 0 1.429rem;
   background-color: $white-color;
   box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 35.714rem;
     margin: 0 auto;
+
     @media (min-width: $tablet-width) {
       max-width: 82.857rem;
       padding-top: 0.857rem;
     }
   }
+
   &__content-wrapper {
     width: 60%;
+
     @media (min-width: $tablet-width) {
       display: flex;
       flex-grow: 1;
       width: auto;
     }
   }
+
   &__login-button-wrapper {
     margin-right: 1.429rem;
   }
+
   &__user-name {
     display: none;
+
     @media (min-width: $tablet-width) {
       display: block;
       padding: 0.214rem 0 0.214rem 1.429rem;
@@ -37,7 +43,9 @@
       color: $dark-color-opacity-50;
     }
   }
+
   &__nav-list {
+    @include reset-list-style;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -46,33 +54,40 @@
     color: $dark-color-opacity-50;
     text-align: center;
   }
+
   &__submenu-link {
     display: block;
     padding: 0.357rem;
     font-style: italic;
     cursor: pointer;
     transition: text-shadow .3s;
+
     &:hover {
       color: $dark-color-opacity-75;
       text-shadow: 0 0 0.071rem $dark-color-opacity-75, 0 0 0.071rem $dark-color-opacity-75;
     }
   }
+
   &__auth-wrapper {
     display: none;
+
     @media (min-width: $desktop-width) {
       display: flex;
       justify-content: flex-end;
       z-index: 0;
     }
   }
+
   &__show-auth-btn {
     @include material-icons;
     color: $purple-color;
     text-decoration: none;
+
     @media (min-width: $desktop-width) {
       display: none;
     }
   }
+
   @media (min-width: $tablet-width) {
     padding-bottom: 0.714rem;
   }
@@ -81,15 +96,18 @@
 .header__content-wrapper-menu_state_closed {
   .header__main-nav {
     display: none;
+
     @media (min-width: $tablet-width) {
       display: flex;
       justify-content: flex-end;
       flex-grow: 1;
     }
   }
+
   .header__toggle-menu-icon_state_opened {
     display: block;
   }
+
   .header__toggle-menu-icon_state_closed {
     display: none;
   }
@@ -99,9 +117,11 @@
   .header__main-nav {
     display: block;
   }
+
   .header__toggle-menu-icon_state_opened {
     display: none;
   }
+
   .header__toggle-menu-icon_state_closed {
     display: block;
   }
@@ -113,6 +133,7 @@
   align-items: center;
   width: 100%;
   min-height: 3.429rem;
+
   @media (min-width: $tablet-width) {
     width: auto;
     order: 1;
@@ -126,12 +147,15 @@
   background-color: transparent;
   color: $purple-color;
   border: none;
+
   &_state_without-js {
     display: none;
   }
+
   &_state_with-js {
     display: block;
   }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -140,12 +164,15 @@
 .header__nav-item {
   min-width: 7.857rem;
   text-align: center;
+
   &_margin_small {
     margin-right: 1.5rem;
   }
+
   &_margin_big {
     margin-right: 1.929rem;
   }
+
   @media (min-width: $tablet-width) {
     min-width: auto;
   }
@@ -156,11 +183,13 @@
   padding: 0.429rem;
   cursor: pointer;
   transition: text-shadow .3s;
+
   &_state_active,
   &:hover {
     color: $dark-color-opacity-75;
     text-shadow: 0 0 0.071rem $dark-color-opacity-75, 0 0 0.071rem $dark-color-opacity-75;
   }
+
   @media (min-width: $tablet-width) {
     padding: 0.714rem 0;
   }
@@ -169,12 +198,15 @@
 .header__submenu {
   width: 100%;
   position: relative;
+
   @media (min-width: $tablet-width) {
     width: auto;
     padding-right: 1.714rem;
     position: relative;
+
     &:hover {
       .header__submenu-list {
+        @include reset-list-style;
         display: block;
         position: absolute;
         top: 100%;
@@ -189,6 +221,7 @@
   .header__toggle-submenu-icon_state_closed {
     display: none;
   }
+
   .header__submenu-list {
     display: none;
   }
@@ -198,9 +231,11 @@
   .header__toggle-submenu-icon_state_closed {
     display: block;
   }
+
   .header__toggle-submenu-icon_state_opened {
     display: none;
   }
+
   .header__submenu-list {
     display: block;
   }
@@ -217,9 +252,11 @@
   border: none;
   background-color: transparent;
   pointer-events: none;
+
   &_state_without-js {
     display: none;
   }
+
   &_state_with-js {
     display: block;
   }

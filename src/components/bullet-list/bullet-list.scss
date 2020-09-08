@@ -2,11 +2,11 @@
 
 .bullet__title {
   @include h2-text;
-  margin-bottom: 1rem;
+  margin: 0 0 1.286rem 1.429rem;
 
   &_font_montserrat {
     @include h3-text;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
   }
 }
 
@@ -18,7 +18,7 @@
 .bullet__item {
   position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 0.786rem;
+  margin-bottom: 0.714rem;
 
   &::before {
     content: '';

@@ -4,6 +4,7 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     margin-bottom: 1.429rem;
   }
 
@@ -11,17 +12,21 @@
     @include h2-text;
   }
 
+  &__count {
+    line-height: 1rem;
+  }
+
   &__list {
     @include reset-list-style;
   }
 
   &__item {
-    margin-bottom: 1.786rem;
+    margin-bottom: 1.571rem;
   }
 
   &__author {
     display: flex;
-    margin-bottom: 0.571rem;
+    margin-bottom: 0.5rem;
   }
 
   &__avatar {
@@ -44,7 +49,7 @@
 
   &__text-wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     padding-left: 0.286rem;
   }
 

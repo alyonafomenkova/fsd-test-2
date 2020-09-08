@@ -29,9 +29,9 @@ mixin roomInfoCards({title, items} = options)
                   alt=`Фото номера`
                   )
               a.room-info-cards__prev-link.js-room-info-cards__prev-link
-                i.room-info-cards__prev-icon expand_more
+                span.room-info-cards__prev-icon expand_more
               a.room-info-cards__next-link.js-room-info-cards__next-link
-                i.room-info-cards__next-icon expand_more
+                span.room-info-cards__next-icon expand_more
               br
               div.room-info-cards__dots-wrapper
                 span(data-number="1").room-info-cards__dot.js-room-info-cards__dot
@@ -45,7 +45,7 @@ mixin roomInfoCards({title, items} = options)
                   if(item.type)
                     span.room-info-cards__type  !{item.type}
                 div.room-info-cards__price-wrapper
-                  b.room-info-cards__price !{item.price}
+                  b.room-info-cards__price !{item.price}&#8381;
                   span.room-info-cards__price-period  в сутки
               div.room-info-cards__reviews-wrapper
                 +rating(item.rating)

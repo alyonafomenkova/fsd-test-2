@@ -8,10 +8,12 @@ body {
 
 .container {
   margin-top: 4.429rem;
+
   &__item {
     margin-bottom: 2.857rem;
     background-color: $white-color;
   }
+
   &__footer-wrapper {
     padding-bottom: 7.143rem;
   }

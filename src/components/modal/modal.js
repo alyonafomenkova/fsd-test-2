@@ -1,6 +1,6 @@
-import '../login-form/login-form.js';
+import '../login/login.js';
 import '../modal/modal.scss';
-import '../registration-form/registration-form.js';
+import '../registration/registration.js';
 
 const body = document.querySelector('body');
 const loginButton = document.querySelector('.js-button_type_login');

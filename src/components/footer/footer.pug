@@ -35,13 +35,13 @@ mixin footer({items, isUikit} = {})
       div.footer__content-wrapper
         each item in settings.contentLists
           div.footer__content-item
-            h3 !{item.title}
-            if(item.links)
+            h3.footer__title !{item.title}
+            if (item.links)
               ul.footer__content-list
                 each link in item.links
-                  li
+                  li.footer__content-unit
                     a.footer__content-link !{link}
-            if(item.subscribe)
+            if (item.subscribe)
               div.footer__subscribe-wrapper
                 p.footer__subscribe-text !{item.subscribe}
                 +subscriptionTextField({'type': 'Email', 'name': 'subscription-text', 'placeholder': 'Email'})

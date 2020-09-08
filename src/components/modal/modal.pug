@@ -1,13 +1,13 @@
 mixin modal(type)
-  include ../login-form/login-form
-  include ../registration-form/registration-form
+  include ../login/login
+  include ../registration/registration
   if(type='login')
     section.login-modal.js-login-modal
       div.login-modal__overlay.js-login-modal__overlay
       div.login-modal__form
-        +loginForm
+        +login
   if(type='registration')
     section.registration-modal.js-registration-modal
       div.registration-modal__overlay.js-registration-modal__overlay
       div.registration-modal__form
-        +registrationForm
+        +registration

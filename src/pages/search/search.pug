@@ -166,11 +166,12 @@ block content
         +checkboxButtons(checkboxData)
       div.search__element.search__element_margin_bottom-21
         +richCheckboxButtons({'title': 'доступность'})
-      div.search__element.search__element_margin_bottom-18
+      div.search__element.search__element_margin_bottom-16
         +dropdown(facilitiesDropdownSettings)
       +expandableCheckboxList(dataForexpandableCheckbox)
     div.search__wrapper
       article.search__cards
         +roomInfoCards(roomInfoCardsData)
-      +pagination
+      div.search__pagination-wrapper
+        +pagination
   +footer()
