@@ -4,13 +4,15 @@ include ../masked-text-field/masked-text-field
 include ../text-field/text-field
 include ../toggle-button/toggle-button
 
-mixin loginForm
+mixin login
   div.login
-    form.login-form(action='url' method='post')
-      h2.login-form__title Войти
-      fieldset.login-form__fieldset-data
-        +textField({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
-        +textField({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
+    form.login__form(action='url' method='post')
+      h2.login__title Войти
+      fieldset.login__fieldset-data
+        div.login__text-field-wrapper
+          +textField({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
+        div.login__text-field-wrapper
+          +textField({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
       +button({'view': 'actionable', 'height': 'high', 'content': 'войти'})
     div.login__registration-wrapper
       span.login__registration-text Нет аккаунта на Toxin?

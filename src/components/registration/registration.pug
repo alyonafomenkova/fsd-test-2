@@ -1,0 +1,38 @@
+include ../masked-text-field/masked-text-field
+include ../radio-buttons/radio-buttons
+include ../text-field/text-field
+include ../toggle-button/toggle-button
+include ../button/button
+
+mixin registration
+  -
+    const toggleData = {
+      'items': [
+        {'name': 'toggle', 'label': 'Получать спецпредложения'}
+      ]
+    };
+
+  div.registration
+    form.registration__form(action='url' method='post')
+      h2.registration__title Регистрация аккаунта
+      fieldset.registration__fieldset-name
+        div.registration__text-field-wrapper
+          +textField({'name': 'text', 'placeholder': 'Имя'})
+        div.registration__text-field-wrapper
+          +textField({'name': 'surname', 'placeholder': 'Фамилия'})
+      fieldset.registration__fieldset-gender
+        +radioButtons()
+      fieldset.registration__fieldset-birthday
+        +maskedTextField({'name': 'birthday', 'placeholder': 'дд.мм.гггг', 'label': 'дата рождения'})
+      fieldset.registration__fieldset-login
+        legend.registration__legend-login данные для входа в сервис
+        div.registration__text-field-wrapper
+          +textField({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
+        div.registration__text-field-wrapper
+          +textField({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
+      div.registration__offers-wrapper
+        +toggleButton(toggleData)
+      +button({'view': 'actionable', 'height': 'high', 'content': 'Перейти к оплате'})
+    div.registration__login-wrapper
+      span.registration__login-text Уже есть аккаунт на Toxin
+      +button({'view': 'bordered', 'height': 'high', 'content': 'войти'})
