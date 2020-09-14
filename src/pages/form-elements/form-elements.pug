@@ -22,137 +22,137 @@ include ../../components/reviews/reviews
 block vars
   -
     const defaultTextField = {
-      'type': 'email',
-      'name': 'email',
-      'placeholder': 'Email',
-      'label': 'Text Field',
-      'uikitState': 'default',
+      "type": "email",
+      "name": "email",
+      "placeholder": "Email",
+      "label": "Text Field",
+      "uikitState": "default",
     };
     const hoveredTextField = {
-      'name': 'text',
-      'placeholder': 'This is pretty awesome',
-      'label': 'Text Field',
-      'uikitState': 'Hover / Focus',
-      'isHovered': true,
+      "name": "text",
+      "placeholder": "This is pretty awesome",
+      "label": "Text Field",
+      "uikitState": "Hover / Focus",
+      "isHovered": true,
     };
     const maskedTextField = {
-      'name': 'masked-text',
-      'placeholder': 'дд.мм.гггг',
-      'label': 'masked text field',
-      'uikitState': 'default',
+      "name": "masked-text",
+      "placeholder": "дд.мм.гггг",
+      "label": "masked text field",
+      "uikitState": "default",
     };
     const subscriptionTextField = {
-      'type': 'Email',
-      'name': 'subscription-text',
-      'placeholder': 'Email',
-      'label': 'subscription text field',
+      "type": "Email",
+      "name": "subscription-text",
+      "placeholder": "Email",
+      "label": "subscription text field",
     };
     const dropdownSettings1 = {
-      'type': 'people',
-      'label': 'Dropdown',
-      'uikitState': 'default',
-      'placeholder': 'Сколько гостей',
-      'items': [
-        {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+      "type": "people",
+      "label": "Dropdown",
+      "uikitState": "default",
+      "placeholder": "Сколько гостей",
+      "items": [
+        {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+        {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+        {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
       ],
     };
     const dropdownSettings2 = {
-      'type': 'facilities',
-      'label': 'Dropdown',
-      'uikitState': 'default',
-      'placeholder': 'Сколько комнат',
-      'items': [
-        {'title': 'спальни', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'кровати', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+      "type": "facilities",
+      "label": "Dropdown",
+      "uikitState": "default",
+      "placeholder": "Сколько комнат",
+      "items": [
+        {"title": "спальни", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+        {"title": "кровати", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+        {"title": "ванные комнаты", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
       ],
     };
     const dropdownSettings3 = {
-      'type': 'facilities',
-      'isExpanded': true,
-      'label': 'Dropdown',
-      'uikitState': 'expanded',
-      'placeholder': 'Сколько комнат',
-      'items': [
-        {'title': 'спальни', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'кровати', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'ванные комнаты', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+      "type": "facilities",
+      "isExpanded": true,
+      "label": "Dropdown",
+      "uikitState": "expanded",
+      "placeholder": "Сколько комнат",
+      "items": [
+        {"title": "спальни", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+        {"title": "кровати", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+        {"title": "ванные комнаты", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
       ],
     };
     const dropdownSettings4 = {
-      'type': 'people',
-      'isExpanded': true,
-      'label': 'Dropdown',
-      'uikitState': 'expanded',
-      'placeholder': 'Сколько гостей',
-      'items': [
-        {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+      "type": "people",
+      "isExpanded": true,
+      "label": "Dropdown",
+      "uikitState": "expanded",
+      "placeholder": "Сколько гостей",
+      "items": [
+        {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+        {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+        {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
       ],
     };
     const dropdownSettings5 = {
-      'type': 'people',
-      'isExpanded': true,
-      'label': 'Dropdown',
-      'uikitState': 'expanded',
-      'placeholder': 'Сколько гостей',
-      'items': [
-        {'title': 'Взрослые', 'defaultCount': '2', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'Дети', 'defaultCount': '1', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'}
+      "type": "people",
+      "isExpanded": true,
+      "label": "Dropdown",
+      "uikitState": "expanded",
+      "placeholder": "Сколько гостей",
+      "items": [
+        {"title": "Взрослые", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+        {"title": "Дети", "defaultCount": "1", "minCount": "0", "maxCount": "10"},
+        {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
       ],
     };
     const checkboxData = {
-      'title': 'Checkbox Buttons',
-      'items': [
-        {'name': 'smoke', 'label': 'Можно курить'},
-        {'name': 'pets', 'label': 'Можно с питомцами', 'isChecked': true},
-        {'name': 'guests', 'label': 'Можно пригласить гостей (до 10 человек)', 'isChecked': true},
+      "title": "Checkbox Buttons",
+      "items": [
+        {"name": "smoke", "label": "Можно курить"},
+        {"name": "pets", "label": "Можно с питомцами", "isChecked": true},
+        {"name": "guests", "label": "Можно пригласить гостей (до 10 человек)", "isChecked": true},
       ]
     };
     const dataForExpandableCheckbox = {
-      'title': 'expandable checkbox list',
-      'items': [
-        {'name': 'wifi', 'label': 'wi-fi', 'isChecked': true},
-        {'name': 'parking', 'label': 'Парковка'},
+      "title": "expandable checkbox list",
+      "items": [
+        {"name": "wifi", "label": "wi-fi", "isChecked": true},
+        {"name": "parking", "label": "Парковка"},
       ]
     };
     const dataForExpandedCheckbox = {
-      'title': 'expandable checkbox list',
-      'isExpanded': true,
-      'items': [
-        {'name': 'breakfast', 'label': 'Завтрак'},
-        {'name': 'table', 'label': 'Письменный стол', 'isChecked': true},
-        {'name': 'chair', 'label': 'Стул для кормления', 'isChecked': true},
-        {'name': 'cot', 'label': 'Кроватка', 'isChecked': true},
-        {'name': 'tv', 'label': 'Телевизор'},
-        {'name': 'shampoo', 'label': 'Шампунь'},
+      "title": "expandable checkbox list",
+      "isExpanded": true,
+      "items": [
+        {"name": "breakfast", "label": "Завтрак"},
+        {"name": "table", "label": "Письменный стол", "isChecked": true},
+        {"name": "chair", "label": "Стул для кормления", "isChecked": true},
+        {"name": "cot", "label": "Кроватка", "isChecked": true},
+        {"name": "tv", "label": "Телевизор"},
+        {"name": "shampoo", "label": "Шампунь"},
       ]
     };
     const toggleData = {
-      'title': 'Toggle',
-      'items': [
-        {'name': 'toggle', 'label': 'Получать спецпредложения', 'isChecked': true},
-        {'name': 'toggle', 'label': 'Получать спецпредложения'},
+      "title": "Toggle",
+      "items": [
+        {"name": "toggle", "label": "Получать спецпредложения", "isChecked": true},
+        {"name": "toggle", "label": "Получать спецпредложения"},
       ]
     };
     const roomDetailsData = {
-      'items': [
-        {'icon': 'insert_emoticon', 'name': 'Комфорт', 'description': 'Шумопоглощающие стены'},
-        {'icon': 'location_city', 'name': 'Удобство', 'description': 'Окно в каждой из спален'},
+      "items": [
+        {"icon": "insert_emoticon", "name": "Комфорт", "description": "Шумопоглощающие стены"},
+        {"icon": "location_city", "name": "Удобство", "description": "Окно в каждой из спален"},
       ]
     };
     const reviewsData = {
-      'items': [{
-        'imgName': 'avatar-1.png',
-        'authorName': 'Мурад Сарафанов',
-        'date': '5 дней назад',
-        'likeButton': {'countOfLikes': 12, 'isActive': true},
-        'text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. ' +
-          'И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+      "items": [{
+        "imgName": "avatar-1.png",
+        "authorName": "Мурад Сарафанов",
+        "date": "5 дней назад",
+        "likeButton": {"countOfLikes": 12, "isActive": true},
+        "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. " +
+          "И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
       }]
     };
 
@@ -165,7 +165,7 @@ block title
 
 block content
 
-  +logo('uikit')
+  +logo("uikit")
   main.form-elements
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
@@ -177,9 +177,9 @@ block content
       div.form-elements__element.form-elements__element_margin_bottom-35
         +masked-text-field(maskedTextField)
       div.form-elements__element.form-elements__element_margin_bottom-36
-        +date-dropdown({'startLabel': 'date Dropdown', 'endLabel': 'date Dropdown'})
+        +date-dropdown({"startLabel": "date Dropdown", "endLabel": "date Dropdown"})
       div.form-elements__element.form-elements__element_margin_bottom-43
-        +date-dropdown({'startLabel': 'filter date dropdown'})
+        +date-dropdown({"startLabel": "filter date dropdown"})
       div.form-elements__element.form-elements__element_margin_bottom-103
         +subscription-text-field(subscriptionTextField)
 
@@ -187,14 +187,14 @@ block content
       div.form-elements__element.form-elements__element_margin_bottom-43
         +checkbox(checkboxData)
       div.form-elements__element.form-elements__element_margin_bottom-35
-        +radio({'title': 'Radio Buttons'})
+        +radio({"title": "Radio Buttons"})
       div.form-elements__element.form-elements__element_margin_bottom-41
         +toggle(toggleData)
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title like button
         div.form-elements__wrapper.form-elements__wrapper_buttons-type_like
-          +like-button({'countOfLikes': 2})
-          +like-button({'countOfLikes': 12, 'isActive': true})
+          +like-button({"countOfLikes": 2})
+          +like-button({"countOfLikes": 12, "isActive": true})
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title.form-elements__title_view_rating rate button
         div.form-elements__wrapper.form-elements__wrapper_buttons-type_rate
@@ -203,19 +203,19 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-35
-        +range-slider({'title': 'Range Slider'})
+        +range-slider({"title": "Range Slider"})
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title buttons
         div.form-elements__buttons-wrapper
-          +button({'view': 'filled', 'height': 'high', 'content': 'click me'})
-          +button({'view': 'filled', 'height': 'high', 'isHovered': true, 'content': 'click me'})
+          +button({"view": "filled", "height": "high", "content": "click me"})
+          +button({"view": "filled", "height": "high", "isHovered": true, "content": "click me"})
         div.form-elements__buttons-wrapper
-          +button({'view': 'bordered', 'height': 'high', 'content': 'click me'})
-          +button({'view': 'bordered', 'height': 'high', 'isHovered': true, 'content': 'click me'})
+          +button({"view": "bordered", "height": "high", "content": "click me"})
+          +button({"view": "bordered", "height": "high", "isHovered": true, "content": "click me"})
         div.form-elements__buttons-wrapper
-          +button({'view': 'textual', 'height': 'high', 'content': 'click me'})
-          +button({'view': 'textual', 'height': 'high', 'isHovered': true, 'content': 'click me'})
-        +button({'view': 'actionable', 'height': 'high', 'content': 'Перейти к оплате'})
+          +button({"view": "textual", "height": "high", "content": "click me"})
+          +button({"view": "textual", "height": "high", "isHovered": true, "content": "click me"})
+        +button({"view": "actionable", "height": "high", "content": "Перейти к оплате"})
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title pagination
         +pagination
@@ -242,11 +242,11 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-15
-        +rich-checkbox({'title': 'rich Checkbox Buttons'})
+        +rich-checkbox({"title": "rich Checkbox Buttons"})
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-15
-        +bullet({'title': 'Bullet list', 'isUikit': true})
+        +bullet({"title": "Bullet list", "isUikit": true})
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-93

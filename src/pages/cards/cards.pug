@@ -10,19 +10,19 @@ include ../../components/room-info-cards/room-info-cards
 block vars
   -
     const roomInfoCardsData = {
-      'items': [
+      "items": [
         {
-          'roomNumber': '888',
-          'title': '№ 888',
-          'type': 'люкс',
-          'rating': '5',
-          'reviewsCount': 145,
+          "roomNumber": "888",
+          "title": "№ 888",
+          "type": "люкс",
+          "rating": "5",
+          "reviewsCount": 145,
         },
         {
-          'roomNumber': '840',
-          'title': '№ 840',
-          'rating': '4',
-          'reviewsCount': 65,
+          "roomNumber": "840",
+          "title": "№ 840",
+          "rating": "4",
+          "reviewsCount": 65,
         },
       ]
     };
@@ -34,7 +34,7 @@ block title
   | Cards
 
 block content
-  +logo('uikit')
+  +logo("uikit")
 
   main.cards
     div.cards__wrapper
@@ -51,6 +51,6 @@ block content
 
     div.cards__wrapper
       div.cards__card
-        +date-dropdown({'isInline': 'true'})
+        +date-dropdown({"isInline": "true"})
       div.cards__card.cards__card_content_room
         +roomInfoCards(roomInfoCardsData)

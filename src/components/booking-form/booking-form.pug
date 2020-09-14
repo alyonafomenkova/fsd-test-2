@@ -5,21 +5,21 @@ include ../dropdown/dropdown
 mixin bookingForm
   -
     const dateDropdownOptions = [
-      {'id': 'start1-id', 'label': 'прибытие', 'placeholder': 'дд.мм.гггг', 'classes': ''},
-      {'id': 'end1-id', 'label': 'выезд', 'placeholder': 'дд.мм.гггг', 'classes': ''},
+      {"id": "start1-id", "label": "прибытие", "placeholder": "дд.мм.гггг", "classes": ""},
+      {"id": "end1-id", "label": "выезд", "placeholder": "дд.мм.гггг", "classes": ""},
     ];
     const dropdownSettings = {
-      'type': 'people',
-      'label': 'гости',
-      'placeholder': 'Сколько гостей',
-      'items': [
-        {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-        {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+      "type": "people",
+      "label": "гости",
+      "placeholder": "Сколько гостей",
+      "items": [
+        {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+        {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+        {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
       ]
     };
 
-  form.booking-form(action='url' method='post')
+  form.booking-form(action="url" method="post")
     div.booking-form__header
       div.booking-form__room-info
         span.booking-form__room-number-symbol №
@@ -29,7 +29,7 @@ mixin bookingForm
         b.booking-form__room-cost 9&nbsp;990₽
         span.booking-form__room-period  в сутки
     fieldset.booking-form__fieldset-date
-      +date-dropdown({'startLabel': 'прибытие', 'endLabel': 'выезд'})
+      +date-dropdown({"startLabel": "прибытие", "endLabel": "выезд"})
     fieldset.booking-form__fieldset-guests
       +dropdown(dropdownSettings)
     div.booking-form__price-details
@@ -48,4 +48,4 @@ mixin bookingForm
         span.booking-form__total-text Итого
         span.booking-form__dotes
         span.booking-form__total-value 38&nbsp;081₽
-    +button({'view': 'actionable', 'height': 'high', 'content': 'забронировать'})
+    +button({"view": "actionable", "height": "high", "content": "забронировать"})

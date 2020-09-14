@@ -11,22 +11,22 @@ mixin roomInfoCards({title, items} = options)
             div.room-info-cards__slideshow-container
               div.room-info-cards__mySlides.js-room-info-cards__mySlides.room-info-cards__mySlides_faded
                 img.room-info-cards__img(
-                  src=require('../../components/room-info-cards/images/' + item.roomNumber + '/' + item.roomNumber + '_1.png').default
+                  src=require(`../../components/room-info-cards/images/${item.roomNumber}/${item.roomNumber}_1.png`).default
                   alt=`Фото номера`
                   )
               div.room-info-cards__mySlides.js-room-info-cards__mySlides.room-info-cards__mySlides_faded
                 img.room-info-cards__img(
-                  src=require('../../components/room-info-cards/images/' + item.roomNumber + '/' + item.roomNumber + '_2.png').default
+                  src=require(`../../components/room-info-cards/images/${item.roomNumber}/${item.roomNumber}_2.png`).default
                   alt=`Фото номера`
                   )
               div.room-info-cards__mySlides.js-room-info-cards__mySlides.room-info-cards__mySlides_faded
                 img.room-info-cards__img(
-                  src=require('../../components/room-info-cards/images/' + item.roomNumber + '/' + item.roomNumber + '_3.png').default
+                  src=require(`../../components/room-info-cards/images/${item.roomNumber}/${item.roomNumber}_3.png`).default
                   alt=`Фото номера`
                   )
               div.room-info-cards__mySlides.js-room-info-cards__mySlides.room-info-cards__mySlides_faded
                 img.room-info-cards__img(
-                  src=require('../../components/room-info-cards/images/' + item.roomNumber + '/' + item.roomNumber + '_4.png').default
+                  src=require(`../../components/room-info-cards/images/${item.roomNumber}/${item.roomNumber}_4.png`).default
                   alt=`Фото номера`
                   )
               a.room-info-cards__prev-link.js-room-info-cards__prev-link
@@ -50,4 +50,4 @@ mixin roomInfoCards({title, items} = options)
                   span.room-info-cards__price-period  в сутки
               div.room-info-cards__reviews-wrapper
                 +rating(item.rating)
-                a.room-info-cards__reviews(href='reviews.html') <b> !{item.reviewsCount} </b>Отзывов
+                a.room-info-cards__reviews(href="reviews.html") <b> !{item.reviewsCount} </b>Отзывов

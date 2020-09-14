@@ -13,14 +13,14 @@ block title
   | headers-and-footers
 
 block content
-  +logo('uikit')
+  +logo("uikit")
 
   main.container
     div.container__item
       +header()
     div.container__item
-      +header({'isUserAuthorized': true})
+      +header({"isUserAuthorized": true})
     div.container__item
       +footer()
     div.container__item.container__footer-wrapper
-      +footer({'isUikit': true})
+      +footer({"isUikit": true})

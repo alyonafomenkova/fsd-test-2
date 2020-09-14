@@ -10,24 +10,24 @@ include ../../components/footer/footer
 block vars
   -
     const reviewsData = {
-      'title': 'Отзывы посетителей номера',
-      'isVisibleCountOfReviews': true,
-      'items': [
+      "title": "Отзывы посетителей номера",
+      "isVisibleCountOfReviews": true,
+      "items": [
         {
-          'imgName': 'avatar-1.png',
-          'authorName': 'Мурад Сарафанов',
-          'date': '5 дней назад',
-          'likeButton': {'countOfLikes': 12, 'isActive': true},
-          'text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. ' +
-            'И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+          "imgName": "avatar-1.png",
+          "authorName": "Мурад Сарафанов",
+          "date": "5 дней назад",
+          "likeButton": {"countOfLikes": 12, "isActive": true},
+          "text": `Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
+            И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.`,
         },
         {
-          'imgName': 'avatar-2.png',
-          'authorName': 'Патрисия Стёклышкова',
-          'date': 'Неделю назад',
-          'likeButton': {'countOfLikes': '2'},
-          'text': 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое ' +
-            'блюдо и десерт как комплимент',
+          "imgName": "avatar-2.png",
+          "authorName": "Патрисия Стёклышкова",
+          "date": "Неделю назад",
+          "likeButton": {"countOfLikes": "2"},
+          "text": `Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое
+            блюдо и десерт как комплимент`,
         }
       ]
     };
@@ -44,19 +44,19 @@ block content
   +header()
   main.details
     div.details__images-wrapper
-      img.details__image(src=require('../../pages/room-details/images/1.png').default width='68.125%' height='100%' alt='Photo of bedroom')
-      img.details__image(src=require('../../pages/room-details/images/2.png').default width='31.875%' height='50%' alt='Photo of cabinet')
-      img.details__image(src=require('../../pages/room-details/images/3.png').default width='31.875%' height='50%' alt='Photo of bedroom')
+      img.details__image(src=require("../../pages/room-details/images/1.png").default width="68.125%" height="100%" alt="Photo of bedroom")
+      img.details__image(src=require("../../pages/room-details/images/2.png").default width="31.875%" height="50%" alt="Photo of cabinet")
+      img.details__image(src=require("../../pages/room-details/images/3.png").default width="31.875%" height="50%" alt="Photo of bedroom")
     div.details__content-wrapper
       div.details__content
         div.details__content-top
-          +room-details({'title': 'Сведения о номере'})
+          +room-details({"title": "Сведения о номере"})
           +pie-chart()
         div.details__content-bottom
           div.details__reviews-wrapper
             +reviews(reviewsData)
         div.details__rules-wrapper
-          +bullet({'title': 'Правила'})
+          +bullet({"title": "Правила"})
           div.details__cancel-rule
             h2.details__cancel-rule-title Отмена
             p.details__cancel-rule-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
