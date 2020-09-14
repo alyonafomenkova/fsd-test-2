@@ -103,13 +103,13 @@
     width: 27.143rem;
     padding: 3rem 2.143rem 2.143rem 2.143rem;
   }
-}
 
-.booking-form__service-text {
-  width: 13.571rem;
-  line-height: 1.286rem;
+  &__service-text {
+    width: 13.571rem;
+    line-height: 1.286rem;
 
-  @media (min-width: $tablet-width) {
-    width: 15.5rem;
+    @media (min-width: $tablet-width) {
+      width: 15.5rem;
+    }
   }
 }

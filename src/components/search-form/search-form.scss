@@ -11,6 +11,17 @@
   border-radius: 0.286rem;
   box-shadow: 0 0 1.786rem $black-color-opacity-20;
 
+  &__title {
+    @include h2-text;
+    margin-bottom: 1.214rem;
+
+    @media (min-width: $tablet-width) {
+      width: 21.786rem;
+      font-size: 1.714rem;
+      line-height: 2.14rem;
+    }
+  }
+
   &__fieldset-date,
   &__fieldset-guests {
     margin: 0;
@@ -29,16 +40,5 @@
   @media (min-width: $tablet-width) {
     width: 27.143rem;
     padding: 2.857rem 2.143rem 2.143rem 2rem;
-  }
-}
-
-.search-form__title {
-  @include h2-text;
-  margin-bottom: 1.214rem;
-
-  @media (min-width: $tablet-width) {
-    width: 21.786rem;
-    font-size: 1.714rem;
-    line-height: 2.14rem;
   }
 }
