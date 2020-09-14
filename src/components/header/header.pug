@@ -10,7 +10,7 @@ mixin header({isUserAuthorized, items} = {})
       {'content': 'Новости'},
       {'content': 'Соглашения', 'submenu': [{'content': 'Соглашение_1'}, {'content': 'Соглашение_2'}]},
     ];
-    const settings = items ?  items: defaultItems;
+    items = items || defaultItems;
 
   header.header
     div.header__wrapper
@@ -30,7 +30,7 @@ mixin header({isUserAuthorized, items} = {})
               +button({'isRegister': true, 'view': 'filled', 'height': 'low', 'content': 'зарегистрироваться', 'href': 'sign-up.html'})
         nav.header__main-nav.js-header__main-nav
           ul.header__nav-list.js-header__nav-list
-            each item in settings
+            each item in items
               li.header__nav-item.js-header__nav-item(
                 class = 'header__nav-item_margin_small'
                 class = item.submenu ? 'header__submenu js-header__submenu header__submenu_state_closed' : ''

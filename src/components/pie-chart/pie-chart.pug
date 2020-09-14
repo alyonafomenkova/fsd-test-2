@@ -10,11 +10,11 @@ mixin pie-chart({title, items} = {})
       {'type': 'fine', 'count': '520', 'label': 'Великолепно'},
       {'type': 'bad', 'count': '0', 'label': 'Разочарован'},
     ];
-    const settings = items ?  items: defaultItems;
-    const totalVotes = settings.map(it => it.count).reduce((a, b) => Number.parseInt(a) + Number.parseInt(b), 0);
+    items = items || defaultItems;
+    const totalVotes = items.map(it => it.count).reduce((a, b) => Number.parseInt(a) + Number.parseInt(b), 0);
     title = title || 'Впечатления от номера';
 
-  figure.pie-chart.js-pie-chart(data-chart-data = settings)
+  figure.pie-chart.js-pie-chart(data-chart-data = items)
     if (title)
       figcaption.pie-chart__title !{title}
     div.pie-chart__wrapper
@@ -38,7 +38,7 @@ mixin pie-chart({title, items} = {})
           desc(id="votes-desc") На диаграмме представлены 1040 голосов. "Великолепно" - 520 голосов. "Хорошо" - 260 голосов. "Удовлетворительно" - 260 голосов.
           -
             let totalLengthOfPreviousSegments = 0;
-          each segment, index in settings
+          each segment, index in items
             - let segmentLength = (segment.count / totalVotes) * circumference;
             circle.pie-chart__circle.js-pie-chart__circle(cx="17" cy="17" r= radius fill="transparent" stroke=`url(#gradient-${segment.type})` stroke-width="1"
               stroke-dasharray= `${Math.max(segmentLength - GAP, 0)} ${circumference - segmentLength + GAP}`
