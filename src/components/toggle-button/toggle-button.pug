@@ -8,8 +8,8 @@ mixin toggleButton({title, items} = options)
           li.toggle__item
             label.toggle__label(for = item.id) #{item.label}
               input.toggle__input(
-                type = 'checkbox',
+                type = "checkbox",
                 name = item.name,
-                checked=item.isChecked
+                checked = item.isChecked
               )
               span.toggle__slider

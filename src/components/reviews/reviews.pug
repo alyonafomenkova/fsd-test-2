@@ -13,8 +13,8 @@ mixin reviews({title, items, isVisibleCountOfReviews} = options)
           li.reviews__item
             div.reviews__author
               img.reviews__avatar(
-                src = require('../../components/reviews/images/' + item.imgName).default
-                width='48' height='48' alt='Avatar')
+                src = require(`../../components/reviews/images/${item.imgName}`).default
+                width="48" height="48" alt="Avatar")
               div.reviews__author-info
                 span.reviews__author-name !{item.authorName}
                 span.reviews__date !{item.date}

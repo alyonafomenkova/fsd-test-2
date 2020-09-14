@@ -1,8 +1,8 @@
 mixin radioButtons({title, items} = {})
   -
     const defaultItems = [
-      {'name': 'sex', 'label': 'Мужчина', 'isChecked': true},
-      {'name': 'sex', 'label': 'Женщина'}
+      {"name": "sex", "label": "Мужчина", "isChecked": true},
+      {"name": "sex", "label": "Женщина"}
     ];
     items = items || defaultItems
 
@@ -13,10 +13,10 @@ mixin radioButtons({title, items} = {})
       each item, index in items
         li.radio__item
           input.radio__input(
-            type = 'radio',
-            id = item.name + '-' + index + '-id',
+            type = "radio",
+            id = `${item.name}-${index}-id`,
             name = item.name,
             checked = item.isChecked,
             disabled = item.isDisabled,
           )
-          label.radio__label(for = item.name + '-' + index + '-id') #{item.label}
+          label.radio__label(for = `${item.name}-${index}-id`) #{item.label}

@@ -6,23 +6,23 @@ mixin date-dropdown({isInline, startLabel, endLabel, placeholder, readonly} = op
       div.date-dropdown__item--inline.js-date-dropdown__item--inline
   else
     div.date-dropdown.js-date-dropdown(
-      class = endLabel ? 'date-dropdown--with-to-inputs js-date-dropdown--with-to-inputs' : 'date-dropdown--filter js-date-dropdown--filter'
+      class = endLabel ? "date-dropdown--with-to-inputs js-date-dropdown--with-to-inputs" : "date-dropdown--filter js-date-dropdown--filter"
     )
-      div.date-dropdown__item(class = !endLabel ? 'date-dropdown__item--filter' : '')
+      div.date-dropdown__item(class = !endLabel ? "date-dropdown__item--filter" : "")
         label.date-dropdown__label !{startLabel}
           input.date-dropdown__input(
-            type = 'text'
-            class = endLabel ? 'date-dropdown__input--first js-date-dropdown__input--first' : 'date-dropdown__input--filter js-date-dropdown__input--filter'
-            placeholder = placeholder ? placeholder : 'дд.мм.гггг'
+            type = "text"
+            class = endLabel ? "date-dropdown__input--first js-date-dropdown__input--first" : "date-dropdown__input--filter js-date-dropdown__input--filter"
+            placeholder = placeholder ? placeholder : "дд.мм.гггг"
             readonly = readonly
-            data-position='bottom left'
+            data-position="bottom left"
           )
       if (endLabel)
         div.date-dropdown__item
           label.date-dropdown__label !{endLabel}
             input.date-dropdown__input.date-dropdown__input--second.js-date-dropdown__input--second(
-              type = 'text'
-              placeholder = placeholder ? placeholder : 'дд.мм.гггг'
+              type = "text"
+              placeholder = placeholder ? placeholder : "дд.мм.гггг"
               readonly = readonly
-              data-position = 'bottom right'
+              data-position = "bottom right"
             )

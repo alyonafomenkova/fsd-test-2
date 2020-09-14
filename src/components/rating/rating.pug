@@ -6,7 +6,7 @@ mixin rating(currentRating)
       while n <= maxRating
         li.rating__item.js-rating__item(
           data-value = n,
-          class = currentRating >= n ? 'rating__item_selected js-rating__item_selected' : ''
+          class = currentRating >= n ? "rating__item_selected js-rating__item_selected" : ""
           )
-          i.rating__star.js-rating__star
+          span.rating__star.js-rating__star
         - n++

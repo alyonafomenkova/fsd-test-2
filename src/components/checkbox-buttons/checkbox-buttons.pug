@@ -5,12 +5,12 @@ mixin checkboxButtons({title, items} = options)
     ul.checkbox__list
       if (items)
         each item in items
-          li.checkbox__item(class = item.isDisabled ? 'checkbox__item_disabled' : '')
+          li.checkbox__item(class = item.isDisabled ? "checkbox__item_disabled" : "")
             input.checkbox__input(
-              type = 'checkbox',
-              id = item.name + '-id',
+              type = "checkbox",
+              id = `${item.name}-id`,
               name = item.name,
               checked = item.isChecked,
               disabled = item.isDisabled,
             )
-            label.checkbox__label(for = item.name + '-id') #{item.label}
+            label.checkbox__label(for = `${item.name}-id`) #{item.label}
