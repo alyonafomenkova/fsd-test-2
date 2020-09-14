@@ -1,21 +1,23 @@
 @import '~Base';
 
-.rating__list {
-  @include reset-list-style;
-  display: flex;
-  cursor: pointer;
-}
+.rating {
+  &__list {
+    @include reset-list-style;
+    display: flex;
+    cursor: pointer;
+  }
 
-.rating__item {
-  display: inline-block;
-  width: 1.714rem;
-  height: 1.714rem;
-}
+  &__item {
+    display: inline-block;
+    width: 1.714rem;
+    height: 1.714rem;
+  }
 
-.rating__star {
-  @include material-icons;
-  line-height: 1.429rem;
-  background-image: $purple-gradient;
-  background-clip: text;
-  color: transparent;
+  &__star {
+    @include material-icons;
+    line-height: 1.429rem;
+    background-image: $purple-gradient;
+    background-clip: text;
+    color: transparent;
+  }
 }

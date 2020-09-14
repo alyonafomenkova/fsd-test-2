@@ -31,13 +31,13 @@
     color: $dark-color-opacity-25;
     pointer-events: none;
   }
-}
 
-.like-button_active {
-  border-color: $purple-color;
+  &_active {
+    border-color: $purple-color;
 
-  .like-button__icon,
-  .like-button__count-likes {
-    color: $purple-color;
+    .like-button__icon,
+    .like-button__count-likes {
+      color: $purple-color;
+    }
   }
 }
