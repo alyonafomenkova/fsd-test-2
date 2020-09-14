@@ -1,8 +1,8 @@
-mixin expandableCheckboxList({title, isExpanded, items} = options)
-  include ../checkbox-buttons/checkbox-buttons
+mixin expandable-checkbox({title, isExpanded, items} = options)
+  include ../checkbox/checkbox
   div.expandable-checkbox.js-expandable-checkbox(class = isExpanded ? "expandable-checkbox_state_expanded js-expandable-checkbox_state_expanded" : "")
     div.expandable-checkbox__selection.js-expandable-checkbox__selection
       h3.expandable-checkbox__title !{title}
       span.expandable-checkbox__more-icon expand_more
     div.expandable-checkbox__wrapper.js-expandable-checkbox__wrapper
-      +checkboxButtons({items})
+      +checkbox({items})

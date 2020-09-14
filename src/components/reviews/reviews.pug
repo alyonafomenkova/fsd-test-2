@@ -19,5 +19,5 @@ mixin reviews({title, items, isVisibleCountOfReviews} = options)
                 span.reviews__author-name !{item.authorName}
                 span.reviews__date !{item.date}
             div.reviews__text-wrapper
-              +likeButton(item.likeButton)
+              +like-button(item.likeButton)
               p.reviews__text !{item.text}

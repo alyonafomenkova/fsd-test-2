@@ -1,8 +1,8 @@
 include ../button/button
-include ../radio-buttons/radio-buttons
+include ../radio/radio
 include ../masked-text-field/masked-text-field
 include ../text-field/text-field
-include ../toggle-button/toggle-button
+include ../toggle/toggle
 
 mixin login
   div.login
@@ -10,9 +10,9 @@ mixin login
       h2.login__title Войти
       fieldset.login__fieldset-data
         div.login__text-field-wrapper
-          +textField({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
+          +text-field({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
         div.login__text-field-wrapper
-          +textField({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
+          +text-field({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
       +button({'view': 'actionable', 'height': 'high', 'content': 'войти'})
     div.login__registration-wrapper
       span.login__registration-text Нет аккаунта на Toxin?

@@ -3,9 +3,9 @@ include ../../components/header/header
 include ../../components/date-dropdown/date-dropdown
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
-include ../../components/checkbox-buttons/checkbox-buttons
-include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
-include ../../components/expandable-checkbox-list/expandable-checkbox-list
+include ../../components/checkbox/checkbox
+include ../../components/rich-checkbox/rich-checkbox
+include ../../components/expandable-checkbox/expandable-checkbox
 include ../../components/room-info-cards/room-info-cards
 include ../../components/pagination/pagination
 include ../../components/footer/footer
@@ -160,15 +160,15 @@ block content
       div.search__element.search__element_margin_bottom-31
         +dropdown(dropdownSettings)
       div.search__element.search__element_margin_bottom-31
-        +rangeSlider({'title': 'диапазон цены'})
+        +range-slider({'title': 'диапазон цены'})
         p.search__cost-comment Стоимость за сутки пребывания в номере
       div.search__element.search__element_margin_bottom-33
-        +checkboxButtons(checkboxData)
+        +checkbox(checkboxData)
       div.search__element.search__element_margin_bottom-21
-        +richCheckboxButtons({'title': 'доступность'})
+        +rich-checkbox({'title': 'доступность'})
       div.search__element.search__element_margin_bottom-16
         +dropdown(facilitiesDropdownSettings)
-      +expandableCheckboxList(dataForexpandableCheckbox)
+      +expandable-checkbox(dataForexpandableCheckbox)
     div.search__wrapper
       article.search__cards
         +roomInfoCards(roomInfoCardsData)

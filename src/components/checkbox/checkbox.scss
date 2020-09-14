@@ -1,0 +1,62 @@
+@import '~Base';
+
+.checkbox {
+  &__list {
+    @include reset-list-style;
+  }
+
+  &__item {
+    margin-bottom: 0.714rem;
+
+    &_disabled  {
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    @include h3-text;
+    margin-bottom: 1.214rem;
+  }
+
+  &__input {
+    @include visually-hidden;
+
+    & + .checkbox__label {
+      display: flex;
+      align-items: flex-start;
+      width: 17.143rem;
+      cursor: pointer;
+      color: $dark-color-opacity-50;
+      line-height: 1.286rem;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        box-sizing: border-box;
+        width: 1.429rem;
+        height: 1.429rem;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 0.071rem solid $dark-color-opacity-25;
+        border-radius: 0.286rem;
+        margin-right: 0.7em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+
+      &:hover {
+        color: $dark-color-opacity-75;
+
+        &::before {
+          border-color: $purple-hover-color;
+        }
+      }
+    }
+
+    &:checked + .checkbox__label::before {
+      border-color: $purple-color;
+      background-image: url('images/tick.svg');
+    }
+  }
+}

@@ -1,7 +1,7 @@
 include ../masked-text-field/masked-text-field
-include ../radio-buttons/radio-buttons
+include ../radio/radio
 include ../text-field/text-field
-include ../toggle-button/toggle-button
+include ../toggle/toggle
 include ../button/button
 
 mixin registration
@@ -17,21 +17,21 @@ mixin registration
       h2.registration__title Регистрация аккаунта
       fieldset.registration__fieldset-name
         div.registration__text-field-wrapper
-          +textField({'name': 'text', 'placeholder': 'Имя'})
+          +text-field({'name': 'text', 'placeholder': 'Имя'})
         div.registration__text-field-wrapper
-          +textField({'name': 'surname', 'placeholder': 'Фамилия'})
+          +text-field({'name': 'surname', 'placeholder': 'Фамилия'})
       fieldset.registration__fieldset-gender
-        +radioButtons()
+        +radio()
       fieldset.registration__fieldset-birthday
-        +maskedTextField({'name': 'birthday', 'placeholder': 'дд.мм.гггг', 'label': 'дата рождения'})
+        +masked-text-field({'name': 'birthday', 'placeholder': 'дд.мм.гггг', 'label': 'дата рождения'})
       fieldset.registration__fieldset-login
         legend.registration__legend-login данные для входа в сервис
         div.registration__text-field-wrapper
-          +textField({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
+          +text-field({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
         div.registration__text-field-wrapper
-          +textField({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
+          +text-field({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
       div.registration__offers-wrapper
-        +toggleButton(toggleData)
+        +toggle(toggleData)
       +button({'view': 'actionable', 'height': 'high', 'content': 'Перейти к оплате'})
     div.registration__login-wrapper
       span.registration__login-text Уже есть аккаунт на Toxin

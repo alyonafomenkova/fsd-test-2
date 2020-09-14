@@ -1,11 +1,11 @@
-import '../../components/checkbox-buttons/checkbox-buttons.js';
+import '../../components/checkbox/checkbox.js';
 import '../../components/date-dropdown/date-dropdown.js';
 import '../../components/dropdown/dropdown.js';
-import '../../components/expandable-checkbox-list/expandable-checkbox-list.js';
+import '../../components/expandable-checkbox/expandable-checkbox.js';
 import '../../components/footer/footer.js';
 import '../../components/header/header.js';
 import '../../components/pagination/pagination.js';
 import '../../components/range-slider/range-slider.js';
-import '../../components/rich-checkbox-buttons/rich-checkbox-buttons.js';
+import '../../components/rich-checkbox/rich-checkbox.js';
 import '../../components/room-info-cards/room-info-cards.js';
 import './search.scss';

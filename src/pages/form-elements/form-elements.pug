@@ -5,17 +5,17 @@ include ../../components/masked-text-field/masked-text-field
 include ../../components/dropdown/dropdown
 include ../../components/date-dropdown/date-dropdown
 include ../../components/subscription-text-field/subscription-text-field
-include ../../components/checkbox-buttons/checkbox-buttons
-include ../../components/radio-buttons/radio-buttons
-include ../../components/toggle-button/toggle-button
+include ../../components/checkbox/checkbox
+include ../../components/radio/radio
+include ../../components/toggle/toggle
 include ../../components/like-button/like-button
 include ../../components/rating/rating
 include ../../components/range-slider/range-slider
 include ../../components/button/button
 include ../../components/pagination/pagination
-include ../../components/expandable-checkbox-list/expandable-checkbox-list
-include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
-include ../../components/bullet-list/bullet-list
+include ../../components/expandable-checkbox/expandable-checkbox
+include ../../components/rich-checkbox/rich-checkbox
+include ../../components/bullet/bullet
 include ../../components/room-details/room-details
 include ../../components/reviews/reviews
 
@@ -169,32 +169,32 @@ block content
   main.form-elements
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
-        +textField(defaultTextField)
+        +text-field(defaultTextField)
       div.form-elements__element.form-elements__element_margin_bottom-22
-        +textField(hoveredTextField)
+        +text-field(hoveredTextField)
       div.form-elements__element.form-elements__element_margin_bottom-24
         +dropdown(dropdownSettings1)
       div.form-elements__element.form-elements__element_margin_bottom-35
-        +maskedTextField(maskedTextField)
+        +masked-text-field(maskedTextField)
       div.form-elements__element.form-elements__element_margin_bottom-36
         +date-dropdown({'startLabel': 'date Dropdown', 'endLabel': 'date Dropdown'})
       div.form-elements__element.form-elements__element_margin_bottom-43
         +date-dropdown({'startLabel': 'filter date dropdown'})
       div.form-elements__element.form-elements__element_margin_bottom-103
-        +subscriptionTextField(subscriptionTextField)
+        +subscription-text-field(subscriptionTextField)
 
     div.form-elements__elements-wrapper.form-elements__elements-wrapper_alignment_center
       div.form-elements__element.form-elements__element_margin_bottom-43
-        +checkboxButtons(checkboxData)
+        +checkbox(checkboxData)
       div.form-elements__element.form-elements__element_margin_bottom-35
-        +radioButtons({'title': 'Radio Buttons'})
+        +radio({'title': 'Radio Buttons'})
       div.form-elements__element.form-elements__element_margin_bottom-41
-        +toggleButton(toggleData)
+        +toggle(toggleData)
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title like button
         div.form-elements__wrapper.form-elements__wrapper_buttons-type_like
-          +likeButton({'countOfLikes': 2})
-          +likeButton({'countOfLikes': 12, 'isActive': true})
+          +like-button({'countOfLikes': 2})
+          +like-button({'countOfLikes': 12, 'isActive': true})
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title.form-elements__title_view_rating rate button
         div.form-elements__wrapper.form-elements__wrapper_buttons-type_rate
@@ -203,7 +203,7 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-35
-        +rangeSlider({'title': 'Range Slider'})
+        +range-slider({'title': 'Range Slider'})
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title buttons
         div.form-elements__button-wrapper
@@ -237,21 +237,21 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
-        +expandableCheckboxList(dataForExpandableCheckbox)
+        +expandable-checkbox(dataForExpandableCheckbox)
       div.form-elements__element
-        +expandableCheckboxList(dataForExpandedCheckbox)
+        +expandable-checkbox(dataForExpandedCheckbox)
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-15
-        +richCheckboxButtons({'title': 'rich Checkbox Buttons'})
+        +rich-checkbox({'title': 'rich Checkbox Buttons'})
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-15
-        +bulletList({'title': 'Bullet list', 'isUikit': true})
+        +bullet({'title': 'Bullet list', 'isUikit': true})
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-93
-        +roomDetails(roomDetailsData)
+        +room-details(roomDetailsData)
 
     div.form-elements__elements-wrapper.form-elements__elements-wrapper_column_double
       div.form-elements__element.form-elements__element_margin_top-82

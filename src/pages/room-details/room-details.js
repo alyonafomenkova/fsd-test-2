@@ -1,5 +1,5 @@
 import '../../components/booking-form/booking-form.js';
-import '../../components/bullet-list/bullet-list.js';
+import '../../components/bullet/bullet.js';
 import '../../components/footer/footer.js';
 import '../../components/header/header.js';
 import '../../components/pie-chart/pie-chart.js';
