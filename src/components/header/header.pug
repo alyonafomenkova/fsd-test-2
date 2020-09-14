@@ -23,7 +23,7 @@ mixin header({isUserAuthorized, items} = {})
           if (isUserAuthorized)
             span.header__user-name.js-header__user-name Юлий Цезарь
           else
-            a.header__show-auth-btn.header__show-auth-btn_state_without-js(href="auth.html") person
+            a.header__show-auth-btn.header__show-auth-btn_state_without-js(href="sign-in.html") person
             div.header__auth-wrapper
               div.header__login-button-wrapper
                 +button({"isLogin": true, "view": "bordered", "height": "low", "content": "войти", "href": "sign-in.html"})
@@ -35,12 +35,14 @@ mixin header({isUserAuthorized, items} = {})
                 class = "header__nav-item_margin_small"
                 class = item.submenu ? "header__submenu js-header__submenu header__submenu_state_closed" : ""
               )
-                a.header__nav-link(class=item.isActive ? "header__nav-link_state_active" : "") !{item.content}
-                if(item.submenu)
+                if (item.submenu)
+                  span.header__nav-link(class=item.isActive ? "header__nav-link_state_active" : "") !{item.content}
+                else
+                  a.header__nav-link(class=item.isActive ? "header__nav-link_state_active" : "" href="test.html") !{item.content}
+                if (item.submenu)
                   button.header__toggle-submenu-btn.js-header__toggle-submenu-btn.header__toggle-submenu-btn_state_without-js
                     span.header__toggle-submenu-icon.header__toggle-submenu-icon_state_opened expand_more
-                    span.header__toggle-submenu-icon.header__toggle-submenu-icon_state_closed expand_less
                   ul.header__submenu-list
                     each subitem in item.submenu
                       li.header__submenu-item
-                        a.header__submenu-link !{subitem.content}
+                        a.header__submenu-link(href="test.html") !{subitem.content}
