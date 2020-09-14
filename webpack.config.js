@@ -20,6 +20,8 @@ const config = {
     'landing': PATHS.source + '/pages/landing/landing.js',
     'search': PATHS.source + '/pages/search/search.js',
     'room-details': PATHS.source + '/pages/room-details/room-details.js',
+    'sign-in': PATHS.source + '/pages/sign-in/sign-in.js',
+    'sign-up': PATHS.source + '/pages/sign-up/sign-up.js',
   },
   output: {
     path: PATHS.build,
@@ -139,6 +141,18 @@ const config = {
       filename: 'room-details.html',
       template: PATHS.source + '/pages/room-details/room-details.pug',
       chunks: ['room-details'],
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'sign-in.html',
+      template: PATHS.source + '/pages/sign-in/sign-in.pug',
+      chunks: ['sign-in'],
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'sign-up.html',
+      template: PATHS.source + '/pages/sign-up/sign-up.pug',
+      chunks: ['sign-up'],
       inject: true,
     }),
     new webpack.ProvidePlugin({

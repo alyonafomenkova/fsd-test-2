@@ -1,15 +1,30 @@
-mixin button({type, isLogin, isRegister, height, view, isHovered, content} = options)
-  button.button(
-    type = type ? type : 'button',
-    class = isLogin ? 'button_type_login js-button_type_login' : '',
-    class = isRegister ? 'button_type_register js-button_type_register' : '',
-    class = height === 'high' ? 'button_height_high' : '',
-    class = height === 'low' ? 'button_height_low' : '',
-    class = view === 'filled' ? 'button_view_filled' : '',
-    class = view === 'filled' && isHovered ? 'button_view_filled-on-hover' : '',
-    class = view === 'bordered' ? 'button_view_bordered' : '',
-    class = view === 'bordered' && isHovered ? 'button_view_bordered-on-hover' : '',
-    class = view === 'textual' ? 'button_view_textual' : '',
-    class = view === 'textual' && isHovered ? 'button_view_textual-on-hover' : '',
-    class = view === 'actionable' ? 'button_view_actionable' : ''
-    ) !{content}
+mixin button({type, isLogin, isRegister, height, view, isHovered, href, content} = options)
+  -
+    let classes = "";
+    if (isLogin)
+      classes += " button_type_login js-button_type_login"
+    if (isRegister)
+      classes += " button_type_register js-button_type_register"
+    if (height === "high")
+      classes += " button_height_high"
+    if (height === "low")
+      classes += " button_height_low"
+    if (view === "filled")
+      classes += " button_view_filled"
+    if (view === "filled" && isHovered)
+      classes +=  " button_view_filled-on-hover"
+    if (view === "bordered")
+      classes += " button_view_bordered"
+    if (view === "bordered" && isHovered)
+      classes += " button_view_bordered-on-hover"
+    if (view === "textual")
+      classes += " button_view_textual"
+    if (view === "textual" && isHovered)
+      classes += " button_view_textual-on-hover"
+    if (view === "actionable")
+      classes += " button_view_actionable"
+
+  if (href)
+    a.button(href = href, class = classes) !{content}
+  else
+    button.button(type = type ? type : "button", class = classes) !{content}

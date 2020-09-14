@@ -3,11 +3,14 @@
 .button {
   @include h3-text;
   box-sizing: border-box;
+  display: block;
   padding: 0;
   border: none;
   border-radius: 1.571rem;
   background: none;
   word-break: break-all;
+  text-decoration: none;
+  text-align: center;
 
   &:focus {
     outline-color: $purple-color;

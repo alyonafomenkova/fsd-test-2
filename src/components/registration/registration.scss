@@ -1,8 +1,9 @@
 @import '~Base';
 
 .registration {
+  box-sizing: border-box;
   position: relative;
-  max-width: 27.286rem;
+  max-width: 27.143rem;
   padding: 1.429rem;
   background-color: $white-color;
   border: 0.071rem solid $black-color-opacity-12;
@@ -11,6 +12,7 @@
   z-index: 0;
 
   @media (min-width: $tablet-width) {
+    width: 27.143rem;
     padding: 2.857rem 2.143rem 2.143rem 2rem;
   }
 

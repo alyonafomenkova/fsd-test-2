@@ -1,6 +1,5 @@
 include ../button/button
 include ../logo/logo
-include ../modal/modal
 
 mixin header({isUserAuthorized, items} = {})
   -
@@ -27,8 +26,8 @@ mixin header({isUserAuthorized, items} = {})
             a.header__show-auth-btn.header__show-auth-btn_state_without-js(href='auth.html') person
             div.header__auth-wrapper
               div.header__login-button-wrapper
-                +button({'isLogin': true, 'view': 'bordered', 'height': 'low', 'content': 'войти'})
-              +button({'isRegister': true, 'view': 'filled', 'height': 'low', 'content': 'зарегистрироваться'})
+                +button({'isLogin': true, 'view': 'bordered', 'height': 'low', 'content': 'войти', 'href': 'sign-in.html'})
+              +button({'isRegister': true, 'view': 'filled', 'height': 'low', 'content': 'зарегистрироваться', 'href': 'sign-up.html'})
         nav.header__main-nav.js-header__main-nav
           ul.header__nav-list.js-header__nav-list
             each item in settings
@@ -45,6 +44,3 @@ mixin header({isUserAuthorized, items} = {})
                     each subitem in item.submenu
                       li.header__submenu-item
                         a.header__submenu-link !{subitem.content}
-  if(!isUserAuthorized)
-    +modal('login')
-    +modal('registration')

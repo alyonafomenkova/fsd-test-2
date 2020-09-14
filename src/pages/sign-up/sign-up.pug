@@ -1,0 +1,22 @@
+extends ../../base/base.pug
+include ../../components/header/header
+include ../../components/registration/registration
+include ../../components/footer/footer
+
+block vars
+
+block meta
+  meta(name = "keywords", content = "toxin")
+  meta(name = "description" content = "Учебный проект FSD. Registration page.")
+
+block title
+  | Registration
+
+block content
+
+  +header()
+  main.sign-up
+    div.sign-up__wrapper
+      div.sign-up__form-wrapper
+        +registration
+  +footer()

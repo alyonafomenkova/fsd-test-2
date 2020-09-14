@@ -1,7 +1,8 @@
 @import '~Base';
 
 .login {
-  max-width: 27.286rem;
+  box-sizing: border-box;
+  max-width: 27.143rem;
   padding: 1.429rem;
   position: relative;
   background-color: $white-color;
@@ -11,6 +12,7 @@
   box-shadow: 0 0 1.786rem $black-color-opacity-20;
 
   @media (min-width: $tablet-width) {
+    width: 27.143rem;
     padding: 2.857rem 2.143rem 2.143rem 2.143rem;
   }
 
@@ -44,6 +46,8 @@
   }
 
   &__registration-text {
+    display: inline-block;
+    margin-right: 0.357rem;
     font-size: 0.857rem;
     line-height: 1.071rem;
     color: $black-color;
