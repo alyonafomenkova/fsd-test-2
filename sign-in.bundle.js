@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/headers-and-footers/headers-and-footers.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/sign-in/sign-in.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -155,6 +155,29 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
+/***/ "./src/components/login/login.js":
+/*!***************************************!*\
+  !*** ./src/components/login/login.js ***!
+  \***************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _login_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login.scss */ \"./src/components/login/login.scss\");\n/* harmony import */ var _login_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_login_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/login/login.js?");
+
+/***/ }),
+
+/***/ "./src/components/login/login.scss":
+/*!*****************************************!*\
+  !*** ./src/components/login/login.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/login/login.scss?");
+
+/***/ }),
+
 /***/ "./src/components/logo/logo.js":
 /*!*************************************!*\
   !*** ./src/components/logo/logo.js ***!
@@ -201,26 +224,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/pages/headers-and-footers/headers-and-footers.js":
-/*!**************************************************************!*\
-  !*** ./src/pages/headers-and-footers/headers-and-footers.js ***!
-  \**************************************************************/
+/***/ "./src/pages/sign-in/sign-in.js":
+/*!**************************************!*\
+  !*** ./src/pages/sign-in/sign-in.js ***!
+  \**************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/header/header.js */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_logo_logo_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./headers-and-footers.scss */ \"./src/pages/headers-and-footers/headers-and-footers.scss\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/headers-and-footers/headers-and-footers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/header/header.js */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_login_login_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/login/login.js */ \"./src/components/login/login.js\");\n/* harmony import */ var _sign_in_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sign-in.scss */ \"./src/pages/sign-in/sign-in.scss\");\n/* harmony import */ var _sign_in_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sign_in_scss__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/pages/sign-in/sign-in.js?");
 
 /***/ }),
 
-/***/ "./src/pages/headers-and-footers/headers-and-footers.scss":
-/*!****************************************************************!*\
-  !*** ./src/pages/headers-and-footers/headers-and-footers.scss ***!
-  \****************************************************************/
+/***/ "./src/pages/sign-in/sign-in.scss":
+/*!****************************************!*\
+  !*** ./src/pages/sign-in/sign-in.scss ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/pages/headers-and-footers/headers-and-footers.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/pages/sign-in/sign-in.scss?");
 
 /***/ })
 

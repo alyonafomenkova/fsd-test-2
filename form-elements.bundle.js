@@ -153,26 +153,26 @@ eval("/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals 
 
 /***/ }),
 
-/***/ "./src/components/bullet-list/bullet-list.js":
-/*!***************************************************!*\
-  !*** ./src/components/bullet-list/bullet-list.js ***!
-  \***************************************************/
+/***/ "./src/components/bullet/bullet.js":
+/*!*****************************************!*\
+  !*** ./src/components/bullet/bullet.js ***!
+  \*****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bullet_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bullet-list.scss */ \"./src/components/bullet-list/bullet-list.scss\");\n/* harmony import */ var _bullet_list_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bullet_list_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/bullet-list/bullet-list.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bullet_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bullet.scss */ \"./src/components/bullet/bullet.scss\");\n/* harmony import */ var _bullet_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bullet_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/bullet/bullet.js?");
 
 /***/ }),
 
-/***/ "./src/components/bullet-list/bullet-list.scss":
-/*!*****************************************************!*\
-  !*** ./src/components/bullet-list/bullet-list.scss ***!
-  \*****************************************************/
+/***/ "./src/components/bullet/bullet.scss":
+/*!*******************************************!*\
+  !*** ./src/components/bullet/bullet.scss ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/bullet-list/bullet-list.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/bullet/bullet.scss?");
 
 /***/ }),
 
@@ -199,26 +199,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/components/checkbox-buttons/checkbox-buttons.js":
-/*!*************************************************************!*\
-  !*** ./src/components/checkbox-buttons/checkbox-buttons.js ***!
-  \*************************************************************/
+/***/ "./src/components/checkbox/checkbox.js":
+/*!*********************************************!*\
+  !*** ./src/components/checkbox/checkbox.js ***!
+  \*********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _checkbox_buttons_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkbox-buttons.scss */ \"./src/components/checkbox-buttons/checkbox-buttons.scss\");\n/* harmony import */ var _checkbox_buttons_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_checkbox_buttons_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/checkbox-buttons/checkbox-buttons.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _checkbox_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkbox.scss */ \"./src/components/checkbox/checkbox.scss\");\n/* harmony import */ var _checkbox_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_checkbox_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/checkbox/checkbox.js?");
 
 /***/ }),
 
-/***/ "./src/components/checkbox-buttons/checkbox-buttons.scss":
-/*!***************************************************************!*\
-  !*** ./src/components/checkbox-buttons/checkbox-buttons.scss ***!
-  \***************************************************************/
+/***/ "./src/components/checkbox/checkbox.scss":
+/*!***********************************************!*\
+  !*** ./src/components/checkbox/checkbox.scss ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/checkbox-buttons/checkbox-buttons.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/checkbox/checkbox.scss?");
 
 /***/ }),
 
@@ -264,7 +264,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _but
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var pug = __webpack_require__(/*! ../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (options) {var pug_indent = [];\npug_mixins[\"button\"] = pug_interp = function({type, isLogin, isRegister, height, view, isHovered, content} = options){\nvar block = (this && this.block), attributes = (this && this.attributes) || {};\npug_html = pug_html + \"\\n\";\npug_html = pug_html + pug_indent.join(\"\");\npug_html = pug_html + \"\\u003Cbutton\" + (pug.attr(\"class\", pug.classes([\"button\",isLogin ? 'button_type_login js-button_type_login' : '',isRegister ? 'button_type_register js-button_type_register' : '',height === 'high' ? 'button_height_high' : '',height === 'low' ? 'button_height_low' : '',view === 'filled' ? 'button_view_filled' : '',view === 'filled' && isHovered ? 'button_view_filled-on-hover' : '',view === 'bordered' ? 'button_view_bordered' : '',view === 'bordered' && isHovered ? 'button_view_bordered-on-hover' : '',view === 'textual' ? 'button_view_textual' : '',view === 'textual' && isHovered ? 'button_view_textual-on-hover' : '',view === 'actionable' ? 'button_view_actionable' : ''], [false,true,true,true,true,true,true,true,true,true,true,true]), false, true)+pug.attr(\"type\", type ? type : 'button', true, true)) + \"\\u003E\" + (null == (pug_interp = content) ? \"\" : pug_interp) + \"\\u003C\\u002Fbutton\\u003E\";\n};\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n}.call(this,\"options\" in locals_for_with?locals_for_with.options:typeof options!==\"undefined\"?options:undefined));;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack:///./src/components/dropdown/dropdown.pug?");
+eval("var pug = __webpack_require__(/*! ../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (options) {var pug_indent = [];\npug_mixins[\"button\"] = pug_interp = function({type, isLogin, isRegister, height, view, isHovered, href, content} = options){\nvar block = (this && this.block), attributes = (this && this.attributes) || {};\nlet classes = \"\";\nif (isLogin)\n  classes += \" button_type_login js-button_type_login\"\nif (isRegister)\n  classes += \" button_type_register js-button_type_register\"\nif (height === \"high\")\n  classes += \" button_height_high\"\nif (height === \"low\")\n  classes += \" button_height_low\"\nif (view === \"filled\")\n  classes += \" button_view_filled\"\nif (view === \"filled\" && isHovered)\n  classes +=  \" button_view_filled-on-hover\"\nif (view === \"bordered\")\n  classes += \" button_view_bordered\"\nif (view === \"bordered\" && isHovered)\n  classes += \" button_view_bordered-on-hover\"\nif (view === \"textual\")\n  classes += \" button_view_textual\"\nif (view === \"textual\" && isHovered)\n  classes += \" button_view_textual-on-hover\"\nif (view === \"actionable\")\n  classes += \" button_view_actionable\"\n\nif ((href)) {\npug_html = pug_html + \"\\u003Ca\" + (pug.attr(\"class\", pug.classes([\"button\",classes], [false,true]), false, true)+pug.attr(\"href\", href, true, true)) + \"\\u003E\" + (null == (pug_interp = content) ? \"\" : pug_interp) + \"\\u003C\\u002Fa\\u003E\";\n}\nelse {\npug_html = pug_html + \"\\n\";\npug_html = pug_html + pug_indent.join(\"\");\npug_html = pug_html + \"\\u003Cbutton\" + (pug.attr(\"class\", pug.classes([\"button\",classes], [false,true]), false, true)+pug.attr(\"type\", type ? type : \"button\", true, true)) + \"\\u003E\" + (null == (pug_interp = content) ? \"\" : pug_interp) + \"\\u003C\\u002Fbutton\\u003E\";\n}\n};\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n}.call(this,\"options\" in locals_for_with?locals_for_with.options:typeof options!==\"undefined\"?options:undefined));;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack:///./src/components/dropdown/dropdown.pug?");
 
 /***/ }),
 
@@ -279,26 +279,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/components/expandable-checkbox-list/expandable-checkbox-list.js":
-/*!*****************************************************************************!*\
-  !*** ./src/components/expandable-checkbox-list/expandable-checkbox-list.js ***!
-  \*****************************************************************************/
+/***/ "./src/components/expandable-checkbox/expandable-checkbox.js":
+/*!*******************************************************************!*\
+  !*** ./src/components/expandable-checkbox/expandable-checkbox.js ***!
+  \*******************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var _expandable_checkbox_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./expandable-checkbox-list.scss */ \"./src/components/expandable-checkbox-list/expandable-checkbox-list.scss\");\n/* harmony import */ var _expandable_checkbox_list_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_expandable_checkbox_list_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\njQuery(function() {\n  const EXPANDED_CLASS = 'expandable-checkbox_state_expanded';\n  const selection = $('.js-expandable-checkbox__selection');\n\n  function handleDocumentClick(evt) {\n    const target = evt.target.closest('.js-expandable-checkbox__selection') || evt.target.closest('.js-expandable-checkbox__wrapper');\n    if (target) {\n      return;\n    } else {\n      const expandedCheckboxes = document.querySelectorAll('.js-expandable-checkbox_state_expanded');\n      expandedCheckboxes.forEach((checkbox) => {\n        checkbox.classList.remove('js-expandable-checkbox_state_expanded');\n        checkbox.classList.remove('expandable-checkbox_state_expanded');\n      });\n    }\n  }\n\n  selection.click(function() {\n    const target = $(event.target).closest('.js-expandable-checkbox');\n    const checkboxList = $(target.find('.js-expandable-checkbox__wrapper'));\n    target.toggleClass(EXPANDED_CLASS);\n    if (target.hasClass(EXPANDED_CLASS)) {\n      checkboxList.show();\n      target.addClass('js-expandable-checkbox_state_expanded');\n    } else {\n      checkboxList.hide();\n    }\n  });\n\n  $(document).click(handleDocumentClick);\n});\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"), __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/expandable-checkbox-list/expandable-checkbox-list.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var _expandable_checkbox_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./expandable-checkbox.scss */ \"./src/components/expandable-checkbox/expandable-checkbox.scss\");\n/* harmony import */ var _expandable_checkbox_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_expandable_checkbox_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\njQuery(function() {\n  const EXPANDED_CLASS = 'expandable-checkbox_state_expanded';\n  const selection = $('.js-expandable-checkbox__selection');\n\n  function handleDocumentClick(evt) {\n    const target = evt.target.closest('.js-expandable-checkbox__selection') || evt.target.closest('.js-expandable-checkbox__wrapper');\n    if (target) {\n      return;\n    } else {\n      const expandedCheckboxes = document.querySelectorAll('.js-expandable-checkbox_state_expanded');\n      expandedCheckboxes.forEach((checkbox) => {\n        checkbox.classList.remove('js-expandable-checkbox_state_expanded');\n        checkbox.classList.remove('expandable-checkbox_state_expanded');\n      });\n    }\n  }\n\n  selection.click(function() {\n    const target = $(event.target).closest('.js-expandable-checkbox');\n    const checkboxList = $(target.find('.js-expandable-checkbox__wrapper'));\n    target.toggleClass(EXPANDED_CLASS);\n    if (target.hasClass(EXPANDED_CLASS)) {\n      checkboxList.show();\n      target.addClass('js-expandable-checkbox_state_expanded');\n    } else {\n      checkboxList.hide();\n    }\n  });\n\n  $(document).click(handleDocumentClick);\n});\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"), __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/expandable-checkbox/expandable-checkbox.js?");
 
 /***/ }),
 
-/***/ "./src/components/expandable-checkbox-list/expandable-checkbox-list.scss":
-/*!*******************************************************************************!*\
-  !*** ./src/components/expandable-checkbox-list/expandable-checkbox-list.scss ***!
-  \*******************************************************************************/
+/***/ "./src/components/expandable-checkbox/expandable-checkbox.scss":
+/*!*********************************************************************!*\
+  !*** ./src/components/expandable-checkbox/expandable-checkbox.scss ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/expandable-checkbox-list/expandable-checkbox-list.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/expandable-checkbox/expandable-checkbox.scss?");
 
 /***/ }),
 
@@ -394,26 +394,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/components/radio-buttons/radio-buttons.js":
-/*!*******************************************************!*\
-  !*** ./src/components/radio-buttons/radio-buttons.js ***!
-  \*******************************************************/
+/***/ "./src/components/radio/radio.js":
+/*!***************************************!*\
+  !*** ./src/components/radio/radio.js ***!
+  \***************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-buttons.scss */ \"./src/components/radio-buttons/radio-buttons.scss\");\n/* harmony import */ var _radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/radio-buttons/radio-buttons.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _radio_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio.scss */ \"./src/components/radio/radio.scss\");\n/* harmony import */ var _radio_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_radio_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/radio/radio.js?");
 
 /***/ }),
 
-/***/ "./src/components/radio-buttons/radio-buttons.scss":
-/*!*********************************************************!*\
-  !*** ./src/components/radio-buttons/radio-buttons.scss ***!
-  \*********************************************************/
+/***/ "./src/components/radio/radio.scss":
+/*!*****************************************!*\
+  !*** ./src/components/radio/radio.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/radio-buttons/radio-buttons.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/radio/radio.scss?");
 
 /***/ }),
 
@@ -486,26 +486,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/components/rich-checkbox-buttons/rich-checkbox-buttons.js":
-/*!***********************************************************************!*\
-  !*** ./src/components/rich-checkbox-buttons/rich-checkbox-buttons.js ***!
-  \***********************************************************************/
+/***/ "./src/components/rich-checkbox/rich-checkbox.js":
+/*!*******************************************************!*\
+  !*** ./src/components/rich-checkbox/rich-checkbox.js ***!
+  \*******************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rich_checkbox_buttons_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rich-checkbox-buttons.scss */ \"./src/components/rich-checkbox-buttons/rich-checkbox-buttons.scss\");\n/* harmony import */ var _rich_checkbox_buttons_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_rich_checkbox_buttons_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/rich-checkbox-buttons/rich-checkbox-buttons.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rich_checkbox_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rich-checkbox.scss */ \"./src/components/rich-checkbox/rich-checkbox.scss\");\n/* harmony import */ var _rich_checkbox_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_rich_checkbox_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/rich-checkbox/rich-checkbox.js?");
 
 /***/ }),
 
-/***/ "./src/components/rich-checkbox-buttons/rich-checkbox-buttons.scss":
-/*!*************************************************************************!*\
-  !*** ./src/components/rich-checkbox-buttons/rich-checkbox-buttons.scss ***!
-  \*************************************************************************/
+/***/ "./src/components/rich-checkbox/rich-checkbox.scss":
+/*!*********************************************************!*\
+  !*** ./src/components/rich-checkbox/rich-checkbox.scss ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/rich-checkbox-buttons/rich-checkbox-buttons.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/rich-checkbox/rich-checkbox.scss?");
 
 /***/ }),
 
@@ -555,26 +555,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/components/toggle-button/toggle-button.js":
-/*!*******************************************************!*\
-  !*** ./src/components/toggle-button/toggle-button.js ***!
-  \*******************************************************/
+/***/ "./src/components/toggle/toggle.js":
+/*!*****************************************!*\
+  !*** ./src/components/toggle/toggle.js ***!
+  \*****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _toggle_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle-button.scss */ \"./src/components/toggle-button/toggle-button.scss\");\n/* harmony import */ var _toggle_button_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_toggle_button_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/toggle-button/toggle-button.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _toggle_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle.scss */ \"./src/components/toggle/toggle.scss\");\n/* harmony import */ var _toggle_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_toggle_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/toggle/toggle.js?");
 
 /***/ }),
 
-/***/ "./src/components/toggle-button/toggle-button.scss":
-/*!*********************************************************!*\
-  !*** ./src/components/toggle-button/toggle-button.scss ***!
-  \*********************************************************/
+/***/ "./src/components/toggle/toggle.scss":
+/*!*******************************************!*\
+  !*** ./src/components/toggle/toggle.scss ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/toggle-button/toggle-button.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/toggle/toggle.scss?");
 
 /***/ }),
 
@@ -586,7 +586,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_bullet_list_bullet_list_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/bullet-list/bullet-list.js */ \"./src/components/bullet-list/bullet-list.js\");\n/* harmony import */ var _components_button_button_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _components_checkbox_buttons_checkbox_buttons_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/checkbox-buttons/checkbox-buttons.js */ \"./src/components/checkbox-buttons/checkbox-buttons.js\");\n/* harmony import */ var _components_date_dropdown_date_dropdown_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/date-dropdown/date-dropdown.js */ \"./src/components/date-dropdown/date-dropdown.js\");\n/* harmony import */ var _components_dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/dropdown/dropdown.js */ \"./src/components/dropdown/dropdown.js\");\n/* harmony import */ var _components_expandable_checkbox_list_expandable_checkbox_list_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/expandable-checkbox-list/expandable-checkbox-list.js */ \"./src/components/expandable-checkbox-list/expandable-checkbox-list.js\");\n/* harmony import */ var _components_like_button_like_button_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/like-button/like-button.js */ \"./src/components/like-button/like-button.js\");\n/* harmony import */ var _components_logo_logo_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _components_masked_text_field_masked_text_field_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/masked-text-field/masked-text-field.js */ \"./src/components/masked-text-field/masked-text-field.js\");\n/* harmony import */ var _components_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/pagination/pagination.js */ \"./src/components/pagination/pagination.js\");\n/* harmony import */ var _components_radio_buttons_radio_buttons_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/radio-buttons/radio-buttons.js */ \"./src/components/radio-buttons/radio-buttons.js\");\n/* harmony import */ var _components_range_slider_range_slider_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/range-slider/range-slider.js */ \"./src/components/range-slider/range-slider.js\");\n/* harmony import */ var _components_rating_rating_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/rating/rating.js */ \"./src/components/rating/rating.js\");\n/* harmony import */ var _components_reviews_reviews_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/reviews/reviews.js */ \"./src/components/reviews/reviews.js\");\n/* harmony import */ var _components_rich_checkbox_buttons_rich_checkbox_buttons_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/rich-checkbox-buttons/rich-checkbox-buttons.js */ \"./src/components/rich-checkbox-buttons/rich-checkbox-buttons.js\");\n/* harmony import */ var _components_room_details_room_details_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/room-details/room-details.js */ \"./src/components/room-details/room-details.js\");\n/* harmony import */ var _components_subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/subscription-text-field/subscription-text-field.js */ \"./src/components/subscription-text-field/subscription-text-field.js\");\n/* harmony import */ var _components_toggle_button_toggle_button_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/toggle-button/toggle-button.js */ \"./src/components/toggle-button/toggle-button.js\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./form-elements.scss */ \"./src/pages/form-elements/form-elements.scss\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_form_elements_scss__WEBPACK_IMPORTED_MODULE_18__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/form-elements/form-elements.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_bullet_bullet_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/bullet/bullet.js */ \"./src/components/bullet/bullet.js\");\n/* harmony import */ var _components_button_button_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _components_checkbox_checkbox_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/checkbox/checkbox.js */ \"./src/components/checkbox/checkbox.js\");\n/* harmony import */ var _components_date_dropdown_date_dropdown_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/date-dropdown/date-dropdown.js */ \"./src/components/date-dropdown/date-dropdown.js\");\n/* harmony import */ var _components_dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/dropdown/dropdown.js */ \"./src/components/dropdown/dropdown.js\");\n/* harmony import */ var _components_expandable_checkbox_expandable_checkbox_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/expandable-checkbox/expandable-checkbox.js */ \"./src/components/expandable-checkbox/expandable-checkbox.js\");\n/* harmony import */ var _components_like_button_like_button_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/like-button/like-button.js */ \"./src/components/like-button/like-button.js\");\n/* harmony import */ var _components_logo_logo_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _components_masked_text_field_masked_text_field_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/masked-text-field/masked-text-field.js */ \"./src/components/masked-text-field/masked-text-field.js\");\n/* harmony import */ var _components_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/pagination/pagination.js */ \"./src/components/pagination/pagination.js\");\n/* harmony import */ var _components_radio_radio_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/radio/radio.js */ \"./src/components/radio/radio.js\");\n/* harmony import */ var _components_range_slider_range_slider_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/range-slider/range-slider.js */ \"./src/components/range-slider/range-slider.js\");\n/* harmony import */ var _components_rating_rating_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/rating/rating.js */ \"./src/components/rating/rating.js\");\n/* harmony import */ var _components_reviews_reviews_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/reviews/reviews.js */ \"./src/components/reviews/reviews.js\");\n/* harmony import */ var _components_rich_checkbox_rich_checkbox_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/rich-checkbox/rich-checkbox.js */ \"./src/components/rich-checkbox/rich-checkbox.js\");\n/* harmony import */ var _components_room_details_room_details_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/room-details/room-details.js */ \"./src/components/room-details/room-details.js\");\n/* harmony import */ var _components_subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/subscription-text-field/subscription-text-field.js */ \"./src/components/subscription-text-field/subscription-text-field.js\");\n/* harmony import */ var _components_toggle_toggle_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/toggle/toggle.js */ \"./src/components/toggle/toggle.js\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./form-elements.scss */ \"./src/pages/form-elements/form-elements.scss\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_form_elements_scss__WEBPACK_IMPORTED_MODULE_18__);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/pages/form-elements/form-elements.js?");
 
 /***/ }),
 
