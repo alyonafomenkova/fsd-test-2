@@ -1,8 +1,10 @@
 @import '~Base';
 
 .header {
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 1.429rem 0 1.429rem;
+  position: relative;
   background-color: $white-color;
   box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
 
@@ -24,6 +26,8 @@
 
     @media (min-width: $tablet-width) {
       display: flex;
+      justify-content: flex-end;
+      align-items: center;
       flex-grow: 1;
       width: auto;
     }
@@ -46,13 +50,32 @@
 
   &__nav-list {
     @include reset-list-style;
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     line-height: 1.214rem;
     color: $dark-color-opacity-50;
     text-align: center;
+    position: absolute;
+    width: 60%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    border: 0.143rem solid $dark-color-opacity-50;
+    background-color: $white-color;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      flex-direction: row;
+      position: static;
+      transform: none;
+      border: none;
+      background-color: inherit;
+    }
   }
 
   &__submenu-link {
@@ -61,6 +84,8 @@
     font-style: italic;
     cursor: pointer;
     transition: text-shadow .3s;
+    text-decoration: none;
+    color: $dark-color-opacity-50;
 
     &:hover {
       color: $dark-color-opacity-75;
@@ -129,7 +154,7 @@
 
 .header__buttons-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   min-height: 3.429rem;
@@ -142,7 +167,7 @@
 
 .header__toggle-menu-btn {
   @include material-icons;
-  margin: 0;
+  margin: 0 2.143rem 0 0;
   padding: 0;
   background-color: transparent;
   color: $purple-color;
@@ -183,6 +208,8 @@
   padding: 0.429rem;
   cursor: pointer;
   transition: text-shadow .3s;
+  text-decoration: none;
+  color: $dark-color-opacity-50;
 
   &_state_active,
   &:hover {
@@ -199,6 +226,18 @@
   width: 100%;
   position: relative;
 
+  .header__submenu-list {
+    @include reset-list-style;
+    display: none;
+    background-color: $white-color;
+  }
+
+  &:hover {
+    .header__submenu-list {
+      display: block;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: auto;
     padding-right: 1.714rem;
@@ -206,38 +245,11 @@
 
     &:hover {
       .header__submenu-list {
-        @include reset-list-style;
-        display: block;
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: rgba($purple-color, 0.5);
       }
     }
-  }
-}
-
-.header__submenu_state_closed {
-  .header__toggle-submenu-icon_state_closed {
-    display: none;
-  }
-
-  .header__submenu-list {
-    display: none;
-  }
-}
-
-.header__submenu_state_opened {
-  .header__toggle-submenu-icon_state_closed {
-    display: block;
-  }
-
-  .header__toggle-submenu-icon_state_opened {
-    display: none;
-  }
-
-  .header__submenu-list {
-    display: block;
   }
 }
 
