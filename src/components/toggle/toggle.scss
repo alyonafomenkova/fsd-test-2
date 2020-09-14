@@ -40,17 +40,17 @@
       border-radius: 50%;
     }
   }
-}
 
-.toggle__input {
-  @include visually-hidden;
+  &__input {
+    @include visually-hidden;
 
-  &:checked + .toggle__slider {
-    border-color: $purple-color;
+    &:checked + .toggle__slider {
+      border-color: $purple-color;
 
-    &:before {
-      transform: translateX(1.429rem);
-      background-image: $purple-gradient;
+      &:before {
+        transform: translateX(1.429rem);
+        background-image: $purple-gradient;
+      }
     }
   }
 }

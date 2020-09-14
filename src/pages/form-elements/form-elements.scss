@@ -23,17 +23,19 @@ body {
     margin-bottom: 1.286rem;
   }
 
-  &__button-wrapper {
-    display: inline-block;
-    margin-right: 1.071rem;
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 15.5rem;
     margin-bottom: 2.143rem;
 
     &:nth-of-type(2) {
-      margin-bottom: 1.786rem;
+      margin-bottom: 2.286rem;
     }
 
     &:last-of-type {
-      margin-bottom: 1.929rem;
+      max-width: 10.143rem;
+      margin-bottom: 2.214rem;
     }
   }
 }

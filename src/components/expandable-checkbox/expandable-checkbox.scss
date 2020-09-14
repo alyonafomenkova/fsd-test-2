@@ -29,14 +29,14 @@
     height: 3.143rem;
     line-height: 1.714rem;
   }
-}
 
-.expandable-checkbox_state_expanded {
-  .expandable-checkbox__wrapper {
-    display: block;
-  }
+  &_state_expanded {
+    .expandable-checkbox__wrapper {
+      display: block;
+    }
 
-  .expandable-checkbox__more-icon {
-    transform: rotate(-180deg);
+    .expandable-checkbox__more-icon {
+      transform: rotate(-180deg);
+    }
   }
 }
