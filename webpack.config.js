@@ -19,7 +19,7 @@ const config = {
     'headers-and-footers': PATHS.source + '/pages/headers-and-footers/headers-and-footers.js',
     'landing': PATHS.source + '/pages/landing/landing.js',
     'search': PATHS.source + '/pages/search/search.js',
-    'room-details': PATHS.source + '/pages/room-details/room-details.js',
+    'details': PATHS.source + '/pages/details/details.js',
     'sign-in': PATHS.source + '/pages/sign-in/sign-in.js',
     'sign-up': PATHS.source + '/pages/sign-up/sign-up.js',
   },
@@ -28,7 +28,7 @@ const config = {
     filename: '[name].bundle.js'
   },
   devServer: {
-    index: 'search.html',
+    index: 'details.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
@@ -138,9 +138,9 @@ const config = {
       inject: true,
     }),
     new HtmlWebpackPlugin({
-      filename: 'room-details.html',
-      template: PATHS.source + '/pages/room-details/room-details.pug',
-      chunks: ['room-details'],
+      filename: 'details.html',
+      template: PATHS.source + '/pages/details/details.pug',
+      chunks: ['details'],
       inject: true,
     }),
     new HtmlWebpackPlugin({

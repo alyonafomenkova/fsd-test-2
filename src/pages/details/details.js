@@ -6,4 +6,4 @@ import '../../components/pie-chart/pie-chart.js';
 import '../../components/reviews/reviews.js';
 import '../../components/room-info-cards/room-info-cards.js';
 import '../../components/room-details/room-details.js';
-import './room-details.scss';
+import './details.scss';
