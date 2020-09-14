@@ -9,7 +9,9 @@
 ### Main pages:<br/>
 - [landing](https://alyonafomenkova.github.io/fsd-test-2/landing.html)
 - [search](https://alyonafomenkova.github.io/fsd-test-2/search.html)
-- [room-details](https://alyonafomenkova.github.io/fsd-test-2/room-details.html)
+- [details](https://alyonafomenkova.github.io/fsd-test-2/details.html)
+- [sign-in](https://alyonafomenkova.github.io/fsd-test-2/sign-in.html)
+- [sign-up](https://alyonafomenkova.github.io/fsd-test-2/sign-up.html)
 
 ---
 
