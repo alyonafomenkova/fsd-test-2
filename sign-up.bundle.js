@@ -139,7 +139,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../subscription-text-field/subscription-text-field.js */ \"./src/components/subscription-text-field/subscription-text-field.js\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer.scss */ \"./src/components/footer/footer.scss\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/components/footer/footer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _social_list_social_list_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../social-list/social-list.js */ \"./src/components/social-list/social-list.js\");\n/* harmony import */ var _subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../subscription-text-field/subscription-text-field.js */ \"./src/components/subscription-text-field/subscription-text-field.js\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./footer.scss */ \"./src/components/footer/footer.scss\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/components/footer/footer.js?");
 
 /***/ }),
 
@@ -266,6 +266,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _but
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/registration/registration.scss?");
+
+/***/ }),
+
+/***/ "./src/components/social-list/social-list.js":
+/*!***************************************************!*\
+  !*** ./src/components/social-list/social-list.js ***!
+  \***************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _social_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./social-list.scss */ \"./src/components/social-list/social-list.scss\");\n/* harmony import */ var _social_list_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_social_list_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./src/components/social-list/social-list.js?");
+
+/***/ }),
+
+/***/ "./src/components/social-list/social-list.scss":
+/*!*****************************************************!*\
+  !*** ./src/components/social-list/social-list.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/social-list/social-list.scss?");
 
 /***/ }),
 
