@@ -108,29 +108,6 @@
     }
   }
 
-  &__social-list {
-    @include reset-list-style;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 8rem;
-  }
-
-  &__social-link {
-    display: block;
-    width: 1.714rem;
-    height: 1.714rem;
-    background: $purple-gradient;
-    text-decoration: none;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  &__social-text {
-    @include visually-hidden;
-  }
-
   &__copyright-text {
     margin: 0 auto 1.5rem auto;
     text-align: center;
@@ -138,24 +115,6 @@
     @media (min-width: $desktop-width) {
       margin: 0;
     }
-  }
-}
-
-.footer__social-icon {
-  font-family: 'font-awesome-5-brands-regular';
-  font-weight: normal;
-  font-size: 1.714rem;
-
-  &_social-network_tw::before {
-    content: '\f099';
-  }
-
-  &_social-network_fb::before {
-    content: '\f082';
-  }
-
-  &_social-network_insta::before {
-    content: '\f16d';
   }
 }
 

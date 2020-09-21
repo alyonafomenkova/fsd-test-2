@@ -1,0 +1,42 @@
+@import '~Base';
+
+.social-list {
+  @include reset-list-style;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 8rem;
+
+  &__link {
+    display: block;
+    width: 1.714rem;
+    height: 1.714rem;
+    background: $purple-gradient;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__text {
+    @include visually-hidden;
+  }
+
+  &__icon {
+    font-family: 'font-awesome-5-brands-regular';
+    font-weight: normal;
+    font-size: 1.714rem;
+
+    &_type_tw::before {
+      content: '\f099';
+    }
+
+    &_type_fb::before {
+      content: '\f082';
+    }
+
+    &_type_insta::before {
+      content: '\f16d';
+    }
+  }
+}

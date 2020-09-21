@@ -54,7 +54,8 @@ mixin pie-chart({title, items} = {})
 
       figcaption.pie-chart__description-wrapper
         ul.pie-chart__description-list(aria-hidden="true" role="presentation")
-          li.pie-chart__description-item.js-pie-chart__description-item.pie-chart__description-item_rating_fine(data-label-type = "fine") Великолепно
-          li.pie-chart__description-item.js-pie-chart__description-item.pie-chart__description-item_rating_good(data-label-type = "good") Хорошо
-          li.pie-chart__description-item.js-pie-chart__description-item.pie-chart__description-item_rating_normal(data-label-type = "normal") Удовлетворительно
-          li.pie-chart__description-item.js-pie-chart__description-item.pie-chart__description-item_rating_bad(data-label-type = "bad") Разочарован
+          each item in items
+            li(
+              class=`pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_${item.type}`,
+              data-label-type = item.type
+              ) !{item.label}

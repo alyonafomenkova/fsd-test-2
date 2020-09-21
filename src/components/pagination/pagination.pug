@@ -1,16 +1,19 @@
 mixin pagination
+  -
+    const items = [
+      {"content": "1", "isCurrent": true},
+      {"content": "2"},
+      {"content": "3"},
+      {"content": "..."},
+      {"content": "15"},
+      {"content": "arrow_forward", "isNext": true},
+    ];
   div.pagination
     ul.pagination__list
-      li.pagination__item
-        a.pagination__link.pagination__link_value_current 1
-      li.pagination__item
-        a.pagination__link 2
-      li.pagination__item
-        a.pagination__link 3
-      li.pagination__item
-        a.pagination__link ...
-      li.pagination__item
-        a.pagination__link 15
-      li.pagination__item
-        a.pagination__link.pagination__link_value_next arrow_forward
+      each item in items
+        li.pagination__item
+          a.pagination__link(
+            class = item.isCurrent ? "pagination__link_value_current" : "",
+            class = item.isNext ? "pagination__link_value_next" : ""
+            ) !{item.content}
     p.pagination__description 1 – 12 из 100+ вариантов аренды

@@ -1,0 +1,31 @@
+mixin social-list({items} = {})
+  -
+    const defaultItems = [
+      {
+        "id": "tw",
+        "text": "Мы в Твиттер",
+        "link": "https://twitter.com/"
+      },
+      {
+        "id": "fb",
+        "text": "Мы в Фейсбук",
+        "link": "https://www.facebook.com/"
+      },
+      {
+        "id": "insta",
+        "text": "Мы в Инстаграм",
+        "link": "https://www.instagram.com/"
+      }
+    ];
+    items = items || defaultItems;
+  ul.social-list
+    each item in items
+      li.social-list__item
+        a(
+          class=`social-list__link social-list__link_type_${item.id}`,
+          href=item.link,
+          target="_blank",
+          rel="noopener noreferrer"
+          )
+          span.social-list__text !{item.text}
+          span(class=`social-list__icon social-list__icon_type_${item.id}`)
