@@ -25,12 +25,24 @@ class DateDropdown {
     };
   }
 
-  createOptions(additionalOptions) {
+  init() {
+    if (this.dropdown.classList.contains('js-date-dropdown--with-to-inputs')) {
+      this._initDateDropdown();
+    } else if (this.dropdown.classList.contains('js-date-dropdown--filter')) {
+      this._initFilterDropdown();
+    } else if (this.dropdown.classList.contains('js-date-dropdown--inline')) {
+      this._initInlineDropdown();
+    } else {
+      throw new Error('Unknown datedropdown')
+    }
+  }
+
+  _createOptions(additionalOptions) {
     const options = $.extend({}, this.baseOptions, additionalOptions);
     return options;
   };
 
-  setSelectedDate($datepickerInput) {
+  _setSelectedDate($datepickerInput) {
     let startDate = new Date();
     let endDate = new Date();
     startDate.setDate(startDate.getDate() + 2);
@@ -39,13 +51,13 @@ class DateDropdown {
     $datepickerInput.datepicker().data('datepicker').selectDate(selectDates);
   }
 
-  addApplyButton($datepickerInput) {
+  _addApplyButton($datepickerInput) {
     const applyButtonHtml = '<span class="datepicker--button" data-action="apply">Применить</span>';
     const $buttons = $datepickerInput.data('datepicker').$datepicker.find('.datepicker--buttons');
     $buttons.append(applyButtonHtml);
   };
 
-  initDateDropdown() {
+  _initDateDropdown() {
     const $startDateInput = $(this.dropdown).find('.js-date-dropdown__input--first');
     const $endDateInput = $(this.dropdown).find('.js-date-dropdown__input--second');
     const additionalOptionsForStartInput = {
@@ -84,22 +96,22 @@ class DateDropdown {
     };
 
     $startDateInput.addClass('datepicker-here');
-    $startDateInput.datepicker(this.createOptions(additionalOptionsForStartInput));
-    $endDateInput.datepicker(this.createOptions(additionalOptionsForEndInput));
-    this.addApplyButton($startDateInput);
-    this.addApplyButton($endDateInput);
+    $startDateInput.datepicker(this._createOptions(additionalOptionsForStartInput));
+    $endDateInput.datepicker(this._createOptions(additionalOptionsForEndInput));
+    this._addApplyButton($startDateInput);
+    this._addApplyButton($endDateInput);
   }
 
-  initInlineDropdown() {
+  _initInlineDropdown() {
     const $inlineDatepicker = $(this.dropdown).find('.js-date-dropdown__item--inline');
     $inlineDatepicker.addClass('datepicker-here');
     $inlineDatepicker.datepicker(this.baseOptions);
-    this.setSelectedDate($inlineDatepicker);
+    this._setSelectedDate($inlineDatepicker);
     $(this.dropdown).addClass('datepicker--selected');
-    this.addApplyButton($inlineDatepicker);
+    this._addApplyButton($inlineDatepicker);
   }
 
-  initFilterDropdown() {
+  _initFilterDropdown() {
     const $filterDateInput = $(this.dropdown).find('.js-date-dropdown__input--filter');
     const additionalOptionsForFilterInput = {
       dateFormat: 'd M',
@@ -117,21 +129,9 @@ class DateDropdown {
     };
 
     $filterDateInput.addClass('datepicker-here');
-    $filterDateInput.datepicker(this.createOptions(additionalOptionsForFilterInput));
-    this.setSelectedDate($filterDateInput);
-    this.addApplyButton($filterDateInput);
-  }
-
-  init() {
-    if (this.dropdown.classList.contains('js-date-dropdown--with-to-inputs')) {
-      this.initDateDropdown();
-    } else if (this.dropdown.classList.contains('js-date-dropdown--filter')) {
-      this.initFilterDropdown();
-    } else if (this.dropdown.classList.contains('js-date-dropdown--inline')) {
-      this.initInlineDropdown();
-    } else {
-      throw new Error('Unknown datedropdown')
-    }
+    $filterDateInput.datepicker(this._createOptions(additionalOptionsForFilterInput));
+    this._setSelectedDate($filterDateInput);
+    this._addApplyButton($filterDateInput);
   }
 }
 

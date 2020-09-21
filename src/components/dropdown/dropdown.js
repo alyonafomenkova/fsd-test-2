@@ -5,33 +5,51 @@ import './dropdown.pug';
 class Dropdown {
   constructor(dropdown) {
     this.dropdown = dropdown;
-    this.type = this.dropdown.getAttribute('data-type');
+    this.Mode = {
+      PEOPLE: 'people',
+      FACILITIES: 'facilities'
+    };
+    this.type;
+    this.totalCount;
+  }
+
+  init() {
+    this._updateType();
+    this._disableButtons();
+    this._updateTotalCount();
+    this._updatePlaceholder();
+    this._setupBind();
+    document.addEventListener('click', this._handleDocumentClick);
+
+    if (this.type === this.Mode.PEOPLE) {
+      this._addListenersForPeopleMode();
+    } else if (this.type === this.Mode.FACILITIES) {
+      this._addListenersForFacilitiesMode();
+    } else throw new Error('Unknown dropdown\'s mode');
+  }
+
+  _setupDom() {
     this.selection = this.dropdown.querySelector('.js-dropdown__selection');
-    this.placeholder = this.dropdown.querySelector('.js-dropdown__selection-text');
-    this.defaultPlaceholderText = this.placeholder.getAttribute('data-placeholder');
-    this.menu = this.dropdown.querySelector('.js-dropdown__menu');
-    this.optionList = this.dropdown.querySelectorAll('.js-dropdown__option');
     this.decrementButtons = this.dropdown.querySelectorAll('.js-dropdown__decrement-button');
     this.incrementButtons = this.dropdown.querySelectorAll('.js-dropdown__increment-button');
     this.quantityNodes = this.dropdown.querySelectorAll('.js-dropdown__quantity');
-    this.handleSelectionButtonClick = this.handleSelectionButtonClick.bind(this);
-    this.handleDecrementButtonClick = this.handleDecrementButtonClick.bind(this);
-    this.handleIncrementButtonClick = this.handleIncrementButtonClick.bind(this);
-    this.handleClearButtonClick = this.handleClearButtonClick.bind(this);
-    this.handleApplyButtonClick = this.handleApplyButtonClick.bind(this);
-    this.totalCount;
-    this.Mode = {
-      PEOPLE: `people`,
-      FACILITIES: `facilities`
-    };
   }
 
-  toggleMenu() {
-    this.menu.classList.toggle('dropdown__menu_state_expanded');
-    this.menu.classList.toggle('js-dropdown__menu_state_expanded');
+  _setupBind() {
+    this._handleSelectionButtonClick = this._handleSelectionButtonClick.bind(this);
+    this._handleDecrementButtonClick = this._handleDecrementButtonClick.bind(this);
+    this._handleIncrementButtonClick = this._handleIncrementButtonClick.bind(this);
+    this._handleClearButtonClick = this._handleClearButtonClick.bind(this);
+    this._handleApplyButtonClick = this._handleApplyButtonClick.bind(this);
+  }
+
+  _toggleMenu() {
+    const menu = this.dropdown.querySelector('.js-dropdown__menu');
+    menu.classList.toggle('dropdown__menu_state_expanded');
+    menu.classList.toggle('js-dropdown__menu_state_expanded');
   };
 
-  handleDocumentClick(evt) {
+  _handleDocumentClick(evt) {
     const target = evt.target.closest('.dropdown__container');
     if (target) {
       return;
@@ -44,9 +62,9 @@ class Dropdown {
     }
   };
 
-  toggleClearButton() {
+  _toggleClearButton() {
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear-button');
-    this.updateTotalCount();
+    this._updateTotalCount();
     if (this.totalCount > 0) {
       clearButton.classList.remove('dropdown__clear-button_visibility_invisible');
     } else {
@@ -54,7 +72,7 @@ class Dropdown {
     }
   }
 
-  setPluralForGuests(count) {
+  _setPluralForGuests(count) {
     if (count === 1) {
       return 'гость';
     } else if (count >= 2 && count <= 4) {
@@ -64,7 +82,7 @@ class Dropdown {
     }
   };
 
-  setPluralForBedrooms(count) {
+  _setPluralForBedrooms(count) {
     if (count === 1) {
       return `${count} спальня`;
     } else if (count >= 2 && count <= 4) {
@@ -74,7 +92,7 @@ class Dropdown {
     }
   };
 
-  setPluralForBeds(count) {
+  _setPluralForBeds(count) {
     if (count === 1) {
       return `${count} кровать`;
     } else if (count >= 2 && count <= 4) {
@@ -84,30 +102,40 @@ class Dropdown {
     }
   };
 
-  updateTotalCount() {
+  _updateTotalCount() {
     this.totalCount = 0;
     this.quantityNodes.forEach((node) => {
       this.totalCount += +node.innerText;
     });
   }
 
-  updatePlaceholder() {
+  _updateType() {
+    this.type = this.dropdown.getAttribute('data-type');
+  }
+
+  _updatePlaceholder() {
+    const placeholder = this.dropdown.querySelector('.js-dropdown__selection-text');
+    const defaultPlaceholderText = placeholder.getAttribute('data-placeholder');
+
     if (this.totalCount > 0) {
-      this.placeholder.innerText = ``;
+      placeholder.innerText = ``;
       if (this.type === this.Mode.PEOPLE) {
-        this.placeholder.innerText = this.totalCount + ' ' + this.setPluralForGuests(this.totalCount);
+        placeholder.innerText = this.totalCount + ' ' + this._setPluralForGuests(this.totalCount);
       } else if (this.type === this.Mode.FACILITIES) {
         const bedroomCount = Number.parseInt(this.quantityNodes[0].innerText);
         const bedCount = Number.parseInt(this.quantityNodes[1].innerText);
-        this.placeholder.innerText = this.setPluralForBedrooms(bedroomCount) + ', ' + this.setPluralForBeds(bedCount) + '...';
+        placeholder.innerText = this._setPluralForBedrooms(bedroomCount) + ', ' + this._setPluralForBeds(bedCount) + '...';
       } else throw new Error('Unknown dropdown\'s mode');
     } else {
-      this.placeholder.innerText = this.defaultPlaceholderText;
+      placeholder.innerText = defaultPlaceholderText;
     }
   }
 
-  disableButtons() {
-    this.optionList.forEach((option) => {
+  _disableButtons() {
+    const optionList = this.dropdown.querySelectorAll('.js-dropdown__option');
+    this._setupDom();
+
+    optionList.forEach((option) => {
       const index = option.getAttribute('data-index');
       const currentCount = this.quantityNodes[index].innerText;
       const minCount = this.decrementButtons[index].getAttribute('data-min-count');
@@ -121,11 +149,11 @@ class Dropdown {
     });
   }
 
-  enableDecrementButton(button) {
+  _enableDecrementButton(button) {
     button.disabled = false;
   }
 
-  incrementCount() {
+  _incrementCount() {
     const incrementButton = event.target;
     const index = incrementButton.getAttribute('data-index');
     const maxCount = Number.parseInt(incrementButton.getAttribute('data-max-count'));
@@ -136,11 +164,11 @@ class Dropdown {
       currentCountValue += 1;
       currentCountNode.innerHTML = ``;
       currentCountNode.innerHTML = currentCountValue;
-      this.enableDecrementButton(decrementButton);
+      this._enableDecrementButton(decrementButton);
     }
   }
 
-  decrementCount() {
+  _decrementCount() {
     const decrementButton = event.target;
     const index = decrementButton.getAttribute('data-index');
     const minCount = Number.parseInt(decrementButton.getAttribute('data-min-count'));
@@ -153,83 +181,74 @@ class Dropdown {
     }
   }
 
-  resetCounts() {
+  _resetCounts() {
     this.quantityNodes.forEach((node) => {
       node.innerText = 0;
     });
   }
 
-  handleSelectionButtonClick() {
-    this.toggleMenu();
+  _handleSelectionButtonClick() {
+    this._toggleMenu();
   }
 
-  handleDecrementButtonClick() {
-    this.decrementCount();
-    this.disableButtons();
-    this.updateTotalCount();
-    this.updatePlaceholder();
+  _handleDecrementButtonClick() {
+    this._decrementCount();
+    this._disableButtons();
+    this._updateTotalCount();
+    this._updatePlaceholder();
     if (this.type === this.Mode.PEOPLE) {
-      this.toggleClearButton();
+      this._toggleClearButton();
     }
   }
 
-  handleIncrementButtonClick() {
-    this.incrementCount();
-    this.disableButtons();
-    this.updateTotalCount();
-    this.updatePlaceholder();
+  _handleIncrementButtonClick() {
+    this._incrementCount();
+    this._disableButtons();
+    this._updateTotalCount();
+    this._updatePlaceholder();
     if (this.type === this.Mode.PEOPLE) {
-      this.toggleClearButton();
+      this._toggleClearButton();
     }
   }
 
-  handleClearButtonClick() {
-    this.resetCounts();
-    this.disableButtons();
-    this.updateTotalCount();
-    this.updatePlaceholder();
-    this.toggleClearButton();
+  _handleClearButtonClick() {
+    this._resetCounts();
+    this._disableButtons();
+    this._updateTotalCount();
+    this._updatePlaceholder();
+    this._toggleClearButton();
   }
 
-  handleApplyButtonClick() {
-    this.toggleMenu();
+  _handleApplyButtonClick() {
+    this._toggleMenu();
   }
 
-  addListenersForPeopleMode() {
+  _addListenersForPeopleMode() {
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear-button');
     const applyButton = this.dropdown.querySelector('.js-dropdown__apply-button');
-    this.selection.addEventListener('click', this.handleSelectionButtonClick);
+
+    this._setupDom();
+    this.selection.addEventListener('click', this._handleSelectionButtonClick);
     this.decrementButtons.forEach((decrementButton) => {
-      decrementButton.addEventListener('click', this.handleDecrementButtonClick);
+      decrementButton.addEventListener('click', this._handleDecrementButtonClick);
     });
     this.incrementButtons.forEach((incrementButton) => {
-      incrementButton.addEventListener('click', this.handleIncrementButtonClick);
+      incrementButton.addEventListener('click', this._handleIncrementButtonClick);
     });
-    clearButton.addEventListener('click', this.handleClearButtonClick);
-    applyButton.addEventListener('click', this.handleApplyButtonClick);
-    this.toggleClearButton();
+    clearButton.addEventListener('click', this._handleClearButtonClick);
+    applyButton.addEventListener('click', this._handleApplyButtonClick);
+    this._toggleClearButton();
   }
 
-  addListenersForFacilitiesMode() {
-    this.selection.addEventListener('click', this.handleSelectionButtonClick);
+  _addListenersForFacilitiesMode() {
+    this._setupDom();
+    this.selection.addEventListener('click', this._handleSelectionButtonClick);
     this.decrementButtons.forEach((decrementButton) => {
-      decrementButton.addEventListener('click', this.handleDecrementButtonClick);
+      decrementButton.addEventListener('click', this._handleDecrementButtonClick);
     });
     this.incrementButtons.forEach((incrementButton) => {
-      incrementButton.addEventListener('click', this.handleIncrementButtonClick);
+      incrementButton.addEventListener('click', this._handleIncrementButtonClick);
     });
-  }
-
-  init() {
-    this.disableButtons();
-    this.updateTotalCount();
-    this.updatePlaceholder();
-    document.addEventListener('click', this.handleDocumentClick);
-    if (this.type === this.Mode.PEOPLE) {
-      this.addListenersForPeopleMode();
-    } else if (this.type === this.Mode.FACILITIES) {
-      this.addListenersForFacilitiesMode();
-    } else throw new Error('Unknown dropdown\'s mode');
   }
 }
 

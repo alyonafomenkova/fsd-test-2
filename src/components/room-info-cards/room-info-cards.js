@@ -4,17 +4,29 @@ import './room-info-cards.scss';
 class Carousel {
   constructor(carousel) {
     this.carousel = carousel;
-    this.prevButtons = this.carousel.querySelectorAll('.js-room-info-cards__prev-link');
-    this.nextButtons = this.carousel.querySelectorAll('.js-room-info-cards__next-link');
-    this.dotButtons = this.carousel.querySelectorAll('.js-room-info-cards__dot');
-    this.handleControlsButtonClick = this.handleControlsButtonClick.bind(this);
-    this.handleDotButtonClick = this.handleDotButtonClick.bind(this);
     this.slideIndex = 1;
   }
 
-  showSlides() {
+  createCarousel() {
+    this._showSlides();
+    this._addListeners();
+  }
+
+  _setupDom() {
+    this.dotButtons = this.carousel.querySelectorAll('.js-room-info-cards__dot');
+  }
+
+  _setupBind() {
+    this._handleControlsButtonClick = this._handleControlsButtonClick.bind(this);
+    this._handleDotButtonClick = this._handleDotButtonClick.bind(this);
+  }
+
+  _showSlides() {
     const slides = this.carousel.querySelectorAll('.js-room-info-cards__mySlides');
     let i;
+
+    this._setupDom();
+
     if (this.slideIndex > slides.length) {this.slideIndex = 1}
     if (this.slideIndex < 1) {
       this.slideIndex = slides.length;
@@ -29,33 +41,33 @@ class Carousel {
     this.dotButtons[this.slideIndex-1].className += ' room-info-cards__dot_active';
   }
 
-  handleControlsButtonClick(n) {
+  _handleControlsButtonClick(n) {
     return () => {
       this.slideIndex = +this.slideIndex + n;
-      this.showSlides();
+      this._showSlides();
     };
   }
 
-  handleDotButtonClick() {
+  _handleDotButtonClick() {
     this.slideIndex = event.target.getAttribute('data-number');
-    this.showSlides();
+    this._showSlides();
   };
 
-  addListeners() {
-    this.prevButtons.forEach((prevButton) => {
-      prevButton.addEventListener('click', this.handleControlsButtonClick(-1));
+  _addListeners() {
+    const prevButtons = this.carousel.querySelectorAll('.js-room-info-cards__prev-link');
+    const nextButtons = this.carousel.querySelectorAll('.js-room-info-cards__next-link');
+
+    this._setupDom();
+    this._setupBind();
+    prevButtons.forEach((prevButton) => {
+      prevButton.addEventListener('click', this._handleControlsButtonClick(-1));
     });
-    this.nextButtons.forEach((nextButton) => {
-      nextButton.addEventListener('click', this.handleControlsButtonClick(1));
+    nextButtons.forEach((nextButton) => {
+      nextButton.addEventListener('click', this._handleControlsButtonClick(1));
     });
     this.dotButtons.forEach((dotButton) => {
-      dotButton.addEventListener('click', this.handleDotButtonClick);
+      dotButton.addEventListener('click', this._handleDotButtonClick);
     });
-  }
-
-  createCarousel() {
-    this.showSlides();
-    this.addListeners();
   }
 }
 
