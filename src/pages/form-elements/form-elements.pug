@@ -20,141 +20,7 @@ include ../../components/room-details/room-details
 include ../../components/reviews/reviews
 
 block vars
-  -
-    const defaultTextField = {
-      "type": "email",
-      "name": "email",
-      "placeholder": "Email",
-      "label": "Text Field",
-      "uikitState": "default",
-    };
-    const hoveredTextField = {
-      "name": "text",
-      "placeholder": "This is pretty awesome",
-      "label": "Text Field",
-      "uikitState": "Hover / Focus",
-      "isHovered": true,
-    };
-    const maskedTextField = {
-      "name": "masked-text",
-      "placeholder": "дд.мм.гггг",
-      "label": "masked text field",
-      "uikitState": "default",
-    };
-    const subscriptionTextField = {
-      "type": "Email",
-      "name": "subscription-text",
-      "placeholder": "Email",
-      "label": "subscription text field",
-    };
-    const dropdownSettings1 = {
-      "type": "people",
-      "label": "Dropdown",
-      "uikitState": "default",
-      "placeholder": "Сколько гостей",
-      "items": [
-        {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-        {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-        {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
-      ],
-    };
-    const dropdownSettings2 = {
-      "type": "facilities",
-      "label": "Dropdown",
-      "uikitState": "default",
-      "placeholder": "Сколько комнат",
-      "items": [
-        {"title": "спальни", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-        {"title": "кровати", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-        {"title": "ванные комнаты", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
-      ],
-    };
-    const dropdownSettings3 = {
-      "type": "facilities",
-      "isExpanded": true,
-      "label": "Dropdown",
-      "uikitState": "expanded",
-      "placeholder": "Сколько комнат",
-      "items": [
-        {"title": "спальни", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-        {"title": "кровати", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-        {"title": "ванные комнаты", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-      ],
-    };
-    const dropdownSettings4 = {
-      "type": "people",
-      "isExpanded": true,
-      "label": "Dropdown",
-      "uikitState": "expanded",
-      "placeholder": "Сколько гостей",
-      "items": [
-        {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-        {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-        {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
-      ],
-    };
-    const dropdownSettings5 = {
-      "type": "people",
-      "isExpanded": true,
-      "label": "Dropdown",
-      "uikitState": "expanded",
-      "placeholder": "Сколько гостей",
-      "items": [
-        {"title": "Взрослые", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-        {"title": "Дети", "defaultCount": "1", "minCount": "0", "maxCount": "10"},
-        {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
-      ],
-    };
-    const checkboxData = {
-      "title": "Checkbox Buttons",
-      "items": [
-        {"name": "smoke", "label": "Можно курить"},
-        {"name": "pets", "label": "Можно с питомцами", "isChecked": true},
-        {"name": "guests", "label": "Можно пригласить гостей (до 10 человек)", "isChecked": true},
-      ]
-    };
-    const dataForExpandableCheckbox = {
-      "title": "expandable checkbox list",
-      "items": [
-        {"name": "wifi", "label": "wi-fi", "isChecked": true},
-        {"name": "parking", "label": "Парковка"},
-      ]
-    };
-    const dataForExpandedCheckbox = {
-      "title": "expandable checkbox list",
-      "isExpanded": true,
-      "items": [
-        {"name": "breakfast", "label": "Завтрак"},
-        {"name": "table", "label": "Письменный стол", "isChecked": true},
-        {"name": "chair", "label": "Стул для кормления", "isChecked": true},
-        {"name": "cot", "label": "Кроватка", "isChecked": true},
-        {"name": "tv", "label": "Телевизор"},
-        {"name": "shampoo", "label": "Шампунь"},
-      ]
-    };
-    const toggleData = {
-      "title": "Toggle",
-      "items": [
-        {"name": "toggle", "label": "Получать спецпредложения", "isChecked": true},
-        {"name": "toggle", "label": "Получать спецпредложения"},
-      ]
-    };
-    const roomDetailsData = {
-      "items": [
-        {"icon": "insert_emoticon", "name": "Комфорт", "description": "Шумопоглощающие стены"},
-        {"icon": "location_city", "name": "Удобство", "description": "Окно в каждой из спален"},
-      ]
-    };
-    const reviewsData = {
-      "items": [{
-        "imgName": "avatar-1.png",
-        "authorName": "Мурад Сарафанов",
-        "date": "5 дней назад",
-        "likeButton": {"countOfLikes": 12, "isActive": true},
-        "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. " +
-          "И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
-      }]
-    };
+  - const data = require("./form-elements.json");
 
 block meta
   meta(name="keywords", content="toxin")
@@ -169,27 +35,27 @@ block content
   main.form-elements
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
-        +text-field(defaultTextField)
+        +text-field(data.defaultTextField)
       div.form-elements__element.form-elements__element_margin_bottom-22
-        +text-field(hoveredTextField)
+        +text-field(data.hoveredTextField)
       div.form-elements__element.form-elements__element_margin_bottom-24
-        +dropdown(dropdownSettings1)
+        +dropdown(data.defaultDropdown)
       div.form-elements__element.form-elements__element_margin_bottom-35
-        +masked-text-field(maskedTextField)
+        +masked-text-field(data.maskedTextField)
       div.form-elements__element.form-elements__element_margin_bottom-36
         +date-dropdown({"startLabel": "date Dropdown", "endLabel": "date Dropdown"})
       div.form-elements__element.form-elements__element_margin_bottom-43
         +date-dropdown({"startLabel": "filter date dropdown"})
       div.form-elements__element.form-elements__element_margin_bottom-103
-        +subscription-text-field(subscriptionTextField)
+        +subscription-text-field(data.subscriptionTextField)
 
     div.form-elements__elements-wrapper.form-elements__elements-wrapper_alignment_center
       div.form-elements__element.form-elements__element_margin_bottom-43
-        +checkbox(checkboxData)
+        +checkbox(data.checkbox)
       div.form-elements__element.form-elements__element_margin_bottom-35
         +radio({"title": "Radio Buttons"})
       div.form-elements__element.form-elements__element_margin_bottom-41
-        +toggle(toggleData)
+        +toggle(data.toggleData)
       div.form-elements__element.form-elements__element_margin_bottom-41
         h2.form-elements__title like button
         div.form-elements__wrapper.form-elements__wrapper_buttons-type_like
@@ -222,23 +88,23 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
-        +dropdown(dropdownSettings2)
+        +dropdown(data.defaultFacilitiesDropdown)
       div.form-elements__element.form-elements__element_margin_bottom-160
-        +dropdown(dropdownSettings3)
+        +dropdown(data.expandedFacilitiesDropdown)
 
     div.form-elements__elements-wrapper
       div.form-elements__element
-        +dropdown(dropdownSettings4)
+        +dropdown(data.expandedDropdown)
 
     div.form-elements__elements-wrapper
       div.form-elements__element
-        +dropdown(dropdownSettings5)
+        +dropdown(data.expandedDropdownWithDefaultCount)
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_bottom-21
-        +expandable-checkbox(dataForExpandableCheckbox)
+        +expandable-checkbox(data.expandableCheckbox)
       div.form-elements__element
-        +expandable-checkbox(dataForExpandedCheckbox)
+        +expandable-checkbox(data.expandedCheckbox)
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-15
@@ -250,8 +116,8 @@ block content
 
     div.form-elements__elements-wrapper
       div.form-elements__element.form-elements__element_margin_top-93
-        +room-details(roomDetailsData)
+        +room-details(data.roomDetails)
 
     div.form-elements__elements-wrapper.form-elements__elements-wrapper_column_double
       div.form-elements__element.form-elements__element_margin_top-82
-        +reviews(reviewsData)
+        +reviews(data.reviews)

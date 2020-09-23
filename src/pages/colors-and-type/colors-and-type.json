@@ -1,0 +1,17 @@
+{
+  "colors": [
+    {"title": "Dark Shade 100%", "value": "rgba(31, 32, 65, 1)", "valueInHex": "#1F2041"},
+    {"title": "Dark Shade 75%", "value": "rgba(31, 32, 65, 0.75)", "valueInHex": "#1F2041"},
+    {"title": "Dark Shade 50%", "value": "rgba(31, 32, 65, 0.50)", "valueInHex": "#1F2041"},
+    {"title": "Dark Shade 25%", "value": "rgba(31, 32, 65, 0.25)", "valueInHex": "#1F2041"},
+    {"title": "Dark Shade 5%", "value": "rgba(31, 32, 65, 0.05)", "valueInHex": "#1F2041"},
+    {"title": "Purple", "value": "rgba(188, 156, 255, 1)", "valueInHex": "#BC9CFF"},
+    {"title": "Green", "value": "rgba(111, 207, 151, 1)", "valueInHex": "#6FCF97"}
+  ],
+  "types": [
+    {"tag": "H1", "title": "H1", "description": "This one is the sub-section or widget title"},
+    {"tag": "H2", "title": "H2", "description": "Next one is the item title inside widgets"},
+    {"tag": "H3", "title": "H3", "description": "This is a label or CTA text"},
+    {"tag": "p", "title": "Body", "description": "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "defaultTextField": {
+    "type": "email",
+    "name": "email",
+    "placeholder": "Email",
+    "label": "Text Field",
+    "uikitState": "default"
+  },
+  "hoveredTextField": {
+    "name": "text",
+    "placeholder": "This is pretty awesome",
+    "label": "Text Field",
+    "uikitState": "Hover / Focus",
+    "isHovered": true
+  },
+  "maskedTextField": {
+    "name": "masked-text",
+    "placeholder": "дд.мм.гггг",
+    "label": "masked text field",
+    "uikitState": "default"
+  },
+  "subscriptionTextField": {
+    "type": "Email",
+    "name": "subscription-text",
+    "placeholder": "Email",
+    "label": "subscription text field"
+  },
+  "defaultDropdown": {
+    "type": "people",
+    "label": "Dropdown",
+    "uikitState": "default",
+    "placeholder": "Сколько гостей",
+    "items": [
+      {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+      {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+      {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+    ]
+  },
+  "defaultFacilitiesDropdown": {
+    "type": "facilities",
+    "label": "Dropdown",
+    "uikitState": "default",
+    "placeholder": "Сколько комнат",
+    "items": [
+      {"title": "спальни", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+      {"title": "кровати", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+      {"title": "ванные комнаты", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+    ]
+  },
+  "expandedFacilitiesDropdown": {
+    "type": "facilities",
+    "isExpanded": true,
+    "label": "Dropdown",
+    "uikitState": "expanded",
+    "placeholder": "Сколько комнат",
+    "items": [
+      {"title": "спальни", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+      {"title": "кровати", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+      {"title": "ванные комнаты", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+    ]
+  },
+  "expandedDropdown": {
+    "type": "people",
+    "isExpanded": true,
+    "label": "Dropdown",
+    "uikitState": "expanded",
+    "placeholder": "Сколько гостей",
+    "items": [
+      {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+      {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
+      {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+    ]
+  },
+  "expandedDropdownWithDefaultCount": {
+    "type": "people",
+    "isExpanded": true,
+    "label": "Dropdown",
+    "uikitState": "expanded",
+    "placeholder": "Сколько гостей",
+    "items": [
+      {"title": "Взрослые", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
+      {"title": "Дети", "defaultCount": "1", "minCount": "0", "maxCount": "10"},
+      {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+    ]
+  },
+  "checkbox": {
+    "title": "Checkbox Buttons",
+    "items": [
+      {"name": "smoke", "label": "Можно курить"},
+      {"name": "pets", "label": "Можно с питомцами", "isChecked": true},
+      {"name": "guests", "label": "Можно пригласить гостей (до 10 человек)", "isChecked": true}
+    ]
+  },
+  "expandableCheckbox": {
+    "title": "expandable checkbox list",
+    "items": [
+      {"name": "wifi", "label": "wi-fi", "isChecked": true},
+      {"name": "parking", "label": "Парковка"}
+    ]
+  },
+  "expandedCheckbox": {
+    "title": "expandable checkbox list",
+    "isExpanded": true,
+    "items": [
+      {"name": "breakfast", "label": "Завтрак"},
+      {"name": "table", "label": "Письменный стол", "isChecked": true},
+      {"name": "chair", "label": "Стул для кормления", "isChecked": true},
+      {"name": "cot", "label": "Кроватка", "isChecked": true},
+      {"name": "tv", "label": "Телевизор"},
+      {"name": "shampoo", "label": "Шампунь"}
+    ]
+  },
+  "toggleData": {
+    "title": "Toggle",
+    "items": [
+      {"name": "toggle", "label": "Получать спецпредложения", "isChecked": true},
+      {"name": "toggle", "label": "Получать спецпредложения"}
+    ]
+  },
+  "roomDetails": {
+    "items": [
+      {"icon": "insert_emoticon", "name": "Комфорт", "description": "Шумопоглощающие стены"},
+      {"icon": "location_city", "name": "Удобство", "description": "Окно в каждой из спален"}
+    ]
+  },
+  "reviews": {
+    "items": [{
+      "imgName": "avatar-1.png",
+      "authorName": "Мурад Сарафанов",
+      "date": "5 дней назад",
+      "likeButton": {"countOfLikes": 12, "isActive": true},
+      "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+    }]
+  }
+}
