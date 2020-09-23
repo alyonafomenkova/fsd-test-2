@@ -125,7 +125,7 @@
   },
   "reviews": {
     "items": [{
-      "imgName": "avatar-1.png",
+      "imgName": "avatar-Murad-Sarafanov.png",
       "authorName": "Мурад Сарафанов",
       "date": "5 дней назад",
       "likeButton": {"countOfLikes": 12, "isActive": true},
