@@ -1,4 +1,4 @@
-import '../rating/rating.js';
+import '../rating/Rating.js';
 import './room-info-cards.scss';
 
 class Carousel {
