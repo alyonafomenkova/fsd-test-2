@@ -5,7 +5,7 @@ import '../../components/expandable-checkbox/ExpandableCheckbox.js';
 import '../../components/footer/footer.js';
 import '../../components/header/header.js';
 import '../../components/pagination/pagination.js';
-import '../../components/range-slider/range-slider.js';
+import '../../components/range-slider/RangeSlider.js';
 import '../../components/rich-checkbox/rich-checkbox.js';
 import '../../components/room-info-cards/room-info-cards.js';
 import './search.scss';
