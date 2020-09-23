@@ -7,12 +7,14 @@ body {
 }
 
 .form-elements {
-  display: grid;
-  grid-template-columns: repeat(3, 22.857rem);
-  grid-template-rows: repeat(4, min-content);
-  justify-content: space-between;
-  max-width: 82.857rem;
-  margin: 4.714rem auto 0 auto;
+  &__content-wrapper {
+    max-width: 82.857rem;
+    display: grid;
+    grid-template-columns: repeat(3, 22.857rem);
+    grid-template-rows: repeat(4, min-content);
+    justify-content: space-between;
+    margin: 4.714rem auto 0 auto;
+  }
 
   &__title {
     @include h3-text;

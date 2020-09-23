@@ -38,20 +38,21 @@ block content
   +logo("uikit")
 
   main.cards
-    div.cards__wrapper
-      div.cards__card
-        +search-form
-      div.cards__card
-        +registration
+    div.cards__content-wrapper
+      div.cards__wrapper
+        div.cards__card
+          +search-form
+        div.cards__card
+          +registration
 
-    div.cards__wrapper
-      div.cards__card
-        +booking-form
-      div.cards__card
-        +login
+      div.cards__wrapper
+        div.cards__card
+          +booking-form
+        div.cards__card
+          +login
 
-    div.cards__wrapper
-      div.cards__card
-        +date-dropdown({"isInline": "true"})
-      div.cards__card.cards__card_content_room
-        +room-info-cards(roomInfoCardsData)
+      div.cards__wrapper
+        div.cards__card
+          +date-dropdown({"isInline": "true"})
+        div.cards__card.cards__card_content_room
+          +room-info-cards(roomInfoCardsData)
