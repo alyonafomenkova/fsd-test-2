@@ -1,4 +1,4 @@
 import '../button/button.js';
-import '../date-dropdown/date-dropdown.js';
-import '../dropdown/dropdown.js';
+import '../date-dropdown/DateDropdown.js';
+import '../dropdown/Dropdown.js';
 import './booking-form.scss';

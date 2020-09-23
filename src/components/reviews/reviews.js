@@ -1,2 +1,2 @@
-import '../like-button/like-button.js';
+import '../like-button/LikeButton.js';
 import './reviews.scss';

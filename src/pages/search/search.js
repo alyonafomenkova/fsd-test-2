@@ -1,6 +1,6 @@
 import '../../components/checkbox/checkbox.js';
-import '../../components/date-dropdown/date-dropdown.js';
-import '../../components/dropdown/dropdown.js';
+import '../../components/date-dropdown/DateDropdown.js';
+import '../../components/dropdown/Dropdown.js';
 import '../../components/expandable-checkbox/expandable-checkbox.js';
 import '../../components/footer/footer.js';
 import '../../components/header/header.js';
