@@ -1,19 +1,19 @@
 import '../rating/Rating.js';
 import './room-info-cards.scss';
 
-class Carousel {
-  constructor(carousel) {
-    this.carousel = carousel;
+class RoomInfoCard {
+  constructor(card) {
+    this.card = card;
     this.slideIndex = 1;
   }
 
-  createCarousel() {
+  createCard() {
     this._showSlides();
     this._addListeners();
   }
 
   _setupDom() {
-    this.dotButtons = this.carousel.querySelectorAll('.js-room-info-cards__dot');
+    this.dotButtons = this.card.querySelectorAll('.js-room-info-cards__dot');
   }
 
   _setupBind() {
@@ -22,7 +22,7 @@ class Carousel {
   }
 
   _showSlides() {
-    const slides = this.carousel.querySelectorAll('.js-room-info-cards__mySlides');
+    const slides = this.card.querySelectorAll('.js-room-info-cards__mySlides');
     let i;
 
     this._setupDom();
@@ -54,8 +54,8 @@ class Carousel {
   };
 
   _addListeners() {
-    const prevButtons = this.carousel.querySelectorAll('.js-room-info-cards__prev-link');
-    const nextButtons = this.carousel.querySelectorAll('.js-room-info-cards__next-link');
+    const prevButtons = this.card.querySelectorAll('.js-room-info-cards__prev-link');
+    const nextButtons = this.card.querySelectorAll('.js-room-info-cards__next-link');
 
     this._setupDom();
     this._setupBind();
@@ -71,9 +71,9 @@ class Carousel {
   }
 }
 
-const carousels = document.querySelectorAll('.room-info-cards__slideshow-container');
+const cards = document.querySelectorAll('.room-info-cards__slideshow-container');
 
-carousels.forEach((it) => {
-  const carousel = new Carousel(it);
-  carousel.createCarousel();
+cards.forEach((it) => {
+  const card = new RoomInfoCard(it);
+  card.createCard();
 });
