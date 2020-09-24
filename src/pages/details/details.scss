@@ -7,10 +7,12 @@ body {
 }
 
 .details {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto 1.357rem auto;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto 1.357rem auto;
+  }
 
   &__images-wrapper {
     display: flex;
