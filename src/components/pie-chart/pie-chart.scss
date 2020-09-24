@@ -1,9 +1,9 @@
 @import '~Base';
 
 .pie-chart {
+  @include reset-figure;
   max-width: 24.643rem;
   flex-grow: 1;
-  margin: 0;
 
   &__title {
     @include h2-text;
