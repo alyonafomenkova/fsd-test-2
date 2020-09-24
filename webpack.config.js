@@ -13,10 +13,10 @@ const webpack = require('webpack');
 const config = {
   mode: 'development',
   entry: {
-    'colors-and-type': PATHS.source + '/pages/colors-and-type/colors-and-type.js',
+    'theme': PATHS.source + '/pages/theme/theme.js',
     'form-elements': PATHS.source + '/pages/form-elements/form-elements.js',
     'cards': PATHS.source + '/pages/cards/cards.js',
-    'headers-and-footers': PATHS.source + '/pages/headers-and-footers/headers-and-footers.js',
+    'header-and-footer': PATHS.source + '/pages/header-and-footer/header-and-footer.js',
     'landing': PATHS.source + '/pages/landing/landing.js',
     'search': PATHS.source + '/pages/search/search.js',
     'details': PATHS.source + '/pages/details/details.js',
@@ -102,9 +102,9 @@ const config = {
       filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
-      filename: 'colors-and-type.html',
-      template: PATHS.source + '/pages/colors-and-type/colors-and-type.pug',
-      chunks: ['colors-and-type'],
+      filename: 'header-and-footer.html',
+      template: PATHS.source + '/pages/theme/theme.pug',
+      chunks: ['theme'],
       inject: true,
     }),
     new HtmlWebpackPlugin({
@@ -120,9 +120,9 @@ const config = {
       inject: true,
     }),
     new HtmlWebpackPlugin({
-      filename: 'headers-and-footers.html',
-      template: PATHS.source + '/pages/headers-and-footers/headers-and-footers.pug',
-      chunks: ['headers-and-footers'],
+      filename: 'header-and-footer.html',
+      template: PATHS.source + '/pages/header-and-footer/header-and-footer.pug',
+      chunks: ['header-and-footer'],
       inject: true,
     }),
     new HtmlWebpackPlugin({

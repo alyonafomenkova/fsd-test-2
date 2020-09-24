@@ -6,8 +6,10 @@ body {
   background-color: #E5E5E5;
 }
 
-.container {
-  margin-top: 4.429rem;
+.header-and-footer {
+  &__wrapper {
+    margin-top: 4.429rem;
+  }
 
   &__item {
     margin-bottom: 2.857rem;

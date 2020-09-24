@@ -1,10 +1,10 @@
 # Учебный  проект FSD
 
 ### UIkit:<br/>
-- [colors-and-type](https://alyonafomenkova.github.io/fsd-test-2/colors-and-type.html)
+- [colors-and-type](https://alyonafomenkova.github.io/fsd-test-2/theme.html)
 - [form-elements](https://alyonafomenkova.github.io/fsd-test-2/form-elements.html)
 - [cards](https://alyonafomenkova.github.io/fsd-test-2/cards.html)
-- [headers-and-footers](https://alyonafomenkova.github.io/fsd-test-2/headers-and-footers.html)
+- [headers-and-footers](https://alyonafomenkova.github.io/fsd-test-2/header-and-footer.html)
 
 ### Main pages:<br/>
 - [landing](https://alyonafomenkova.github.io/fsd-test-2/landing.html)
