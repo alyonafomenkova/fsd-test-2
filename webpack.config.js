@@ -102,7 +102,7 @@ const config = {
       filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
-      filename: 'header-and-footer.html',
+      filename: 'theme.html',
       template: PATHS.source + '/pages/theme/theme.pug',
       chunks: ['theme'],
       inject: true,
