@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/headers-and-footers/headers-and-footers.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/header-and-footer/header-and-footer.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -132,15 +132,15 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/components/header/header.js":
+/***/ "./src/components/header/Header.js":
 /*!*****************************************!*\
-  !*** ./src/components/header/header.js ***!
+  !*** ./src/components/header/Header.js ***!
   \*****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header.scss */ \"./src/components/header/header.scss\");\n/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nconst toggleMenuButtons = document.querySelectorAll('.js-header__toggle-menu-btn');\nconst toggleSubmenuList = document.querySelectorAll('.js-header__nav-item.header__submenu');\nconst headerNavMenu = document.querySelectorAll('.js-header__main-nav');\nconst userNames = document.querySelectorAll('.js-header__user-name');\n\nuserNames.forEach((name) => {\n  const headerWrapper = name.closest('.js-header__buttons-wrapper');\n  headerWrapper.classList.add('header__buttons-wrapper_state_authorized');\n});\n\ntoggleMenuButtons.forEach((button) => {\n  button.classList.remove('header__toggle-menu-btn_state_without-js');\n  button.classList.add('header__toggle-menu-btn_state_with-js');\n});\n\nheaderNavMenu.forEach((navMenu) => {\n  const wrapper = navMenu.closest('.header__content-wrapper');\n  wrapper.classList.remove('header__content-wrapper-menu_state_opened');\n  wrapper.classList.add('header__content-wrapper-menu_state_closed');\n});\n\ntoggleMenuButtons.forEach((button) => {\n  button.addEventListener('click', function() {\n    const wrapper = button.closest('.header__content-wrapper');\n    if (wrapper.classList.contains('header__content-wrapper-menu_state_closed')) {\n      wrapper.classList.remove('header__content-wrapper-menu_state_closed');\n      wrapper.classList.add('header__content-wrapper-menu_state_opened');\n    } else {\n      wrapper.classList.add('header__content-wrapper-menu_state_closed');\n      wrapper.classList.remove('header__content-wrapper-menu_state_opened');\n    }\n  });\n});\n\ntoggleSubmenuList.forEach((submenu) => {\n  const button = submenu.querySelector('.js-header__toggle-submenu-btn');\n  button.classList.remove('header__toggle-submenu-btn_state_without-js');\n  button.classList.add('header__toggle-submenu-btn_state_with-js');\n});\n\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_button_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../button/button.js */ \"./src/components/button/button.js\");\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header.scss */ \"./src/components/header/header.scss\");\n/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nclass Header {\n  constructor(header) {\n    this.header = header;\n  }\n\n  init() {\n    this._toggleJsClass();\n    this._addClassNameForAuthorizedUser();\n    this._changeState();\n    this._setupBind();\n  }\n\n  _setupBind() {\n    const toggleMenuButton = this.header.querySelector('.js-header__toggle-menu-btn');\n\n    this._handleToggleMenuButtonClick = this._handleToggleMenuButtonClick.bind(this);\n    toggleMenuButton.addEventListener('click', this._handleToggleMenuButtonClick);\n  }\n\n  _toggleJsClass() {\n    const toggleMenuButton = this.header.querySelector('.js-header__toggle-menu-btn');\n    const toggleSubmenuList = this.header.querySelectorAll('.js-header__nav-item.header__submenu');\n\n    toggleMenuButton.classList.remove('header__toggle-menu-btn_state_without-js');\n    toggleMenuButton.classList.add('header__toggle-menu-btn_state_with-js');\n\n    toggleSubmenuList.forEach((submenu) => {\n      const button = submenu.querySelector('.js-header__toggle-submenu-btn');\n      button.classList.remove('header__toggle-submenu-btn_state_without-js');\n      button.classList.add('header__toggle-submenu-btn_state_with-js');\n    });\n  }\n\n  _addClassNameForAuthorizedUser() {\n    const userNames = this.header.querySelectorAll('.js-header__user-name');\n\n    userNames.forEach((name) => {\n      const headerWrapper = name.closest('.js-header__buttons-wrapper');\n      headerWrapper.classList.add('header__buttons-wrapper_state_authorized');\n    });\n  }\n\n  _changeState() {\n    const headerNavMenu = this.header.querySelectorAll('.js-header__main-nav');\n\n    headerNavMenu.forEach((navMenu) => {\n      const wrapper = navMenu.closest('.header__content-wrapper');\n      wrapper.classList.remove('header__content-wrapper-menu_state_opened');\n      wrapper.classList.add('header__content-wrapper-menu_state_closed');\n    });\n  }\n\n  _handleToggleMenuButtonClick(evt) {\n    const button = evt.target;\n    const wrapper = button.closest('.header__content-wrapper');\n    if (wrapper.classList.contains('header__content-wrapper-menu_state_closed')) {\n      wrapper.classList.remove('header__content-wrapper-menu_state_closed');\n      wrapper.classList.add('header__content-wrapper-menu_state_opened');\n    } else {\n      wrapper.classList.add('header__content-wrapper-menu_state_closed');\n      wrapper.classList.remove('header__content-wrapper-menu_state_opened');\n    }\n  }\n}\n\nconst headers = document.querySelectorAll('.js-header');\n\nheaders.forEach((it) => {\n  const header = new Header(it);\n  header.init();\n});\n\n\n//# sourceURL=webpack:///./src/components/header/Header.js?");
 
 /***/ }),
 
@@ -224,26 +224,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/pages/headers-and-footers/headers-and-footers.js":
-/*!**************************************************************!*\
-  !*** ./src/pages/headers-and-footers/headers-and-footers.js ***!
-  \**************************************************************/
+/***/ "./src/pages/header-and-footer/header-and-footer.js":
+/*!**********************************************************!*\
+  !*** ./src/pages/header-and-footer/header-and-footer.js ***!
+  \**********************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/header/header.js */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_logo_logo_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./headers-and-footers.scss */ \"./src/pages/headers-and-footers/headers-and-footers.scss\");\n/* harmony import */ var _headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_headers_and_footers_scss__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/headers-and-footers/headers-and-footers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _components_header_Header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/header/Header.js */ \"./src/components/header/Header.js\");\n/* harmony import */ var _components_logo_logo_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _header_and_footer_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header-and-footer.scss */ \"./src/pages/header-and-footer/header-and-footer.scss\");\n/* harmony import */ var _header_and_footer_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_header_and_footer_scss__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/pages/header-and-footer/header-and-footer.js?");
 
 /***/ }),
 
-/***/ "./src/pages/headers-and-footers/headers-and-footers.scss":
-/*!****************************************************************!*\
-  !*** ./src/pages/headers-and-footers/headers-and-footers.scss ***!
-  \****************************************************************/
+/***/ "./src/pages/header-and-footer/header-and-footer.scss":
+/*!************************************************************!*\
+  !*** ./src/pages/header-and-footer/header-and-footer.scss ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/pages/headers-and-footers/headers-and-footers.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/pages/header-and-footer/header-and-footer.scss?");
 
 /***/ })
 

@@ -1085,11 +1085,11 @@ body {
     font-family: 'font-awesome-5-brands-regular';
     font-weight: normal;
     font-size: 1.714rem; }
-    .social-list__icon_type_tw::before {
+    .social-list__icon_type_twitter::before {
       content: '\f099'; }
-    .social-list__icon_type_fb::before {
+    .social-list__icon_type_facebook::before {
       content: '\f082'; }
-    .social-list__icon_type_insta::before {
+    .social-list__icon_type_instagram::before {
       content: '\f16d'; }
 
 @font-face {
@@ -2614,21 +2614,22 @@ body {
   font-size: 1rem; }
 
 .footer {
-  margin: 0 auto;
   padding-top: 6.357rem;
   background-color: #FFFFFF;
   border-top: 0.071rem solid rgba(31, 32, 65, 0.25); }
   @media (max-width: 1165px) {
     .footer {
       padding-bottom: 7.143rem; } }
-  .footer__wrapper {
+  .footer__total-wrapper {
+    margin: 0 auto; }
+  .footer__top-wrapper {
     display: flex;
     max-width: 82.857rem;
     margin: 0 auto;
     padding-top: 0.714rem;
     padding-bottom: 5.357rem; }
     @media (max-width: 1165px) {
-      .footer__wrapper {
+      .footer__top-wrapper {
         padding-bottom: 2rem; } }
   .footer__description-wrapper {
     width: 24%;
@@ -2704,9 +2705,8 @@ body {
         margin: 0; } }
 
 .footer-uikit {
-  max-width: 768px;
   padding: 0; }
-  .footer-uikit .footer__wrapper {
+  .footer-uikit .footer__top-wrapper {
     margin-top: 8.429rem;
     padding: 0; }
   .footer-uikit .footer__description-wrapper {
@@ -3208,7 +3208,6 @@ body {
 
 .header {
   box-sizing: border-box;
-  margin: 0 auto;
   padding: 0 1.429rem 0 1.429rem;
   position: relative;
   background-color: #FFFFFF;
@@ -3937,11 +3936,13 @@ body {
   margin: 0 auto;
   background-color: #E5E5E5; }
 
-.container {
+.header-and-footer__wrapper {
   margin-top: 4.429rem; }
-  .container__item {
-    margin-bottom: 2.857rem;
-    background-color: #FFFFFF; }
-  .container__footer-wrapper {
-    padding-bottom: 7.143rem; }
+
+.header-and-footer__item {
+  margin-bottom: 2.857rem;
+  background-color: #FFFFFF; }
+
+.header-and-footer__footer-wrapper {
+  padding-bottom: 7.143rem; }
 
