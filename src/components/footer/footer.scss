@@ -1,7 +1,6 @@
 @import '~Base';
 
 .footer {
-  margin: 0 auto;
   padding-top: 6.357rem;
   background-color: $white-color;
   border-top: 0.071rem solid $dark-color-opacity-25;
@@ -10,7 +9,11 @@
     padding-bottom: 7.143rem;
   }
 
-  &__wrapper {
+  &__total-wrapper {
+    margin: 0 auto;
+  }
+
+  &__top-wrapper {
     display: flex;
     max-width: 82.857rem;
     margin: 0 auto;
@@ -119,10 +122,9 @@
 }
 
 .footer-uikit {
-  max-width: $tablet-width;
   padding: 0;
 
-  .footer__wrapper {
+  .footer__top-wrapper {
     margin-top: 8.429rem;
     padding: 0;
   }
