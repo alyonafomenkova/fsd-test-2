@@ -1,15 +1,12 @@
-import './dropdown.scss';
-import './dropdown.pug';
-
 class Dropdown {
   constructor(dropdown) {
     this.dropdown = dropdown;
     this.Mode = {
       PEOPLE: 'people',
-      FACILITIES: 'facilities'
+      FACILITIES: 'facilities',
     };
-    this.type;
-    this.totalCount;
+    this.type = undefined;
+    this.totalCount = undefined;
   }
 
   init() {
@@ -18,7 +15,7 @@ class Dropdown {
     this._updateTotalCount();
     this._updatePlaceholder();
     this._setupBind();
-    document.addEventListener('click', this._handleDocumentClick);
+    document.addEventListener('click', Dropdown._handleDocumentClick);
 
     if (this.type === this.Mode.PEOPLE) {
       this._addListenersForPeopleMode();
@@ -44,26 +41,28 @@ class Dropdown {
 
   _toggleMenu() {
     const menu = this.dropdown.querySelector('.js-dropdown__menu');
+
     menu.classList.toggle('dropdown__menu_state_expanded');
     menu.classList.toggle('js-dropdown__menu_state_expanded');
-  };
+  }
 
-  _handleDocumentClick(evt) {
+  static _handleDocumentClick(evt) {
     const target = evt.target.closest('.dropdown__container');
-    if (target) {
-      return;
-    } else {
+
+    if (!target) {
       const menus = document.querySelectorAll('.js-dropdown__menu_state_expanded');
       menus.forEach((menu) => {
         menu.classList.remove('dropdown__menu_state_expanded');
         menu.classList.remove('js-dropdown__menu_state_expanded');
       });
     }
-  };
+  }
 
   _toggleClearButton() {
     const clearButton = this.dropdown.querySelector('.js-dropdown__clear-button');
+
     this._updateTotalCount();
+
     if (this.totalCount > 0) {
       clearButton.classList.remove('dropdown__clear-button_visibility_invisible');
     } else {
@@ -71,40 +70,55 @@ class Dropdown {
     }
   }
 
-  _setPluralForGuests(count) {
-    if (count === 1) {
-      return 'гость';
-    } else if (count >= 2 && count <= 4) {
-      return 'гостя';
-    } else if (count === 0 || count >= 5) {
-      return 'гостей';
-    }
-  };
+  static _setPluralForGuests(count) {
+    let value;
 
-  _setPluralForBedrooms(count) {
     if (count === 1) {
-      return `${count} спальня`;
-    } else if (count >= 2 && count <= 4) {
-      return `${count} спальни`;
-    } else if (count === 0 || count >= 5) {
-      return `${count} спален`;
+      value = 'гость';
     }
-  };
+    if (count >= 2 && count <= 4) {
+      value = 'гостя';
+    }
+    if (count === 0 || count >= 5) {
+      value = 'гостей';
+    }
+    return value;
+  }
 
-  _setPluralForBeds(count) {
+  static _setPluralForBedrooms(count) {
+    let value;
+
     if (count === 1) {
-      return `${count} кровать`;
-    } else if (count >= 2 && count <= 4) {
-      return `${count} кровати`;
-    } else if (count === 0 || count >= 5) {
-      return `${count} кроватей`;
+      value = `${count} спальня`;
     }
-  };
+    if (count >= 2 && count <= 4) {
+      value = `${count} спальни`;
+    }
+    if (count === 0 || count >= 5) {
+      value = `${count} спален`;
+    }
+    return value;
+  }
+
+  static _setPluralForBeds(count) {
+    let value;
+
+    if (count === 1) {
+      value = `${count} кровать`;
+    }
+    if (count >= 2 && count <= 4) {
+      value = `${count} кровати`;
+    }
+    if (count === 0 || count >= 5) {
+      value = `${count} кроватей`;
+    }
+    return value;
+  }
 
   _updateTotalCount() {
     this.totalCount = 0;
     this.quantityNodes.forEach((node) => {
-      this.totalCount += +node.innerText;
+      this.totalCount += Number.parseInt(node.innerText, 10);
     });
   }
 
@@ -117,13 +131,13 @@ class Dropdown {
     const defaultPlaceholderText = placeholder.getAttribute('data-placeholder');
 
     if (this.totalCount > 0) {
-      placeholder.innerText = ``;
+      placeholder.innerText = '';
       if (this.type === this.Mode.PEOPLE) {
-        placeholder.innerText = this.totalCount + ' ' + this._setPluralForGuests(this.totalCount);
+        placeholder.innerText = `${this.totalCount} ${Dropdown._setPluralForGuests(this.totalCount)}`;
       } else if (this.type === this.Mode.FACILITIES) {
-        const bedroomCount = Number.parseInt(this.quantityNodes[0].innerText);
-        const bedCount = Number.parseInt(this.quantityNodes[1].innerText);
-        placeholder.innerText = this._setPluralForBedrooms(bedroomCount) + ', ' + this._setPluralForBeds(bedCount) + '...';
+        const bedroomCount = Number.parseInt(this.quantityNodes[0].innerText, 10);
+        const bedCount = Number.parseInt(this.quantityNodes[1].innerText, 10);
+        placeholder.innerText = `${Dropdown._setPluralForBedrooms(bedroomCount)}, ${Dropdown._setPluralForBeds(bedCount)}...`;
       } else throw new Error('Unknown dropdown\'s mode');
     } else {
       placeholder.innerText = defaultPlaceholderText;
@@ -132,8 +146,8 @@ class Dropdown {
 
   _disableButtons() {
     const optionList = this.dropdown.querySelectorAll('.js-dropdown__option');
-    this._setupDom();
 
+    this._setupDom();
     optionList.forEach((option) => {
       const index = option.getAttribute('data-index');
       const currentCount = this.quantityNodes[index].innerText;
@@ -148,34 +162,36 @@ class Dropdown {
     });
   }
 
-  _enableDecrementButton(button) {
+  static _enableDecrementButton(button) {
     button.disabled = false;
   }
 
-  _incrementCount() {
-    const incrementButton = event.target;
+  _incrementCount(evt) {
+    const incrementButton = evt.target;
     const index = incrementButton.getAttribute('data-index');
-    const maxCount = Number.parseInt(incrementButton.getAttribute('data-max-count'));
-    let currentCountNode = this.quantityNodes[index];
-    let currentCountValue = Number.parseInt(currentCountNode.innerText);
-    let decrementButton = this.decrementButtons[index];
+    const maxCount = Number.parseInt(incrementButton.getAttribute('data-max-count'), 10);
+    const currentCountNode = this.quantityNodes[index];
+    const decrementButton = this.decrementButtons[index];
+    let currentCountValue = Number.parseInt(currentCountNode.innerText, 10);
+
     if (currentCountValue < maxCount) {
       currentCountValue += 1;
-      currentCountNode.innerHTML = ``;
+      currentCountNode.innerHTML = '';
       currentCountNode.innerHTML = currentCountValue;
-      this._enableDecrementButton(decrementButton);
+      Dropdown._enableDecrementButton(decrementButton);
     }
   }
 
-  _decrementCount() {
-    const decrementButton = event.target;
+  _decrementCount(evt) {
+    const decrementButton = evt.target;
     const index = decrementButton.getAttribute('data-index');
-    const minCount = Number.parseInt(decrementButton.getAttribute('data-min-count'));
-    let currentCountNode = this.quantityNodes[index];
-    let currentCountValue = Number.parseInt(currentCountNode.innerText);
+    const minCount = Number.parseInt(decrementButton.getAttribute('data-min-count'), 10);
+    const currentCountNode = this.quantityNodes[index];
+    let currentCountValue = Number.parseInt(currentCountNode.innerText, 10);
+
     if (currentCountValue > minCount) {
       currentCountValue -= 1;
-      currentCountNode.innerHTML = ``;
+      currentCountNode.innerHTML = '';
       currentCountNode.innerHTML = currentCountValue;
     }
   }
@@ -190,21 +206,23 @@ class Dropdown {
     this._toggleMenu();
   }
 
-  _handleDecrementButtonClick() {
-    this._decrementCount();
+  _handleDecrementButtonClick(evt) {
+    this._decrementCount(evt);
     this._disableButtons();
     this._updateTotalCount();
     this._updatePlaceholder();
+
     if (this.type === this.Mode.PEOPLE) {
       this._toggleClearButton();
     }
   }
 
-  _handleIncrementButtonClick() {
-    this._incrementCount();
+  _handleIncrementButtonClick(evt) {
+    this._incrementCount(evt);
     this._disableButtons();
     this._updateTotalCount();
     this._updatePlaceholder();
+
     if (this.type === this.Mode.PEOPLE) {
       this._toggleClearButton();
     }
