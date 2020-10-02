@@ -1,5 +1,3 @@
-import './rating.scss';
-
 class Rating {
   constructor(rating) {
     this.rating = rating;
@@ -11,7 +9,7 @@ class Rating {
     this._setupBind();
     this._toggleSelectedIcon();
     ratingButtons.forEach((button) => {
-      button.addEventListener('click', this._handleRatingButtonClick)
+      button.addEventListener('click', this._handleRatingButtonClick);
     });
   }
 
@@ -20,17 +18,16 @@ class Rating {
   }
 
   _handleRatingButtonClick(evt) {
-    const target = evt.target;
-    const item = target.closest('.js-rating__item');
+    const item = evt.target.closest('.js-rating__item');
     const value = Number(item.getAttribute('data-value'));
     const stars = this.rating.querySelectorAll('li.rating__item');
 
-    for (let i = 0; i < stars.length; i++) {
+    for (let i = 0; i < stars.length; i += 1) {
       $(stars[i]).removeClass('js-rating__item_selected');
       this._toggleSelectedIcon();
     }
 
-    for (let i = 0; i < value; i++) {
+    for (let i = 0; i < value; i += 1) {
       $(stars[i]).addClass('js-rating__item_selected');
       this._toggleSelectedIcon();
     }

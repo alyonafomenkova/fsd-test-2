@@ -1,5 +1,4 @@
 import '../../../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js';
-import './range-slider.scss';
 
 class RangeSlider {
   constructor(slider) {
@@ -8,7 +7,7 @@ class RangeSlider {
       type: 'double',
       postfix: '₽',
       step: 500,
-      values_separator: ' - '
+      values_separator: ' - ',
     };
   }
 

@@ -1,5 +1,3 @@
-import './expandable-checkbox.scss';
-
 class ExpandableCheckbox {
   constructor(checkbox) {
     this.checkbox = checkbox;
@@ -7,27 +5,25 @@ class ExpandableCheckbox {
 
   init() {
     this._setupBind();
-    this.checkbox.addEventListener('click', this._handleCheckboxClick);
-    document.addEventListener('click', this._handleDocumentClick);
+    this.checkbox.addEventListener('click', ExpandableCheckbox._handleCheckboxClick);
+    document.addEventListener('click', ExpandableCheckbox._handleDocumentClick);
   }
 
   _setupBind() {
-    this._handleCheckboxClick = this._handleCheckboxClick.bind(this);
+    ExpandableCheckbox._handleCheckboxClick = ExpandableCheckbox._handleCheckboxClick.bind(this);
   }
 
-  _handleCheckboxClick(evt) {
+  static _handleCheckboxClick(evt) {
     const target = evt.target.closest('.js-expandable-checkbox');
 
     target.classList.toggle('js-expandable-checkbox_state_expanded');
     target.classList.toggle('expandable-checkbox_state_expanded');
   }
 
-  _handleDocumentClick(evt) {
+  static _handleDocumentClick(evt) {
     const target = evt.target.closest('.js-expandable-checkbox__selection') || evt.target.closest('.js-expandable-checkbox__wrapper');
 
-    if (target) {
-      return;
-    } else {
+    if (!target) {
       const expandedCheckboxes = document.querySelectorAll('.js-expandable-checkbox_state_expanded');
       expandedCheckboxes.forEach((checkbox) => {
         checkbox.classList.remove('js-expandable-checkbox_state_expanded');
