@@ -18,7 +18,7 @@ mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = optio
               div.dropdown__option.js-dropdown__option(data-index = index)
                 h3.dropdown__option-title !{item.title}
                 div.dropdown__buttons-wrapper
-                  button.dropdown__button.dropdown__decrement-button.js-dropdown__decrement-button(
+                  button.dropdown__decrement-button.js-dropdown__decrement-button(
                     type = "button"
                     data-min-count = item.minCount
                     data-index = index
@@ -27,7 +27,7 @@ mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = optio
                     data-default-count = item.defaultCount
                     data-index = index
                   ) !{item.defaultCount}
-                  button.dropdown__button.dropdown__increment-button.js-dropdown__increment-button(
+                  button.dropdown__increment-button.js-dropdown__increment-button(
                     type = "button"
                     data-max-count = item.maxCount
                     data-index = index
