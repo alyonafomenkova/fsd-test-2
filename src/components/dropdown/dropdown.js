@@ -1,4 +1,3 @@
-import '../button/button.js';
 import './dropdown.scss';
 import './dropdown.pug';
 

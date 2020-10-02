@@ -13,22 +13,14 @@ const webpack = require('webpack');
 const config = {
   mode: 'development',
   entry: {
-    'theme': PATHS.source + '/pages/theme/theme.js',
-    'form-elements': PATHS.source + '/pages/form-elements/form-elements.js',
-    'cards': PATHS.source + '/pages/cards/cards.js',
-    'header-and-footer': PATHS.source + '/pages/header-and-footer/header-and-footer.js',
-    'landing': PATHS.source + '/pages/landing/landing.js',
-    'search': PATHS.source + '/pages/search/search.js',
-    'details': PATHS.source + '/pages/details/details.js',
-    'sign-in': PATHS.source + '/pages/sign-in/sign-in.js',
-    'sign-up': PATHS.source + '/pages/sign-up/sign-up.js',
+    'index': './src/index.js'
   },
   output: {
     path: PATHS.build,
-    filename: '[name].bundle.js'
+    filename: 'index.bundle.js',
   },
   devServer: {
-    index: 'details.html',
+    index: 'form-elements.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
@@ -99,61 +91,43 @@ const config = {
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: 'index.css',
     }),
     new HtmlWebpackPlugin({
       filename: 'theme.html',
       template: PATHS.source + '/pages/theme/theme.pug',
-      chunks: ['theme'],
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'form-elements.html',
       template: PATHS.source + '/pages/form-elements/form-elements.pug',
-      chunks: ['form-elements'],
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'cards.html',
       template: PATHS.source + '/pages/cards/cards.pug',
-      chunks: ['cards'],
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'header-and-footer.html',
       template: PATHS.source + '/pages/header-and-footer/header-and-footer.pug',
-      chunks: ['header-and-footer'],
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'landing.html',
       template: PATHS.source + '/pages/landing/landing.pug',
-      chunks: ['landing'],
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'search.html',
       template: PATHS.source + '/pages/search/search.pug',
-      chunks: ['search'],
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'details.html',
       template: PATHS.source + '/pages/details/details.pug',
-      chunks: ['details'],
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'sign-in.html',
       template: PATHS.source + '/pages/sign-in/sign-in.pug',
-      chunks: ['sign-in'],
-      inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'sign-up.html',
       template: PATHS.source + '/pages/sign-up/sign-up.pug',
-      chunks: ['sign-up'],
-      inject: true,
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

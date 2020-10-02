@@ -1,4 +1,3 @@
-import './masked-text-field.scss';
 import 'inputmask/dist/jquery.inputmask';
 
 class MaskedTextField {
@@ -7,7 +6,7 @@ class MaskedTextField {
     this.settings = {
       alias: 'datetime',
       inputFormat: 'dd.mm.yyyy',
-      placeholder: 'дд.мм.гггг'
+      placeholder: 'дд.мм.гггг',
     };
   }
 
