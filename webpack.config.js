@@ -9,6 +9,7 @@ const PATHS = {
   build: path.join(__dirname, 'build')
 };
 const webpack = require('webpack');
+const pages = ['theme', 'form-elements', 'cards', 'header-and-footer', 'landing', 'search', 'details', 'sign-in', 'sign-up'];
 
 const config = {
   mode: 'development',
@@ -20,7 +21,7 @@ const config = {
     filename: 'index.bundle.js',
   },
   devServer: {
-    index: 'form-elements.html',
+    index: 'details.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
@@ -93,47 +94,20 @@ const config = {
     new MiniCssExtractPlugin({
       filename: 'index.css',
     }),
-    new HtmlWebpackPlugin({
-      filename: 'theme.html',
-      template: PATHS.source + '/pages/theme/theme.pug',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'form-elements.html',
-      template: PATHS.source + '/pages/form-elements/form-elements.pug',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'cards.html',
-      template: PATHS.source + '/pages/cards/cards.pug',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'header-and-footer.html',
-      template: PATHS.source + '/pages/header-and-footer/header-and-footer.pug',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'landing.html',
-      template: PATHS.source + '/pages/landing/landing.pug',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'search.html',
-      template: PATHS.source + '/pages/search/search.pug',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'details.html',
-      template: PATHS.source + '/pages/details/details.pug',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'sign-in.html',
-      template: PATHS.source + '/pages/sign-in/sign-in.pug',
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'sign-up.html',
-      template: PATHS.source + '/pages/sign-up/sign-up.pug',
-    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
     })
   ]
 };
+
+pages.forEach((page) => {
+  config.plugins.push(
+    new HtmlWebpackPlugin({
+      filename: `${page}.html`,
+      template: PATHS.source + `/pages/${page}/${page}.pug`,
+    }),
+  );
+});
 
 module.exports = config;
