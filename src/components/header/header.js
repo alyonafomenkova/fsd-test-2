@@ -1,5 +1,3 @@
-import './header.scss';
-
 class Header {
   constructor(header) {
     this.header = header;
@@ -15,8 +13,8 @@ class Header {
   _setupBind() {
     const toggleMenuButton = this.header.querySelector('.js-header__toggle-menu-btn');
 
-    this._handleToggleMenuButtonClick = this._handleToggleMenuButtonClick.bind(this);
-    toggleMenuButton.addEventListener('click', this._handleToggleMenuButtonClick);
+    Header._handleToggleMenuButtonClick = Header._handleToggleMenuButtonClick.bind(this);
+    toggleMenuButton.addEventListener('click', Header._handleToggleMenuButtonClick);
   }
 
   _toggleJsClass() {
@@ -52,9 +50,10 @@ class Header {
     });
   }
 
-  _handleToggleMenuButtonClick(evt) {
+  static _handleToggleMenuButtonClick(evt) {
     const button = evt.target;
     const wrapper = button.closest('.header__content-wrapper');
+
     if (wrapper.classList.contains('header__content-wrapper-menu_state_closed')) {
       wrapper.classList.remove('header__content-wrapper-menu_state_closed');
       wrapper.classList.add('header__content-wrapper-menu_state_opened');
