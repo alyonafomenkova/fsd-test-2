@@ -1,5 +1,3 @@
-import './pie-chart.scss';
-
 class PieChart {
   constructor(pieChart) {
     this.pieChart = pieChart;
@@ -16,9 +14,9 @@ class PieChart {
       BAD: '#919191',
       DEFAULT: '#000000',
     };
-    this.count;
-    this.text;
-    this.circles;
+    this.count = undefined;
+    this.text = undefined;
+    this.circles = undefined;
   }
 
   init() {
@@ -69,8 +67,7 @@ class PieChart {
   }
 
   _handleLabelMouseover(evt) {
-    const target = evt.target;
-    const targetAttribute = target.getAttribute('data-label-type');
+    const targetAttribute = evt.target.getAttribute('data-label-type');
 
     this.circles.forEach((circle) => {
       if (circle.getAttribute('data-circle-type') === targetAttribute) {
@@ -82,8 +79,7 @@ class PieChart {
   }
 
   _handleLabelMouseout(evt) {
-    const target = evt.target;
-    const targetAttribute = target.getAttribute('data-label-type');
+    const targetAttribute = evt.target.getAttribute('data-label-type');
 
     this.circles.forEach((circle) => {
       if (circle.getAttribute('data-circle-type') === targetAttribute) {

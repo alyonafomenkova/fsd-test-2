@@ -1,6 +1,3 @@
-import '../rating/Rating.js';
-import './room-info-cards.scss';
-
 class RoomInfoCard {
   constructor(card) {
     this.card = card;
@@ -27,18 +24,18 @@ class RoomInfoCard {
 
     this._setupDom();
 
-    if (this.slideIndex > slides.length) {this.slideIndex = 1}
+    if (this.slideIndex > slides.length) { this.slideIndex = 1; }
     if (this.slideIndex < 1) {
       this.slideIndex = slides.length;
     }
-    for (i = 0; i < slides.length; i++) {
+    for (i = 0; i < slides.length; i += 1) {
       slides[i].style.display = 'none';
     }
-    for (i = 0; i < this.dotButtons.length; i++) {
+    for (i = 0; i < this.dotButtons.length; i += 1) {
       this.dotButtons[i].className = this.dotButtons[i].className.replace(' room-info-cards__dot_active', '');
     }
-    slides[this.slideIndex-1].style.display = 'block';
-    this.dotButtons[this.slideIndex-1].className += ' room-info-cards__dot_active';
+    slides[this.slideIndex - 1].style.display = 'block';
+    this.dotButtons[this.slideIndex - 1].className += ' room-info-cards__dot_active';
   }
 
   _handleControlsButtonClick(n) {
@@ -48,10 +45,10 @@ class RoomInfoCard {
     };
   }
 
-  _handleDotButtonClick() {
-    this.slideIndex = event.target.getAttribute('data-number');
+  _handleDotButtonClick(evt) {
+    this.slideIndex = evt.target.getAttribute('data-number');
     this._showSlides();
-  };
+  }
 
   _addListeners() {
     const prevButtons = this.card.querySelectorAll('.js-room-info-cards__prev-link');
@@ -71,7 +68,7 @@ class RoomInfoCard {
   }
 }
 
-const cards = document.querySelectorAll('.room-info-cards__slideshow-container');
+const cards = document.querySelectorAll('.js-room-info-cards__slideshow-container');
 
 cards.forEach((it) => {
   const card = new RoomInfoCard(it);
