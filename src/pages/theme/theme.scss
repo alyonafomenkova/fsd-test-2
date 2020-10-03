@@ -1,11 +1,9 @@
 @import '~Base';
 
-body {
+.theme {
   max-width: $max-desktop-width;
   margin: 0 auto;
- }
 
-.theme {
   &__container {
     display: flex;
     justify-content: space-between;

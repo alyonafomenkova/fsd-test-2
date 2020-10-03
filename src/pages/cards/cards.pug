@@ -15,17 +15,20 @@ block vars
           "roomNumber": "888",
           "title": "№ 888",
           "type": "люкс",
+          "price": "9&nbsp;990",
           "rating": "5",
           "reviewsCount": 145,
         },
         {
           "roomNumber": "840",
           "title": "№ 840",
+          "price": "9&nbsp;990",
           "rating": "4",
           "reviewsCount": 65,
         },
       ],
-      "countOfImages": 4
+      "countOfImages": 4,
+      "isSmallIndent": false
     };
 block meta
   meta(name="keywords", content="toxin")
@@ -35,24 +38,25 @@ block title
   | Cards
 
 block content
-  +logo("uikit")
+  div.cards
+    div.cards__logo-wrapper
+      +logo("uikit")
+    main.cards__wrapper
+      div.cards__content-wrapper
+        div.cards__column-wrapper
+          div.cards__card
+            +search-form
+          div.cards__card
+            +registration
 
-  main.cards
-    div.cards__content-wrapper
-      div.cards__wrapper
-        div.cards__card
-          +search-form
-        div.cards__card
-          +registration
+        div.cards__column-wrapper
+          div.cards__card
+            +booking-form
+          div.cards__card
+            +login
 
-      div.cards__wrapper
-        div.cards__card
-          +booking-form
-        div.cards__card
-          +login
-
-      div.cards__wrapper
-        div.cards__card
-          +date-dropdown({"isInline": "true"})
-        div.cards__card.cards__card_content_room
-          +room-info-cards(roomInfoCardsData)
+        div.cards__column-wrapper
+          div.cards__card
+            +date-dropdown({"isInline": "true"})
+          div.cards__card.cards__card_content_room
+            +room-info-cards(roomInfoCardsData)

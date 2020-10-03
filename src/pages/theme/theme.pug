@@ -12,18 +12,19 @@ block title
   | Colors and Type
 
 block content
-  +logo("uikit")
-  main.theme
-    div.theme__container
-      div.theme__content
-        each item in data.colors
-          div.theme__color
-            div.theme__color-example(style=`background-color: ${item.value}`)
-            div.theme__color-info
-              h2.theme__color-title #{item.title}
-              p.theme__color-description #{item.valueInHex}
-      div.theme__content
-        each item in data.types
-          div.theme__type(class=`theme__type-wrapper_type_${item.title.toLowerCase()}`)
-            #{item.tag}(class=`theme__type-title theme__type-title_type_${item.title.toLowerCase()}`) #{item.title}
-            #{item.tag}.theme__type-description #{item.description}
+  div.theme
+    +logo("uikit")
+    main.theme__content-wrapper
+      div.theme__container
+        div.theme__content
+          each item in data.colors
+            div.theme__color
+              div.theme__color-example(style=`background-color: ${item.value}`)
+              div.theme__color-info
+                h2.theme__color-title #{item.title}
+                p.theme__color-description #{item.valueInHex}
+        div.theme__content
+          each item in data.types
+            div.theme__type(class=`theme__type-wrapper_type_${item.title.toLowerCase()}`)
+              #{item.tag}(class=`theme__type-title theme__type-title_type_${item.title.toLowerCase()}`) #{item.title}
+              #{item.tag}.theme__type-description #{item.description}
