@@ -3,8 +3,7 @@ include ../../components/rating/rating
 mixin room-info-cards({title, items, countOfImages, isSmallIndent} = options)
   -
     countOfImages = countOfImages || 0;
-    isSmallIndent = isSmallIndent || true;
-
+  div !{isSmallIndent}
   div.room-info-cards
     if (title)
       h1.room-info-cards__title !{title}
@@ -12,9 +11,7 @@ mixin room-info-cards({title, items, countOfImages, isSmallIndent} = options)
       if (items)
         each item in items
           - let {roomNumber, isSmallIndent, title, type, price, rating, reviewsCount} = item;
-          li.room-info-cards__item(
-            class=isSmallIndent ? 'room-info-cards__item_indent_small' : 'room-info-cards__item_indent_big'
-            )
+          li.room-info-cards__item(class = isSmallIndent ? "room-info-cards__item_indent_small" : "room-info-cards__item_indent_big")
             div.room-info-cards__slideshow-container.js-room-info-cards__slideshow-container
               - let i = 1;
               while (i <= countOfImages)

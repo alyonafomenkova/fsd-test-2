@@ -13,15 +13,16 @@ block title
   | header-and-footer
 
 block content
-  +logo("uikit")
-
-  main.header-and-footer
-    div.header-and-footer__wrapper
-      div.header-and-footer__item
-        +header()
-      div.header-and-footer__item
-        +header({"isUserAuthorized": true})
-      div.header-and-footer__item
-        +footer()
-      div.header-and-footer__item.header-and-footer__footer-wrapper
-        +footer({"isUikit": true})
+  div.header-and-footer
+    div.header-and-footer__logo-wrapper
+      +logo("uikit")
+    main.header-and-footer__wrapper
+      div.header-and-footer__content-wrapper
+        div.header-and-footer__item
+          +header()
+        div.header-and-footer__item
+          +header({"isUserAuthorized": true})
+        div.header-and-footer__item
+          +footer()
+        div.header-and-footer__item
+          +footer({"isUikit": true})

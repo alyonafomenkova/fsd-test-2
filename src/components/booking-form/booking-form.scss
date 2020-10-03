@@ -10,6 +10,11 @@
   border-radius: 0.286rem;
   box-shadow: 0 0 1.786rem $black-color-opacity-20;
 
+  @media (min-width: $tablet-width) {
+    width: 27.143rem;
+    padding: 3rem 2.143rem 2.143rem 2rem;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -97,11 +102,6 @@
   &__total-value {
     @include h2-text;
     margin-left: 0.357rem;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 27.143rem;
-    padding: 3rem 2.143rem 2.143rem 2.143rem;
   }
 
   &__service-text {

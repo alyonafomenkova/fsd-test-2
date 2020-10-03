@@ -1,22 +1,25 @@
 @import '~Base';
 
-body {
-  width: 100%;
-  margin: 0 auto;
-  background-color: #E5E5E5;
-}
-
 .header-and-footer {
-  &__wrapper {
+  padding-bottom: 10rem;
+  background-color: #E5E5E5;
+
+  &__logo-wrapper {
+    max-width: $max-desktop-width;
+    margin: 0 auto;
+  }
+
+  &__content-wrapper{
     margin-top: 4.429rem;
   }
 
   &__item {
     margin-bottom: 2.857rem;
     background-color: $white-color;
-  }
 
-  &__footer-wrapper {
-    padding-bottom: 7.143rem;
+    &:last-child {
+      max-width: $tablet-width;
+      margin: 0 auto;
+    }
   }
 }

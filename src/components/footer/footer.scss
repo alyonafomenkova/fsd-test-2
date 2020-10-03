@@ -1,12 +1,15 @@
 @import '~Base';
 
 .footer {
-  padding-top: 6.357rem;
+  padding-top: 6.429rem;
   background-color: $white-color;
+  box-shadow: 0 0.071rem 0 $dark-color-opacity-10;
   border-top: 0.071rem solid $dark-color-opacity-25;
 
   @media (max-width: $desktop-width) {
-    padding-bottom: 7.143rem;
+    padding-top: 6.429rem;
+    padding-bottom: 8.571rem;
+    box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
   }
 
   &__total-wrapper {
@@ -122,10 +125,9 @@
 }
 
 .footer-uikit {
-  padding: 0;
+  padding: 8.571rem 0 6.857rem 0;
 
   .footer__top-wrapper {
-    margin-top: 8.429rem;
     padding: 0;
   }
 

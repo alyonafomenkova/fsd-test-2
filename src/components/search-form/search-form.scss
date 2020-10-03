@@ -11,6 +11,11 @@
   border-radius: 0.286rem;
   box-shadow: 0 0 1.786rem $black-color-opacity-20;
 
+  @media (min-width: $tablet-width) {
+    width: 27.143rem;
+    padding: 2.857rem 2.143rem 2.143rem 2rem;
+  }
+
   &__title {
     @include h2-text;
     margin-bottom: 1.214rem;
@@ -35,10 +40,5 @@
 
   &__fieldset-guests {
     margin-bottom: 2.357rem;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 27.143rem;
-    padding: 2.857rem 2.143rem 2.143rem 2rem;
   }
 }

@@ -1,7 +1,7 @@
 @import '~Base';
 
 .cards {
-  //background-color: #E5E5E5;
+  background-color: #E5E5E5;
 
   &__logo-wrapper {
     max-width: $max-desktop-width;
@@ -12,7 +12,8 @@
     display: flex;
     justify-content: space-between;
     max-width: 82.857rem;
-    margin: 5.143rem auto 10rem auto;
+    margin: 5.143rem auto 0 auto;
+    padding-bottom: 10rem;
   }
 
   &__column-wrapper:last-of-type {
