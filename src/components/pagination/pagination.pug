@@ -11,9 +11,10 @@ mixin pagination
   div.pagination
     ul.pagination__list
       each item in items
+        - let {content, isCurrent, isNext} = item;
         li.pagination__item
           a.pagination__link(
-            class = item.isCurrent ? "pagination__link_value_current" : "",
-            class = item.isNext ? "pagination__link_value_next" : ""
-            ) !{item.content}
+            class = isCurrent ? "pagination__link_value_current" : "",
+            class = isNext ? "pagination__link_value_next" : ""
+            ) !{content}
     p.pagination__description 1 – 12 из 100+ вариантов аренды

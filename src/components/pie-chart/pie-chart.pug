@@ -39,12 +39,14 @@ mixin pie-chart({title, items} = {})
           -
             let totalLengthOfPreviousSegments = 0;
           each segment, index in items
-            - let segmentLength = (segment.count / totalVotes) * circumference;
-            circle.pie-chart__circle.js-pie-chart__circle(cx="17" cy="17" r= radius fill="transparent" stroke=`url(#gradient-${segment.type})` stroke-width="1"
+            -
+              let {count, type} = segment;
+              let segmentLength = (count / totalVotes) * circumference;
+            circle.pie-chart__circle.js-pie-chart__circle(cx="17" cy="17" r= radius fill="transparent" stroke=`url(#gradient-${type})` stroke-width="1"
               stroke-dasharray= `${Math.max(segmentLength - GAP, 0)} ${circumference - segmentLength + GAP}`
               stroke-dashoffset=`${circumference - totalLengthOfPreviousSegments + FIRST_OFFSET - GAP}`
-              data-circle-type = segment.type
-              data-circle-count = segment.count
+              data-circle-type = type
+              data-circle-count = count
             )
             - totalLengthOfPreviousSegments += segmentLength;
 
@@ -55,7 +57,8 @@ mixin pie-chart({title, items} = {})
       figcaption.pie-chart__description-wrapper
         ul.pie-chart__description-list(aria-hidden="true" role="presentation")
           each item in items
+            - let {type, label} = item;
             li(
-              class=`pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_${item.type}`,
-              data-label-type = item.type
-              ) !{item.label}
+              class=`pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_${type}`,
+              data-label-type = type
+              ) !{label}

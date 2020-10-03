@@ -31,18 +31,20 @@ mixin header({isUserAuthorized, items} = {})
         nav.header__main-nav.js-header__main-nav
           ul.header__nav-list.js-header__nav-list
             each item in items
+              - let {submenu, isActive, content} = item;
               li.header__nav-item.js-header__nav-item(
                 class = "header__nav-item_margin_small"
-                class = item.submenu ? "header__submenu js-header__submenu header__submenu_state_closed" : ""
+                class = submenu ? "header__submenu js-header__submenu header__submenu_state_closed" : ""
               )
-                if (item.submenu)
-                  span.header__nav-link(class=item.isActive ? "header__nav-link_state_active" : "") !{item.content}
+                if (submenu)
+                  span.header__nav-link(class=isActive ? "header__nav-link_state_active" : "") !{content}
                 else
-                  a.header__nav-link(class=item.isActive ? "header__nav-link_state_active" : "" href="test.html") !{item.content}
-                if (item.submenu)
+                  a.header__nav-link(class=isActive ? "header__nav-link_state_active" : "" href="test.html") !{content}
+                if (submenu)
                   button.header__toggle-submenu-btn.js-header__toggle-submenu-btn.header__toggle-submenu-btn_state_without-js
                     span.header__toggle-submenu-icon.header__toggle-submenu-icon_state_opened expand_more
                   ul.header__submenu-list
-                    each subitem in item.submenu
+                    each subitem in submenu
+                      - let {content} = subitem;
                       li.header__submenu-item
-                        a.header__submenu-link(href="test.html") !{subitem.content}
+                        a.header__submenu-link(href="test.html") !{content}

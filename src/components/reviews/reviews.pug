@@ -10,14 +10,15 @@ mixin reviews({title, items, isVisibleCountOfReviews} = options)
     ul.reviews__list
       if (items)
         each item in items
+          - let {imgName, authorName, date, likeButton, text} = item;
           li.reviews__item
             div.reviews__author
               img.reviews__avatar(
-                src = require(`../../components/reviews/images/${item.imgName}`).default
+                src = require(`../../components/reviews/images/${imgName}`).default
                 width="48" height="48" alt="Avatar")
               div.reviews__author-info
-                span.reviews__author-name !{item.authorName}
-                span.reviews__date !{item.date}
+                span.reviews__author-name !{authorName}
+                span.reviews__date !{date}
             div.reviews__text-wrapper
-              +like-button(item.likeButton)
-              p.reviews__text !{item.text}
+              +like-button(likeButton)
+              p.reviews__text !{text}

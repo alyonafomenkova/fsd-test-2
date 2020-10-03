@@ -12,8 +12,9 @@ mixin room-details({title, items} = {})
       h2.room-details__title !{title}
     ul.room-details__list
       each item in items
+        - let {icon, name, description} = item;
         li.room-details__item
-          span.room-details__icon !{item.icon}
+          span.room-details__icon !{icon}
           div.room-details__text
-            p.room-details__name !{item.name}
-            p.room-details__description #{item.description}
+            p.room-details__name !{name}
+            p.room-details__description #{description}

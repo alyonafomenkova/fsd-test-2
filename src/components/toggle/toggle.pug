@@ -5,11 +5,12 @@ mixin toggle({title, items} = options)
     ul.toggle__list
       if (items)
         each item in items
+          - let {id, name, label, isChecked} = item;
           li.toggle__item
-            label.toggle__label(for = item.id) #{item.label}
+            label.toggle__label(for = id) #{label}
               input.toggle__input(
                 type = "checkbox",
-                name = item.name,
-                checked = item.isChecked
+                name = name,
+                checked = isChecked
               )
               span.toggle__slider

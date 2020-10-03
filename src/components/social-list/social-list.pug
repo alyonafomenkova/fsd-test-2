@@ -18,14 +18,16 @@ mixin social-list({items} = {})
       }
     ];
     items = items || defaultItems;
+
   ul.social-list
     each item in items
+      - let {id, link, text} = item;
       li.social-list__item
         a(
-          class=`social-list__link social-list__link_type_${item.id}`,
-          href=item.link,
+          class=`social-list__link social-list__link_type_${id}`,
+          href=link,
           target="_blank",
           rel="noopener noreferrer"
           )
-          span.social-list__text !{item.text}
-          span(class=`social-list__icon social-list__icon_type_${item.id}`)
+          span.social-list__text !{text}
+          span(class=`social-list__icon social-list__icon_type_${id}`)

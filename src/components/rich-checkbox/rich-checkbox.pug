@@ -19,15 +19,16 @@ mixin rich-checkbox({title, items} = options)
       h2.rich-checkbox__title !{title}
     ul.rich-checkbox__list
       each item in items
+        - let {name, title, description, isChecked, isDisabled} = item;
         li.rich-checkbox__item
           input.rich-checkbox__input(
             type = "checkbox",
-            id = `${item.name}-id`,
-            name = item.name,
-            checked = item.isChecked,
-            disabled = item.isDisabled,
+            id = `${name}-id`,
+            name = name,
+            checked = isChecked,
+            disabled = isDisabled,
           )
-          label.rich-checkbox__label(for = `${item.name}-id`)
+          label.rich-checkbox__label(for = `${name}-id`)
             div.rich-checkbox__info-wrapper
-              p.rich-checkbox__item-title #{item.title}
-              p.rich-checkbox__description #{item.description}
+              p.rich-checkbox__item-title #{title}
+              p.rich-checkbox__description #{description}

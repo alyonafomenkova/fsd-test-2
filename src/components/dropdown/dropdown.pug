@@ -15,21 +15,22 @@ mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = optio
         div.dropdown__options
           if (items)
             each item, index in items
+              - let {title, minCount, defaultCount, maxCount} = item;
               div.dropdown__option.js-dropdown__option(data-index = index)
-                h3.dropdown__option-title !{item.title}
+                h3.dropdown__option-title !{title}
                 div.dropdown__buttons-wrapper
                   button.dropdown__decrement-button.js-dropdown__decrement-button(
                     type = "button"
-                    data-min-count = item.minCount
+                    data-min-count = minCount
                     data-index = index
                     ) -
                   span.dropdown__quantity.js-dropdown__quantity(
-                    data-default-count = item.defaultCount
+                    data-default-count = defaultCount
                     data-index = index
-                  ) !{item.defaultCount}
+                  ) !{defaultCount}
                   button.dropdown__increment-button.js-dropdown__increment-button(
                     type = "button"
-                    data-max-count = item.maxCount
+                    data-max-count = maxCount
                     data-index = index
                   ) +
         if (type === "people")

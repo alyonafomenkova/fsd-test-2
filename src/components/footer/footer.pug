@@ -27,28 +27,29 @@ mixin footer({items, isUikit} = {})
       ],
       "copyrightText": "Copyright © 2018 Toxin отель. Все права зачищены."
     };
-    items = items || defaultItems;
+    const {description, contentLists, copyrightText} = items || defaultItems;
 
   footer.footer(class=isUikit ? "footer-uikit" : "")
     div.footer__total-wrapper
       div.footer__top-wrapper
         div.footer__description-wrapper
           +logo
-          p.footer__description !{items.description}
+          p.footer__description !{description}
         div.footer__content-wrapper
-          each item in items.contentLists
+          each item in contentLists
+            - let {title, links, isDisabled, isChecked, subscribe} = item;
             div.footer__content-item
-              h3.footer__title !{item.title}
-              if (item.links)
+              h3.footer__title !{title}
+              if (links)
                 ul.footer__content-list
-                  each link in item.links
+                  each link in links
                     li.footer__content-unit
                       a.footer__content-link !{link}
-              if (item.subscribe)
+              if (subscribe)
                 div.footer__subscribe-wrapper
-                  p.footer__subscribe-text !{item.subscribe}
+                  p.footer__subscribe-text !{subscribe}
                   +subscription-text-field({"type": "Email", "name": "subscription-text", "placeholder": "Email"})
       hr.footer__separator
       div.footer__bottom-wrapper
-        p.footer__copyright-text !{items.copyrightText}
+        p.footer__copyright-text !{copyrightText}
         +social-list()
