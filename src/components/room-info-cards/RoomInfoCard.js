@@ -18,8 +18,26 @@ class RoomInfoCard {
     this._handleDotButtonClick = this._handleDotButtonClick.bind(this);
   }
 
+  static _show(element) {
+    const isHide = element.classList.contains('room-info-cards__slides_display_none');
+
+    if (isHide) {
+      element.classList.remove('room-info-cards__slides_display_none');
+      element.classList.add('room-info-cards__slides_display_block');
+    }
+  }
+
+  static _hide(element) {
+    const isVisible = element.classList.contains('room-info-cards__slides_display_block');
+
+    if (isVisible) {
+      element.classList.remove('room-info-cards__slides_display_block');
+      element.classList.add('room-info-cards__slides_display_none');
+    }
+  }
+
   _showSlides() {
-    const slides = this.card.querySelectorAll('.js-room-info-cards__mySlides');
+    const slides = this.card.querySelectorAll('.js-room-info-cards__slides');
     let i;
 
     this._setupDom();
@@ -29,18 +47,18 @@ class RoomInfoCard {
       this.slideIndex = slides.length;
     }
     for (i = 0; i < slides.length; i += 1) {
-      slides[i].style.display = 'none';
+      RoomInfoCard._hide(slides[i]);
     }
     for (i = 0; i < this.dotButtons.length; i += 1) {
       this.dotButtons[i].className = this.dotButtons[i].className.replace(' room-info-cards__dot_active', '');
     }
-    slides[this.slideIndex - 1].style.display = 'block';
+    RoomInfoCard._show(slides[this.slideIndex - 1]);
     this.dotButtons[this.slideIndex - 1].className += ' room-info-cards__dot_active';
   }
 
   _handleControlsButtonClick(n) {
     return () => {
-      this.slideIndex = +this.slideIndex + n;
+      this.slideIndex = Number(this.slideIndex) + n;
       this._showSlides();
     };
   }

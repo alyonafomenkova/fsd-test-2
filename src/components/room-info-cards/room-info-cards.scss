@@ -29,11 +29,18 @@
     position: relative;
   }
 
-  &__mySlides {
-    display: none;
+  &__slides {
     width: 100%;
     height: 100%;
     overflow: hidden;
+
+    &_display_block {
+      display: block;
+    }
+
+    &_display_none {
+      display: none;
+    }
   }
 
   &__img {
@@ -92,7 +99,7 @@
     }
   }
 
-  &__mySlides_faded {
+  &__slides_view_faded {
     animation-name: fade;
     animation-duration: 1.5s;
   }
