@@ -3,6 +3,7 @@
 .text-field {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   flex-wrap: wrap;
   max-width: 22.857rem;
 
@@ -23,8 +24,7 @@
   &__input {
     box-sizing: border-box;
     width: 100%;
-    height: 3.143rem;
-    padding: 0.929rem 0 0.929rem 1.071rem;
+    padding: 0.857rem 0 0.857rem 1rem;
     border: 0.071rem solid $dark-color-opacity-25;
     border-radius: 0.286rem;
 

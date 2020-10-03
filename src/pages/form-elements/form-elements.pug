@@ -30,95 +30,99 @@ block title
   | Form Elements
 
 block content
+  div.form-elements
+    +logo("uikit")
+    main.form-elements__wrapper
+      div.form-elements__content-wrapper
+        div.form-elements__row-wrapper
+          div.form-elements__column-wrapper.form-elements__column-wrapper_right-margin_52
+            div.form-elements__element.form-elements__element_bottom-margin_21
+              +text-field(data.defaultTextField)
+            div.form-elements__element.form-elements__element_bottom-margin_22
+              +text-field(data.hoveredTextField)
+            div.form-elements__element.form-elements__element_bottom-margin_24
+              +dropdown(data.defaultDropdown)
+            div.form-elements__element.form-elements__element_bottom-margin_36
+              +masked-text-field(data.maskedTextField)
+            div.form-elements__element.form-elements__element_bottom-margin_36
+              +date-dropdown({"startLabel": "date Dropdown", "endLabel": "date Dropdown"})
+            div.form-elements__element.form-elements__element_bottom-margin_43
+              +date-dropdown({"startLabel": "filter date dropdown"})
+            div.form-elements__element.form-elements__element_bottom-margin_102
+              +subscription-text-field(data.subscriptionTextField)
 
-  +logo("uikit")
-  main.form-elements
-    div.form-elements__content-wrapper
-      div.form-elements__elements-wrapper
-        div.form-elements__element.form-elements__element_margin_bottom-21
-          +text-field(data.defaultTextField)
-        div.form-elements__element.form-elements__element_margin_bottom-22
-          +text-field(data.hoveredTextField)
-        div.form-elements__element.form-elements__element_margin_bottom-24
-          +dropdown(data.defaultDropdown)
-        div.form-elements__element.form-elements__element_margin_bottom-35
-          +masked-text-field(data.maskedTextField)
-        div.form-elements__element.form-elements__element_margin_bottom-36
-          +date-dropdown({"startLabel": "date Dropdown", "endLabel": "date Dropdown"})
-        div.form-elements__element.form-elements__element_margin_bottom-43
-          +date-dropdown({"startLabel": "filter date dropdown"})
-        div.form-elements__element.form-elements__element_margin_bottom-103
-          +subscription-text-field(data.subscriptionTextField)
+          div.form-elements__column-wrapper
+            div.form-elements__element.form-elements__element_bottom-margin_43
+              +checkbox(data.checkbox)
+            div.form-elements__element.form-elements__element_bottom-margin_35
+              +radio({"title": "Radio Buttons"})
+            div.form-elements__element.form-elements__element_bottom-margin_41
+              +toggle(data.toggleData)
+            div.form-elements__element.form-elements__element_bottom-margin_41
+              h2.form-elements__title like button
+              div.form-elements__buttons-wrapper.form-elements__buttons-wrapper_buttons-type_like
+                +like-button({"countOfLikes": 2})
+                +like-button({"countOfLikes": 12, "isActive": true})
+            div.form-elements__element.form-elements__element_bottom-margin_41
+              h2.form-elements__title.form-elements__title_view_rating rate button
+              div.form-elements__buttons-wrapper.form-elements__buttons-wrapper_buttons-type_rate
+                +rating(4)
+                +rating(5)
 
-      div.form-elements__elements-wrapper.form-elements__elements-wrapper_alignment_center
-        div.form-elements__element.form-elements__element_margin_bottom-43
-          +checkbox(data.checkbox)
-        div.form-elements__element.form-elements__element_margin_bottom-35
-          +radio({"title": "Radio Buttons"})
-        div.form-elements__element.form-elements__element_margin_bottom-41
-          +toggle(data.toggleData)
-        div.form-elements__element.form-elements__element_margin_bottom-41
-          h2.form-elements__title like button
-          div.form-elements__wrapper.form-elements__wrapper_buttons-type_like
-            +like-button({"countOfLikes": 2})
-            +like-button({"countOfLikes": 12, "isActive": true})
-        div.form-elements__element.form-elements__element_margin_bottom-41
-          h2.form-elements__title.form-elements__title_view_rating rate button
-          div.form-elements__wrapper.form-elements__wrapper_buttons-type_rate
-            +rating(4)
-            +rating(5)
+          div.form-elements__column-wrapper
+            div.form-elements__element.form-elements__element_bottom-margin_35
+              +range-slider({"title": "Range Slider"})
+            div.form-elements__element.form-elements__element_bottom-margin_41
+              h2.form-elements__title buttons
+              div.form-elements__main-buttons-wrapper
+                +button({"view": "filled", "height": "high", "content": "click me"})
+                +button({"view": "filled", "height": "high", "isHovered": true, "content": "click me"})
+              div.form-elements__main-buttons-wrapper
+                +button({"view": "bordered", "height": "high", "content": "click me"})
+                +button({"view": "bordered", "height": "high", "isHovered": true, "content": "click me"})
+              div.form-elements__main-buttons-wrapper
+                +button({"view": "textual", "height": "high", "content": "click me"})
+                +button({"view": "textual", "height": "high", "isHovered": true, "content": "click me"})
+              +button({"view": "actionable", "height": "high", "content": "Перейти к оплате"})
+            div.form-elements__element.form-elements__element_bottom-margin_41
+              h2.form-elements__title pagination
+              +pagination
 
-      div.form-elements__elements-wrapper
-        div.form-elements__element.form-elements__element_margin_bottom-35
-          +range-slider({"title": "Range Slider"})
-        div.form-elements__element.form-elements__element_margin_bottom-41
-          h2.form-elements__title buttons
-          div.form-elements__buttons-wrapper
-            +button({"view": "filled", "height": "high", "content": "click me"})
-            +button({"view": "filled", "height": "high", "isHovered": true, "content": "click me"})
-          div.form-elements__buttons-wrapper
-            +button({"view": "bordered", "height": "high", "content": "click me"})
-            +button({"view": "bordered", "height": "high", "isHovered": true, "content": "click me"})
-          div.form-elements__buttons-wrapper
-            +button({"view": "textual", "height": "high", "content": "click me"})
-            +button({"view": "textual", "height": "high", "isHovered": true, "content": "click me"})
-          +button({"view": "actionable", "height": "high", "content": "Перейти к оплате"})
-        div.form-elements__element.form-elements__element_margin_bottom-41
-          h2.form-elements__title pagination
-          +pagination
+        div.form-elements__row-wrapper
+          div.form-elements__column-wrapper.form-elements__column-wrapper_right-margin_52
+            div.form-elements__element.form-elements__element_bottom-margin_21
+              +dropdown(data.defaultFacilitiesDropdown)
+            div.form-elements__element.form-elements__element_bottom-margin_160
+              +dropdown(data.expandedFacilitiesDropdown)
 
-      div.form-elements__elements-wrapper
-        div.form-elements__element.form-elements__element_margin_bottom-21
-          +dropdown(data.defaultFacilitiesDropdown)
-        div.form-elements__element.form-elements__element_margin_bottom-160
-          +dropdown(data.expandedFacilitiesDropdown)
+          div.form-elements__column-wrapper
+            div.form-elements__element
+              +dropdown(data.expandedDropdown)
 
-      div.form-elements__elements-wrapper
-        div.form-elements__element
-          +dropdown(data.expandedDropdown)
+          div.form-elements__column-wrapper
+            div.form-elements__element
+              +dropdown(data.expandedDropdownWithDefaultCount)
 
-      div.form-elements__elements-wrapper
-        div.form-elements__element
-          +dropdown(data.expandedDropdownWithDefaultCount)
+        div.form-elements__row-wrapper
+          div.form-elements__column-wrapper.form-elements__column-wrapper_right-margin_52
+            div.form-elements__element.form-elements__element_bottom-margin_21
+              +expandable-checkbox(data.expandableCheckbox)
+            div.form-elements__element
+              +expandable-checkbox(data.expandedCheckbox)
 
-      div.form-elements__elements-wrapper
-        div.form-elements__element.form-elements__element_margin_bottom-21
-          +expandable-checkbox(data.expandableCheckbox)
-        div.form-elements__element
-          +expandable-checkbox(data.expandedCheckbox)
+          div.form-elements__column-wrapper
+            div.form-elements__element.form-elements__element_top-margin_15
+              +rich-checkbox({"title": "rich Checkbox Buttons"})
 
-      div.form-elements__elements-wrapper
-        div.form-elements__element.form-elements__element_margin_top-15
-          +rich-checkbox({"title": "rich Checkbox Buttons"})
+          div.form-elements__column-wrapper
+            div.form-elements__element.form-elements__element_top-margin_15
+              +bullet({"title": "Bullet list", "isUikit": true})
 
-      div.form-elements__elements-wrapper
-        div.form-elements__element.form-elements__element_margin_top-15
-          +bullet({"title": "Bullet list", "isUikit": true})
+        div.form-elements__row-wrapper
+          div.form-elements__column-wrapper
+            div.form-elements__element.form-elements__element_top-margin_93
+              +room-details(data.roomDetails)
 
-      div.form-elements__elements-wrapper
-        div.form-elements__element.form-elements__element_margin_top-93
-          +room-details(data.roomDetails)
-
-      div.form-elements__elements-wrapper.form-elements__elements-wrapper_column_double
-        div.form-elements__element.form-elements__element_margin_top-82
-          +reviews(data.reviews)
+          div.form-elements__column-wrapper.form-elements__column-wrapper_column_double
+            div.form-elements__element.form-elements__element_margin_top-82
+              +reviews(data.reviews)

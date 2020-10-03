@@ -1,18 +1,18 @@
 @import '~Base';
 
-body {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .form-elements {
+  max-width: $max-desktop-width;
+  margin: 0 auto;
+
   &__content-wrapper {
-    max-width: 82.857rem;
-    display: grid;
-    grid-template-columns: repeat(3, 22.857rem);
-    grid-template-rows: repeat(4, min-content);
-    justify-content: space-between;
+    max-width: $desktop-width;
     margin: 4.714rem auto 0 auto;
+  }
+
+  &__row-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__title {
@@ -24,11 +24,13 @@ body {
     margin-bottom: 1.286rem;
   }
 
-  &__buttons-wrapper {
+  &__main-buttons-wrapper {
     display: flex;
     justify-content: space-between;
     max-width: 15.5rem;
     margin-bottom: 2.143rem;
+    position: relative;
+    z-index: 0;
 
     &:nth-of-type(2) {
       margin-bottom: 2.286rem;
@@ -36,24 +38,25 @@ body {
 
     &:last-of-type {
       max-width: 10.143rem;
-      margin-bottom: 2.214rem;
+      margin-bottom: 2.143rem;
     }
   }
 }
 
-.form-elements__elements-wrapper {
-  &_alignment_center {
-    justify-self: center;
+.form-elements__column-wrapper {
+  width: 22.857rem;
+
+  &_right-margin_52 {
+    margin-right: 3.714rem;
   }
 
   &_column_double {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    width: auto;
   }
 }
 
 .form-elements__element {
-  &_margin_top-15 {
+  &_top-margin_15 {
     margin-top: 1.071rem;
   }
 
@@ -61,31 +64,31 @@ body {
     margin-top: 5.857rem;
   }
 
-  &_margin_top-93 {
+  &_top-margin_93 {
     margin-top: 6.643rem;
   }
 
-  &_margin_bottom-21 {
+  &_bottom-margin_21 {
     margin-bottom: 1.5rem;
   }
 
-  &_margin_bottom-22 {
+  &_bottom-margin_22 {
     margin-bottom: 1.571rem;
   }
 
-  &_margin_bottom-24 {
+  &_bottom-margin_24 {
     margin-bottom: 1.714rem;
   }
 
-  &_margin_bottom-35 {
+  &_bottom-margin_35 {
     margin-bottom: 2.5rem;
   }
 
-  &_margin_bottom-36 {
+  &_bottom-margin_36 {
     margin-bottom: 2.571rem;
   }
 
-  &_margin_bottom-41 {
+  &_bottom-margin_41 {
     margin-bottom: 2.929rem;
   }
 
@@ -93,7 +96,7 @@ body {
     margin-bottom: 3rem;
   }
 
-  &_margin_bottom-43 {
+  &_bottom-margin_43 {
     margin-bottom: 3.071rem;
   }
 
@@ -101,16 +104,16 @@ body {
     margin-bottom: 3.214rem;
   }
 
-  &_margin_bottom-103 {
-    margin-bottom: 7.357rem;
+  &_bottom-margin_102 {
+    margin-bottom: 7.286rem;
   }
 
-  &_margin_bottom-160 {
+  &_bottom-margin_160 {
     margin-bottom: 11.429rem;
   }
 }
 
-.form-elements__wrapper {
+.form-elements__buttons-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

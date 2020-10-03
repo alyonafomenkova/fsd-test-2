@@ -54,8 +54,8 @@
   &__controls-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 1.071rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.786rem;
   }
 
   &__apply-button {
@@ -70,6 +70,7 @@
   &__increment-button {
     width: 2.143rem;
     height: 2.143rem;
+    padding-top: 0.357rem;
     border: 0.071rem solid $dark-color-opacity-25;
     background: none;
     border-radius: 1.571rem;

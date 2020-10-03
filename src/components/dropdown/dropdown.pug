@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = options)
-  div.dropdown.js-dropdown(class=`"dropdown_type_${type}` data-type = type)
+  div.dropdown.js-dropdown(class=`dropdown_type_${type}` data-type = type)
     if (label)
       div.dropdown__info
         h3.dropdown__label !{label}
