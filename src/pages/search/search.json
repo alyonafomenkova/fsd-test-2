@@ -39,7 +39,6 @@
     ]
   },
   "roomInfoCards": {
-    "isSmallIndent": true,
     "title": "Номера, которые мы для вас подобрали",
     "countOfImages": 4,
     "items": [

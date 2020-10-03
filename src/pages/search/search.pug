@@ -26,18 +26,18 @@ block content
   main.search
     div.search__content-wrapper
       aside.search__aside
-        div.search__element.search__element_margin_bottom-21
+        div.search__element.search__element_bottom-margin_21
           +date-dropdown({"startLabel": "даты пребывания в отеле"})
-        div.search__element.search__element_margin_bottom-31
+        div.search__element.search__element_bottom-margin_31
           +dropdown(data.dropdown)
-        div.search__element.search__element_margin_bottom-31
+        div.search__element.search__element_bottom-margin_31
           +range-slider({"title": "диапазон цены"})
           p.search__cost-comment Стоимость за сутки пребывания в номере
-        div.search__element.search__element_margin_bottom-33
+        div.search__element.search__element_bottom-margin_33
           +checkbox(data.checkbox)
-        div.search__element.search__element_margin_bottom-21
+        div.search__element.search__element_bottom-margin_21
           +rich-checkbox({"title": "доступность"})
-        div.search__element.search__element_margin_bottom-16
+        div.search__element.search__element_bottom-margin_16
           +dropdown(data.facilitiesDropdown)
         +expandable-checkbox(data.expandableCheckbox)
       div.search__wrapper

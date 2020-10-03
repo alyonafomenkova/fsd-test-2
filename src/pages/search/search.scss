@@ -1,11 +1,5 @@
 @import '~Base';
 
-//body {
-//  width: 100%;
-//  margin: 0 auto;
-//  background-color: $white-color;
-//}
-
 .search {
   &__content-wrapper {
     display: flex;
@@ -57,19 +51,19 @@
 }
 
 .search__element {
-  &_margin_bottom-16 {
+  &_bottom-margin_16 {
     margin-bottom: 1.143rem;
   }
 
-  &_margin_bottom-21 {
+  &_bottom-margin_21 {
     margin-bottom: 1.5rem;
   }
 
-  &_margin_bottom-31 {
+  &_bottom-margin_31 {
     margin-bottom: 2.214rem;
   }
 
-  &_margin_bottom-33 {
+  &_bottom-margin_33 {
     margin-bottom: 2.357rem;
   }
 }

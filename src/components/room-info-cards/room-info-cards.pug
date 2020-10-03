@@ -3,14 +3,15 @@ include ../../components/rating/rating
 mixin room-info-cards({title, items, countOfImages, isSmallIndent} = options)
   -
     countOfImages = countOfImages || 0;
-  div !{isSmallIndent}
+    isSmallIndent = isSmallIndent || true;
+
   div.room-info-cards
     if (title)
       h1.room-info-cards__title !{title}
     ul.room-info-cards__list
       if (items)
         each item in items
-          - let {roomNumber, isSmallIndent, title, type, price, rating, reviewsCount} = item;
+          - let {roomNumber, title, type, price, rating, reviewsCount} = item;
           li.room-info-cards__item(class = isSmallIndent ? "room-info-cards__item_indent_small" : "room-info-cards__item_indent_big")
             div.room-info-cards__slideshow-container.js-room-info-cards__slideshow-container
               - let i = 1;
