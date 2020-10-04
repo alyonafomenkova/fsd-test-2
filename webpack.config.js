@@ -21,7 +21,7 @@ const config = {
     filename: 'index.bundle.js',
   },
   devServer: {
-    index: 'details.html',
+    index: 'search.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
