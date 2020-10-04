@@ -8,13 +8,14 @@
     <link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="mask-icon" href="assets/favicons/safari.svg" color="#BC9CFF">
     <link rel="manifest" href="assets/favicons/site.webmanifest">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
     <meta name="keywords" content="toxin">
     <meta name="description" content="Учебный проект FSD. Search page.">
     <title>search
     </title>
-  <link href="search.css" rel="stylesheet"></head>
+  <link href="index.css" rel="stylesheet"></head>
   <body>
     <header class="header js-header">
       <div class="header__wrapper"><a class="logo" href="landing.html"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
@@ -56,7 +57,7 @@
     <main class="search">
       <div class="search__content-wrapper">
         <aside class="search__aside">
-          <div class="search__element search__element_margin_bottom-21">
+          <div class="search__element search__element_bottom-margin_21">
             <div class="date-dropdown js-date-dropdown date-dropdown--filter js-date-dropdown--filter">
               <div class="date-dropdown__item date-dropdown__item--filter">
                 <label class="date-dropdown__label">даты пребывания в отеле
@@ -65,8 +66,8 @@
               </div>
             </div>
           </div>
-          <div class="search__element search__element_margin_bottom-31">
-            <div class="dropdown js-dropdown &quot;dropdown_type_people" data-type="people">
+          <div class="search__element search__element_bottom-margin_31">
+            <div class="dropdown js-dropdown dropdown_type_people" data-type="people">
               <div class="dropdown__info">
                 <h3 class="dropdown__label">гости</h3>
               </div>
@@ -79,22 +80,22 @@
                     <div class="dropdown__option js-dropdown__option" data-index="0">
                       <h3 class="dropdown__option-title">Взрослые</h3>
                       <div class="dropdown__buttons-wrapper">
-                        <button class="dropdown__button dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="0">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="0">0</span>
-                        <button class="dropdown__button dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="0">+</button>
+                        <button class="dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="0">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="0">0</span>
+                        <button class="dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="0">+</button>
                       </div>
                     </div>
                     <div class="dropdown__option js-dropdown__option" data-index="1">
                       <h3 class="dropdown__option-title">Дети</h3>
                       <div class="dropdown__buttons-wrapper">
-                        <button class="dropdown__button dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="1">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="1">0</span>
-                        <button class="dropdown__button dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="1">+</button>
+                        <button class="dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="1">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="1">0</span>
+                        <button class="dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="1">+</button>
                       </div>
                     </div>
                     <div class="dropdown__option js-dropdown__option" data-index="2">
                       <h3 class="dropdown__option-title">Младенцы</h3>
                       <div class="dropdown__buttons-wrapper">
-                        <button class="dropdown__button dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="2">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="2">0</span>
-                        <button class="dropdown__button dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="2">+</button>
+                        <button class="dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="2">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="2">0</span>
+                        <button class="dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="2">+</button>
                       </div>
                     </div>
                   </div>
@@ -110,14 +111,14 @@
               </div>
             </div>
           </div>
-          <div class="search__element search__element_margin_bottom-31">
+          <div class="search__element search__element_bottom-margin_31">
             <div class="range-slider">
               <h3 class="range-slider__title">диапазон цены</h3>
               <input class="range-slider__input js-range-slider__input" type="text" value="" data-min="0" data-max="15500" data-from="5000" data-to="10000">
             </div>
             <p class="search__cost-comment">Стоимость за сутки пребывания в номере</p>
           </div>
-          <div class="search__element search__element_margin_bottom-33">
+          <div class="search__element search__element_bottom-margin_33">
             <div class="checkbox js-checkbox">
               <h2 class="checkbox__title">Checkbox Buttons</h2>
               <ul class="checkbox__list">
@@ -136,7 +137,7 @@
               </ul>
             </div>
           </div>
-          <div class="search__element search__element_margin_bottom-21">
+          <div class="search__element search__element_bottom-margin_21">
             <div class="rich-checkbox">
               <h2 class="rich-checkbox__title">доступность</h2>
               <ul class="rich-checkbox__list">
@@ -161,8 +162,8 @@
               </ul>
             </div>
           </div>
-          <div class="search__element search__element_margin_bottom-16">
-            <div class="dropdown js-dropdown &quot;dropdown_type_facilities" data-type="facilities">
+          <div class="search__element search__element_bottom-margin_16">
+            <div class="dropdown js-dropdown dropdown_type_facilities" data-type="facilities">
               <div class="dropdown__info">
                 <h3 class="dropdown__label">удобства номера</h3>
               </div>
@@ -175,22 +176,22 @@
                     <div class="dropdown__option js-dropdown__option" data-index="0">
                       <h3 class="dropdown__option-title">спальни</h3>
                       <div class="dropdown__buttons-wrapper">
-                        <button class="dropdown__button dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="0">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="2" data-index="0">2</span>
-                        <button class="dropdown__button dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="0">+</button>
+                        <button class="dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="0">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="2" data-index="0">2</span>
+                        <button class="dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="0">+</button>
                       </div>
                     </div>
                     <div class="dropdown__option js-dropdown__option" data-index="1">
                       <h3 class="dropdown__option-title">кровати</h3>
                       <div class="dropdown__buttons-wrapper">
-                        <button class="dropdown__button dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="1">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="2" data-index="1">2</span>
-                        <button class="dropdown__button dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="1">+</button>
+                        <button class="dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="1">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="2" data-index="1">2</span>
+                        <button class="dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="1">+</button>
                       </div>
                     </div>
                     <div class="dropdown__option js-dropdown__option" data-index="2">
                       <h3 class="dropdown__option-title">ванные комнаты</h3>
                       <div class="dropdown__buttons-wrapper">
-                        <button class="dropdown__button dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="2">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="2">0</span>
-                        <button class="dropdown__button dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="2">+</button>
+                        <button class="dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="2">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="2">0</span>
+                        <button class="dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="2">+</button>
                       </div>
                     </div>
                   </div>
@@ -239,12 +240,12 @@
             <div class="room-info-cards">
               <h1 class="room-info-cards__title">Номера, которые мы для вас подобрали</h1>
               <ul class="room-info-cards__list">
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/888_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/888_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/888_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/888_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/888_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/888_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/888_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/888_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -267,12 +268,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/840_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/840_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/840_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/840_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/840_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/840_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/840_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/840_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -295,12 +296,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/980_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/980_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/980_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/980_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/980_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/980_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/980_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/980_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -323,12 +324,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/856_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/856_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/856_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/856_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/856_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/856_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/856_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/856_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -351,12 +352,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/740_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/740_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/740_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/740_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/740_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/740_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/740_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/740_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -379,12 +380,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/982_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/982_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/982_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/982_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/982_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/982_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/982_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/982_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -407,12 +408,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/678_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/678_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/678_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/678_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/678_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/678_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/678_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/678_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -435,12 +436,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/450_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/450_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/450_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/450_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/450_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/450_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/450_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/450_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -463,12 +464,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/350_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/350_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/350_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/350_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/350_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/350_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/350_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/350_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -491,12 +492,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/666_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/666_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/666_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/666_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/666_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/666_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/666_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/666_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -519,12 +520,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/444_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/444_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/444_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/444_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/444_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/444_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/444_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/444_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -547,12 +548,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="room-info-cards__item">
-                  <div class="room-info-cards__slideshow-container">
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/352_1.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/352_2.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/352_3.png" alt="Фото номера"></div>
-                    <div class="room-info-cards__mySlides js-room-info-cards__mySlides room-info-cards__mySlides_faded"><img class="room-info-cards__img" src="assets/images/352_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
+                <li class="room-info-cards__item room-info-cards__item_indent_small">
+                  <div class="room-info-cards__slideshow-container js-room-info-cards__slideshow-container">
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/352_1.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/352_2.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/352_3.png" alt="Фото номера"></div>
+                    <div class="room-info-cards__slides js-room-info-cards__slides room-info-cards__slides_view_faded room-info-cards__slides_display_block"><img class="room-info-cards__img" src="assets/images/352_4.png" alt="Фото номера"></div><a class="room-info-cards__prev-link js-room-info-cards__prev-link"><span class="room-info-cards__prev-icon">expand_more</span></a><a class="room-info-cards__next-link js-room-info-cards__next-link"><span class="room-info-cards__next-icon">expand_more</span></a><br>
                     <div class="room-info-cards__dots-wrapper"><span class="room-info-cards__dot js-room-info-cards__dot" data-number="1"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="2"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="3"></span><span class="room-info-cards__dot js-room-info-cards__dot" data-number="4"></span>
                     </div>
                   </div>
@@ -651,5 +652,5 @@
         </div>
       </div>
     </footer>
-  <script src="search.bundle.js"></script></body>
+  <script src="index.bundle.js"></script></body>
 </html>

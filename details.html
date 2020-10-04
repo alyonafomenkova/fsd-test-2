@@ -8,13 +8,14 @@
     <link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="mask-icon" href="assets/favicons/safari.svg" color="#BC9CFF">
     <link rel="manifest" href="assets/favicons/site.webmanifest">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
     <meta name="keywords" content="toxin">
     <meta name="description" content="Учебный проект FSD. Room details page.">
     <title>room details
     </title>
-  <link href="details.css" rel="stylesheet"></head>
+  <link href="index.css" rel="stylesheet"></head>
   <body>
     <header class="header js-header">
       <div class="header__wrapper"><a class="logo" href="landing.html"><img class="logo__img logo__img_view_main" src="assets/images/main-logo.svg" width="40" height="40" alt="Logo"><img class="logo__img logo__img_view_textual" src="assets/images/text-logo.svg" width="53" alt="Toxin"></a>
@@ -82,7 +83,7 @@
                   </li>
                 </ul>
               </div>
-              <figure class="pie-chart js-pie-chart" data-chart-data="[{&quot;type&quot;:&quot;normal&quot;,&quot;count&quot;:&quot;260&quot;,&quot;label&quot;:&quot;Удовлетворительно&quot;},{&quot;type&quot;:&quot;good&quot;,&quot;count&quot;:&quot;260&quot;,&quot;label&quot;:&quot;Хорошо&quot;},{&quot;type&quot;:&quot;fine&quot;,&quot;count&quot;:&quot;520&quot;,&quot;label&quot;:&quot;Великолепно&quot;},{&quot;type&quot;:&quot;bad&quot;,&quot;count&quot;:&quot;0&quot;,&quot;label&quot;:&quot;Разочарован&quot;}]">
+              <figure class="pie-chart js-pie-chart" data-chart-data="[{&quot;type&quot;:&quot;fine&quot;,&quot;count&quot;:&quot;520&quot;,&quot;label&quot;:&quot;Великолепно&quot;},{&quot;type&quot;:&quot;good&quot;,&quot;count&quot;:&quot;260&quot;,&quot;label&quot;:&quot;Хорошо&quot;},{&quot;type&quot;:&quot;normal&quot;,&quot;count&quot;:&quot;260&quot;,&quot;label&quot;:&quot;Удовлетворительно&quot;},{&quot;type&quot;:&quot;bad&quot;,&quot;count&quot;:&quot;0&quot;,&quot;label&quot;:&quot;Разочарован&quot;}]">
                 <figcaption class="pie-chart__title">Впечатления от номера</figcaption>
                 <div class="pie-chart__wrapper">
                   <div class="pie-chart__donut-wrapper">
@@ -105,10 +106,10 @@
                       </linearGradient>
                       <title id="votes-title">Диаграмма голосов</title>
                       <desc id="votes-desc">На диаграмме представлены 1040 голосов. "Великолепно" - 520 голосов. "Хорошо" - 260 голосов. "Удовлетворительно" - 260 голосов.</desc>
-                      <circle class="pie-chart__circle js-pie-chart__circle" cx="17" cy="17" r="15.915494309137825" fill="transparent" stroke="url(#gradient-normal)" stroke-width="1" stroke-dasharray="24 76" stroke-dashoffset="124" data-circle-type="normal" data-circle-count="260"></circle>
-                      <circle class="pie-chart__circle js-pie-chart__circle" cx="17" cy="17" r="15.915494309137825" fill="transparent" stroke="url(#gradient-good)" stroke-width="1" stroke-dasharray="24 76" stroke-dashoffset="99" data-circle-type="good" data-circle-count="260"></circle>
-                      <circle class="pie-chart__circle js-pie-chart__circle" cx="17" cy="17" r="15.915494309137825" fill="transparent" stroke="url(#gradient-fine)" stroke-width="1" stroke-dasharray="49 51" stroke-dashoffset="74" data-circle-type="fine" data-circle-count="520"></circle>
-                      <circle class="pie-chart__circle js-pie-chart__circle" cx="17" cy="17" r="15.915494309137825" fill="transparent" stroke="url(#gradient-bad)" stroke-width="1" stroke-dasharray="0 101" stroke-dashoffset="24" data-circle-type="bad" data-circle-count="0"></circle>
+                      <circle class="pie-chart__circle js-pie-chart__circle" cx="17" cy="17" r="15.915494309137825" fill="transparent" stroke="url(#gradient-fine)" stroke-width="1" stroke-dasharray="49 51" stroke-dashoffset="174" data-circle-type="fine" data-circle-count="520"></circle>
+                      <circle class="pie-chart__circle js-pie-chart__circle" cx="17" cy="17" r="15.915494309137825" fill="transparent" stroke="url(#gradient-good)" stroke-width="1" stroke-dasharray="24 76" stroke-dashoffset="124" data-circle-type="good" data-circle-count="260"></circle>
+                      <circle class="pie-chart__circle js-pie-chart__circle" cx="17" cy="17" r="15.915494309137825" fill="transparent" stroke="url(#gradient-normal)" stroke-width="1" stroke-dasharray="24 76" stroke-dashoffset="99" data-circle-type="normal" data-circle-count="260"></circle>
+                      <circle class="pie-chart__circle js-pie-chart__circle" cx="17" cy="17" r="15.915494309137825" fill="transparent" stroke="url(#gradient-bad)" stroke-width="1" stroke-dasharray="0 101" stroke-dashoffset="74" data-circle-type="bad" data-circle-count="0"></circle>
                       <g class="pie-chart__text">
                         <text class="pie-chart__number js-pie-chart__number" x="50%" y="50%" data-total-votes="1040">1040</text>
                         <text class="pie-chart__label js-pie-chart__label" x="50%" y="50%">голосов</text>
@@ -117,9 +118,9 @@
                   </div>
                   <figcaption class="pie-chart__description-wrapper">
                     <ul class="pie-chart__description-list" aria-hidden="true" role="presentation">
-                      <li class="pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_normal" data-label-type="normal">Удовлетворительно</li>
-                      <li class="pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_good" data-label-type="good">Хорошо</li>
                       <li class="pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_fine" data-label-type="fine">Великолепно</li>
+                      <li class="pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_good" data-label-type="good">Хорошо</li>
+                      <li class="pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_normal" data-label-type="normal">Удовлетворительно</li>
                       <li class="pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_bad" data-label-type="bad">Разочарован</li>
                     </ul>
                   </figcaption>
@@ -190,7 +191,7 @@
               </div>
             </fieldset>
             <fieldset class="booking-form__fieldset-guests">
-              <div class="dropdown js-dropdown &quot;dropdown_type_people" data-type="people">
+              <div class="dropdown js-dropdown dropdown_type_people" data-type="people">
                 <div class="dropdown__info">
                   <h3 class="dropdown__label">гости</h3>
                 </div>
@@ -203,22 +204,22 @@
                       <div class="dropdown__option js-dropdown__option" data-index="0">
                         <h3 class="dropdown__option-title">Взрослые</h3>
                         <div class="dropdown__buttons-wrapper">
-                          <button class="dropdown__button dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="0">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="0">0</span>
-                          <button class="dropdown__button dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="0">+</button>
+                          <button class="dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="0">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="0">0</span>
+                          <button class="dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="0">+</button>
                         </div>
                       </div>
                       <div class="dropdown__option js-dropdown__option" data-index="1">
                         <h3 class="dropdown__option-title">Дети</h3>
                         <div class="dropdown__buttons-wrapper">
-                          <button class="dropdown__button dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="1">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="1">0</span>
-                          <button class="dropdown__button dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="1">+</button>
+                          <button class="dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="1">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="1">0</span>
+                          <button class="dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="1">+</button>
                         </div>
                       </div>
                       <div class="dropdown__option js-dropdown__option" data-index="2">
                         <h3 class="dropdown__option-title">Младенцы</h3>
                         <div class="dropdown__buttons-wrapper">
-                          <button class="dropdown__button dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="2">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="2">0</span>
-                          <button class="dropdown__button dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="2">+</button>
+                          <button class="dropdown__decrement-button js-dropdown__decrement-button" type="button" data-min-count="0" data-index="2">-</button><span class="dropdown__quantity js-dropdown__quantity" data-default-count="0" data-index="2">0</span>
+                          <button class="dropdown__increment-button js-dropdown__increment-button" type="button" data-max-count="10" data-index="2">+</button>
                         </div>
                       </div>
                     </div>
@@ -302,5 +303,5 @@
         </div>
       </div>
     </footer>
-  <script src="details.bundle.js"></script></body>
+  <script src="index.bundle.js"></script></body>
 </html>
