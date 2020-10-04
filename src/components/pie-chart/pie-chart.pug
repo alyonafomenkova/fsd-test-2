@@ -1,13 +1,13 @@
 mixin pie-chart({title, items} = {})
   -
     const GAP = 1;
-    const FIRST_OFFSET = 25;
+    const FIRST_OFFSET = 75;
     const circumference = 100;
     const radius = circumference / (2 * 3.1415926536);
     const defaultItems = [
-      {"type": "normal","count": "260", "label": "Удовлетворительно"},
-      {"type": "good", "count": "260", "label": "Хорошо"},
       {"type": "fine", "count": "520", "label": "Великолепно"},
+      {"type": "good", "count": "260", "label": "Хорошо"},
+      {"type": "normal","count": "260", "label": "Удовлетворительно"},
       {"type": "bad", "count": "0", "label": "Разочарован"},
     ];
     items = items || defaultItems;

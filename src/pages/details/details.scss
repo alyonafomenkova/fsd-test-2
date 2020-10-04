@@ -1,17 +1,11 @@
 @import '~Base';
 
-//body {
-//  width: 100%;
-//  margin: 0 auto;
-//  background-color: $white-color;
-//}
-
 .details {
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 auto 1.357rem auto;
+    margin: 0 auto 1.214rem auto;
   }
 
   &__images-wrapper {
