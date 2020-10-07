@@ -15,15 +15,15 @@ mixin header({isUserAuthorized, items} = {})
   header.header.js-header
     div.header__wrapper
       +logo
-      div.header__content-wrapper.header__content-wrapper-menu_state_opened
+      div.header__content-wrapper.header__content-wrapper-menu_opened
         div.header__buttons-wrapper.js-header__buttons-wrapper
-          button.header__toggle-menu-btn.header__toggle-menu-btn_state_without-js.js-header__toggle-menu-btn(type="button")
-            span.header__toggle-menu-icon.header__toggle-menu-icon_state_opened menu
-            span.header__toggle-menu-icon.header__toggle-menu-icon_state_closed expand_less
+          button.header__toggle-menu-btn.js-header__toggle-menu-btn(type="button")
+            span.header__toggle-menu-icon.header__toggle-menu-icon_view_hamburger menu
+            span.header__toggle-menu-icon.header__toggle-menu-icon_view_arrow expand_less
           if (isUserAuthorized)
             span.header__user-name.js-header__user-name Юлий Цезарь
           else
-            a.header__show-auth-btn.header__show-auth-btn_state_without-js(href="sign-in.html") person
+            a.header__show-auth-btn(href="sign-in.html") person
             div.header__auth-wrapper
               div.header__login-button-wrapper
                 +button({"isLogin": true, "view": "bordered", "height": "low", "content": "войти", "href": "sign-in.html"})
@@ -34,15 +34,15 @@ mixin header({isUserAuthorized, items} = {})
               - let {submenu, isActive, content} = item;
               li.header__nav-item.js-header__nav-item(
                 class = "header__nav-item_margin_small"
-                class = submenu ? "header__submenu js-header__submenu header__submenu_state_closed" : ""
+                class = submenu ? "header__submenu js-header__submenu" : ""
               )
                 if (submenu)
-                  span.header__nav-link(class=isActive ? "header__nav-link_state_active" : "") !{content}
+                  span.header__nav-link(class=isActive ? "header__nav-link_active" : "") !{content}
                 else
-                  a.header__nav-link(class=isActive ? "header__nav-link_state_active" : "" href="test.html") !{content}
+                  a.header__nav-link(class=isActive ? "header__nav-link_active" : "" href="test.html") !{content}
                 if (submenu)
-                  button.header__toggle-submenu-btn.js-header__toggle-submenu-btn.header__toggle-submenu-btn_state_without-js
-                    span.header__toggle-submenu-icon.header__toggle-submenu-icon_state_opened expand_more
+                  button.header__toggle-submenu-btn.js-header__toggle-submenu-btn
+                    span.header__toggle-submenu-icon expand_more
                   ul.header__submenu-list
                     each subitem in submenu
                       - let {content} = subitem;

@@ -21,7 +21,7 @@
     flex-wrap: wrap;
   }
 
-  &__state {
+  &__type {
     @include h3-text;
     margin: 0;
     font-weight: normal;
@@ -131,7 +131,7 @@
     box-shadow: 0 0.714rem 1.429rem $dark-color-opacity-5;
     background-color: $white-color;
 
-    &_state_expanded {
+    &_expanded {
       display: block;
     }
   }

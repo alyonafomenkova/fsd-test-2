@@ -6,12 +6,12 @@ mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = optio
       div.dropdown__info
         h3.dropdown__label !{label}
         if (uikitState)
-          span.dropdown__state !{uikitState}
+          span.dropdown__type !{uikitState}
     div.dropdown__container
       div.dropdown__selection.js-dropdown__selection
         p.dropdown__selection-text.js-dropdown__selection-text(data-placeholder = placeholder) !{placeholder}
         span.dropdown__selection-icon expand_more
-      div.dropdown__menu.js-dropdown__menu(class = isExpanded ? "dropdown__menu_state_expanded js-dropdown__menu_state_expanded" : "")
+      div.dropdown__menu.js-dropdown__menu(class = isExpanded ? "dropdown__menu_expanded js-dropdown__menu_expanded" : "")
         div.dropdown__options
           if (items)
             each item, index in items

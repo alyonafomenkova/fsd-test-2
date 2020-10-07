@@ -21,13 +21,11 @@ class Header {
     const toggleMenuButton = this.header.querySelector('.js-header__toggle-menu-btn');
     const toggleSubmenuList = this.header.querySelectorAll('.js-header__nav-item.header__submenu');
 
-    toggleMenuButton.classList.remove('header__toggle-menu-btn_state_without-js');
-    toggleMenuButton.classList.add('header__toggle-menu-btn_state_with-js');
+    toggleMenuButton.classList.add('header__toggle-menu-btn_has-js');
 
     toggleSubmenuList.forEach((submenu) => {
       const button = submenu.querySelector('.js-header__toggle-submenu-btn');
-      button.classList.remove('header__toggle-submenu-btn_state_without-js');
-      button.classList.add('header__toggle-submenu-btn_state_with-js');
+      button.classList.add('header__toggle-submenu-btn_has-js');
     });
   }
 
@@ -36,7 +34,7 @@ class Header {
 
     userNames.forEach((name) => {
       const headerWrapper = name.closest('.js-header__buttons-wrapper');
-      headerWrapper.classList.add('header__buttons-wrapper_state_authorized');
+      headerWrapper.classList.add('header__buttons-wrapper_authorized');
     });
   }
 
@@ -45,8 +43,7 @@ class Header {
 
     headerNavMenu.forEach((navMenu) => {
       const wrapper = navMenu.closest('.header__content-wrapper');
-      wrapper.classList.remove('header__content-wrapper-menu_state_opened');
-      wrapper.classList.add('header__content-wrapper-menu_state_closed');
+      wrapper.classList.remove('header__content-wrapper-menu_opened');
     });
   }
 
@@ -54,13 +51,7 @@ class Header {
     const button = evt.target;
     const wrapper = button.closest('.header__content-wrapper');
 
-    if (wrapper.classList.contains('header__content-wrapper-menu_state_closed')) {
-      wrapper.classList.remove('header__content-wrapper-menu_state_closed');
-      wrapper.classList.add('header__content-wrapper-menu_state_opened');
-    } else {
-      wrapper.classList.add('header__content-wrapper-menu_state_closed');
-      wrapper.classList.remove('header__content-wrapper-menu_state_opened');
-    }
+    wrapper.classList.toggle('header__content-wrapper-menu_opened');
   }
 }
 

@@ -42,18 +42,18 @@ class Dropdown {
   _toggleMenu() {
     const menu = this.dropdown.querySelector('.js-dropdown__menu');
 
-    menu.classList.toggle('dropdown__menu_state_expanded');
-    menu.classList.toggle('js-dropdown__menu_state_expanded');
+    menu.classList.toggle('dropdown__menu_expanded');
+    menu.classList.toggle('js-dropdown__menu_expanded');
   }
 
   static _handleDocumentClick(evt) {
     const target = evt.target.closest('.dropdown__container');
 
     if (!target) {
-      const menus = document.querySelectorAll('.js-dropdown__menu_state_expanded');
+      const menus = document.querySelectorAll('.js-dropdown__menu_expanded');
       menus.forEach((menu) => {
-        menu.classList.remove('dropdown__menu_state_expanded');
-        menu.classList.remove('js-dropdown__menu_state_expanded');
+        menu.classList.remove('dropdown__menu_expanded');
+        menu.classList.remove('js-dropdown__menu_expanded');
       });
     }
   }
