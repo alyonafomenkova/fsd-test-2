@@ -4,17 +4,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 const PATHS = {
   source: path.join(__dirname, 'src'),
-  build: path.join(__dirname, 'build')
+  build: path.join(__dirname, 'build'),
 };
 const webpack = require('webpack');
+
 const pages = ['theme', 'form-elements', 'cards', 'header-and-footer', 'landing', 'search', 'details', 'sign-in', 'sign-up'];
 
 const config = {
   mode: 'development',
   entry: {
-    'index': './src/index.js'
+    index: './src/index.js',
   },
   output: {
     path: PATHS.build,
@@ -38,7 +40,7 @@ const config = {
       FontsScss: path.resolve(__dirname, 'src/base/fonts.scss'),
       Base: path.resolve(__dirname, 'src/base/base.scss'),
       AirDatepicker: path.resolve(__dirname, 'node_modules/air-datepicker/dist'),
-    }
+    },
   },
   module: {
     rules: [
@@ -46,7 +48,7 @@ const config = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
         ],
       },
 
@@ -56,23 +58,23 @@ const config = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
 
       {
         test: /\.pug$/,
         loader: 'pug-loader',
         options: {
-          'pretty': true
-        }
+          pretty: true,
+        },
       },
 
       {
         test: /\.(png|svg|jpe?g|gif)$/i,
         loader: 'file-loader',
         options: {
-          name: 'assets/images/[name].[ext]'
+          name: 'assets/images/[name].[ext]',
         },
         exclude: [/fonts/],
       },
@@ -88,7 +90,7 @@ const config = {
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: PATHS.source + '/assets/favicons', to: PATHS.build + '/assets/favicons' },
+        { from: `${PATHS.source}/assets/favicons`, to: `${PATHS.build}/assets/favicons` },
       ],
     }),
     new MiniCssExtractPlugin({
@@ -97,15 +99,15 @@ const config = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-    })
-  ]
+    }),
+  ],
 };
 
 pages.forEach((page) => {
   config.plugins.push(
     new HtmlWebpackPlugin({
       filename: `${page}.html`,
-      template: PATHS.source + `/pages/${page}/${page}.pug`,
+      template: `${PATHS.source}/pages/${page}/${page}.pug`,
     }),
   );
 });
