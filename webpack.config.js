@@ -23,7 +23,7 @@ const config = {
     filename: 'index.bundle.js',
   },
   devServer: {
-    index: 'search.html',
+    index: 'form-elements.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
@@ -32,14 +32,10 @@ const config = {
   },
   resolve: {
     alias: {
-      Normalize: path.resolve(__dirname, 'node_modules/normalize.scss/normalize.scss'),
-      Mixins: path.resolve(__dirname, 'src/base/mixins.scss'),
-      Theme: path.resolve(__dirname, 'src/base/theme.scss'),
-      Assets: path.resolve(__dirname, 'src/assets'),
-      Fonts: path.resolve(__dirname, 'src/assets/fonts'),
-      FontsScss: path.resolve(__dirname, 'src/base/fonts.scss'),
-      Base: path.resolve(__dirname, 'src/base/base.scss'),
       AirDatepicker: path.resolve(__dirname, 'node_modules/air-datepicker/dist'),
+      Base: path.resolve(__dirname, 'src/base/'),
+      Fonts: path.resolve(__dirname, 'src/assets/fonts'),
+      Normalize: path.resolve(__dirname, 'node_modules/normalize.scss/normalize.scss'),
     },
   },
   module: {

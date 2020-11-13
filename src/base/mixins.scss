@@ -1,5 +1,5 @@
-@import '~FontsScss';
-@import '~Theme';
+@import '~Base/fonts.scss';
+@import '~Base/theme.scss';
 
 @mixin body-text {
   font-size: 1rem;

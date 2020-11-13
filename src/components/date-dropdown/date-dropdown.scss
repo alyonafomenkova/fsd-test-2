@@ -1,7 +1,7 @@
 @import '../button/button';
 @import '../masked-text-field/masked-text-field';
 @import '~AirDatepicker/css/datepicker.min.css';
-@import '~Base';
+@import '~Base/base.scss';
 
 .date-dropdown {
   display: flex;
