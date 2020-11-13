@@ -1,8 +1,6 @@
 {
   "name": "fsd-test-2",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "lint": "eslint \"./**/*.js\"",
     "build:prod": "webpack --mode=production",
@@ -25,8 +23,7 @@
     "type": "git",
     "url": "git+https://github.com/alyonafomenkova/fsd-test-2.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Alena Fomenkova",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alyonafomenkova/fsd-test-2/issues"
