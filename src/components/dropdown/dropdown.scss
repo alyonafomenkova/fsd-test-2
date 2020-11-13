@@ -1,4 +1,4 @@
-@import '~Base';
+@import '~Base/base.scss';;
 
 .dropdown {
   max-width: 22.857rem;
@@ -34,6 +34,7 @@
 
   &__option {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 0.5rem 0;
@@ -42,10 +43,12 @@
   &__option-title,
   &__quantity {
     @include h3-text;
+    word-break: break-all;
   }
 
   &__buttons-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 6.571rem;
