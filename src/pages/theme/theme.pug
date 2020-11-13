@@ -2,7 +2,7 @@ extends ../../base/base.pug
 include ../../components/logo/logo
 
 block vars
-  - const {colors, types} = require("./theme.json");
+  - const {colors, types} = require('./theme.json');
 
 block meta
   meta(name="keywords", content="toxin")
@@ -13,7 +13,7 @@ block title
 
 block content
   div.theme
-    +logo("uikit")
+    +logo('uikit')
     main.theme__content-wrapper
       div.theme__container
         div.theme__content

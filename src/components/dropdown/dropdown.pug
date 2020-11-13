@@ -33,9 +33,9 @@ mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = optio
                     data-max-count = maxCount
                     data-index = index
                   ) +
-        if (type === "people")
+        if (type === 'people')
           div.dropdown__controls-wrapper
             div.dropdown__clear-button.js-dropdown__clear-button
-              +button({"view": "textual", "height": "high", "content": "очистить"})
+              +button({'view': 'textual', 'height': 'high', 'content': 'очистить'})
             div.dropdown__apply-button.js-dropdown__apply-button
-              +button({"view": "textual", "height": "high", "content": "применить"})
+              +button({'view': 'textual', 'height': 'high', 'content': 'применить'})
