@@ -10,6 +10,7 @@ $max-desktop-width: 1440px;
 
 html {
   box-sizing: border-box;
+  height: 100%;
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -21,5 +22,8 @@ html {
 
 body {
   @include body-text;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
 }

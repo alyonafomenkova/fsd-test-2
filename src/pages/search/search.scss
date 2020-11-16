@@ -1,6 +1,8 @@
 @import '~Base/base.scss';
 
 .search {
+  flex-grow: 1;
+
   &__content-wrapper {
     display: flex;
     flex-wrap: wrap;

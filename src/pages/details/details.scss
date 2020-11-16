@@ -1,6 +1,8 @@
 @import '~Base/base.scss';
 
 .details {
+  flex-grow: 1;
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
