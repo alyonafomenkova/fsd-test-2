@@ -1,0 +1,23 @@
+{
+  "roomInfoCardsData": {
+    "items": [
+      {
+        "roomNumber": "888",
+        "title": "№ 888",
+        "type": "люкс",
+        "price": "9&nbsp;990",
+        "rating": "5",
+        "reviewsCount": 145
+      },
+      {
+        "roomNumber": "840",
+        "title": "№ 840",
+        "price": "9&nbsp;990",
+        "rating": "4",
+        "reviewsCount": 65
+      }
+    ],
+    "countOfImages": 4,
+    "isSmallIndent": false
+  }
+}

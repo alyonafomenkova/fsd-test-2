@@ -8,28 +8,7 @@ include ../../components/booking-form/booking-form
 include ../../components/room-info-cards/room-info-cards
 
 block vars
-  -
-    const roomInfoCardsData = {
-      "items": [
-        {
-          "roomNumber": "888",
-          "title": "№ 888",
-          "type": "люкс",
-          "price": "9&nbsp;990",
-          "rating": "5",
-          "reviewsCount": 145,
-        },
-        {
-          "roomNumber": "840",
-          "title": "№ 840",
-          "price": "9&nbsp;990",
-          "rating": "4",
-          "reviewsCount": 65,
-        },
-      ],
-      "countOfImages": 4,
-      "isSmallIndent": false
-    };
+  - const data = require('./cards.json');
 block meta
   meta(name="keywords", content="toxin")
   meta(name="description" content="Учебный проект FSD. Cards для Uikit.")
@@ -40,7 +19,7 @@ block title
 block content
   div.cards
     div.cards__logo-wrapper
-      +logo("uikit")
+      +logo('uikit')
     main.cards__wrapper
       div.cards__content-wrapper
         div.cards__column-wrapper
@@ -57,6 +36,6 @@ block content
 
         div.cards__column-wrapper
           div.cards__card
-            +date-dropdown({"isInline": "true"})
+            +date-dropdown({'isInline': 'true'})
           div.cards__card.cards__card_content_room
-            +room-info-cards(roomInfoCardsData)
+            +room-info-cards(data.roomInfoCardsData)
