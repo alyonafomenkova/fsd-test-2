@@ -4,11 +4,11 @@ include ../logo/logo
 mixin header({isUserAuthorized, items} = {})
   -
     const defaultItems = [
-      {"content": "О нас"},
-      {"content": "Услуги", "submenu": [{"content": "Услуга_1"}, {"content": "Услуга_2"}]},
-      {"content": "Вакансии"},
-      {"content": "Новости"},
-      {"content": "Соглашения", "submenu": [{"content": "Соглашение_1"}, {"content": "Соглашение_2"}]},
+      {'content': 'О нас'},
+      {'content': 'Услуги', 'submenu': [{'content': 'Услуга_1'}, {'content': 'Услуга_2'}]},
+      {'content': 'Вакансии'},
+      {'content': 'Новости'},
+      {'content': 'Соглашения', 'submenu': [{'content': 'Соглашение_1'}, {'content': 'Соглашение_2'}]},
     ];
     items = items || defaultItems;
 
@@ -26,8 +26,8 @@ mixin header({isUserAuthorized, items} = {})
             a.header__show-auth-btn(href="sign-in.html") person
             div.header__auth-wrapper
               div.header__login-button-wrapper
-                +button({"isLogin": true, "view": "bordered", "height": "low", "content": "войти", "href": "sign-in.html"})
-              +button({"isRegister": true, "view": "filled", "height": "low", "content": "зарегистрироваться", "href": "sign-up.html"})
+                +button({'isLogin': true, 'view': 'bordered', 'height': 'low', 'content': 'войти', 'href': 'sign-in.html'})
+              +button({'isRegister': true, 'view': 'filled', 'height': 'low', 'content': 'зарегистрироваться', 'href': 'sign-up.html'})
         nav.header__main-nav.js-header__main-nav
           ul.header__nav-list.js-header__nav-list
             each item in items

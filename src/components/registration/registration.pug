@@ -7,8 +7,8 @@ include ../button/button
 mixin registration
   -
     const toggleData = {
-      "items": [
-        {"name": "toggle", "label": "Получать спецпредложения"}
+      'items': [
+        {'name': 'toggle', 'label': 'Получать спецпредложения'}
       ]
     };
 
@@ -17,22 +17,22 @@ mixin registration
       h2.registration__title Регистрация аккаунта
       fieldset.registration__fieldset-name
         div.registration__text-field-wrapper
-          +text-field({"name": "text", "placeholder": "Имя"})
+          +text-field({'name': 'text', 'placeholder': 'Имя'})
         div.registration__text-field-wrapper
-          +text-field({"name": "surname", "placeholder": "Фамилия"})
+          +text-field({'name': 'surname', 'placeholder': 'Фамилия'})
       fieldset.registration__fieldset-gender
         +radio()
       fieldset.registration__fieldset-birthday
-        +masked-text-field({"name": "birthday", "placeholder": "дд.мм.гггг", "label": "дата рождения"})
+        +masked-text-field({'name': 'birthday', 'placeholder': 'дд.мм.гггг', 'label': 'дата рождения'})
       fieldset.registration__fieldset-login
         legend.registration__legend-login данные для входа в сервис
         div.registration__text-field-wrapper
-          +text-field({"type": "email", "name": "email", "placeholder": "Email"})
+          +text-field({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
         div.registration__text-field-wrapper
-          +text-field({"type": "password", "name": "password", "placeholder": "Пароль"})
+          +text-field({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
       div.registration__offers-wrapper
         +toggle(toggleData)
-      +button({"view": "actionable", "height": "high", "content": "Перейти к оплате"})
+      +button({'view': 'actionable', 'height': 'high', 'content': 'Перейти к оплате'})
     div.registration__login-wrapper
       span.registration__login-text Уже есть аккаунт на Toxin
-      +button({"view": "bordered", "height": "high", "content": "войти", "href": "sign-in.html"})
+      +button({'view': 'bordered', 'height': 'high', 'content': 'войти', 'href': 'sign-in.html'})

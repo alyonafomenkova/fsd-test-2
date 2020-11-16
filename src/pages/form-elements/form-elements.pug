@@ -20,7 +20,7 @@ include ../../components/room-details/room-details
 include ../../components/reviews/reviews
 
 block vars
-  - const data = require("./form-elements.json");
+  - const data = require('./form-elements.json');
 
 block meta
   meta(name="keywords", content="toxin")
@@ -31,7 +31,7 @@ block title
 
 block content
   div.form-elements
-    +logo("uikit")
+    +logo('uikit')
     main.form-elements__wrapper
       div.form-elements__content-wrapper
         div.form-elements__row-wrapper
@@ -45,9 +45,9 @@ block content
             div.form-elements__element.form-elements__element_bottom-margin_36
               +masked-text-field(data.maskedTextField)
             div.form-elements__element.form-elements__element_bottom-margin_36
-              +date-dropdown({"startLabel": "date Dropdown", "endLabel": "date Dropdown"})
+              +date-dropdown({'startLabel': 'date Dropdown', 'endLabel': 'date Dropdown'})
             div.form-elements__element.form-elements__element_bottom-margin_43
-              +date-dropdown({"startLabel": "filter date dropdown"})
+              +date-dropdown({'startLabel': 'filter date dropdown'})
             div.form-elements__element.form-elements__element_bottom-margin_102
               +subscription-text-field(data.subscriptionTextField)
 
@@ -55,14 +55,14 @@ block content
             div.form-elements__element.form-elements__element_bottom-margin_43
               +checkbox(data.checkbox)
             div.form-elements__element.form-elements__element_bottom-margin_35
-              +radio({"title": "Radio Buttons"})
+              +radio({'title': 'Radio Buttons'})
             div.form-elements__element.form-elements__element_bottom-margin_41
               +toggle(data.toggleData)
             div.form-elements__element.form-elements__element_bottom-margin_41
               h2.form-elements__title like button
               div.form-elements__buttons-wrapper.form-elements__buttons-wrapper_buttons-type_like
-                +like-button({"countOfLikes": 2})
-                +like-button({"countOfLikes": 12, "isActive": true})
+                +like-button({'countOfLikes': 2})
+                +like-button({'countOfLikes': 12, 'isActive': true})
             div.form-elements__element.form-elements__element_bottom-margin_41
               h2.form-elements__title.form-elements__title_view_rating rate button
               div.form-elements__buttons-wrapper.form-elements__buttons-wrapper_buttons-type_rate
@@ -71,19 +71,19 @@ block content
 
           div.form-elements__column-wrapper
             div.form-elements__element.form-elements__element_bottom-margin_35
-              +range-slider({"title": "Range Slider"})
+              +range-slider({'title': 'Range Slider'})
             div.form-elements__element.form-elements__element_bottom-margin_41
               h2.form-elements__title buttons
               div.form-elements__main-buttons-wrapper
-                +button({"view": "filled", "height": "high", "content": "click me"})
-                +button({"view": "filled", "height": "high", "isHovered": true, "content": "click me"})
+                +button({'view': 'filled', 'height': 'high', 'content': 'click me'})
+                +button({'view': 'filled', 'height': 'high', 'isHovered': true, 'content': 'click me'})
               div.form-elements__main-buttons-wrapper
-                +button({"view": "bordered", "height": "high", "content": "click me"})
-                +button({"view": "bordered", "height": "high", "isHovered": true, "content": "click me"})
+                +button({'view': 'bordered', 'height': 'high', 'content': 'click me'})
+                +button({'view': 'bordered', 'height': 'high', 'isHovered': true, 'content': 'click me'})
               div.form-elements__main-buttons-wrapper
-                +button({"view": "textual", "height": "high", "content": "click me"})
-                +button({"view": "textual", "height": "high", "isHovered": true, "content": "click me"})
-              +button({"view": "actionable", "height": "high", "content": "Перейти к оплате"})
+                +button({'view': 'textual', 'height': 'high', 'content': 'click me'})
+                +button({'view': 'textual', 'height': 'high', 'isHovered': true, 'content': 'click me'})
+              +button({'view': 'actionable', 'height': 'high', 'content': 'Перейти к оплате'})
             div.form-elements__element.form-elements__element_bottom-margin_41
               h2.form-elements__title pagination
               +pagination
@@ -112,11 +112,11 @@ block content
 
           div.form-elements__column-wrapper
             div.form-elements__element.form-elements__element_top-margin_15
-              +rich-checkbox({"title": "rich Checkbox Buttons"})
+              +rich-checkbox({'title': 'rich Checkbox Buttons'})
 
           div.form-elements__column-wrapper
             div.form-elements__element.form-elements__element_top-margin_15
-              +bullet({"title": "Bullet list", "isUikit": true})
+              +bullet({'title': 'Bullet list', 'isUikit': true})
 
         div.form-elements__row-wrapper
           div.form-elements__column-wrapper

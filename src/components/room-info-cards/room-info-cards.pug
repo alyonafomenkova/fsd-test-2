@@ -19,7 +19,7 @@ mixin room-info-cards({title, items, countOfImages, isSmallIndent} = options)
                 div.room-info-cards__slides.js-room-info-cards__slides.room-info-cards__slides_view_faded.room-info-cards__slides_visible
                   img.room-info-cards__img(
                     src=require(`../../components/room-info-cards/images/${roomNumber}/${roomNumber}_${i}.png`).default
-                    alt="Фото номера"
+                    alt=`Номер ${roomNumber}`
                     )
                 - i++
               a.room-info-cards__prev-link.js-room-info-cards__prev-link

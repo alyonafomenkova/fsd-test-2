@@ -5,14 +5,14 @@ mixin pie-chart({title, items} = {})
     const circumference = 100;
     const radius = circumference / (2 * 3.1415926536);
     const defaultItems = [
-      {"type": "fine", "count": "520", "label": "Великолепно"},
-      {"type": "good", "count": "260", "label": "Хорошо"},
-      {"type": "normal","count": "260", "label": "Удовлетворительно"},
-      {"type": "bad", "count": "0", "label": "Разочарован"},
+      {'type': 'fine', 'count': '520', 'label': 'Великолепно'},
+      {'type': 'good', 'count': '260', 'label': 'Хорошо'},
+      {'type': 'normal', 'count': '260', 'label': 'Удовлетворительно'},
+      {'type': 'bad', 'count': '0', 'label': 'Разочарован'},
     ];
     items = items || defaultItems;
     const totalVotes = items.map(it => it.count).reduce((a, b) => Number.parseInt(a) + Number.parseInt(b), 0);
-    title = title || "Впечатления от номера";
+    title = title || 'Впечатления от номера';
 
   figure.pie-chart.js-pie-chart(data-chart-data = items)
     if (title)

@@ -10,10 +10,10 @@ mixin login
       h2.login__title Войти
       fieldset.login__fieldset-data
         div.login__text-field-wrapper
-          +text-field({"type": "email", "name": "email", "placeholder": "Email"})
+          +text-field({'type': 'email', 'name': 'email', 'placeholder': 'Email'})
         div.login__text-field-wrapper
-          +text-field({"type": "password", "name": "password", "placeholder": "Пароль"})
-      +button({"view": "actionable", "height": "high", "content": "войти"})
+          +text-field({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
+      +button({'view': 'actionable', 'height': 'high', 'content': 'войти'})
     div.login__registration-wrapper
       span.login__registration-text Нет аккаунта на Toxin?
-      +button({"view": "bordered", "height": "high", "content": "создать", "href": "sign-up.html"})
+      +button({'view': 'bordered', 'height': 'high', 'content': 'создать', 'href': 'sign-up.html'})

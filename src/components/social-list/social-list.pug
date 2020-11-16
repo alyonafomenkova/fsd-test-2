@@ -2,19 +2,19 @@ mixin social-list({items} = {})
   -
     const defaultItems = [
       {
-        "id": "twitter",
-        "text": "Мы в Твиттер",
-        "link": "https://twitter.com/"
+        'id': 'twitter',
+        'text': 'Мы в Твиттер',
+        'link': 'https://twitter.com/'
       },
       {
-        "id": "facebook",
-        "text": "Мы в Фейсбук",
-        "link": "https://www.facebook.com/"
+        'id': 'facebook',
+        'text': 'Мы в Фейсбук',
+        'link': 'https://www.facebook.com/'
       },
       {
-        "id": "instagram",
-        "text": "Мы в Инстаграм",
-        "link": "https://www.instagram.com/"
+        'id': 'instagram',
+        'text': 'Мы в Инстаграм',
+        'link': 'https://www.instagram.com/'
       }
     ];
     items = items || defaultItems;
@@ -26,8 +26,8 @@ mixin social-list({items} = {})
         a(
           class=`social-list__link social-list__link_type_${id}`,
           href=link,
-          target="_blank",
-          rel="noopener noreferrer"
+          target='_blank',
+          rel='noopener noreferrer'
           )
           span.social-list__text !{text}
           span(class=`social-list__icon social-list__icon_type_${id}`)
