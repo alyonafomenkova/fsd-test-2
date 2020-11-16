@@ -53,6 +53,7 @@
   position: relative;
   padding-left: 1.071rem;
   cursor: pointer;
+  word-break: break-all;
 
   &::before {
     content: '';
