@@ -27,4 +27,5 @@
 `npm run prod` - сборка в *production-режиме*, сохранение результата в папке *build*<br/>
 `npm run lint` - проверка синтаксиса js-файлов с помощью [Eslint](https://eslint.org/)<br/>
 `npm run deploy` - загрузка результата сборки (папка *build*) в ветку *gh-pages*<br/>
+
 ---
