@@ -13,9 +13,7 @@ mixin reviews({title, items, isVisibleCountOfReviews} = options)
           - let {imgName, authorName, date, likeButton, text} = item;
           li.reviews__item
             div.reviews__author
-              img.reviews__avatar(
-                src = require(`../../components/reviews/images/${imgName}`).default
-                width="48" height="48" alt="Avatar")
+              img.reviews__avatar(src = require(`../../components/reviews/images/${imgName}`).default alt="Avatar")
               div.reviews__author-info
                 span.reviews__author-name !{authorName}
                 span.reviews__date !{date}
