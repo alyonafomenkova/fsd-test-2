@@ -1,34 +1,24 @@
 const path = require('path');
-const autoprefixer = require('autoprefixer');
+const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
+const webpack = require('webpack');
 const PATHS = {
   source: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build'),
 };
-const webpack = require('webpack');
-
+const devMode = process.env.NODE_ENV !== 'production';
 const pages = ['theme', 'form-elements', 'cards', 'header-and-footer', 'landing', 'search', 'details', 'sign-in', 'sign-up'];
 
-const config = {
-  mode: 'development',
+const common = {
   entry: {
     index: './src/index.js',
   },
   output: {
     path: PATHS.build,
     filename: 'index.bundle.js',
-  },
-  devServer: {
-    index: 'form-elements.html',
-    contentBase: path.join(__dirname, 'build'),
-    compress: true,
-    hot: true,
-    port: 8000,
-    open: 'chrome',
   },
   resolve: {
     alias: {
@@ -41,17 +31,9 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
-          'style-loader',
-          'css-loader',
-        ],
-      },
-
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader',
@@ -82,8 +64,8 @@ const config = {
       },
     ],
   },
-
   plugins: [
+    new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         { from: `${PATHS.source}/assets/favicons`, to: `${PATHS.build}/assets/favicons` },
@@ -91,6 +73,7 @@ const config = {
     }),
     new MiniCssExtractPlugin({
       filename: 'index.css',
+      chunkFilename: '[id].css',
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -100,7 +83,7 @@ const config = {
 };
 
 pages.forEach((page) => {
-  config.plugins.push(
+  common.plugins.push(
     new HtmlWebpackPlugin({
       filename: `${page}.html`,
       template: `${PATHS.source}/pages/${page}/${page}.pug`,
@@ -108,4 +91,26 @@ pages.forEach((page) => {
   );
 });
 
-module.exports = config;
+const devConfig = {
+  mode: 'development',
+  devServer: {
+    index: 'form-elements.html',
+    contentBase: path.join(__dirname, 'build'),
+    compress: true,
+    hot: true,
+    port: 8000,
+    open: 'chrome',
+  }
+};
+
+module.exports = function (env) {
+  if (env === 'production') {
+    return common;
+  }
+  if (env === 'development') {
+    return merge([
+      common,
+      devConfig,
+    ]);
+  }
+};
