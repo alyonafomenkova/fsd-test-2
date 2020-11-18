@@ -1,14 +1,14 @@
-mixin text-field({type, name, placeholder, label, readOnly, uikitState, isHovered} = options)
+mixin text-field({type = "text", name, placeholder = '', label, readOnly = false, uikitState, isHovered} = options)
   div.text-field
     if label
       label.text-field__label(for = `${name}-id`) !{label}
     if uikitState
       span.text-field__state !{uikitState}
     input.text-field__input(
-      type = type ? type : "text",
+      type = type,
       name = name,
       id = `${name}-id`,
-      class = isHovered ? "text-field__input_hovered" : "",
-      placeholder = placeholder || "",
+      class = isHovered && "text-field__input_hovered",
+      placeholder = placeholder,
       readonly = readOnly
   )
