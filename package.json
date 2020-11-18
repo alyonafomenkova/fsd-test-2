@@ -2,8 +2,9 @@
   "name": "fsd-test-2",
   "version": "1.0.0",
   "scripts": {
+    "clear": "rimraf ./build",
     "dev": "webpack-dev-server --mode-development --env development --open",
-    "prod": "cross-env NODE_ENV=production webpack --mode-production --env production",
+    "prod": "npm run clear && cross-env NODE_ENV=production webpack --mode-production --env production",
     "lint": "eslint \"./**/*.js\"",
     "deploy": "gh-pages -d build"
   },

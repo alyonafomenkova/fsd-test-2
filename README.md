@@ -23,8 +23,9 @@
 ---
 
 ### Основные команды:<br/>
+`npm run clear` - удаление папки *build*<br/>
 `npm run dev` - сборка в *development-режиме*, запуск локального сервера, открытие вкладки с адресом локального сервера в браузере<br/>
-`npm run prod` - сборка в *production-режиме*, сохранение результата в папке *build*<br/>
+`npm run prod` - очищение папки *build*, сборка в *production-режиме*, сохранение результата в папке *build*<br/>
 `npm run lint` - проверка синтаксиса js-файлов с помощью [Eslint](https://eslint.org/)<br/>
 `npm run deploy` - загрузка результата сборки (папка *build*) в ветку *gh-pages*<br/>
 
