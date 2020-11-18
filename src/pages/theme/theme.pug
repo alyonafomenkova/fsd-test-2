@@ -18,9 +18,9 @@ block content
       div.theme__container
         div.theme__content
           each color in colors
-            - let {value, title, valueInHex} = color;
+            - let {title, name, valueInHex} = color;
             div.theme__color
-              div.theme__color-example(style=`background-color: ${value}`)
+              div.theme__color-example(class=`theme__color-example_name_${name}`)
               div.theme__color-info
                 h2.theme__color-title #{title}
                 p.theme__color-description #{valueInHex}
