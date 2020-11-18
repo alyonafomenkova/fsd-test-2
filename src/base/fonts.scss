@@ -9,11 +9,11 @@
   }
 }
 
-@include setupFont('Montserrat', normal, normal, swap, '~Fonts/montserrat-regular');
-@include setupFont('Montserrat', normal, bold, swap, '~Fonts/montserrat-bold');
-@include setupFont('Quicksand', normal, normal, swap, '~Fonts/quicksand-regular');
-@include setupFont('Quicksand', normal, bold, swap, '~Fonts/quicksand-bold');
-@include setupFont('Open Sans', normal, normal, swap, '~Fonts/opensans-regular');
-@include setupFont('Open Sans', normal, bold, swap, '~Fonts/opensans-bold');
-@include setupFont('Material Icons', normal, normal, swap, '~Fonts/materialIcons-regular');
-@include setupFont('font-awesome-5-brands-regular', normal, normal, swap, '~Fonts/font-awesome-5-brands-regular');
+@include setupFont('Montserrat', normal, normal, swap, '~Fonts/montserrat/montserrat-regular');
+@include setupFont('Montserrat', normal, bold, swap, '~Fonts/montserrat/montserrat-bold');
+@include setupFont('Quicksand', normal, normal, swap, '~Fonts/quicksand/quicksand-regular');
+@include setupFont('Quicksand', normal, bold, swap, '~Fonts/quicksand/quicksand-bold');
+@include setupFont('Open Sans', normal, normal, swap, '~Fonts/opensans/opensans-regular');
+@include setupFont('Open Sans', normal, bold, swap, '~Fonts/opensans/opensans-bold');
+@include setupFont('Material Icons', normal, normal, swap, '~Fonts/material-icons/material-icons-regular');
+@include setupFont('font-awesome-5-brands-regular', normal, normal, swap, '~Fonts/font-awesome-5-brands/font-awesome-5-brands-regular');

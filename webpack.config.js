@@ -3,7 +3,6 @@ const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const PATHS = {
   source: path.join(__dirname, 'src'),
@@ -60,12 +59,11 @@ const common = {
       {
         test: /\.(woff2|woff|ttf|svg)$/,
         include: [/fonts/],
-        loader: 'file-loader?limit=1024&name=assets/fonts/[name].[ext]',
+        loader: 'file-loader?limit=1024&name=assets/fonts/[folder]/[name].[ext]',
       },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         { from: `${PATHS.source}/assets/favicons`, to: `${PATHS.build}/assets/favicons` },
