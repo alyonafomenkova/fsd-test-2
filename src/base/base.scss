@@ -1,12 +1,5 @@
-@import '~Base/fonts.scss';
 @import '~Base/mixins.scss';
-@import '~Base/theme.scss';
 @import '~Normalize';
-
-$mobile-width: 320px;
-$tablet-width: 768px;
-$desktop-width: 1159px;
-$max-desktop-width: 1440px;
 
 html {
   box-sizing: border-box;
