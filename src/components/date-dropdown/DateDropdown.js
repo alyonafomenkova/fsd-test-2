@@ -1,4 +1,4 @@
-import '../../../node_modules/air-datepicker/dist/js/datepicker.min.js';
+import 'air-datepicker/dist/js/datepicker.min.js';
 
 class DateDropdown {
   constructor(dateDropdown) {
@@ -134,5 +134,4 @@ class DateDropdown {
   }
 }
 
-const dateDropdownList = document.querySelectorAll('.js-date-dropdown');
-dateDropdownList.forEach((dateDropdown) => new DateDropdown(dateDropdown).init());
+export default DateDropdown;
