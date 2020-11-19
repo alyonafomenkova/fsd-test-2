@@ -53,9 +53,4 @@ class Rating {
   }
 }
 
-const ratings = document.querySelectorAll('.js-rating');
-
-ratings.forEach((it) => {
-  const rating = new Rating(it);
-  rating.init();
-});
+export default Rating;
