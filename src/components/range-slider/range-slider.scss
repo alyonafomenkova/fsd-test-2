@@ -1,5 +1,5 @@
-@import '../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css';
-@import '~Base/base.scss';
+@import 'ion-rangeslider/css/ion.rangeSlider.min.css';
+@import '~Base/mixins.scss';
 
 .range-slider {
   width: 19rem;
