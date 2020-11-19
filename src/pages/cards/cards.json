@@ -18,6 +18,6 @@
       }
     ],
     "countOfImages": 4,
-    "isSmallIndent": false
+    "indent": "big"
   }
 }

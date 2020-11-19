@@ -5,20 +5,20 @@ include ../dropdown/dropdown
 mixin search-form
   -
     const dropdownSettings = {
-    'type': 'people',
-    'label': 'гости',
-    'placeholder': 'Сколько гостей',
-    'items': [
-      {'title': 'Взрослые', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-      {'title': 'Дети', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
-      {'title': 'Младенцы', 'defaultCount': '0', 'minCount': '0', 'maxCount': '10'},
+    type: 'people',
+    label: 'гости',
+    placeholder: 'Сколько гостей',
+    items: [
+      {title: 'Взрослые', defaultCount: 0, minCount: 0, maxCount: 10},
+      {title: 'Дети', defaultCount: 0, minCount: 0, maxCount: 10},
+      {title: 'Младенцы', defaultCount: 0, minCount: 0, maxCount: 10},
     ]
     };
 
   form.search-form(action="url" method="post")
     h2.search-form__title Найдём номера под ваши пожелания
     fieldset.search-form__fieldset-date
-      +date-dropdown({'startLabel': 'прибытие', 'endLabel': 'выезд'})
+      +date-dropdown({startLabel: 'прибытие', endLabel: 'выезд'})
     fieldset.search-form__fieldset-guests
       +dropdown(dropdownSettings)
-    +button({type: 'link', view: 'actionable', content: 'подобрать номер', url: 'search.html'})
+    +button({type: 'submit', view: 'actionable', content: 'подобрать номер'})
