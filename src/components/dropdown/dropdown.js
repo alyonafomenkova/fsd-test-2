@@ -269,9 +269,4 @@ class Dropdown {
   }
 }
 
-const dropdowns = document.querySelectorAll('.js-dropdown');
-
-dropdowns.forEach((it) => {
-  const dropdown = new Dropdown(it);
-  dropdown.init();
-});
+export default Dropdown;
