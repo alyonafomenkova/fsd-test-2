@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = options)
-  div.dropdown.js-dropdown(class=`dropdown_type_${type}` data-type = type)
+  div.dropdown.js-dropdown(class=`dropdown_type_${type}` data-type=type)
     if (label)
       div.dropdown__info
         h3.dropdown__label !{label}
@@ -9,9 +9,9 @@ mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = optio
           span.dropdown__type !{uikitState}
     div.dropdown__container
       div.dropdown__selection.js-dropdown__selection
-        p.dropdown__selection-text.js-dropdown__selection-text(data-placeholder = placeholder) !{placeholder}
+        p.dropdown__selection-text.js-dropdown__selection-text(data-placeholder=placeholder) !{placeholder}
         span.dropdown__selection-icon expand_more
-      div.dropdown__menu.js-dropdown__menu(class = isExpanded ? "dropdown__menu_expanded js-dropdown__menu_expanded" : "")
+      div.dropdown__menu.js-dropdown__menu(class=isExpanded && "dropdown__menu_expanded js-dropdown__menu_expanded")
         div.dropdown__options
           if (items)
             each item, index in items
@@ -20,22 +20,22 @@ mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = optio
                 h3.dropdown__option-title !{title}
                 div.dropdown__buttons-wrapper
                   button.dropdown__decrement-button.js-dropdown__decrement-button(
-                    type = "button"
-                    data-min-count = minCount
-                    data-index = index
+                    type="button"
+                    data-min-count=minCount
+                    data-index=index
                     ) -
                   span.dropdown__quantity.js-dropdown__quantity(
-                    data-default-count = defaultCount
-                    data-index = index
+                    data-default-count=defaultCount
+                    data-index=index
                   ) !{defaultCount}
                   button.dropdown__increment-button.js-dropdown__increment-button(
-                    type = "button"
-                    data-max-count = maxCount
-                    data-index = index
+                    type="button"
+                    data-max-count=maxCount
+                    data-index=index
                   ) +
         if (type === 'people')
           div.dropdown__controls-wrapper
             div.dropdown__clear-button.js-dropdown__clear-button
-              +button({'view': 'textual', 'height': 'high', 'content': 'очистить'})
+              +button({view: 'textual', content: 'очистить'})
             div.dropdown__apply-button.js-dropdown__apply-button
-              +button({'view': 'textual', 'height': 'high', 'content': 'применить'})
+              +button({view: 'textual', content: 'применить'})

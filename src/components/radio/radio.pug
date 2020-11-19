@@ -1,23 +1,26 @@
-mixin radio({title, items} = {})
+mixin radio(options = {})
   -
     const defaultItems = [
       {'name': 'sex', 'label': 'Мужчина', 'isChecked': true},
       {'name': 'sex', 'label': 'Женщина'}
     ];
-    items = items || defaultItems
+    const {
+      title,
+      items = defaultItems
+    } = options;
 
   div.radio
     if (title)
       h2.radio__title !{title}
     ul.radio__list
       each item, index in items
-        - let {name, label, isDisabled, isChecked} = item;
+        - let { name, label, isDisabled, isChecked } = item;
         li.radio__item
           input.radio__input(
-            type = "radio",
-            id = `${name}-${index}-id`,
-            name = name,
-            checked = isChecked,
-            disabled = isDisabled,
+            type="radio",
+            id=`${name}-${index}-id`,
+            name=name,
+            checked=isChecked,
+            disabled=isDisabled,
           )
-          label.radio__label(for = `${name}-${index}-id`) #{label}
+          label.radio__label(for=`${name}-${index}-id`) #{label}

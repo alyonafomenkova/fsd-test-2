@@ -1,16 +1,22 @@
-mixin toggle({title, items} = options)
+mixin toggle(options = {})
+  -
+    const defaultItems = [{'name': 'toggle', 'label': 'Получать спецпредложения'}];
+    const {
+      title,
+      items = defaultItems
+    } = options;
   div.toggle
     if (title)
       h2.toggle__title !{title}
     ul.toggle__list
       if (items)
         each item in items
-          - let {id, name, label, isChecked} = item;
+          - let { id, name, label, isChecked } = item;
           li.toggle__item
-            label.toggle__label(for = id) #{label}
+            label.toggle__label(for=id) #{label}
               input.toggle__input(
-                type = "checkbox",
-                name = name,
-                checked = isChecked
+                type="checkbox",
+                name=name,
+                checked=isChecked
               )
               span.toggle__slider

@@ -1,17 +1,17 @@
-mixin checkbox({title, items} = options)
+mixin checkbox({ title, items } = options)
   div.checkbox.js-checkbox
     if (title)
       h2.checkbox__title !{title}
     ul.checkbox__list
       if (items)
         each item in items
-          - let {name, label, isDisabled, isChecked} = item;
-          li.checkbox__item(class = isDisabled ? "checkbox__item_disabled" : "")
+          - let { name, label, isDisabled, isChecked } = item;
+          li.checkbox__item(class=isDisabled && "checkbox__item_disabled")
             input.checkbox__input(
-              type = "checkbox",
-              id = `${name}-id`,
-              name = name,
-              checked = isChecked,
-              disabled = isDisabled,
+              type="checkbox",
+              id=`${name}-id`,
+              name=name,
+              checked=isChecked,
+              disabled=isDisabled,
             )
-            label.checkbox__label(for = `${name}-id`) #{label}
+            label.checkbox__label(for=`${name}-id`) #{label}
