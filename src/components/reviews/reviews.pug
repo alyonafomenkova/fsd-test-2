@@ -1,6 +1,6 @@
 include ../like-button/like-button
 
-mixin reviews({title, items, isVisibleCountOfReviews} = options)
+mixin reviews({ title, items, isVisibleCountOfReviews } = options)
   div.reviews
     div.reviews__wrapper
       if (title)
@@ -10,7 +10,7 @@ mixin reviews({title, items, isVisibleCountOfReviews} = options)
     ul.reviews__list
       if (items)
         each item in items
-          - let {imgName, authorName, date, likeButton, text} = item;
+          - let { imgName, authorName, date, likeButton, text } = item;
           li.reviews__item
             div.reviews__author
               img.reviews__avatar(src = require(`../../components/reviews/images/${imgName}`).default alt="Avatar")
