@@ -1,4 +1,4 @@
-import '../../../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js';
+import 'ion-rangeslider/js/ion.rangeSlider.min.js';
 
 class RangeSlider {
   constructor(slider) {
@@ -16,9 +16,4 @@ class RangeSlider {
   }
 }
 
-const sliders = document.querySelectorAll('.js-range-slider__input');
-
-sliders.forEach((it) => {
-  const slider = new RangeSlider(it);
-  slider.init();
-});
+export default RangeSlider;
