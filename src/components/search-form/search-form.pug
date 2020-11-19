@@ -21,4 +21,4 @@ mixin search-form
       +date-dropdown({'startLabel': 'прибытие', 'endLabel': 'выезд'})
     fieldset.search-form__fieldset-guests
       +dropdown(dropdownSettings)
-    +button({'view': 'actionable', 'height': 'high', 'content': 'подобрать номер', 'href': 'search.html'})
+    +button({type: 'link', view: 'actionable', content: 'подобрать номер', url: 'search.html'})

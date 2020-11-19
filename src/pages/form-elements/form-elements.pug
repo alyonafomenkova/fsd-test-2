@@ -75,15 +75,15 @@ block content
             div.form-elements__element.form-elements__element_bottom-margin_41
               h2.form-elements__title buttons
               div.form-elements__main-buttons-wrapper
-                +button({'view': 'filled', 'height': 'high', 'content': 'click me'})
-                +button({'view': 'filled', 'height': 'high', 'isHovered': true, 'content': 'click me'})
+                +button({view: 'filled', content: 'click me'})
+                +button({view: 'filled', state: 'hovered', content: 'click me'})
               div.form-elements__main-buttons-wrapper
-                +button({'view': 'bordered', 'height': 'high', 'content': 'click me'})
-                +button({'view': 'bordered', 'height': 'high', 'isHovered': true, 'content': 'click me'})
+                +button({view: 'bordered', content: 'click me'})
+                +button({view: 'bordered', state: 'hovered', content: 'click me'})
               div.form-elements__main-buttons-wrapper
-                +button({'view': 'textual', 'height': 'high', 'content': 'click me'})
-                +button({'view': 'textual', 'height': 'high', 'isHovered': true, 'content': 'click me'})
-              +button({'view': 'actionable', 'height': 'high', 'content': 'Перейти к оплате'})
+                +button({view: 'textual', content: 'click me'})
+                +button({view: 'textual', state: 'hovered', content: 'click me'})
+              +button({view: 'actionable', content: 'Перейти к оплате'})
             div.form-elements__element.form-elements__element_bottom-margin_41
               h2.form-elements__title pagination
               +pagination

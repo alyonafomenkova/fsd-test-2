@@ -26,8 +26,8 @@ mixin header({isUserAuthorized, items} = {})
             a.header__show-auth-btn(href="sign-in.html") person
             div.header__auth-wrapper
               div.header__login-button-wrapper
-                +button({'isLogin': true, 'view': 'bordered', 'height': 'low', 'content': 'войти', 'href': 'sign-in.html'})
-              +button({'isRegister': true, 'view': 'filled', 'height': 'low', 'content': 'зарегистрироваться', 'href': 'sign-up.html'})
+                +button({type: 'link', view: 'bordered', height: 'low', content: 'войти', url: 'sign-in.html'})
+              +button({type: 'link', view: 'filled', height: 'low', content: 'зарегистрироваться', url: 'sign-up.html'})
         nav.header__main-nav.js-header__main-nav
           ul.header__nav-list.js-header__nav-list
             each item in items

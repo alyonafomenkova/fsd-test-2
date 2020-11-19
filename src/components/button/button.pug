@@ -1,30 +1,30 @@
-mixin button({type, isLogin, isRegister, height, view, isHovered, href, content} = options)
+mixin button({ type = 'button', height = 'high', view, state, url, content } = options)
   -
-    let classes = '';
-    if (isLogin)
-      classes += ' button_type_login js-button_type_login'
-    if (isRegister)
-      classes += ' button_type_register js-button_type_register'
-    if (height === 'high')
-      classes += ' button_height_high'
-    if (height === 'low')
-      classes += ' button_height_low'
-    if (view === 'filled')
-      classes += ' button_view_filled'
-    if (view === 'filled' && isHovered)
-      classes +=  ' button_view_filled-on-hover'
-    if (view === 'bordered')
-      classes += ' button_view_bordered'
-    if (view === 'bordered' && isHovered)
-      classes += ' button_view_bordered-on-hover'
-    if (view === 'textual')
-      classes += ' button_view_textual'
-    if (view === 'textual' && isHovered)
-      classes += ' button_view_textual-on-hover'
-    if (view === 'actionable')
-      classes += ' button_view_actionable'
+    const typeModifiers = {
+      button: 'button_type_button',
+      submit: 'button_type_submit',
+      link: 'button_type_link'
+    };
+    const heightModifiers = {
+      high: 'button_height_high',
+      low: 'button_height_low'
+    };
+    const viewModifiers = {
+      filled: 'button_view_filled',
+      bordered: 'button_view_bordered',
+      textual: 'button_view_textual',
+      actionable: 'button_view_actionable'
+    };
+    const stateModifiers = {
+      hovered: `${viewModifiers[view]}-on-hover`
+    };
+    const classes = [
+      typeModifiers[type],
+      heightModifiers[height],
+      viewModifiers[view],
+      stateModifiers[state]
+    ];
+    const tag = type === 'link' ? 'a' : 'button';
+    const buttonType = type === 'link' ? false : type;
 
-  if (href)
-    a.button(href = href, class = classes) !{content}
-  else
-    button.button(type = type ? type : "button", class = classes) !{content}
+  #{tag}.button(type=buttonType, class=classes, href=url) !{content}

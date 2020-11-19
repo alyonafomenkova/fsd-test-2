@@ -32,7 +32,7 @@ mixin registration
           +text-field({'type': 'password', 'name': 'password', 'placeholder': 'Пароль'})
       div.registration__offers-wrapper
         +toggle(toggleData)
-      +button({'view': 'actionable', 'height': 'high', 'content': 'Перейти к оплате'})
+      +button({view: 'actionable', content: 'Перейти к оплате'})
     div.registration__login-wrapper
       span.registration__login-text Уже есть аккаунт на Toxin
-      +button({'view': 'bordered', 'height': 'high', 'content': 'войти', 'href': 'sign-in.html'})
+      +button({type: 'link', view: 'bordered', content: 'войти', url: 'sign-in.html'})
