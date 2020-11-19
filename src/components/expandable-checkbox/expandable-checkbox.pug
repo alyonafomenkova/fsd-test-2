@@ -1,6 +1,20 @@
-mixin expandable-checkbox({title, isExpanded, items} = options)
+mixin expandable-checkbox(options = {})
+  -
+    const defaultItems = [
+      {name: 'breakfast', label: 'Завтрак'},
+      {name: 'table', label: 'Письменный стол', isChecked: true},
+      {name: 'chair', label: 'Стул для кормления', isChecked: true},
+      {name: 'cot', label: 'Кроватка', isChecked: true},
+      {name: 'tv', label: 'Телевизор'},
+      {name: 'shampoo', label: 'Шампунь'}
+    ];
+    const {
+    title,
+    isExpanded,
+    items = defaultItems
+    } = options;
   include ../checkbox/checkbox
-  div.expandable-checkbox.js-expandable-checkbox(class = isExpanded ? "expandable-checkbox_expanded js-expandable-checkbox_expanded" : "")
+  div.expandable-checkbox.js-expandable-checkbox(class = isExpanded && "expandable-checkbox_expanded js-expandable-checkbox_expanded")
     div.expandable-checkbox__selection.js-expandable-checkbox__selection
       h3.expandable-checkbox__title !{title}
       span.expandable-checkbox__more-icon expand_more

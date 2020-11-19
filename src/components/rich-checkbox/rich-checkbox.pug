@@ -1,34 +1,37 @@
-mixin rich-checkbox({title, items} = options)
+mixin rich-checkbox(options = {})
   -
     const defaultItems = [
       {
-        'name': 'hall',
-        'title': 'Широкий коридор',
-        'description': 'Ширина коридоров в номере не менее 91 см.'
+        name: 'hall',
+        title: 'Широкий коридор',
+        description: 'Ширина коридоров в номере не менее 91 см.'
       },
       {
-        'name': 'assistant',
-        'title': 'Помощник для инвалидов',
-        'description': 'На 1 этаже вас встретит специалист  и проводит до номера.',
+        name: 'assistant',
+        title: 'Помощник для инвалидов',
+        description: 'На 1 этаже вас встретит специалист  и проводит до номера.',
       }
     ];
-    items = items || defaultItems;
+    const {
+    title,
+    items = defaultItems
+    } = options;
 
   div.rich-checkbox
     if (title)
       h2.rich-checkbox__title !{title}
     ul.rich-checkbox__list
       each item in items
-        - let {name, title, description, isChecked, isDisabled} = item;
+        - let { name, title, description, isChecked, isDisabled } = item;
         li.rich-checkbox__item
           input.rich-checkbox__input(
-            type = "checkbox",
-            id = `${name}-id`,
-            name = name,
-            checked = isChecked,
-            disabled = isDisabled,
+            type="checkbox",
+            id=`${name}-id`,
+            name=name,
+            checked=isChecked,
+            disabled=isDisabled,
           )
-          label.rich-checkbox__label(for = `${name}-id`)
+          label.rich-checkbox__label(for=`${name}-id`)
             div.rich-checkbox__info-wrapper
               p.rich-checkbox__item-title #{title}
               p.rich-checkbox__description #{description}

@@ -1,11 +1,11 @@
-mixin range-slider({title, from, to, min, max} = options)
+mixin range-slider({ title, from = 5000, to = 10000, min = 0, max = 15500 } = options)
   div.range-slider
     h3.range-slider__title #{title}
     input.range-slider__input.js-range-slider__input(
-      type = "text",
-      value = "",
-      data-min = min || 0,
-      data-max = max || 15500,
-      data-from = from || 5000,
-      data-to = to || 10000
+      type="text",
+      value="",
+      data-min=min,
+      data-max=max,
+      data-from=from,
+      data-to=to
     )
