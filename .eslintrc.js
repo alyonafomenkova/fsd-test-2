@@ -3,6 +3,7 @@ module.exports = {
     'airbnb-base',
     'eslint:recommended',
   ],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
