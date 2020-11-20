@@ -1,27 +1,29 @@
-mixin social-list({items} = {})
+mixin social-list(options = {})
   -
     const defaultItems = [
       {
-        'id': 'twitter',
-        'text': 'Мы в Твиттер',
-        'link': 'https://twitter.com/'
+        id: 'twitter',
+        text: 'Мы в Твиттер',
+        link: 'https://twitter.com/'
       },
       {
-        'id': 'facebook',
-        'text': 'Мы в Фейсбук',
-        'link': 'https://www.facebook.com/'
+        id: 'facebook',
+        text: 'Мы в Фейсбук',
+        link: 'https://www.facebook.com/'
       },
       {
-        'id': 'instagram',
-        'text': 'Мы в Инстаграм',
-        'link': 'https://www.instagram.com/'
+        id: 'instagram',
+        text: 'Мы в Инстаграм',
+        link: 'https://www.instagram.com/'
       }
     ];
-    items = items || defaultItems;
+    const {
+      items = defaultItems
+    } = options;
 
   ul.social-list
     each item in items
-      - let {id, link, text} = item;
+      - let { id, link, text } = item;
       li.social-list__item
         a(
           class=`social-list__link social-list__link_type_${id}`,

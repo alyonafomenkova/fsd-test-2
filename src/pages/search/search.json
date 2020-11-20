@@ -27,17 +27,6 @@
       {"name": "guests", "label": "Можно пригласить гостей (до 10 человек)", "isChecked": true}
     ]
   },
-  "expandableCheckbox": {
-    "title": "дополнительные удобства",
-    "items": [
-      {"name": "breakfast", "label": "Завтрак"},
-      {"name": "table", "label": "Письменный стол", "isChecked": true},
-      {"name": "chair", "label": "Стул для кормления", "isChecked": true},
-      {"name": "cot", "label": "Кроватка", "isChecked": true},
-      {"name": "tv", "label": "Телевизор"},
-      {"name": "shampoo", "label": "Шампунь"}
-    ]
-  },
   "roomInfoCards": {
     "title": "Номера, которые мы для вас подобрали",
     "countOfImages": 4,

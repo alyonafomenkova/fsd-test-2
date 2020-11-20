@@ -1,20 +1,22 @@
-mixin pie-chart({title, items} = {})
+mixin pie-chart(options = {})
   -
     const GAP = 1;
     const FIRST_OFFSET = 75;
     const circumference = 100;
     const radius = circumference / (2 * 3.1415926536);
     const defaultItems = [
-      {'type': 'fine', 'count': '520', 'label': 'Великолепно'},
-      {'type': 'good', 'count': '260', 'label': 'Хорошо'},
-      {'type': 'normal', 'count': '260', 'label': 'Удовлетворительно'},
-      {'type': 'bad', 'count': '0', 'label': 'Разочарован'},
+      {type: 'fine', count: 520, label: 'Великолепно'},
+      {type: 'good', count: 260, label: 'Хорошо'},
+      {type: 'normal', count: 260, label: 'Удовлетворительно'},
+      {type: 'bad', count: 0, label: 'Разочарован'},
     ];
-    items = items || defaultItems;
+    const {
+      title = 'Впечатления от номера',
+      items = defaultItems
+    } = options;
     const totalVotes = items.map(it => it.count).reduce((a, b) => Number.parseInt(a) + Number.parseInt(b), 0);
-    title = title || 'Впечатления от номера';
 
-  figure.pie-chart.js-pie-chart(data-chart-data = items)
+  figure.pie-chart.js-pie-chart(data-chart-data=items)
     if (title)
       figcaption.pie-chart__title !{title}
     div.pie-chart__wrapper
@@ -40,25 +42,25 @@ mixin pie-chart({title, items} = {})
             let totalLengthOfPreviousSegments = 0;
           each segment, index in items
             -
-              let {count, type} = segment;
+              let { count, type } = segment;
               let segmentLength = (count / totalVotes) * circumference;
             circle.pie-chart__circle.js-pie-chart__circle(cx="17" cy="17" r= radius fill="transparent" stroke=`url(#gradient-${type})` stroke-width="1"
-              stroke-dasharray= `${Math.max(segmentLength - GAP, 0)} ${circumference - segmentLength + GAP}`
+              stroke-dasharray=`${Math.max(segmentLength - GAP, 0)} ${circumference - segmentLength + GAP}`
               stroke-dashoffset=`${circumference - totalLengthOfPreviousSegments + FIRST_OFFSET - GAP}`
-              data-circle-type = type
-              data-circle-count = count
+              data-circle-type=type
+              data-circle-count=count
             )
             - totalLengthOfPreviousSegments += segmentLength;
 
           g(class="pie-chart__text")
-            text(x="50%" y="50%" class="pie-chart__number js-pie-chart__number" data-total-votes = totalVotes) !{totalVotes}
+            text(x="50%" y="50%" class="pie-chart__number js-pie-chart__number" data-total-votes=totalVotes) !{totalVotes}
             text(x="50%" y="50%" class="pie-chart__label js-pie-chart__label") голосов
 
       figcaption.pie-chart__description-wrapper
         ul.pie-chart__description-list(aria-hidden="true" role="presentation")
           each item in items
-            - let {type, label} = item;
+            - let { type, label } = item;
             li(
               class=`pie-chart__description-item js-pie-chart__description-item pie-chart__description-item_rating_${type}`,
-              data-label-type = type
+              data-label-type=type
               ) !{label}

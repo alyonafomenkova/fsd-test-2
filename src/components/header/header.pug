@@ -1,16 +1,19 @@
 include ../button/button
 include ../logo/logo
 
-mixin header({isUserAuthorized, items} = {})
+mixin header(options = {})
   -
     const defaultItems = [
-      {'content': 'О нас'},
-      {'content': 'Услуги', 'submenu': [{'content': 'Услуга_1'}, {'content': 'Услуга_2'}]},
-      {'content': 'Вакансии'},
-      {'content': 'Новости'},
-      {'content': 'Соглашения', 'submenu': [{'content': 'Соглашение_1'}, {'content': 'Соглашение_2'}]},
+      {content: 'О нас'},
+      {content: 'Услуги', submenu: [{content: 'Услуга_1'}, {content: 'Услуга_2'}]},
+      {content: 'Вакансии'},
+      {content: 'Новости'},
+      {content: 'Соглашения', submenu: [{content: 'Соглашение_1'}, {content: 'Соглашение_2'}]},
     ];
-    items = items || defaultItems;
+    const {
+      isUserAuthorized,
+      items = defaultItems
+    } = options;
 
   header.header.js-header
     div.header__wrapper
@@ -31,20 +34,20 @@ mixin header({isUserAuthorized, items} = {})
         nav.header__main-nav.js-header__main-nav
           ul.header__nav-list.js-header__nav-list
             each item in items
-              - let {submenu, isActive, content} = item;
+              - let { submenu, isActive, content } = item;
               li.header__nav-item.js-header__nav-item(
-                class = "header__nav-item_margin_small"
-                class = submenu ? "header__submenu js-header__submenu" : ""
+                class="header__nav-item_margin_small"
+                class=submenu && "header__submenu js-header__submenu"
               )
                 if (submenu)
-                  span.header__nav-link(class=isActive ? "header__nav-link_active" : "") !{content}
+                  span.header__nav-link(class=isActive && "header__nav-link_active") !{content}
                 else
-                  a.header__nav-link(class=isActive ? "header__nav-link_active" : "" href="test.html") !{content}
+                  a.header__nav-link(class=isActive && "header__nav-link_active" href="test.html") !{content}
                 if (submenu)
                   button.header__toggle-submenu-btn.js-header__toggle-submenu-btn
                     span.header__toggle-submenu-icon expand_more
                   ul.header__submenu-list
                     each subitem in submenu
-                      - let {content} = subitem;
+                      - let { content } = subitem;
                       li.header__submenu-item
                         a.header__submenu-link(href="test.html") !{content}

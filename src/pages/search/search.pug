@@ -27,19 +27,19 @@ block content
     div.search__content-wrapper
       aside.search__aside
         div.search__element.search__element_bottom-margin_21
-          +date-dropdown({'startLabel': 'даты пребывания в отеле'})
+          +date-dropdown({startLabel: 'даты пребывания в отеле'})
         div.search__element.search__element_bottom-margin_31
           +dropdown(data.dropdown)
         div.search__element.search__element_bottom-margin_31
-          +range-slider({'title': 'диапазон цены'})
+          +range-slider({title: 'диапазон цены'})
           p.search__cost-comment Стоимость за сутки пребывания в номере
         div.search__element.search__element_bottom-margin_33
           +checkbox(data.checkbox)
         div.search__element.search__element_bottom-margin_21
-          +rich-checkbox({'title': 'доступность'})
+          +rich-checkbox({title: 'доступность'})
         div.search__element.search__element_bottom-margin_16
           +dropdown(data.facilitiesDropdown)
-        +expandable-checkbox(data.expandableCheckbox)
+        +expandable-checkbox({title: 'дополнительные удобства'})
       div.search__wrapper
         article.search__cards
           +room-info-cards(data.roomInfoCards)
