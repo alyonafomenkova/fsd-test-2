@@ -1,19 +1,16 @@
+import { boundMethod } from 'autobind-decorator';
+
 class Header {
   constructor(header) {
     this.header = header;
   }
 
   init() {
+    const toggleMenuButton = this.header.querySelector('.js-header__toggle-menu-btn');
+
     this._toggleJsClass();
     this._addClassNameForAuthorizedUser();
     this._changeState();
-    this._setupBind();
-  }
-
-  _setupBind() {
-    const toggleMenuButton = this.header.querySelector('.js-header__toggle-menu-btn');
-
-    Header._handleToggleMenuButtonClick = Header._handleToggleMenuButtonClick.bind(this);
     toggleMenuButton.addEventListener('click', Header._handleToggleMenuButtonClick);
   }
 
@@ -47,6 +44,7 @@ class Header {
     });
   }
 
+  @boundMethod
   static _handleToggleMenuButtonClick(evt) {
     const button = evt.target;
     const wrapper = button.closest('.header__content-wrapper');

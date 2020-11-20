@@ -1,3 +1,5 @@
+import { boundMethod } from 'autobind-decorator';
+
 class PieChart {
   constructor(pieChart) {
     this.pieChart = pieChart;
@@ -21,7 +23,7 @@ class PieChart {
 
   init() {
     this._setupDom();
-    this._setupBind();
+    this._setListeners();
   }
 
   _updateColor(type) {
@@ -54,11 +56,8 @@ class PieChart {
     this.circles = document.querySelectorAll('.js-pie-chart__circle');
   }
 
-  _setupBind() {
+  _setListeners() {
     const labels = this.pieChart.querySelectorAll('.js-pie-chart__description-item');
-
-    this._handleLabelMouseover = this._handleLabelMouseover.bind(this);
-    this._handleLabelMouseout = this._handleLabelMouseout.bind(this);
 
     labels.forEach((label) => {
       label.addEventListener('mouseover', this._handleLabelMouseover);
@@ -66,6 +65,7 @@ class PieChart {
     });
   }
 
+  @boundMethod
   _handleLabelMouseover(evt) {
     const targetAttribute = evt.target.getAttribute('data-label-type');
 
@@ -78,6 +78,7 @@ class PieChart {
     });
   }
 
+  @boundMethod
   _handleLabelMouseout(evt) {
     const targetAttribute = evt.target.getAttribute('data-label-type');
 

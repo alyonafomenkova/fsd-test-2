@@ -1,18 +1,16 @@
+import { boundMethod } from 'autobind-decorator';
+
 class ExpandableCheckbox {
   constructor(checkbox) {
     this.checkbox = checkbox;
   }
 
   init() {
-    this._setupBind();
     this.checkbox.addEventListener('click', ExpandableCheckbox._handleCheckboxClick);
     document.addEventListener('click', ExpandableCheckbox._handleDocumentClick);
   }
 
-  _setupBind() {
-    ExpandableCheckbox._handleCheckboxClick = ExpandableCheckbox._handleCheckboxClick.bind(this);
-  }
-
+  @boundMethod
   static _handleCheckboxClick(evt) {
     const target = evt.target.closest('.js-expandable-checkbox');
 

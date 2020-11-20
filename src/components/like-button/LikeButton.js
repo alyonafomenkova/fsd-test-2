@@ -1,18 +1,14 @@
-const ACTIVE_BUTTON_CLASS = 'like-button_active';
+import { boundMethod } from 'autobind-decorator';
 
+const ACTIVE_BUTTON_CLASS = 'like-button_active';
 class LikeButton {
   constructor(likeButton) {
     this.likeButton = likeButton;
   }
 
   init() {
-    this._setupBind();
     this._setIconForActiveButton();
     this.likeButton.addEventListener('click', LikeButton._handleLikeButtonClick);
-  }
-
-  _setupBind() {
-    LikeButton._handleLikeButtonClick = LikeButton._handleLikeButtonClick.bind(this);
   }
 
   _setIconForActiveButton() {
@@ -38,6 +34,7 @@ class LikeButton {
     countOfLikes.innerHTML = newValue;
   }
 
+  @boundMethod
   static _handleLikeButtonClick(evt) {
     evt.stopPropagation();
     const targetButton = evt.target;

@@ -1,3 +1,5 @@
+import { boundMethod } from 'autobind-decorator';
+
 class Rating {
   constructor(rating) {
     this.rating = rating;
@@ -6,17 +8,13 @@ class Rating {
   init() {
     const ratingButtons = this.rating.querySelectorAll('.js-rating__item');
 
-    this._setupBind();
     this._toggleSelectedIcon();
     ratingButtons.forEach((button) => {
       button.addEventListener('click', this._handleRatingButtonClick);
     });
   }
 
-  _setupBind() {
-    this._handleRatingButtonClick = this._handleRatingButtonClick.bind(this);
-  }
-
+  @boundMethod
   _handleRatingButtonClick(evt) {
     const item = evt.target.closest('.js-rating__item');
     const value = Number(item.getAttribute('data-value'));

@@ -1,3 +1,5 @@
+import { boundMethod } from 'autobind-decorator';
+
 class RoomInfoCard {
   constructor(card) {
     this.card = card;
@@ -11,11 +13,6 @@ class RoomInfoCard {
 
   _setupDom() {
     this.dotButtons = this.card.querySelectorAll('.js-room-info-cards__dot');
-  }
-
-  _setupBind() {
-    this._handleControlsButtonClick = this._handleControlsButtonClick.bind(this);
-    this._handleDotButtonClick = this._handleDotButtonClick.bind(this);
   }
 
   _showSlides() {
@@ -38,6 +35,7 @@ class RoomInfoCard {
     this.dotButtons[this.slideIndex - 1].className += ' room-info-cards__dot_active';
   }
 
+  @boundMethod
   _handleControlsButtonClick(n) {
     return () => {
       this.slideIndex = Number(this.slideIndex) + n;
@@ -45,6 +43,7 @@ class RoomInfoCard {
     };
   }
 
+  @boundMethod
   _handleDotButtonClick(evt) {
     this.slideIndex = evt.target.getAttribute('data-number');
     this._showSlides();
@@ -55,7 +54,6 @@ class RoomInfoCard {
     const nextButtons = this.card.querySelectorAll('.js-room-info-cards__next-link');
 
     this._setupDom();
-    this._setupBind();
     prevButtons.forEach((prevButton) => {
       prevButton.addEventListener('click', this._handleControlsButtonClick(-1));
     });

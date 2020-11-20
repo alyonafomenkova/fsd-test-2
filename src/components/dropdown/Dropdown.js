@@ -1,3 +1,5 @@
+import { boundMethod } from 'autobind-decorator';
+
 class Dropdown {
   constructor(dropdown) {
     this.dropdown = dropdown;
@@ -14,7 +16,6 @@ class Dropdown {
     this._disableButtons();
     this._updateTotalCount();
     this._updatePlaceholder();
-    this._setupBind();
     document.addEventListener('click', Dropdown._handleDocumentClick);
 
     if (this.type === this.Mode.PEOPLE) {
@@ -29,14 +30,6 @@ class Dropdown {
     this.decrementButtons = this.dropdown.querySelectorAll('.js-dropdown__decrement-button');
     this.incrementButtons = this.dropdown.querySelectorAll('.js-dropdown__increment-button');
     this.quantityNodes = this.dropdown.querySelectorAll('.js-dropdown__quantity');
-  }
-
-  _setupBind() {
-    this._handleSelectionButtonClick = this._handleSelectionButtonClick.bind(this);
-    this._handleDecrementButtonClick = this._handleDecrementButtonClick.bind(this);
-    this._handleIncrementButtonClick = this._handleIncrementButtonClick.bind(this);
-    this._handleClearButtonClick = this._handleClearButtonClick.bind(this);
-    this._handleApplyButtonClick = this._handleApplyButtonClick.bind(this);
   }
 
   _toggleMenu() {
@@ -202,10 +195,12 @@ class Dropdown {
     });
   }
 
+  @boundMethod
   _handleSelectionButtonClick() {
     this._toggleMenu();
   }
 
+  @boundMethod
   _handleDecrementButtonClick(evt) {
     this._decrementCount(evt);
     this._disableButtons();
@@ -217,6 +212,7 @@ class Dropdown {
     }
   }
 
+  @boundMethod
   _handleIncrementButtonClick(evt) {
     this._incrementCount(evt);
     this._disableButtons();
@@ -228,6 +224,7 @@ class Dropdown {
     }
   }
 
+  @boundMethod
   _handleClearButtonClick() {
     this._resetCounts();
     this._disableButtons();
@@ -236,6 +233,7 @@ class Dropdown {
     this._toggleClearButton();
   }
 
+  @boundMethod
   _handleApplyButtonClick() {
     this._toggleMenu();
   }
