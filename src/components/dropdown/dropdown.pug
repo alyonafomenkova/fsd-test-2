@@ -23,7 +23,7 @@ mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = optio
                     type="button"
                     data-min-count=minCount
                     data-index=index
-                    ) -
+                    ) &#8722;
                   span.dropdown__quantity.js-dropdown__quantity(
                     data-default-count=defaultCount
                     data-index=index
@@ -32,7 +32,7 @@ mixin dropdown({type, isExpanded, label, placeholder, items, uikitState} = optio
                     type="button"
                     data-max-count=maxCount
                     data-index=index
-                  ) +
+                  ) &#43;
         if (type === 'people')
           div.dropdown__controls-wrapper
             div.dropdown__clear-button.js-dropdown__clear-button
