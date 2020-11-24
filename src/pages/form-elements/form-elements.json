@@ -4,12 +4,14 @@
     "name": "email",
     "placeholder": "Email",
     "label": "Text Field",
+    "isUikit": true,
     "uikitState": "default"
   },
   "hoveredTextField": {
     "name": "text",
     "placeholder": "This is pretty awesome",
     "label": "Text Field",
+    "isUikit": true,
     "uikitState": "Hover / Focus",
     "isHovered": true
   },
@@ -17,6 +19,7 @@
     "name": "masked-text",
     "placeholder": "дд.мм.гггг",
     "label": "masked text field",
+    "isUikit": true,
     "uikitState": "default"
   },
   "subscriptionTextField": {
