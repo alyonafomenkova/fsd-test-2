@@ -12,7 +12,7 @@
 
   &__label {
     flex-direction: column;
-    width: 19rem;
+    max-width: 19rem;
     margin-bottom: 0.714rem;
   }
 
@@ -72,12 +72,12 @@
 .rich-checkbox__item {
   &:first-of-type {
     .rich-checkbox__description {
-      max-width: 14.286rem;
+      max-width: 13.429rem;
     }
   }
   &:last-of-type {
     .rich-checkbox__description {
-      max-width: 16.643rem;
+      max-width: 15.929rem;
     }
   }
 }
