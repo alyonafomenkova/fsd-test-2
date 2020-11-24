@@ -27,7 +27,7 @@ mixin footer({ items, isUikit = false } = {})
               if (subscribe)
                 div.footer__subscribe-wrapper
                   p.footer__subscribe-text !{subscribe}
-                  +subscription-text-field({type: 'Email', name: 'subscription-text', placeholder: 'Email', isUikit})
+                  +subscription-text-field({type: 'Email', name: 'subscription-text', placeholder: 'Email'})
       hr.footer__separator
       div.footer__bottom-wrapper
         p.footer__copyright-text !{copyrightText}
