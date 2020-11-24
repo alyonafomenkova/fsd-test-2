@@ -20,7 +20,7 @@
     ]
   },
   "checkbox": {
-    "title": "Checkbox Buttons",
+    "title": "правила дома",
     "items": [
       {"name": "smoke", "label": "Можно курить"},
       {"name": "pets", "label": "Можно с питомцами", "isChecked": true},
