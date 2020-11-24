@@ -144,6 +144,10 @@
   border-radius: 1.571rem;
 }
 
+.datepicker--cell-day.-disabled- {
+  pointer-events: none;
+}
+
 .datepicker--cell-day.-other-month-,
 .datepicker--cell-year.-other-decade- {
   color: $dark-color-opacity-25;

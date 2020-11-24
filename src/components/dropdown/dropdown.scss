@@ -88,7 +88,7 @@
       cursor: default;
     }
 
-    &:hover,
+    &:hover:not([disabled]),
     &:focus {
       color: $dark-color-opacity-50;
       border-color: $dark-color-opacity-50;
