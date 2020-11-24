@@ -1,0 +1,7 @@
+[
+  {"content": "О нас"},
+  {"content": "Услуги", "submenu": [{"content": "Услуга_1"}, {"content": "Услуга_2"}]},
+  {"content": "Вакансии"},
+  {"content": "Новости"},
+  {"content": "Соглашения", "submenu": [{"content": "Соглашение_1"}, {"content": "Соглашение_2"}]}
+]

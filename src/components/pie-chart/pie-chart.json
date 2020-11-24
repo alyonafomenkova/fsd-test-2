@@ -1,0 +1,6 @@
+[
+  {"type": "fine", "count": 520, "label": "Великолепно"},
+  {"type": "good", "count": 260, "label": "Хорошо"},
+  {"type": "normal", "count": 260, "label": "Удовлетворительно"},
+  {"type": "bad", "count": 0, "label": "Разочарован"}
+]

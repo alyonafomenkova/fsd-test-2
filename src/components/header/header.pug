@@ -3,13 +3,7 @@ include ../logo/logo
 
 mixin header(options = {})
   -
-    const defaultItems = [
-      {content: 'О нас'},
-      {content: 'Услуги', submenu: [{content: 'Услуга_1'}, {content: 'Услуга_2'}]},
-      {content: 'Вакансии'},
-      {content: 'Новости'},
-      {content: 'Соглашения', submenu: [{content: 'Соглашение_1'}, {content: 'Соглашение_2'}]},
-    ];
+    const defaultItems = require('../../components/header/header.json');
     const {
       isUserAuthorized,
       items = defaultItems

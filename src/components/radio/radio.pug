@@ -1,9 +1,6 @@
 mixin radio(options = {})
   -
-    const defaultItems = [
-      {name: 'sex', label: 'Мужчина', isChecked: true},
-      {name: 'sex', label: 'Женщина'}
-    ];
+    const defaultItems = require('../../components/radio/radio.json');
     const {
       title,
       items = defaultItems

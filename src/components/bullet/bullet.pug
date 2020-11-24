@@ -1,10 +1,6 @@
 mixin bullet(options = {})
   -
-    const defaultItems = [
-      {name: 'Нельзя с питомцами'},
-      {name: 'Без вечеринок и мероприятий'},
-      {name: 'Время прибытия — после 13:00, а выезд до 12:00'}
-    ];
+    const defaultItems = require('../../components/bullet/bullet.json');
     const {
       title,
       items = defaultItems,

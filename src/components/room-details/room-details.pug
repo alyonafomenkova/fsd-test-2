@@ -1,10 +1,6 @@
 mixin room-details(options = {})
   -
-    const defaultItems = [
-      {icon: 'insert_emoticon', name: 'Комфорт', description: 'Шумопоглощающие стены'},
-      {icon: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален'},
-      {icon: 'whatshot', name: 'Уют', description: 'Номер оснащён камином'}
-    ];
+    const defaultItems = require('../../components/room-details/room-details.json');
     const {
     title,
     items = defaultItems

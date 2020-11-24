@@ -1,22 +1,6 @@
 mixin social-list(options = {})
   -
-    const defaultItems = [
-      {
-        id: 'twitter',
-        text: 'Мы в Твиттер',
-        link: 'https://twitter.com/'
-      },
-      {
-        id: 'facebook',
-        text: 'Мы в Фейсбук',
-        link: 'https://www.facebook.com/'
-      },
-      {
-        id: 'instagram',
-        text: 'Мы в Инстаграм',
-        link: 'https://www.instagram.com/'
-      }
-    ];
+    const defaultItems = require('../../components/social-list/social-list.json');
     const {
       items = defaultItems
     } = options;

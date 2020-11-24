@@ -4,9 +4,9 @@
     "label": "гости",
     "placeholder": "Сколько гостей",
     "items": [
-      {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-      {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-      {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+      {"title": "Взрослые", "defaultCount": 0, "minCount": 0, "maxCount": 10},
+      {"title": "Дети", "defaultCount": 0, "minCount": 0, "maxCount": 10},
+      {"title": "Младенцы", "defaultCount": 0, "minCount": 0, "maxCount": 10}
     ]
   },
   "facilitiesDropdown": {
@@ -14,9 +14,9 @@
     "label": "удобства номера",
     "placeholder": "Сколько комнат",
     "items": [
-      {"title": "спальни", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-      {"title": "кровати", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-      {"title": "ванные комнаты", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+      {"title": "спальни", "defaultCount": 2, "minCount": 0, "maxCount": 10},
+      {"title": "кровати", "defaultCount": 2, "minCount": 0, "maxCount": 10},
+      {"title": "ванные комнаты", "defaultCount": 0, "minCount": 0, "maxCount": 10}
     ]
   },
   "checkbox": {
@@ -32,33 +32,33 @@
     "countOfImages": 4,
     "items": [
       {
-        "roomNumber": "888",
+        "roomNumber": 888,
         "title": "№ 888",
         "type": "люкс",
         "price": "9&nbsp;990",
-        "rating": "5",
+        "rating": 5,
         "reviewsCount": 145
       },
       {
-        "roomNumber": "840",
+        "roomNumber": 840,
         "title": "№ 840",
         "price": "9&nbsp;990",
-        "rating": "4",
+        "rating": 4,
         "reviewsCount": 65
       },
       {
-        "roomNumber": "980",
+        "roomNumber": 980,
         "type": "люкс",
         "title": "№ 980",
         "price": "8&nbsp;500",
-        "rating": "3",
+        "rating": 3,
         "reviewsCount": 35
       },
       {
-        "roomNumber": "856",
+        "roomNumber": 856,
         "title": "№ 856",
         "price": "7&nbsp;300",
-        "rating": "5",
+        "rating": 5,
         "reviewsCount": 19
       },
       {
@@ -69,52 +69,52 @@
         "reviewsCount": 44
       },
       {
-        "roomNumber": "982",
+        "roomNumber": 982,
         "title": "№ 982",
         "price": "5&nbsp;800",
-        "rating": "3",
+        "rating": 3,
         "reviewsCount": 56
       },
       {
-        "roomNumber": "678",
+        "roomNumber": 678,
         "title": "№ 678",
         "price": "5&nbsp;500",
-        "rating": "5",
+        "rating": 5,
         "reviewsCount": 45
       },
       {
-        "roomNumber": "450",
+        "roomNumber": 450,
         "title": "№ 450",
         "price": "5&nbsp;300",
-        "rating": "4",
+        "rating": 4,
         "reviewsCount": 39
       },
       {
-        "roomNumber": "350",
+        "roomNumber": 350,
         "title": "№ 350",
         "price": "5&nbsp;000",
-        "rating": "3",
+        "rating": 3,
         "reviewsCount": 77
       },
       {
-        "roomNumber": "666",
+        "roomNumber": 666,
         "title": "№ 666",
         "price": "5&nbsp;000",
-        "rating": "5",
+        "rating": 5,
         "reviewsCount": 25
       },
       {
-        "roomNumber": "444",
+        "roomNumber": 444,
         "title": "№ 444",
         "price": "5&nbsp;000",
-        "rating": "3",
+        "rating": 3,
         "reviewsCount": 15
       },
       {
-        "roomNumber": "352",
+        "roomNumber": 352,
         "title": "№ 352",
         "price": "5&nbsp;000",
-        "rating": "3",
+        "rating": 3,
         "reviewsCount": 55
       }
     ]

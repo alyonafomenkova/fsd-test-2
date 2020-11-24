@@ -1,13 +1,6 @@
 mixin expandable-checkbox(options = {})
   -
-    const defaultItems = [
-      {name: 'breakfast', label: 'Завтрак'},
-      {name: 'table', label: 'Письменный стол', isChecked: true},
-      {name: 'chair', label: 'Стул для кормления', isChecked: true},
-      {name: 'cot', label: 'Кроватка', isChecked: true},
-      {name: 'tv', label: 'Телевизор'},
-      {name: 'shampoo', label: 'Шампунь'}
-    ];
+    const defaultItems = require('../../components/expandable-checkbox/expandable-checkbox.json');
     const {
     title,
     isExpanded,

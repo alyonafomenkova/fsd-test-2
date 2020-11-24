@@ -1,0 +1,17 @@
+[
+  {
+    "id": "twitter",
+    "text": "Мы в Твиттер",
+    "link": "https://twitter.com/"
+  },
+  {
+    "id": "facebook",
+    "text": "Мы в Фейсбук",
+    "link": "https://www.facebook.com/"
+  },
+  {
+    "id": "instagram",
+    "text": "Мы в Инстаграм",
+    "link": "https://www.instagram.com/"
+  }
+]

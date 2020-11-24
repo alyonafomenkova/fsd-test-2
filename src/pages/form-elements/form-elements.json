@@ -31,9 +31,9 @@
     "uikitState": "default",
     "placeholder": "Сколько гостей",
     "items": [
-      {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-      {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-      {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+      {"title": "Взрослые", "defaultCount": 0, "minCount": 0, "maxCount": 10},
+      {"title": "Дети", "defaultCount": 0, "minCount": 0, "maxCount": 10},
+      {"title": "Младенцы", "defaultCount": 0, "minCount": 0, "maxCount": 10}
     ]
   },
   "defaultFacilitiesDropdown": {
@@ -42,9 +42,9 @@
     "uikitState": "default",
     "placeholder": "Сколько комнат",
     "items": [
-      {"title": "спальни", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-      {"title": "кровати", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-      {"title": "ванные комнаты", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+      {"title": "спальни", "defaultCount": 2, "minCount": 0, "maxCount": 10},
+      {"title": "кровати", "defaultCount": 2, "minCount": 0, "maxCount": 10},
+      {"title": "ванные комнаты", "defaultCount": "0", "minCount": 0, "maxCount": 10}
     ]
   },
   "expandedFacilitiesDropdown": {
@@ -54,9 +54,9 @@
     "uikitState": "expanded",
     "placeholder": "Сколько комнат",
     "items": [
-      {"title": "спальни", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-      {"title": "кровати", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-      {"title": "ванные комнаты", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+      {"title": "спальни", "defaultCount": 2, "minCount": 0, "maxCount": 10},
+      {"title": "кровати", "defaultCount": 2, "minCount": 0, "maxCount": 10},
+      {"title": "ванные комнаты", "defaultCount": 0, "minCount": 0, "maxCount": 10}
     ]
   },
   "expandedDropdown": {
@@ -66,9 +66,9 @@
     "uikitState": "expanded",
     "placeholder": "Сколько гостей",
     "items": [
-      {"title": "Взрослые", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-      {"title": "Дети", "defaultCount": "0", "minCount": "0", "maxCount": "10"},
-      {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+      {"title": "Взрослые", "defaultCount": 0, "minCount": 0, "maxCount": 10},
+      {"title": "Дети", "defaultCount": 0, "minCount": 0, "maxCount": 10},
+      {"title": "Младенцы", "defaultCount": 0, "minCount": 0, "maxCount": 10}
     ]
   },
   "expandedDropdownWithDefaultCount": {
@@ -78,9 +78,9 @@
     "uikitState": "expanded",
     "placeholder": "Сколько гостей",
     "items": [
-      {"title": "Взрослые", "defaultCount": "2", "minCount": "0", "maxCount": "10"},
-      {"title": "Дети", "defaultCount": "1", "minCount": "0", "maxCount": "10"},
-      {"title": "Младенцы", "defaultCount": "0", "minCount": "0", "maxCount": "10"}
+      {"title": "Взрослые", "defaultCount": 2, "minCount": 0, "maxCount": 10},
+      {"title": "Дети", "defaultCount": 1, "minCount": 0, "maxCount": 10},
+      {"title": "Младенцы", "defaultCount": 0, "minCount": 0, "maxCount": 10}
     ]
   },
   "checkbox": {

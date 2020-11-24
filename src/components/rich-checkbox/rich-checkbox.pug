@@ -1,17 +1,6 @@
 mixin rich-checkbox(options = {})
   -
-    const defaultItems = [
-      {
-        name: 'hall',
-        title: 'Широкий коридор',
-        description: 'Ширина коридоров в номере не менее 91 см.'
-      },
-      {
-        name: 'assistant',
-        title: 'Помощник для инвалидов',
-        description: 'На 1 этаже вас встретит специалист  и проводит до номера.',
-      }
-    ];
+    const defaultItems = require('../../components/rich-checkbox/rich-checkbox.json');
     const {
     title,
     items = defaultItems
