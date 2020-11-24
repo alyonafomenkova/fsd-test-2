@@ -3,7 +3,7 @@ include ../button/button
 include ../social-list/social-list
 include ../subscription-text-field/subscription-text-field
 
-mixin footer({ items, isUikit } = {})
+mixin footer({ items, isUikit = false } = {})
   -
     const defaultItems = require('../../components/footer/footer.json');
     const { description, contentLists, copyrightText } = items || defaultItems;
@@ -27,7 +27,7 @@ mixin footer({ items, isUikit } = {})
               if (subscribe)
                 div.footer__subscribe-wrapper
                   p.footer__subscribe-text !{subscribe}
-                  +subscription-text-field({type: 'Email', name: 'subscription-text', placeholder: 'Email'})
+                  +subscription-text-field({type: 'Email', name: 'subscription-text', placeholder: 'Email', isUikit})
       hr.footer__separator
       div.footer__bottom-wrapper
         p.footer__copyright-text !{copyrightText}
