@@ -1,12 +1,13 @@
-mixin rating(currentRating = 5)
-  - let n = 1;
-  - let maxRating = 5;
+mixin rating(currentRating = 5, hasValue = true)
+  -
+    const maxRating = 5;
+    let starIndex = 1;
   div.rating.js-rating
     ul.rating__list
-      while n <= maxRating
+      while starIndex <= maxRating
         li.rating__item.js-rating__item(
-          data-value = n,
-          class = currentRating >= n && "rating__item_selected js-rating__item_selected"
+          data-value = starIndex,
+          class = currentRating >= starIndex && hasValue && "rating__item_selected js-rating__item_selected"
           )
           span.rating__star.js-rating__star
-        - n++
+        - starIndex++;
