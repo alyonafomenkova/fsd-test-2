@@ -24,7 +24,8 @@
     & + .checkbox__label {
       display: flex;
       align-items: flex-start;
-      width: 17.143rem;
+      max-width: 15.786rem;
+      width: fit-content;
       cursor: pointer;
       color: $dark-color-opacity-50;
       line-height: 1.286rem;
