@@ -1,6 +1,6 @@
 include ../masked-text-field/masked-text-field
 
-mixin date-dropdown({ isInline, startLabel, endLabel, placeholder, readonly } = options)
+mixin date-dropdown({ isInline, startLabel, endLabel, placeholder } = options)
   if (isInline)
     div.date-dropdown.js-date-dropdown.date-dropdown--inline.js-date-dropdown--inline
       div.date-dropdown__item--inline.js-date-dropdown__item--inline
@@ -14,7 +14,7 @@ mixin date-dropdown({ isInline, startLabel, endLabel, placeholder, readonly } = 
             type="text"
             class=endLabel ? "date-dropdown__input--first js-date-dropdown__input--first" : "date-dropdown__input--filter js-date-dropdown__input--filter"
             placeholder=placeholder || "дд.мм.гггг"
-            readonly=readonly
+            readonly
             data-position="bottom left"
           )
       if (endLabel)
@@ -23,6 +23,6 @@ mixin date-dropdown({ isInline, startLabel, endLabel, placeholder, readonly } = 
             input.date-dropdown__input.date-dropdown__input--second.js-date-dropdown__input--second(
               type="text"
               placeholder=placeholder || "дд.мм.гггг"
-              readonly=readonly
+              readonly
               data-position="bottom right"
             )
