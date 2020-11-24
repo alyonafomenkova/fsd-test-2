@@ -18,14 +18,14 @@ mixin room-info-cards({ title, items, countOfImages = 0, indent = 'small' } = op
           - let { roomNumber, title, type, price, rating, reviewsCount } = item;
           li.room-info-cards__item(class=classes)
             div.room-info-cards__slideshow-container.js-room-info-cards__slideshow-container
-              - let i = 1;
-              while (i <= countOfImages)
+              - let imageIndex = 1;
+              while (imageIndex <= countOfImages)
                 div.room-info-cards__slides.js-room-info-cards__slides.room-info-cards__slides_view_faded.room-info-cards__slides_visible
                   img.room-info-cards__img(
-                    src=require(`../../components/room-info-cards/images/${roomNumber}/${roomNumber}_${i}.png`).default
+                    src=require(`../../components/room-info-cards/images/${roomNumber}/${roomNumber}_${imageIndex}.png`).default
                     alt=`Номер ${roomNumber}`
                     )
-                - i++
+                - imageIndex += 1;
               a.room-info-cards__prev-link.js-room-info-cards__prev-link
                 span.room-info-cards__prev-icon expand_more
               a.room-info-cards__next-link.js-room-info-cards__next-link
@@ -35,7 +35,7 @@ mixin room-info-cards({ title, items, countOfImages = 0, indent = 'small' } = op
                 - let dotsCount = 1;
                 while (dotsCount <= countOfImages)
                   span(data-number=`${dotsCount}`).room-info-cards__dot.js-room-info-cards__dot
-                  - dotsCount++
+                  - dotsCount += 1;
             div.room-info-cards__info-wrapper
               div.room-info-cards__room-wrapper
                 div
