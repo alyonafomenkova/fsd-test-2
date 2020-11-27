@@ -1,4 +1,5 @@
 @import '~Base/mixins.scss';
+@import '~Base/variables.scss';
 @import '~Normalize';
 
 html {
@@ -11,6 +12,10 @@ html {
   font-weight: normal;
   color: $dark-color-opacity-75;
   background-color: $white-color;
+
+  @media (min-width: $desktop-width-m) {
+    font-size: 18px;
+  }
 }
 
 body {

@@ -6,7 +6,7 @@
   background-color: #E5E5E5;
 
   &__logo-wrapper {
-    max-width: $max-desktop-width;
+    max-width: $desktop-width-s;
     margin: 0 auto;
   }
 
@@ -19,7 +19,7 @@
     background-color: $white-color;
 
     &:last-child {
-      max-width: $tablet-width;
+      max-width: $tablet-width-s;
       margin: 0 auto;
     }
   }

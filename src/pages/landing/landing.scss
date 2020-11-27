@@ -21,7 +21,7 @@
   &__form-wrapper {
     margin-bottom: 5.714rem;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       align-self: flex-start;
       margin-bottom: 22.857rem;
     }
@@ -31,7 +31,7 @@
     max-width: 21.429rem;
     margin: 0;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       align-self: flex-end;
       margin-left: auto;
       text-align: end;

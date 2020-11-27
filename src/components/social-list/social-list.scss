@@ -1,4 +1,5 @@
 @import '~Base/mixins.scss';
+@import '~Base/variables.scss';
 
 .social-list {
   @include reset-list-style;
@@ -16,6 +17,10 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    @media (min-width: $desktop-width-m) {
+      padding-top: 0.3125rem;
+    }
   }
 
   &__text {

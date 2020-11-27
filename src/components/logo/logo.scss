@@ -1,14 +1,31 @@
+@import '~Base/variables.scss';
+
 .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 7.571rem;
 
+  @media (min-width: $desktop-width-m) {
+    max-width: 8rem;
+  }
+
   &__img_view_uikit {
     width: 3.429rem;
     height: 3.429rem;
     margin-top: 2.143rem;
     margin-left: 2.143rem;
+  }
+
+  &__img_view_main {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  &__img_view_textual {
+    @media (min-width: $desktop-width-m) {
+      width: 3.9375rem;
+    }
   }
 
   &:hover {

@@ -12,13 +12,19 @@
     margin: 1.929rem auto 1.429rem auto;
     padding: 0 1.429rem;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       flex-wrap: nowrap;
       margin-bottom: 4.071rem;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width-m) {
       padding: 0;
+    }
+
+    @media (min-width: $desktop-width-m) {
+      max-width: $desktop-width-l;
+      padding-left: 4rem;
+      padding-right: 4rem;
     }
   }
 
@@ -26,8 +32,12 @@
     max-width: 19rem;
     margin: 0 auto;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       margin-right: 4.286rem;
+    }
+
+    @media (min-width: $desktop-width-m) {
+      margin-right: 6rem;
     }
   }
 

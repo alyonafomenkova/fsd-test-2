@@ -1,5 +1,6 @@
 @import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 @import '~Base/mixins.scss';
+@import '~Base/variables.scss';
 
 .range-slider {
   width: 19rem;
@@ -39,6 +40,10 @@
     border: 0.143rem solid $white-color;
     border-radius: 0.714rem;
     cursor: pointer;
+
+    @media (min-width: $desktop-width-m) {
+      top:1.125rem;
+    }
 
     &>i:first-child {
       display: none;

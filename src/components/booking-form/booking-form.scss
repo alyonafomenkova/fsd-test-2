@@ -10,7 +10,7 @@
   border-radius: 0.286rem;
   box-shadow: 0 0 1.786rem $black-color-opacity-20;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width-s) {
     width: 27.143rem;
     padding: 3rem 2.143rem 2.143rem 2rem;
   }
@@ -108,7 +108,7 @@
     width: 13.571rem;
     line-height: 1.286rem;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       width: 15.5rem;
     }
   }

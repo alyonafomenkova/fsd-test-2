@@ -30,12 +30,19 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       margin: 5rem auto 0 auto;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width-m) {
       width: 82.857rem;
+    }
+
+    @media (min-width: $desktop-width-m) {
+      max-width: $desktop-width-l;
+      width: 100%;
+      padding-left: 5rem;
+      padding-right: 5rem;
     }
   }
 
@@ -67,13 +74,13 @@
     margin-top: 0.714rem;
     margin-bottom: 3.143rem;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       justify-content: space-between;
     }
   }
 
   &__cancel-rule {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       width: 49%;
     }
   }

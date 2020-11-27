@@ -7,9 +7,13 @@
     margin: 0.214rem auto 1.429rem auto;
     text-align: center;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       margin: 0.214rem 0 1.429rem 0;
       text-align: left;
+    }
+
+    @media (min-width: $desktop-width-m) {
+      text-align: center;
     }
   }
 
@@ -19,8 +23,12 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width-s) {
       justify-content: flex-start;
+    }
+
+    @media (min-width: $desktop-width-m) {
+      justify-content: space-between;
     }
   }
 
