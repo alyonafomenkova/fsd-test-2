@@ -30,7 +30,8 @@ block content
         div.details__content
           div.details__content-top
             +room-details({title: 'Сведения о номере'})
-            +pie-chart()
+            div.details__pieChartWrapper
+              +pie-chart()
           div.details__content-bottom
             div.details__reviews-wrapper
               +reviews(data.reviews)
